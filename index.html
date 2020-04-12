@@ -1,83 +1,206 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Project: Travel webpage</title>
-    </head>
-    <body>
+        <title>Project: Event invite</title>
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat&family=Dancing+Script&family=Flamenco:wght@300&family=Italianno&family=Josefin+Slab:wght@100&family=League+Script&family=Marck+Script&display=swap" rel="stylesheet">
         <style>
             h1{
-                background-color: orange;
-            }
-            .floaty-island {
-                color: rgb(145, 237, 166);
-            }
-            #this {
-                color: white;
+                font-family: 'Josefin Slab', sans-serif;
+                font-size: 51px;
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: -22px;
             }
             h2{
-                color: brown;
+                font-family: Bad Script;
+                text-align: center;
+                margin-top: -41px;
+                font-size: 77px;
+                border-bottom: 40px ridge rgb(126, 144, 242);
+                padding-bottom: 0px;
+                text-shadow: 2px 2px rgb(0, 0, 0);
+                color: rgb(222, 82, 82);
+            }
+            #b{
+                font-family: Italianno;
+                font-size: 30px;
+                text-align: center;
+                margin: 41px;
+                text-decoration: underline overline rgb(219, 219, 219);
+            }
+            .subHeader{
+                font-family: flamenco;
+                font-weight: bold;
+                font-size: 27px;
+                margin: 5px;
+                text-shadow: 1px 1px rgb(189, 189, 189);
+                text-decoration: underline dotted rgb(181, 181, 255);
+            }
+            #a{
+                border-left: 2px dashed rgb(126, 144, 242);
+                border-right: 2px dashed rgb(126, 144, 242);
+                border-top: 2px dashed rgb(126, 144, 242);
+            }
+            #c{
+                border-top: 40px ridge rgb(126, 144, 242);
+                width: 435px;
+                position: absolute;
+                top: 279px;
+            }
+            #info{
+                float: left;
+                width: 44%;
+                border: 2px ridge rgb(138, 180, 181);
+                border-left: 9px groove rgb(138, 180, 181);
+                padding: 19px;
+                padding-top: 12px;
+                padding-bottom: 1px;
+                position: absolute;
+                top: 333px;
+            }
+            #details{
+                float: left;
+                width: 48%;
+                border: 2px ridge rgb(219, 81, 81);
+                border-left: 9px groove rgb(219, 81, 81);
+                padding: 7px;
+                padding-top: 12px;
+                padding-left: 12px;
+                position: absolute;
+                top: 587px;
+                padding-bottom: 0px;
+            }
+            #classified{
+                float: left;
+                width: 48%;
+                border: 2px ridge rgb(148, 165, 247);
+                border-left: 9px groove rgb(148, 165, 247);
+                padding: 7px;
+                padding-top: 12px;
+                padding-left: 12px;
+                position: absolute;
+                top: 907px;
+                padding-bottom: 0px;
+            }
+            #guestList{
+                float: right;
+                width: 36%;
+                position: absolute;
+                top: 333px;
+                left: 264px;
+                border: 2px double rgb(138, 69, 138);
+                padding: 13px;
+                padding-right: 0px;
+            }
+            p{
+                font-family: 'Josefin Slab';
+                font-weight: bold;
+                font-size: 16px;
+            }
+            ul{
+                font-family: Caveat;
+                font-size: 20px;
+            }
+            #z{
+                margin-bottom: 1px;
+                margin-left: -19px;
+                margin-top: 8px;
+            }
+            #detPar{
+                line-height: 26px;
+            }
+            #lines{
+                line-height: 35px;
+                margin-top: 5px;
+                margin-left: -4px;
+            }
+            #blackout{
+                background-color: black;
+            }
+            #c1{
+                font-size: 40px;
+                line-height: 14px;
+                margin-left: 78px;
+                margin-top: 15px;
+                width: 147px;
+            }
+            #blank{
+                position: relative;
+                width: 92px;
+                top: 584px;
+                left: 16px;
+                color: white;
+            }
+            .underline{
+                text-decoration: underline;
+                background-color: rgb(255, 222, 255);
             }
         </style>
+    </head>
+    <body>
         
-        <h1>Travel to .... <em class="floaty-island">Floaty Island!!! </em></h1>
+        <div id="a"><h1>Hello!</h1>
+        <p id="b">You're Invited To...</p>
+        <h2><em>My House :)</em></h2></div>
+        <div id="c"></div>
         
-        <img src="https://www.kasandbox.org/programming-images/space/planet.png" alt="floaty island">
+        <div id="info">
+        <p class="subHeader">Basic Info</p>
+        <p id="lines"><span class="underline">When</span>: You know when.<br> <span class="underline">Where</span>: The place where we buried the <span id="blackout">chicken nugget.</span><br> <span class="underline">What</span>: Chicken<br> <span class="underline">Why</span>: No reason in particular</p>
+        </div>
         
-        <h2>Completely Nonexistant</h2>
-        <p>Have you ever been to <em class="floaty-island">Floaty Island</em>? If you said <em>"yes"</em>, you're lying because <em class="floaty-island">Floaty Island</em> doesn't exist. It is but a figment of my imagination. </p>
+        <div id="details">
+        <p class="subHeader">The Details:</p>
+        <p id="detPar">Hi! It's me, the sender of this invitation. You must be wondering why you received this. Don't worry, it's not because you're special; you're not. There is absolutely no reason for you to have received this. Are you confused? Annoyed? Just deal with it, that's a you problem. </p>
+        </div>
         
-        <h2>This is the place where everyone's happy...</h2>
-        <p>Get it? That's why it doesn't exist. <em>reeeeeeeeeeeeeeeeeeeeeeeeeee...</em></p>
+        <div id="classified">
+        <p class="subHeader">Classified Details</p>
+        <p id="c1">SOMEBO
+        DY ONCET
+        Old me the world was gonnaroll me I ATEAN
+        apple OUTOF the tree io  do the Mario  dothe Mario , do the Mario  do the Mario , do the Mario   </p>
+        </div>
         
-        <h2>Reasons why you should <em>not</em> try to visit <em class="floaty-island">Floaty Island</em></h2>
-        <ol>
-            <li>it doesn't exist</li>
-            <li>it doesn't exist</li>
-            <li>seriously, it doesn't exist, don't try to find it</li>
-        </ol>
-        
-        <h2>What you will find if you ignore my advice and try to visit <em class="floaty-island">Floaty Island</em> anyway</h2>
-        <ul>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>nothing</li>
-            <li>absolutely nothing <strong>AT ALL</strong></li>
+        <div id="guestList">
+        <p class="subHeader">Guest List</p>
+        <ul id="z">
+            <li>Batman</li>
+            <li>My mom</li>
+            <li>The Boogiman</li>
+            <li>Your mom</li>
+            <li>Santa</li>
+            <li>Cadis Etrama <br>Di Raizel</li>
+            <li>Dora the Explorer</li>
+            <li>Van Hohenheim</li>
+            <li>Jieg</li>
+            <li>The guy who invented boxed milk</li>
+            <li>Bambi</li>
+            <li>Elsa</li>
+            <li>Ann the Almighty</li>
+            <li>Yuta</li>
+            <li>Bob the Builder</li>
+            <li>Koro-sensei</li>
+            <li>'Can't Stop Twinkling'</li>
+            <li>Benedict Cumberbatch</li>
+            <li>Illumi Zoldyck</li>
+            <li>The Garbage Man</li>
+            <li>The old man under the bridge</li>
+            <li>Qing Shi Huang</li>
+            <li>Shizuo Heiwajima</li>
+            <li>Izaya Orihara</li>
+            <li>The Garbage Man</li>
+            <li>Gandalf</li>
+            <li>Seamonkey Jr.</li>
+            <li>Shrek</li>
+            <li>George Bush</li>
+            <li>Joe (the evil dude)</li>
+            <li>A gang of piano teachers</li>
         </ul>
+        </div>
         
-        <h3>Here is a beautiful image of a tree.</h3>
-        <img src="https://www.kasandbox.org/programming-images/cute/TreeUgly.png" alt="tree ugly">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <p id="blank">The meeting place is not actually my house. Please do not show up at my house (not that you know where it is anyway). Did you know that potatoes are secretly your dad in disguise? It's stupid how long it took me just to make this.</p>
         
-        <h3>Here is what you will look like if you decide to visit <em class="floaty-island">Floaty Island</em></h3>
-        
-        <img src="https://www.kasandbox.org/programming-images/space/girl1.png" alt="what the heck is this">
-        
-        <p id="this"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>jk,<br>it actually does exist,<br> lol PSYCHE </p>
     </body>
 </html>
