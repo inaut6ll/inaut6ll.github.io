@@ -8,6 +8,7 @@
             body{
                 font-family: 'quicksand', sans-serif;
                 font-size: 20px;
+                opacity: 100%;
             }
             #main-head{
                 position: relative;
@@ -15,6 +16,7 @@
                 left: 150px;
                 background-color: white;
                 z-index: 5;
+                width: 185px;
             }
             #main-border{
                 position: absolute;
@@ -22,6 +24,7 @@
                 left: 156px;
                 z-index: 1;
                 border: 3px double black;
+                width: 185px;
             }
             #maincircle1{
                 position:absolute; 
@@ -42,19 +45,14 @@
                 left: 100px; 
                 z-index: 1;
             }
-            #link1{
-                position: absolute; 
-                top: 20px; 
-                left: 800px; 
-                width: 150px;
-            }
             .heading{
                 font-weight: normal;
                 font-size: 50px;
                 font-family: 'cutive mono', monospace;
-                border: 5px none rgb(83, 80, 80);
+                border: 3px double rgb(83, 80, 80);
                 padding: 5px;
                 width: 150px;
+                opacity: 85%;
             }
             .subheading{
                 font-weight: normal;
@@ -71,7 +69,7 @@
                 float: left;
             }
             .line{
-                border-top: 10px solid black;
+                border-top: 5px solid black;
             }
             .circle{
                 width: 100px;
@@ -94,31 +92,109 @@
                 background-color: rgb(255, 0, 0);
             }
             .button{
-                border: 3px outset rgb(202, 193, 193);
-                font-family: quicksand, sans-serif;
+                border: 1px outset rgb(95, 91, 91);
+                font-family: 'cutive mono', monospace;
                 font-size: 20px;
                 border-radius: 5%;
+                background-color: white;
+                width: 50px;
+                padding: 5px;
+                text-align: center;
             }
             .button:active{
                 border-style: inset;
+                background-color: rgb(190, 186, 186);
+            }
+            .whitetext{
+                opacity: 0%;
+            }
+            .whitetext:hover{
+                opacity: 100%;
+                text-align: center;
+                padding: 3px;
+            }
+            #buttonQ{
+                position: absolute; 
+                top: 0px; 
+                left: 1180px; 
+                width: 50px;
+                text-align: center;
+                z-index: 2;
+                font-weight: bold;
+            }
+            #wt1{
+                width: 100px;
+                position: absolute;
+                top: 0px;
+                left: 1070px;
+                font-family: caveat, sans-serif;
+            }
+            #backQ{
+                position: absolute; 
+                top: 0px; 
+                left: 30px;
+            }
+            #opaque1{
+                opacity: 0%;
             }
         </style>
     </head>
     <body>
-        <div>
-            <div>
-                <p id = "main-head" class="heading">Title</p>
-                <p id = "main-border" class="heading">Title</p>
-                <div class="circle blackBG" id="maincircle1"></div>
-                <div class="circle lightgrayBG" id="maincircle2"></div>
-                <div class="circle brown" id="maincircle3"></div>
-            </div>
-            <p class="subheading" id="link1">Subhead</p>
+        <div id="opaque1">
+            <p id="backQ" class="button">back</p>
         </div>
-        <div class="line" style="position: relative; top: 20px;"></div>
-        <p style="position: relative; top: 20px;">this is an example</p>
+        <div id="rip">
+            <div>
+                <div>
+                    <p id = "main-head" class="heading">Escape "Room"</p>
+                    <p id = "main-border" class="heading">Escape "Room"</p>
+                    <div class="circle blackBG" id="maincircle1"></div>
+                    <div class="circle lightgrayBG" id="maincircle2"></div>
+                    <div class="circle brown" id="maincircle3"></div>
+                </div>
+                <p class="subheading button" id="buttonQ">???</p>
+                <p class="whitetext" id="wt1">dont' click => this button</p>
+            </div>
+            <div class="line" style="position: relative; top: 12px;"></div>
+            <p style="position: relative; top: 20px;">this is an example</p>
+        </div>
+        
+        <div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
+            var qbutton = document.getElementById("buttonQ");
+            var backQ = document.getElementById("backQ");
             
+            var hasClicked = 0;
+            var onQClick = function() { 
+                hasClicked++;
+                document.getElementById("rip").style.opacity = "0%";
+                document.getElementById("opaque1").style.opacity = "100%";
+                if (hasClicked === 1){
+                    document.getElementById("main-head").style.width = "170px";
+                }
+                if (hasClicked === 2) {
+                    document.getElementById("main-head").style.width = "115px";
+                }
+                if (hasClicked === 3) {
+                    document.getElementById("main-head").style.width = "65px";
+                }
+                if (hasClicked === 4) {
+                    document.getElementById("main-head").style.width = "0px";
+                }
+            }
+            var onBQClick = function() {
+                document.getElementById("rip").style.opacity = "100%";
+                document.getElementById("opaque1").style.opacity = "0%";
+            }
+
+            qbutton.addEventListener("click", onQClick); 
+            backQ.addEventListener("click", onBQClick); 
+
+            //alert("Hi");
         </script>
     </body>
 </html>
