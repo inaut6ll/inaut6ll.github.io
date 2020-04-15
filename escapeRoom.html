@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat&family=Cutive+Mono&family=Dancing+Script&family=Flamenco&family=Josefin+Slab&family=Quicksand&display=swap" rel="stylesheet">
         <style>
             body{
-                font-family: 'quicksand', sans-serif;
+                font-family: "cutive mono", monospace;
                 font-size: 20px;
                 opacity: 100%;
             }
@@ -129,6 +129,25 @@
                 left: 1070px;
                 font-family: caveat, sans-serif;
             }
+            #wt2{
+                width: 80px;
+                position: absolute;
+                top: 45px;
+                left: 1160px;
+                font-family: caveat, sans-serif;
+            }
+            #wt3{
+                width: 125px;
+                padding: 2px;
+                border: 1px solid black;
+                position: absolute;
+                top: 0px;
+                left: 950px;
+                font-family: caveat, sans-serif;
+                font-size: 30px;
+                background-color: red;
+                color: white;
+            }
             #backQ{
                 position: absolute; 
                 top: 0px; 
@@ -136,6 +155,17 @@
             }
             #opaque1{
                 opacity: 0%;
+            }
+            #key1{
+                z-index: 3;
+                position: absolute;
+                top: 130px;
+                left: 170px;
+                opacity: 20%;
+                background-color: none;
+            }
+            #key1:hover{
+                color: white;
             }
         </style>
     </head>
@@ -151,9 +181,12 @@
                     <div class="circle blackBG" id="maincircle1"></div>
                     <div class="circle lightgrayBG" id="maincircle2"></div>
                     <div class="circle brown" id="maincircle3"></div>
+                    <p id="key1">something</p>
                 </div>
                 <p class="subheading button" id="buttonQ">???</p>
-                <p class="whitetext" id="wt1">dont' click => this button</p>
+                <p class="whitetext" id="wt1">don't click => this button</p>
+                <p class="whitetext" id="wt2">seriously, don't click the button</p>
+                <p class="whitetext" id="wt3">WARNING</p>
             </div>
             <div class="line" style="position: relative; top: 12px;"></div>
             <p style="position: relative; top: 20px;">this is an example</p>
@@ -175,12 +208,16 @@
                 document.getElementById("opaque1").style.opacity = "100%";
                 if (hasClicked === 1){
                     document.getElementById("main-head").style.width = "170px";
+                    document.getElementById("key1").style.opacity = "50%";
+                    document.getElementById("key1").style.backgroundColor = "black";
                 }
                 if (hasClicked === 2) {
                     document.getElementById("main-head").style.width = "115px";
+                    document.getElementById("key1").style.opacity = "70%";
                 }
                 if (hasClicked === 3) {
                     document.getElementById("main-head").style.width = "65px";
+                    document.getElementById("key1").style.opacity = "100%";
                 }
                 if (hasClicked === 4) {
                     document.getElementById("main-head").style.width = "0px";
