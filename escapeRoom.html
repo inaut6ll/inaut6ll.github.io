@@ -8,7 +8,7 @@
             body{
                 font-family: "cutive mono", monospace;
                 font-size: 20px;
-                opacity: 100%;
+                display: block;
             }
             #main-head{
                 position: absolute;
@@ -32,18 +32,23 @@
                 left: 80px; 
                 z-index: 4; 
                 opacity: 70%;
+                background-color: black;
             }
             #maincircle2{
                 position:absolute; 
                 top: 50px; 
-                left: 150px; 
+                left: 30px; 
                 z-index: 3;
+                background-color: rgb(160, 156, 156);
+                opacity: 70%;
             }
             #maincircle3{
                 position:absolute; 
-                top: 100px; 
+                top: 98px; 
                 left: 100px; 
                 z-index: 2;
+                background-color: red;
+                opacity: 100%;
             }
             .heading{
                 font-weight: normal;
@@ -66,21 +71,6 @@
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
-            }
-            .blackBG{
-                background-color: rgb(0, 0, 0);
-            }
-            .darkgrayBG{
-                background-color: rgb(68, 65, 65);
-            }
-            .grayBG{
-                background-color: rgb(97, 97, 97);
-            }
-            .lightgrayBG{
-                background-color: rgb(160, 156, 156);
-            }
-            .brown{
-                background-color: rgb(255, 0, 0);
             }
             .button{
                 border: 5px outset rgb(95, 91, 91);
@@ -140,7 +130,7 @@
                 color: white;
             }
             #scene2{
-                opacity: 0%;
+                display: none;
             }
             #key1{
                 z-index: 3;
@@ -155,8 +145,8 @@
             }
             #under-red-circle{
                 position: absolute;
-                top: 120px;
-                left: 100px;
+                top: 123px;
+                left: 105px;
                 font-size: 15px;
             }
             .instructions{
@@ -168,7 +158,7 @@
                 color: white;
                 background-color: black;
                 padding: 5px;
-                opacity: 0%;
+                display: none;
             }
             #line1{
                 border: 1px solid black;
@@ -184,7 +174,7 @@
                 z-index: 200;
             }
             #rules{
-                border: 10px double white;
+                border: 8px double white;
                 padding: 10px;
                 text-align: center;
                 width: 900px;
@@ -195,6 +185,61 @@
                 position: absolute;
                 top: 300px;
                 left: 200px;
+            }
+            .input{
+                border: 5px groove black;
+                padding: 3px;
+                background-color: black;
+                color: white;
+                font-family: 'cutive mono', monospace;
+                font-size: 20px;
+            }
+            #pw1{
+                position: absolute;
+                top: 900px;
+                left: 300px;
+            }
+            #menubutton{
+                position: absolute;
+                top: 70px;
+                left: 1000px;
+            }
+            #instrbutton{
+                position: absolute;
+                top: 130px;
+                left: 1000px;
+                width: 150px;
+            }
+            #setbutton{
+                position: absolute;
+                top: 190px;
+                left: 1000px;
+                width: 100px;
+            }
+            #rulescircle{
+                position: absolute;
+                background-color: red;
+                opacity: 60%;
+                top: 220px;
+                left: 1050px;
+            }
+            #rulescircle2{
+                position: absolute;
+                background-color: black;
+                opacity: 60%;
+                top: 250px;
+                left: 1100px;
+                width: 150px;
+                height: 150px;
+            }
+            #rulescircle3{
+                position: absolute;
+                background-color: rgb(146, 102, 102);
+                opacity: 60%;
+                top: 200px;
+                left: 1100px;
+                width: 50px;
+                height: 50px;
             }
         </style>
     </head>
@@ -207,9 +252,12 @@
                 <div>
                     <p id = "main-head" class="heading">Escape "Room"</p>
                     <p id = "main-border" class="heading">Escape "Room"</p>
-                    <div class="circle blackBG" id="maincircle1"></div>
-                    <div class="circle lightgrayBG" id="maincircle2"></div>
-                    <div class="circle brown" id="maincircle3"></div>
+                    <div class="circle" id="maincircle1"></div>
+                    <div class="circle" id="maincircle2"></div>
+                    <div class="circle" id="maincircle3"></div>
+                    <div class="circle" id="rulescircle"></div>
+                    <div class="circle" id="rulescircle2"></div>
+                    <div class="circle" id="rulescircle3"></div>
                     <p id="key1">message</p>
                 </div>
                 <p class="subheading button" id="buttonQ">???</p>
@@ -222,242 +270,93 @@
             <p class="instructions" id="instr1">Hi! Welcome to the Escape "Room". This is an escape room game, except there is neither a physical nor a virtual room. Lol. Feel free to eat a brownie while you're here.<br><br>- Yours Truly</p>
             <p class="instructions" id="instr2">Who are you? Why are you here? We can help you answer that today. If you succeed in escaping this "room", I will tell you the meaning of your life. <br><br> - God</p>
             <p class="instructions" id="instr3">Blob. Glob. ...... Blug glub glug blub.</p>
+            <p class="button" id="menubutton">Menu</p>
+            <p class="button" id="instrbutton">Instructions</p>
+            <p class="button" id="setbutton">Settings</p>
             <div id="rules">
                 <p>Rules:</p>
                 <ol>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li></li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>Win.</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
-                    <li>???</li>
+                    <li id="r3">???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li id="r1">???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li></li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>Win.</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li id="r2">???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                 </ol>
             </div>
-            </p>
+            <p><input type="text" class="input" id="pw1"></p>
+
             <div>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
@@ -473,8 +372,8 @@
             var hasClicked = 0;
             var onQClick = function() { 
                 hasClicked++;
-                document.getElementById("scene1").style.opacity = "0%";
-                document.getElementById("scene2").style.opacity = "100%";
+                document.getElementById("scene1").style.display = "none";
+                document.getElementById("scene2").style.display = "block";
                 if (hasClicked === 1){
                     document.getElementById("main-head").style.width = "170px";
                     document.getElementById("key1").style.opacity = "30%";
@@ -492,10 +391,14 @@
                     document.getElementById("main-head").style.width = "0px";
                     document.getElementById("key1").style.zIndex = "8";
                 }
+                if (hasClicked === 5) {
+                    document.getElementById("r1").textContent = "Input boxes are the exact length of their respective inputs. Meaning you can easily find out how many letters are in each input.";
+                    document.getElementById("r1").style.textAlign = "left";
+                }
             }
             var onback2Click = function() {
-                document.getElementById("scene1").style.opacity = "100%";
-                document.getElementById("scene2").style.opacity = "0%";
+                document.getElementById("scene1").style.display = "block";
+                document.getElementById("scene2").style.display = "none";
             }
 
             qbutton.addEventListener("click", onQClick); 
@@ -514,9 +417,38 @@
                 }
                 if (rCHC === 10) {
                     redCircle.style.opacity = "55%";
+                    document.getElementById("r2").textContent = "Replace this filler.";
+                    document.getElementById("r2").style.textAlign = "left";
                 }
             }
             redCircle.addEventListener("click", onRedCircleClick);
+
+            var menu = document.getElementById("menubutton");
+            var instr = document.getElementById("instrbutton");
+            var set = document.getElementById("setbutton");
+            var pan1 = document.getElementById("instr1");
+            var pan2 = document.getElementById("instr2");
+            var pan3 = document.getElementById("instr3");
+            var onMenuClick = function() {
+                pan1.style.display = "block";
+                pan2.style.display = "none";
+                pan3.style.display = "none";
+            }
+            var onInstrClick = function() {
+                pan2.style.display = "block";
+                pan1.style.display = "none";
+                pan3.style.display = "none";
+            }
+            var onSetClick = function() {
+                pan3.style.display = "block";
+                pan2.style.display = "none";
+                pan1.style.display = "none";
+                document.getElementById("r3").textContent = "This one is self explanatory. Thank me for making this rule #1. And if you already scrolled to the bottom of the rules..... Haha sucks for you I guess.";
+                document.getElementById("r3").style.textAlign = "left";
+            }
+            menu.addEventListener("click", onMenuClick);
+            instr.addEventListener("click", onInstrClick);
+            set.addEventListener("click", onSetClick);
 
             var initialAlert = function() {
                 alert("message");
