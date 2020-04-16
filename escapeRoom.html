@@ -20,7 +20,7 @@
             }
             #main-border{
                 position: absolute;
-                top: 47px;
+                top: 45px;
                 left: 145px;
                 z-index: 1;
                 border: 3px double black;
@@ -241,6 +241,21 @@
                 width: 50px;
                 height: 50px;
             }
+            #death {
+                border-color: red;
+                width: 100px;
+                position: absolute;
+                top: 1500px;
+                left: 600px;
+            }
+            #line2{
+                border-top: 3px solid black;
+                position: absolute;
+                margin: 10px;
+                top: 1600px;
+                left: 400px;
+                width: 500px;
+            }
         </style>
     </head>
     <body>
@@ -267,7 +282,7 @@
                 <p id="under-red-circle">mess<br>age</p>
             </div>
             <p id="line1"></p>
-            <p class="instructions" id="instr1">Hi! Welcome to the Escape "Room". This is an escape room game, except there is neither a physical nor a virtual room. Lol. Feel free to eat a brownie while you're here.<br><br>- Yours Truly</p>
+            <p class="instructions" id="instr1">Hi! Welcome to the Escape "Room". This is an escape room game where there is neither a physical nor a virtual room. Lol. Oof. Feel free to eat a brownie while you're here.<br><br>- Yours Truly</p>
             <p class="instructions" id="instr2">Who are you? Why are you here? We can help you answer that today. If you succeed in escaping this "room", I will tell you the meaning of your life. <br><br> - God</p>
             <p class="instructions" id="instr3">Blob. Glob. ...... Blug glub glug blub.</p>
             <p class="button" id="menubutton">Menu</p>
@@ -355,11 +370,11 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                 </ol>
             </div>
-            <p><input type="text" class="input" id="pw1"></p>
-
             <div>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <p id="pw1">Birthday: <input type="text" class="input"></p>
             </div>
+            <p class="button" id="death">INSTANT DEATH</p>
+            <p id="line2"></p>
         </div>
         
         
@@ -449,6 +464,16 @@
             menu.addEventListener("click", onMenuClick);
             instr.addEventListener("click", onInstrClick);
             set.addEventListener("click", onSetClick);
+
+            var deathButton = document.getElementById("death");
+            var onDeathClick = function() {
+                document.body.style.textAlign = "center";
+                document.body.style.fontSize = "50px";
+                document.body.style.color = "red";
+                document.body.innerHTML = "<h1>YOU DIED.</h1><h2>Wow, you just managed to fail at an untimed online escape room. Great job, dude.</h2>";
+            }
+            deathButton.addEventListener("click", onDeathClick);
+
 
             var initialAlert = function() {
                 alert("message");
