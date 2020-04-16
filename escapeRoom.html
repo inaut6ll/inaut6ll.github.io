@@ -11,7 +11,7 @@
                 opacity: 100%;
             }
             #main-head{
-                position: relative;
+                position: absolute;
                 top: 50px;
                 left: 150px;
                 background-color: white;
@@ -21,7 +21,7 @@
             #main-border{
                 position: absolute;
                 top: 47px;
-                left: 156px;
+                left: 145px;
                 z-index: 1;
                 border: 3px double black;
                 width: 185px;
@@ -30,20 +30,20 @@
                 position:absolute; 
                 top: 40px; 
                 left: 80px; 
-                z-index: 3; 
+                z-index: 4; 
                 opacity: 70%;
             }
             #maincircle2{
                 position:absolute; 
                 top: 50px; 
                 left: 150px; 
-                z-index: 2;
+                z-index: 3;
             }
             #maincircle3{
                 position:absolute; 
                 top: 100px; 
                 left: 100px; 
-                z-index: 1;
+                z-index: 2;
             }
             .heading{
                 font-weight: normal;
@@ -61,15 +61,6 @@
                 border: 2px solid rgb(83, 80, 80);
                 width: 100px;
                 padding: 8px;
-            }
-            .floatright{
-                float: right;
-            }
-            .floatleft{
-                float: left;
-            }
-            .line{
-                border-top: 5px solid black;
             }
             .circle{
                 width: 100px;
@@ -92,7 +83,7 @@
                 background-color: rgb(255, 0, 0);
             }
             .button{
-                border: 1px outset rgb(95, 91, 91);
+                border: 5px outset rgb(95, 91, 91);
                 font-family: 'cutive mono', monospace;
                 font-size: 20px;
                 border-radius: 5%;
@@ -107,11 +98,11 @@
             }
             .whitetext{
                 opacity: 0%;
+                text-align: center;
+                padding: 3px;
             }
             .whitetext:hover{
                 opacity: 100%;
-                text-align: center;
-                padding: 3px;
             }
             #buttonQ{
                 position: absolute; 
@@ -148,12 +139,7 @@
                 background-color: red;
                 color: white;
             }
-            #backQ{
-                position: absolute; 
-                top: 0px; 
-                left: 30px;
-            }
-            #opaque1{
+            #scene2{
                 opacity: 0%;
             }
             #key1{
@@ -167,13 +153,56 @@
             #key1:hover{
                 color: white;
             }
+            #under-red-circle{
+                position: absolute;
+                top: 120px;
+                left: 100px;
+                font-size: 15px;
+            }
+            .instructions{
+                position: absolute;
+                top: 0px;
+                left: 425px;
+                border: 1px double black;
+                width: 450px;
+                color: white;
+                background-color: black;
+                padding: 5px;
+                opacity: 0%;
+            }
+            #line1{
+                border: 1px solid black;
+                position: absolute;
+                top: 0px;
+                left: 400px;
+                width: 500px;
+            }
+            #backScene2{
+                position: absolute;
+                top: 0;
+                left: 30;
+                z-index: 200;
+            }
+            #rules{
+                border: 10px double white;
+                padding: 10px;
+                text-align: center;
+                width: 900px;
+                height: 200px;
+                overflow-y:scroll;
+                background-color: black;
+                color: white;
+                position: absolute;
+                top: 300px;
+                left: 200px;
+            }
         </style>
     </head>
     <body>
-        <div id="opaque1">
-            <p id="backQ" class="button">back</p>
+        <div id="scene2">
+            <p id="backScene2" class="button">back</p>
         </div>
-        <div id="rip">
+        <div id="scene1">
             <div>
                 <div>
                     <p id = "main-head" class="heading">Escape "Room"</p>
@@ -181,34 +210,274 @@
                     <div class="circle blackBG" id="maincircle1"></div>
                     <div class="circle lightgrayBG" id="maincircle2"></div>
                     <div class="circle brown" id="maincircle3"></div>
-                    <p id="key1">something</p>
+                    <p id="key1">message</p>
                 </div>
                 <p class="subheading button" id="buttonQ">???</p>
                 <p class="whitetext" id="wt1">don't click => this button</p>
                 <p class="whitetext" id="wt2">seriously, don't click the button</p>
                 <p class="whitetext" id="wt3">WARNING</p>
+                <p id="under-red-circle">mess<br>age</p>
             </div>
-            <div class="line" style="position: relative; top: 12px;"></div>
-            <p style="position: relative; top: 20px;">this is an example</p>
+            <p id="line1"></p>
+            <p class="instructions" id="instr1">Hi! Welcome to the Escape "Room". This is an escape room game, except there is neither a physical nor a virtual room. Lol. Feel free to eat a brownie while you're here.<br><br>- Yours Truly</p>
+            <p class="instructions" id="instr2">Who are you? Why are you here? We can help you answer that today. If you succeed in escaping this "room", I will tell you the meaning of your life. <br><br> - God</p>
+            <p class="instructions" id="instr3">Blob. Glob. ...... Blug glub glug blub.</p>
+            <div id="rules">
+                <p>Rules:</p>
+                <ol>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li></li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>Win.</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                    <li>???</li>
+                </ol>
+            </div>
+            </p>
+            <div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
         </div>
         
-        <div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
+        
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
             var qbutton = document.getElementById("buttonQ");
-            var backQ = document.getElementById("backQ");
+            var back2 = document.getElementById("backScene2");
             
             var hasClicked = 0;
             var onQClick = function() { 
                 hasClicked++;
-                document.getElementById("rip").style.opacity = "0%";
-                document.getElementById("opaque1").style.opacity = "100%";
+                document.getElementById("scene1").style.opacity = "0%";
+                document.getElementById("scene2").style.opacity = "100%";
                 if (hasClicked === 1){
                     document.getElementById("main-head").style.width = "170px";
-                    document.getElementById("key1").style.opacity = "50%";
+                    document.getElementById("key1").style.opacity = "30%";
                     document.getElementById("key1").style.backgroundColor = "black";
                 }
                 if (hasClicked === 2) {
@@ -221,17 +490,39 @@
                 }
                 if (hasClicked === 4) {
                     document.getElementById("main-head").style.width = "0px";
+                    document.getElementById("key1").style.zIndex = "8";
                 }
             }
-            var onBQClick = function() {
-                document.getElementById("rip").style.opacity = "100%";
-                document.getElementById("opaque1").style.opacity = "0%";
+            var onback2Click = function() {
+                document.getElementById("scene1").style.opacity = "100%";
+                document.getElementById("scene2").style.opacity = "0%";
             }
 
             qbutton.addEventListener("click", onQClick); 
-            backQ.addEventListener("click", onBQClick); 
+            backScene2.addEventListener("click", onback2Click); 
 
-            //alert("Hi");
+            
+            var redCircle = document.getElementById("maincircle3");
+            var rCHC = 0;
+            var onRedCircleClick = function() {
+                rCHC++;
+                if (rCHC === 5) {
+                    redCircle.style.opacity = "95%";
+                }
+                if (rCHC === 8) {
+                    redCircle.style.opacity = "90%";
+                }
+                if (rCHC === 10) {
+                    redCircle.style.opacity = "55%";
+                }
+            }
+            redCircle.addEventListener("click", onRedCircleClick);
+
+            var initialAlert = function() {
+                alert("message");
+            }
+
+            //document.body.addEventListener("onload", initialAlert());
         </script>
     </body>
 </html>
