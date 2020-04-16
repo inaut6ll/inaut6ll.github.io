@@ -194,10 +194,37 @@
                 font-family: 'cutive mono', monospace;
                 font-size: 20px;
             }
-            #pw1{
+            #inputs{
                 position: absolute;
-                top: 900px;
-                left: 300px;
+                top: 600px;
+                left: 900px;
+                border: 2px solid black;
+                width: 300px;
+                height: 250px;
+                padding-left: 15px;
+                background-color: white;
+                z-index: 2;
+            }
+            #inputsshadow{
+                position: absolute;
+                top: 596px;
+                left: 904px;
+                border: 2px solid black;
+                width: 300px;
+                height: 250px;
+                padding-left: 15px;
+            }
+            #fn{
+                width: 60px;
+            }
+            .ln{
+                width: 25px;
+            }
+            #bday{
+                width:97px;
+            }
+            #species{
+                width: 50px;
             }
             #menubutton{
                 position: absolute;
@@ -256,6 +283,7 @@
                 left: 400px;
                 width: 500px;
             }
+
         </style>
     </head>
     <body>
@@ -289,22 +317,22 @@
             <p class="button" id="instrbutton">Instructions</p>
             <p class="button" id="setbutton">Settings</p>
             <div id="rules">
-                <p>Rules:</p>
+                <p>Info:</p>
                 <ol>
-                    <li id="r3">???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li id="r1">???</li><li id="r2">???</li><li id="r3">???</li><li id="r4">???</li><li id="r5">???</li>
+                    <li id="r6">???</li><li id="r7">???</li><li id="r8">???</li><li id="r9">???</li><li id="r10">???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>This.</li><li>???</li><li>???</li>
+                    <li>???</li><li>Won't.</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>*BEEP</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li id="r1">???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>Win.</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
@@ -344,7 +372,7 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>Win.</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
@@ -357,7 +385,7 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li id="r2">???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
@@ -370,9 +398,13 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                 </ol>
             </div>
-            <div>
-                <p id="pw1">Birthday: <input type="text" class="input"></p>
+            <div id="inputs">
+                <p >First Name: <input type="text" class="input" id="fn"></p>
+                <p >Last Name: <input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln1"></p>
+                <p >Birthday: <input type="text" class="input" id="bday"></p>
+                <p >Species: <input type="text" class="input" id="species"></p>
             </div>
+            <div id="inputsshadow"></div>
             <p class="button" id="death">INSTANT DEATH</p>
             <p id="line2"></p>
         </div>
@@ -393,10 +425,14 @@
                     document.getElementById("main-head").style.width = "170px";
                     document.getElementById("key1").style.opacity = "30%";
                     document.getElementById("key1").style.backgroundColor = "black";
+                    document.getElementById("r5").textContent = "Beware everything, actually.";
+                    document.getElementById("r5").style.textAlign = "left";
                 }
                 if (hasClicked === 2) {
                     document.getElementById("main-head").style.width = "115px";
                     document.getElementById("key1").style.opacity = "70%";
+                    document.getElementById("r3").textContent = "The previous statement was a lie.";
+                    document.getElementById("r3").style.textAlign = "left";
                 }
                 if (hasClicked === 3) {
                     document.getElementById("main-head").style.width = "65px";
@@ -407,8 +443,8 @@
                     document.getElementById("key1").style.zIndex = "8";
                 }
                 if (hasClicked === 5) {
-                    document.getElementById("r1").textContent = "Input boxes are the exact length of their respective inputs. Meaning you can easily find out how many letters are in each input.";
-                    document.getElementById("r1").style.textAlign = "left";
+                    document.getElementById("r6").textContent = "Input boxes are the exact length of their respective correct inputs. Meaning you can easily find out how many letters are in each input.";
+                    document.getElementById("r6").style.textAlign = "left";
                 }
             }
             var onback2Click = function() {
@@ -432,8 +468,8 @@
                 }
                 if (rCHC === 10) {
                     redCircle.style.opacity = "55%";
-                    document.getElementById("r2").textContent = "Replace this filler.";
-                    document.getElementById("r2").style.textAlign = "left";
+                    document.getElementById("r10").textContent = "The year is the last info#.";
+                    document.getElementById("r10").style.textAlign = "left";
                 }
             }
             redCircle.addEventListener("click", onRedCircleClick);
@@ -448,22 +484,33 @@
                 pan1.style.display = "block";
                 pan2.style.display = "none";
                 pan3.style.display = "none";
+                document.getElementById("r1").textContent = "This one is self explanatory. Thank me for making this rule #1. And if you already scrolled to the bottom of the rules..... Haha sucks for you I guess.";
+                document.getElementById("r1").style.textAlign = "left";
             }
             var onInstrClick = function() {
                 pan2.style.display = "block";
                 pan1.style.display = "none";
                 pan3.style.display = "none";
+                document.getElementById("r2").textContent = "With a few exceptions, all new info will appear near the bottom of this list.";
+                document.getElementById("r2").style.textAlign = "left";
             }
             var onSetClick = function() {
                 pan3.style.display = "block";
                 pan2.style.display = "none";
                 pan1.style.display = "none";
-                document.getElementById("r3").textContent = "This one is self explanatory. Thank me for making this rule #1. And if you already scrolled to the bottom of the rules..... Haha sucks for you I guess.";
-                document.getElementById("r3").style.textAlign = "left";
+                document.getElementById("r4").textContent = "Beware the buttons.";
+                document.getElementById("r4").style.textAlign = "left";
             }
             menu.addEventListener("click", onMenuClick);
             instr.addEventListener("click", onInstrClick);
             set.addEventListener("click", onSetClick);
+
+            var input1 = document.getElementById("inputs");
+            var onInput1Click = function() {
+                document.getElementById("r7").textContent = "To submit an input, simply type something in the box and leave it there. You can change it if you change your mind. Don't press enter and freak out when nothing happens. If all the inputs in a group are correct, something will happen without the need for any action on your part.";
+                document.getElementById("r7").style.textAlign = "left";
+            }
+            input1.addEventListener("click", onInput1Click);
 
             var deathButton = document.getElementById("death");
             var onDeathClick = function() {
@@ -476,10 +523,10 @@
 
 
             var initialAlert = function() {
-                alert("message");
+                alert("note that this aint done yet");
             }
 
-            //document.body.addEventListener("onload", initialAlert());
+            document.body.addEventListener("onload", initialAlert());
         </script>
     </body>
 </html>
