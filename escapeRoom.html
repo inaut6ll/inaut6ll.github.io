@@ -454,17 +454,32 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
-            //rules
+            //rules start
             var r1 = "This one is self explanatory. Thank me for making this #1. And if you already scrolled to the bottom..... Haha sucks for you I guess.";
-            var r8 = "All the inputs should make sense in the way that they are not just a bunch of randomly scrabbled letters.";
-            var r9 = "All the inputs do not necessarily make sense in the way that they match their labels.";
-            var r11 = "I am watching you.";
-            var r12 = "I am always watching.";
-            var r13 = "Always.";
-            var r14 = "";
-            var r15 = "";
+            //var r8 = "All the inputs should make sense in the way that they are not just a bunch of randomly scrabbled letters.";
+            //var r9 = "All the inputs do not necessarily make sense in the way that they match their labels.";
+            //var r11 = "I am watching you.";
+            //var r12 = "I am always watching.";
+            //var r13 = "Always.";
+            //var r14 = "Click the red circle.";
+            var r15 = "Confused?";
+            var r16 = "To answer your question: No. Nothing is wrong.";
+            //var r17 = "Don't trust red text.";
+            //var r18 = "Google is your friend.";
+            //var r19 = "";
+            //var r20 = "";
+            //var r21 = "";
+            //var r22 = "";
+            //var r23 = "";
+            //var r24 = "";
+            //var r25 = "";
+            //var r26 = "";
             
-            //rules
+            /* Currently unnumbered:
+                
+            */
+
+            //rules end
 
             var qbutton = document.getElementById("buttonQ");
             var back2 = document.getElementById("backScene2");
@@ -513,14 +528,16 @@
             var rCHC = 0;
             var onRedCircleClick = function() {
                 rCHC++;
-                if (rCHC === 5) {
-                    redCircle.style.opacity = "95%";
+                if (rCHC === 3) {
+                    document.getElementById("r15").innerHTML = r15;
+                    document.getElementById("r10").style.textAlign = "left";
                 }
-                if (rCHC === 8) {
-                    redCircle.style.opacity = "90%";
+                if (rCHC === 7) {
+                    document.getElementById("r16").innerHTML = r16;
+                    document.getElementById("r10").style.textAlign = "left";
                 }
-                if (rCHC === 10) {
-                    redCircle.style.opacity = "55%";
+                if (rCHC === 13) {
+                    redCircle.style.opacity = "50%";
                     document.getElementById("r10").textContent = "The year is the last info#.";
                     document.getElementById("r10").style.textAlign = "left";
                 }
