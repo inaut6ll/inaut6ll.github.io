@@ -418,6 +418,20 @@
                 left: 600px;
                 width: 80px;
             }
+            #scene2-message{
+                text-align: center;
+                top: 100px;
+            }
+            #yeah{
+                position: absolute;
+                top: 460px;
+                left: 500px;
+            }
+            #nope{
+                position: absolute;
+                top: 460px;
+                left: 700px;
+            }
         </style>
     </head>
     <body>
@@ -434,6 +448,12 @@
         <div id="scene2">
             <p id="backScene2" class="button">back</p>
             <p id="submit" class="whitetext button">Submit</p>
+            <p id="scene2-message">..........seriously? I just told you not to click the dang button. -_-
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>...well, since you're already here.... 
+                <br> wanna know a secret?
+            </p>
+            <p id="yeah" class="button">yeah</p>
+            <p id="nope" class="button">nope</p>
         </div>
         <div id="scene1">
             <div>
@@ -644,6 +664,20 @@
             qbutton.addEventListener("click", onQClick); 
             backScene2.addEventListener("click", onback2Click); 
 
+            var yeah = document.getElementById("yeah");
+            var nope = document.getElementById("nope");
+            var onYeahClick = function() {
+                yeah.style.display = "none";
+                nope.style.display = "none";
+                alert("Ha! You think I'd tell you?");
+            }
+            var onNopeClick = function() {
+                yeah.style.display = "none";
+                nope.style.display = "none";
+                alert("ok, cool.");
+            }
+            yeah.addEventListener("click", onYeahClick);
+            nope.addEventListener("click", onNopeClick);
             
             var redCircle = document.getElementById("maincircle3");
             var rCHC = 0;
