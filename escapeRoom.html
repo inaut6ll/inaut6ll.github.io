@@ -36,11 +36,13 @@
             }
             #maincircle2{
                 position:absolute; 
-                top: 50px; 
-                left: 30px; 
+                top: 70px; 
+                left: 50px; 
                 z-index: 3;
                 background-color: rgb(160, 156, 156);
                 opacity: 70%;
+                width: 80px;
+                height: 80px;
             }
             #maincircle3{
                 position:absolute; 
@@ -138,6 +140,7 @@
                 left: 170px;
                 opacity: 20%;
                 background-color: none;
+                color: rgb(188, 189, 255);
             }
             #key1:hover{
                 color: white;
@@ -177,7 +180,7 @@
                 padding: 10px;
                 text-align: center;
                 width: 900px;
-                height: 200px;
+                height: 500px;
                 overflow-y:scroll;
                 background-color: black;
                 color: white;
@@ -195,8 +198,8 @@
             }
             #inputs{
                 position: absolute;
-                top: 600px;
-                left: 900px;
+                top: 800px;
+                left: 80px;
                 border: 2px solid black;
                 width: 300px;
                 height: 250px;
@@ -206,15 +209,17 @@
             }
             #inputsshadow{
                 position: absolute;
-                top: 596px;
-                left: 904px;
+                top: 796px;
+                left: 74px;
                 border: 2px solid black;
                 width: 300px;
                 height: 250px;
                 padding-left: 15px;
+                text-align: center;
+                background-color: white;
             }
             #fn{
-                width: 60px;
+                width: 62px;
             }
             .ln{
                 width: 25px;
@@ -283,7 +288,7 @@
                 width: 500px;
             }
             #sceneDeath{
-                display: block;
+                display: none;
             }
             #messageDeath{
                 color: red;
@@ -299,21 +304,38 @@
                 left: 600px;
             }
             #textDeath1{
+                font-family: caveat, sans-serif;
                 position: absolute;
                 top: 100px;
                 left: 100px;
             }
             #textDeath2{
+                font-family: caveat, sans-serif;
                 position: absolute;
                 top: 100px;
                 left: 1000px;
                 width: 200px;
             }
             #textDeath3{
+                font-family: caveat, sans-serif;
                 position: absolute;
                 top: 0px;
                 left: 400px;
                 width: 200px;
+            }
+            #clickThisDeath{
+                position: absolute;
+                top: 1500px;
+                left: 480px;
+                font-family: caveat, sans-serif;
+                text-align: right;
+                font-size: 18px;
+            }
+            #submit{
+                position: absolute;
+                top: 250px;
+                left: 600px;
+                width: 80px;
             }
         </style>
     </head>
@@ -324,12 +346,13 @@
                 <h2>Wow, you just managed to fail at an untimed online escape room. Great job, dude.</h2>
             </div>
             <p id="backDeath" class="button whitetext">back</p>
-            <p id="textDeath1" class="whitetex">haha just kidding</p>
-            <p id="textDeath2" class="whitetex">you're actually not dead</p>
-            <p id="textDeath3" class="whitetex">lol I bet you fell for it</p>
+            <p id="textDeath1" class="whitetext">haha just kidding</p>
+            <p id="textDeath2" class="whitetext">you're not actually dead</p>
+            <p id="textDeath3" class="whitetext">lol I bet you fell for it</p>
         </div>
         <div id="scene2">
             <p id="backScene2" class="button">back</p>
+            <p id="submit" class="whitetext button">Submit</p>
         </div>
         <div id="scene1">
             <div>
@@ -342,7 +365,7 @@
                     <div class="circle" id="rulescircle"></div>
                     <div class="circle" id="rulescircle2"></div>
                     <div class="circle" id="rulescircle3"></div>
-                    <p id="key1">message</p>
+                    <p id="key1">spider</p>
                 </div>
                 <p class="subheading button" id="buttonQ">???</p>
                 <p class="whitetext" id="wt1">don't click => this button</p>
@@ -352,7 +375,7 @@
             </div>
             <p id="line1"></p>
             <p class="instructions" id="instr1">Hi! Welcome to the Escape "Room". This is an escape room game where there is neither a physical nor a virtual room. Lol. Oof. Feel free to eat a brownie while you're here.<br><br>- Yours Truly</p>
-            <p class="instructions" id="instr2">Who are you? Why are you here? We can help you answer that today. If you succeed in escaping this "room", I will tell you the meaning of your life. <br><br> - God</p>
+            <p class="instructions" id="instr2">Who the heck are you?! Get off my freaking lawn, you pest! <br><br> - God</p>
             <p class="instructions" id="instr3">Blob. Glob. ...... Blug glub glug blub.</p>
             <p class="button" id="menubutton">Menu</p>
             <p class="button" id="instrbutton">Instructions</p>
@@ -364,11 +387,11 @@
                     <li id="r6">???</li><li id="r7">???</li><li id="r8">???</li><li id="r9">???</li><li id="r10">???</li>
                     <li id="r11">???</li><li id="r12">???</li><li id="r13">???</li><li id="r14">???</li><li id="r15">???</li>
                     <li id="r16">???</li><li id="r17">???</li><li id="r18">???</li><li id="r19">???</li><li id="r20">???</li>
-                    <li>???</li><li>???</li><li>This.</li><li>???</li><li>???</li>
-                    <li>???</li><li>Won't.</li><li>???</li><li>???</li><li>???</li>
+                    <li id="r21">???</li><li id="r22">???</li><li>This.</li><li id="r24">???</li><li id="r25">???</li>
+                    <li id="r26">???</li><li>Won't.</li><li id="r28">???</li><li id="r29">???</li><li id="r30">???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>*BEEP</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
@@ -388,7 +411,7 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li></li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>*BEEP</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
@@ -441,11 +464,21 @@
             </div>
             <div id="inputs">
                 <p >First Name: <input type="text" class="input" id="fn"></p>
-                <p >Last Name: <input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln1"></p>
+                <p >Last Name: <input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln2">/<input type="text" class="input ln" id="ln3"></p>
                 <p >Birthday: <input type="text" class="input" id="bday"></p>
                 <p >Species: <input type="text" class="input" id="species"></p>
             </div>
-            <div id="inputsshadow"></div>
+            <div id="inputsshadow"><br><br><br><br><br><br> you just got TROLLED</div>
+
+            <div id="inputs2">
+                <p >First Name: <input type="text" class="input" id="fn"></p>
+                <p >Last Name: <input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln2">/<input type="text" class="input ln" id="ln3"></p>
+                <p >Birthday: <input type="text" class="input" id="bday"></p>
+                <p >Species: <input type="text" class="input" id="species"></p>
+            </div>
+            <div id="inputsshadow2"><br><br><br><br><br><br> first name of the main character of Unordinary</div>
+            
+            <p class="whitetext" id="clickThisDeath">click this => <br> I guarantee that <br> it will benefit you</p>
             <p class="button" id="death">INSTANT DEATH</p>
             <p id="line2"></p>
         </div>
@@ -458,22 +491,21 @@
             var r1 = "This one is self explanatory. Thank me for making this #1. And if you already scrolled to the bottom..... Haha sucks for you I guess.";
             //var r8 = "All the inputs should make sense in the way that they are not just a bunch of randomly scrabbled letters.";
             //var r9 = "All the inputs do not necessarily make sense in the way that they match their labels.";
-            //var r11 = "I am watching you.";
-            //var r12 = "I am always watching.";
-            //var r13 = "Always.";
+            //var r11 = "After you have filled out all the inputs in a group, click the Submit button. Yes, it's the same submit button for all of them. No, the submit button is not missing. If all the inputs in that group are correct, something will happen.";
+            //var r12 = "Be sure to scroll. I cannot be sure of the order in which you will discover these."
+            //var r13 = 
             //var r14 = "Click the red circle.";
             var r15 = "Confused?";
             var r16 = "To answer your question: No. Nothing is wrong.";
             //var r17 = "Don't trust red text.";
             //var r18 = "Google is your friend.";
-            //var r19 = "";
-            //var r20 = "";
-            //var r21 = "";
+            //var r19 = "I am watching you."; 
+            //var r20 = "I am always watching.";
+            //var r21 = "Always.";
             //var r22 = "";
-            //var r23 = "";
             //var r24 = "";
             //var r25 = "";
-            //var r26 = "";
+            var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
             
             /* Currently unnumbered:
                 
@@ -492,7 +524,7 @@
                 if (hasClicked === 1){
                     document.getElementById("main-head").style.width = "170px";
                     document.getElementById("key1").style.opacity = "30%";
-                    document.getElementById("key1").style.backgroundColor = "black";
+                    document.getElementById("key1").style.backgroundColor = "rgb(188, 189, 255)";
                     document.getElementById("r5").textContent = "Beware everything, actually.";
                     document.getElementById("r5").style.textAlign = "left";
                 }
@@ -530,11 +562,11 @@
                 rCHC++;
                 if (rCHC === 3) {
                     document.getElementById("r15").innerHTML = r15;
-                    document.getElementById("r10").style.textAlign = "left";
+                    document.getElementById("r15").style.textAlign = "left";
                 }
                 if (rCHC === 7) {
                     document.getElementById("r16").innerHTML = r16;
-                    document.getElementById("r10").style.textAlign = "left";
+                    document.getElementById("r16").style.textAlign = "left";
                 }
                 if (rCHC === 13) {
                     redCircle.style.opacity = "50%";
@@ -577,7 +609,7 @@
 
             var input1 = document.getElementById("inputs");
             var onInput1Click = function() {
-                document.getElementById("r7").textContent = "To submit an input, simply type something in the box and leave it there. You can change it if you change your mind. Don't press enter and freak out when nothing happens. If all the inputs in a group are correct, something will happen without the need for any action on your part.";
+                document.getElementById("r7").textContent = "To enter an input, simply type something in the box and leave it there. You can change it if you change your mind. Don't press Enter and freak out when nothing happens.";
                 document.getElementById("r7").style.textAlign = "left";
             }
             input1.addEventListener("click", onInput1Click);
@@ -589,6 +621,36 @@
             }
             deathButton.addEventListener("click", onDeathClick);
 
+            var backDeath = document.getElementById("backDeath");
+            var onBackDeathClick = function() {
+                document.getElementById("sceneDeath").style.display = "none";
+                document.getElementById("scene1").style.display = "block";
+            }
+            backDeath.addEventListener("click", onBackDeathClick);
+
+            var submit = document.getElementById("submit");
+            var onSubmitClick = function() {
+                var fnVal = document.getElementById("fn").value;
+                var lnVal1 = document.getElementById("ln1").value;
+                var lnVal2 = document.getElementById("ln2").value;
+                var lnVal3 = document.getElementById("ln3").value;
+                var bdayVal = document.getElementById("bday").value;
+                var speciesVal = document.getElementById("species").value;
+                if (fnVal === "Smith" && bdayVal === "werewolf" && speciesVal === "John"){
+                    if (lnVal1 == "04" && lnVal2 == "01" && lnVal3 == "81"){
+                        document.getElementById("inputsshadow").style.zIndex = "3";
+                    }
+                }
+                if (fnVal === "John"){
+                    document.getElementById("r26").innerHTML = r26;
+                    document.getElementById("r26").style.textAlign = "left";
+                }
+            }
+            submit.addEventListener("click", onSubmitClick);
+
+            var levelOneAlert = function() {
+                alert("NICE.");
+            }
 
             var initialAlert = function() {
                 alert("note that this aint done yet");
