@@ -89,7 +89,6 @@
             .whitetext{
                 opacity: 0%;
                 text-align: center;
-                padding: 3px;
             }
             .whitetext:hover{
                 opacity: 100%;
@@ -283,10 +282,52 @@
                 left: 400px;
                 width: 500px;
             }
-
+            #sceneDeath{
+                display: block;
+            }
+            #messageDeath{
+                color: red;
+                font-size: 50px;
+                text-align: center;
+                position: absolute;
+                top: 0px;
+                left: 5px;
+            }
+            #backDeath{
+                position: absolute;
+                top: 0px;
+                left: 600px;
+            }
+            #textDeath1{
+                position: absolute;
+                top: 100px;
+                left: 100px;
+            }
+            #textDeath2{
+                position: absolute;
+                top: 100px;
+                left: 1000px;
+                width: 200px;
+            }
+            #textDeath3{
+                position: absolute;
+                top: 0px;
+                left: 400px;
+                width: 200px;
+            }
         </style>
     </head>
     <body>
+        <div id="sceneDeath">
+            <div id="messageDeath">
+                <h1>YOU DIED.</h1>
+                <h2>Wow, you just managed to fail at an untimed online escape room. Great job, dude.</h2>
+            </div>
+            <p id="backDeath" class="button whitetext">back</p>
+            <p id="textDeath1" class="whitetex">haha just kidding</p>
+            <p id="textDeath2" class="whitetex">you're actually not dead</p>
+            <p id="textDeath3" class="whitetex">lol I bet you fell for it</p>
+        </div>
         <div id="scene2">
             <p id="backScene2" class="button">back</p>
         </div>
@@ -321,8 +362,8 @@
                 <ol>
                     <li id="r1">???</li><li id="r2">???</li><li id="r3">???</li><li id="r4">???</li><li id="r5">???</li>
                     <li id="r6">???</li><li id="r7">???</li><li id="r8">???</li><li id="r9">???</li><li id="r10">???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li id="r11">???</li><li id="r12">???</li><li id="r13">???</li><li id="r14">???</li><li id="r15">???</li>
+                    <li id="r16">???</li><li id="r17">???</li><li id="r18">???</li><li id="r19">???</li><li id="r20">???</li>
                     <li>???</li><li>???</li><li>This.</li><li>???</li><li>???</li>
                     <li>???</li><li>Won't.</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
@@ -413,6 +454,18 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
+            //rules
+            var r1 = "This one is self explanatory. Thank me for making this #1. And if you already scrolled to the bottom..... Haha sucks for you I guess.";
+            var r8 = "All the inputs should make sense in the way that they are not just a bunch of randomly scrabbled letters.";
+            var r9 = "All the inputs do not necessarily make sense in the way that they match their labels.";
+            var r11 = "I am watching you.";
+            var r12 = "I am always watching.";
+            var r13 = "Always.";
+            var r14 = "";
+            var r15 = "";
+            
+            //rules
+
             var qbutton = document.getElementById("buttonQ");
             var back2 = document.getElementById("backScene2");
             
@@ -484,7 +537,7 @@
                 pan1.style.display = "block";
                 pan2.style.display = "none";
                 pan3.style.display = "none";
-                document.getElementById("r1").textContent = "This one is self explanatory. Thank me for making this #1. And if you already scrolled to the bottom..... Haha sucks for you I guess.";
+                document.getElementById("r1").innerHTML = r1;
                 document.getElementById("r1").style.textAlign = "left";
             }
             var onInstrClick = function() {
@@ -514,10 +567,8 @@
 
             var deathButton = document.getElementById("death");
             var onDeathClick = function() {
-                document.body.style.textAlign = "center";
-                document.body.style.fontSize = "50px";
-                document.body.style.color = "red";
-                document.body.innerHTML = "<h1>YOU DIED.</h1><h2>Wow, you just managed to fail at an untimed online escape room. Great job, dude.</h2>";
+                document.getElementById("sceneDeath").style.display = "block";
+                document.getElementById("scene1").style.display = "none";
             }
             deathButton.addEventListener("click", onDeathClick);
 
@@ -526,7 +577,7 @@
                 alert("note that this aint done yet");
             }
 
-            document.body.addEventListener("onload", initialAlert());
+            //document.body.addEventListener("onload", initialAlert());
         </script>
     </body>
 </html>
