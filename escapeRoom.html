@@ -209,7 +209,7 @@
             }
             #inputsshadow{
                 position: absolute;
-                top: 796px;
+                top: 794px;
                 left: 74px;
                 border: 2px solid black;
                 width: 300px;
@@ -229,6 +229,34 @@
             }
             #species{
                 width: 50px;
+            }
+            #inputs2{
+                position: absolute;
+                top: 1150px;
+                left: 200px;
+                border: 2px solid black;
+                width: 400px;
+                height: 80px;
+                padding-left: 15px;
+                background-color: white;
+                z-index: 2;
+            }
+            #inputs2:hover{
+                background-color: rgb(188, 189, 255);
+            }
+            #inputsshadow2{
+                position: absolute;
+                top: 1155px;
+                left: 204px;
+                border: 2px solid black;
+                width: 400px;
+                height: 80px;
+                padding-left: 15px;
+                text-align: center;
+                background-color: white;
+            }
+            #spiders{
+                width:88px;
             }
             #menubutton{
                 position: absolute;
@@ -365,7 +393,7 @@
                     <div class="circle" id="rulescircle"></div>
                     <div class="circle" id="rulescircle2"></div>
                     <div class="circle" id="rulescircle3"></div>
-                    <p id="key1">spider</p>
+                    <p id="key1">spiders</p>
                 </div>
                 <p class="subheading button" id="buttonQ">???</p>
                 <p class="whitetext" id="wt1">don't click => this button</p>
@@ -471,12 +499,9 @@
             <div id="inputsshadow"><br><br><br><br><br><br> you just got TROLLED</div>
 
             <div id="inputs2">
-                <p >First Name: <input type="text" class="input" id="fn"></p>
-                <p >Last Name: <input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln2">/<input type="text" class="input ln" id="ln3"></p>
-                <p >Birthday: <input type="text" class="input" id="bday"></p>
-                <p >Species: <input type="text" class="input" id="species"></p>
+                <p >Your favorite color: <input type="text" class="input" id="spiders"></p>
             </div>
-            <div id="inputsshadow2"><br><br><br><br><br><br> first name of the main character of Unordinary</div>
+            <div id="inputsshadow2"><br>first name of the main character of Unordinary</div>
             
             <p class="whitetext" id="clickThisDeath">click this => <br> I guarantee that <br> it will benefit you</p>
             <p class="button" id="death">INSTANT DEATH</p>
@@ -491,14 +516,14 @@
             var r1 = "This one is self explanatory. Thank me for making this #1. And if you already scrolled to the bottom..... Haha sucks for you I guess.";
             //var r8 = "All the inputs should make sense in the way that they are not just a bunch of randomly scrabbled letters.";
             //var r9 = "All the inputs do not necessarily make sense in the way that they match their labels.";
-            //var r11 = "After you have filled out all the inputs in a group, click the Submit button. Yes, it's the same submit button for all of them. No, the submit button is not missing. If all the inputs in that group are correct, something will happen.";
+            var r11 = "After you have filled out all the inputs in a group, click the Submit button. Yes, it's the same submit button for all of them. No, the submit button is not missing. If all the inputs in that group are correct, something will happen.";
             //var r12 = "Be sure to scroll. I cannot be sure of the order in which you will discover these."
-            //var r13 = 
+            //var r13 = "Your progress is not being saved, so if you'd better write stuff down if you want to continue later.";
             //var r14 = "Click the red circle.";
             var r15 = "Confused?";
             var r16 = "To answer your question: No. Nothing is wrong.";
             //var r17 = "Don't trust red text.";
-            //var r18 = "Google is your friend.";
+            var r18 = "Google is your friend.";
             //var r19 = "I am watching you."; 
             //var r20 = "I am always watching.";
             //var r21 = "Always.";
@@ -614,6 +639,13 @@
             }
             input1.addEventListener("click", onInput1Click);
 
+            var input2 = document.getElementById("inputs2");
+            var onInput2Click = function() {
+                document.getElementById("r11").textContent = r11;
+                document.getElementById("r11").style.textAlign = "left";
+            }
+            input2.addEventListener("click", onInput2Click);
+
             var deathButton = document.getElementById("death");
             var onDeathClick = function() {
                 document.getElementById("sceneDeath").style.display = "block";
@@ -644,6 +676,13 @@
                 if (fnVal === "John"){
                     document.getElementById("r26").innerHTML = r26;
                     document.getElementById("r26").style.textAlign = "left";
+                }
+
+                var spiderVal = document.getElementById("spiders").value;
+                if (spiderVal === "spiders"){
+                    document.getElementById("inputsshadow2").style.zIndex = "3";
+                    document.getElementById("r18").innerHTML = r18;
+                    document.getElementById("r18").style.textAlign = "left";
                 }
             }
             submit.addEventListener("click", onSubmitClick);
