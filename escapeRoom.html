@@ -258,6 +258,59 @@
             #spiders{
                 width:88px;
             }
+            #inputs3{
+                position: absolute;
+                top: 900px;
+                left: 580px;
+                border: 2px solid black;
+                width: 520px;
+                height: 120px;
+                padding-left: 15px;
+                background-color: white;
+                z-index: 2;
+            }
+            #inputsshadow3{
+                position: absolute;
+                top: 894px;
+                left: 574px;
+                border: 2px solid black;
+                width: 520px;
+                height: 120px;
+                padding-left: 15px;
+                text-align: center;
+                background-color: white;
+            }
+            #limit{
+                width: 50px;
+            }
+            #inputs4{
+                position: absolute;
+                top: 1400px;
+                left: 50px;
+                border: 2px solid black;
+                width: 150px;
+                height: 150px;
+                padding-left: 15px;
+                background-color: white;
+                z-index: 2;
+            }
+            #inputsshadow4{
+                position: absolute;
+                top: 1394px;
+                left: 55px;
+                border: 2px solid black;
+                width: 150px;
+                height: 150px;
+                padding-left: 15px;
+                text-align: center;
+                background-color: white;
+            }
+            #mess{
+                width: 50px;
+            }
+            #age{
+                width: 37px;
+            }
             #menubutton{
                 position: absolute;
                 top: 70px;
@@ -399,7 +452,7 @@
                 <p class="whitetext" id="wt1">don't click => this button</p>
                 <p class="whitetext" id="wt2">seriously, don't click the button</p>
                 <p class="whitetext" id="wt3">WARNING</p>
-                <p id="under-red-circle">mess<br>age</p>
+                <p id="under-red-circle">Mess<br>age</p>
             </div>
             <p id="line1"></p>
             <p class="instructions" id="instr1">Hi! Welcome to the Escape "Room". This is an escape room game where there is neither a physical nor a virtual room. Lol. Oof. Feel free to eat a brownie while you're here.<br><br>- Yours Truly</p>
@@ -503,6 +556,17 @@
             </div>
             <div id="inputsshadow2"><br>first name of the main character of Unordinary</div>
             
+            <div id="inputs3">
+                <p >The limit of<br> (56x^2 + 0.35x + 603/7)/(2.56^x - 3029534)<br> as x approaches infinity: <input type="text" class="input" id="limit"></p>
+            </div>
+            <div id="inputsshadow3"><br>click the black circle</div>
+            
+            <div id="inputs4">
+                <p ><input type="text" class="input" id="mess">iah</p>
+                <p ><input type="text" class="input" id="age">nda</p>
+            </div>
+            <div id="inputsshadow4"><br>April Fools!</div>
+            
             <p class="whitetext" id="clickThisDeath">click this => <br> I guarantee that <br> it will benefit you</p>
             <p class="button" id="death">INSTANT DEATH</p>
             <p id="line2"></p>
@@ -514,20 +578,20 @@
         <script>
             //rules start
             var r1 = "This one is self explanatory. Thank me for making this #1. And if you already scrolled to the bottom..... Haha sucks for you I guess.";
-            //var r8 = "All the inputs should make sense in the way that they are not just a bunch of randomly scrabbled letters.";
-            //var r9 = "All the inputs do not necessarily make sense in the way that they match their labels.";
+            var r8 = "All the inputs should make sense in the way that they are not just a bunch of randomly scrabbled letters.";
+            var r9 = "All the inputs do not necessarily make sense in the way that they match their labels.";
             var r11 = "After you have filled out all the inputs in a group, click the Submit button. Yes, it's the same submit button for all of them. No, the submit button is not missing. If all the inputs in that group are correct, something will happen.";
-            //var r12 = "Be sure to scroll. I cannot be sure of the order in which you will discover these."
-            //var r13 = "Your progress is not being saved, so if you'd better write stuff down if you want to continue later.";
-            //var r14 = "Click the red circle.";
+            var r12 = "Be sure to scroll. I cannot be sure of the order in which you will discover these."
+            var r13 = "Your progress is not being saved, so you'd better write stuff down if you want to continue later.";
+            var r14 = "Click the red circle.";
             var r15 = "Confused?";
-            var r16 = "To answer your question: No. Nothing is wrong.";
-            //var r17 = "Don't trust red text.";
+            var r16 = "To answer your question: No, nothing is wrong. Trust me.";
+            var r17 = "Don't trust red text.";
             var r18 = "Google is your friend.";
-            //var r19 = "I am watching you."; 
-            //var r20 = "I am always watching.";
+            var r19 = "I am watching you."; 
+            var r20 = "I am always watching.";
             //var r21 = "Always.";
-            //var r22 = "";
+            //var r22 = "Inputs are case sensitive.";
             //var r24 = "";
             //var r25 = "";
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
@@ -601,6 +665,13 @@
             }
             redCircle.addEventListener("click", onRedCircleClick);
 
+            var blackCircle = document.getElementById("maincircle1");
+            var onBlackCircleClick = function() {
+                document.getElementById("r14").textContent = r14;
+                document.getElementById("r14").style.textAlign = "left";
+            }
+            blackCircle.addEventListener("click", onBlackCircleClick);
+
             var menu = document.getElementById("menubutton");
             var instr = document.getElementById("instrbutton");
             var set = document.getElementById("setbutton");
@@ -646,10 +717,34 @@
             }
             input2.addEventListener("click", onInput2Click);
 
+            var input3 = document.getElementById("inputs3");
+            var onInput3Click = function() {
+                document.getElementById("r12").textContent = r12;
+                document.getElementById("r12").style.textAlign = "left";
+            }
+            input3.addEventListener("click", onInput3Click);
+
+            var input4 = document.getElementById("inputs4");
+            var onInput4Click = function() {
+                document.getElementById("r13").textContent = r13;
+                document.getElementById("r13").style.textAlign = "left";
+            }
+            input4.addEventListener("click", onInput4Click);
+
+            var deathCount = 0;
             var deathButton = document.getElementById("death");
             var onDeathClick = function() {
+                deathCount++;
                 document.getElementById("sceneDeath").style.display = "block";
                 document.getElementById("scene1").style.display = "none";
+                document.getElementById("r17").textContent = r17;
+                document.getElementById("r17").style.textAlign = "left";
+                document.getElementById("r8").textContent = r8;
+                document.getElementById("r8").style.textAlign = "left";
+                if (deathCount === 3){
+                    document.getElementById("r9").textContent = r9;
+                    document.getElementById("r9").style.textAlign = "left";
+                }
             }
             deathButton.addEventListener("click", onDeathClick);
 
@@ -683,6 +778,21 @@
                     document.getElementById("inputsshadow2").style.zIndex = "3";
                     document.getElementById("r18").innerHTML = r18;
                     document.getElementById("r18").style.textAlign = "left";
+                }
+
+                var limitVal = document.getElementById("limit").value;
+                if (limitVal === "zero"){
+                    document.getElementById("inputsshadow3").style.zIndex = "3";
+                    document.getElementById("r19").innerHTML = r19;
+                    document.getElementById("r19").style.textAlign = "left";
+                }
+
+                var messVal = document.getElementById("mess").value;
+                var ageVal = document.getElementById("age").value;
+                if (messVal === "Mess" && ageVal === "age"){
+                    alert("April Fools!");
+                    document.getElementById("r20").innerHTML = r20;
+                    document.getElementById("r20").style.textAlign = "left";
                 }
             }
             submit.addEventListener("click", onSubmitClick);
