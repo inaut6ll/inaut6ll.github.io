@@ -346,6 +346,30 @@
                 padding-left: 15px;
                 text-align: center;
                 background-color: white;
+                color: rgb(230, 139, 139);
+                line-height: 30px;
+            }
+            #sasageyo{
+                border: 2px solid rgb(230, 139, 139);
+                position: absolute;
+                top: 80px;
+                left: 600px;
+                width: 100px;
+                height: 30px;
+                z-index: 2;
+                background-color: rgb(230, 139, 139);
+            }
+            #inputsshadow6{
+                position: absolute;
+                top: 130px;
+                left: 500px;
+                border: 2px solid black;
+                width: 300px;
+                height: 100px;
+                padding-left: 15px;
+                text-align: center;
+                background-color: white;
+                display: none;
             }
             #word{
                 width: 50px;
@@ -518,6 +542,9 @@
                 left: 620px;
                 display: none;
             }
+            .brownhighlight{
+                background-color: rgb(230, 139, 139);
+            }
         </style>
     </head>
     <body>
@@ -540,8 +567,11 @@
             </p>
             <p id="yeah" class="button">yeah</p>
             <p id="nope" class="button">nope</p>
+            <p><input type="text" class="input whitetext" id="sasageyo"></p>
+            <div id="inputsshadow6">Agent _____<br>Granny _____<br>John _____<br>Black_____</div>
         </div>
         <div id="scene1">
+            
             <div>
                 <div>
                     <p id = "main-head" class="heading">Escape "Room"</p>
@@ -680,7 +710,7 @@
             <div id="inputs5">
                 <p >pass <input type="text" class="input" id="word"><input type="text" class="input" id="pass">word</p>
             </div>
-            <div id="inputsshadow5"><br>________, ________, <br> SHINZOU WO ________</div>
+            <div id="inputsshadow5"><br><span class="brownhighlight">________</span>, <span class="brownhighlight">________</span>, <br> SHINZOU WO <span class="brownhighlight">________</span></div>
 
             <div class="numLabel">
                 <p id="label2">2</p>
@@ -715,14 +745,17 @@
             var r19 = "I am watching you."; 
             var r20 = "I am always watching.";
             var r21 = "Always.";
-            //var r22 = "Inputs are case sensitive.";
+            var r22 = "Inputs are case sensitive.";
             var r24 = "Oh, also, there's a lot of invisible stuff. If you got this far you probably already know but I forgot to mention this earlier, lol rip.";
-            //var r25 = "";
+            var r25 = "There's a squash sitting on the floor. It's been there for almost 3 years... I wonder if it has rotten. Perhaps it is a magic squash?";
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
-            
-            /* Currently unnumbered:
-                
-            */
+            //var r28 =
+            //var r29 =
+            //var r30 =
+            //var r31 =
+            //var r32 =
+            //var r33 =
+            //var r34 =
 
             //rules end
 
@@ -807,7 +840,7 @@
 
             var blackCircle = document.getElementById("maincircle1");
             var onBlackCircleClick = function() {
-                document.getElementById("r14").textContent = r14;
+                document.getElementById("r14").innerHTML = r14;
                 document.getElementById("r14").style.textAlign = "left";
             }
             blackCircle.addEventListener("dblclick", onBlackCircleClick);
@@ -885,6 +918,13 @@
             }
             input5.addEventListener("click", onInput5Click);
 
+            var input6 = document.getElementById("sasageyo");
+            var onInput6Click = function() {
+                document.getElementById("r22").innerHTML = r22;
+                document.getElementById("r22").style.textAlign = "left";
+            }
+            input6.addEventListener("click", onInput6Click);
+
             var deathCount = 0;
             var deathButton = document.getElementById("death");
             var onDeathClick = function() {
@@ -954,8 +994,18 @@
                 var passVal = document.getElementById("pass").value;
                 if (wordVal === "word" && passVal === "pass"){
                     document.getElementById("inputsshadow5").style.zIndex = "3";
+                    document.getElementById("r25").innerHTML = r25;
+                    document.getElementById("r25").style.textAlign = "left";
+                    document.getElementById("r18").innerHTML = r18;
+                    document.getElementById("r18").style.textAlign = "left";
+                }
+
+                var sasaVal = document.getElementById("sasageyo").value;
+                if (sasaVal === "SASAGEYO"){
+                    document.getElementById("inputsshadow6").style.display = "block";
                     document.getElementById("r21").innerHTML = r21;
                     document.getElementById("r21").style.textAlign = "left";
+                    alert("CAPS Menu: Click. On. The. Red.");
                 }
             }
             submit.addEventListener("click", onSubmitClick);
