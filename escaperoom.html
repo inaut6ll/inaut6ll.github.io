@@ -162,6 +162,7 @@
                 background-color: black;
                 padding: 5px;
                 display: none;
+                z-index: 3;
             }
             .instructions2{
                 position: absolute;
@@ -346,18 +347,18 @@
                 padding-left: 15px;
                 text-align: center;
                 background-color: white;
-                color: rgb(230, 139, 139);
+                color: rgb(131, 0, 0);
                 line-height: 30px;
             }
             #sasageyo{
-                border: 2px solid rgb(230, 139, 139);
+                border: 2px solid rgb(131, 0, 0);
                 position: absolute;
                 top: 80px;
                 left: 600px;
                 width: 100px;
                 height: 30px;
                 z-index: 2;
-                background-color: rgb(230, 139, 139);
+                background-color: rgb(131, 0, 0);
             }
             #inputsshadow6{
                 position: absolute;
@@ -533,6 +534,12 @@
                 left: 1190px;
                 z-index: 3;
             }
+            #label7{
+                position: absolute;
+                top: 192px;
+                left: 800px;
+                z-index: 3;
+            }
             #limitWT{
                 font-family: caveat, sans-serif;
                 position: absolute;
@@ -549,13 +556,33 @@
                 display: none;
             }
             .brownhighlight{
-                background-color: rgb(230, 139, 139);
+                background-color: rgb(131, 0, 0);
             }
             #nextToPW{
                 position: absolute;
                 top: 1400px;
                 left: 900px;
                 font-family: caveat, sans-serif;
+            }
+            #down{
+                position: absolute;
+                top: 500px;
+                left: 600px;
+                display: none;
+            }
+            #sayDown{
+                position: absolute;
+                top: 450px;
+                left: 600px;
+                font-family: caveat, sans-serif;
+                display: none;
+            }
+            #nightmode{
+                position: absolute;
+                top: 80px;
+                left: 600px;
+                width: 100px;
+                display: none;
             }
         </style>
     </head>
@@ -581,9 +608,11 @@
             <p id="nope" class="button">nope</p>
             <p><input type="text" class="input whitetext" id="sasageyo"></p>
             <div id="inputsshadow6">Agent _____<br>Granny _____<br>John _____<br>Black_____</div>
+            <p class="numLabel" id="label7">3</p>
+            <div class="button whitetext" id="down">down</div>
+            <p id="sayDown">down</p>
         </div>
         <div id="scene1">
-            
             <div>
                 <div>
                     <p id = "main-head" class="heading">Escape "Room"</p>
@@ -609,8 +638,9 @@
             <p class="button" id="menubutton">Menu</p>
             <p class="button" id="instrbutton">Instructions</p>
             <p class="button" id="setbutton">Settings</p>
+            <p class="button" id="nightmode">Night Mode</p>
 
-            <p class="instructions2" id="instr4"><br>Password: Would our random doctor please assist some sailors?<br><br><br></p>
+            <p class="instructions2" id="instr4"><br>Password: would our random doctor  please assist some sailors?<br><br><br></p>
             <div id="rules">
                 <p>Info:</p>
                 <ol>
@@ -702,7 +732,7 @@
                 <p >Birthday: <input type="text" class="input" id="bday"></p>
                 <p >Species: <input type="text" class="input" id="species"></p>
             </div>
-            <div id="inputsshadow"><br><br><br><br> zpvkvtuhpuuspmmfe <br><br>hint: caesar shift 1</div>
+            <div id="inputsshadow"><br><br><br><br> zpvkvtuhpuuspmmfe <br><br>hint: caesar shift 1 <br><br><br><br>re: 28</div>
 
             <div id="inputs2">
                 <p >Your favorite color: <input type="text" class="input" id="spiders"></p>
@@ -725,7 +755,7 @@
             <div id="inputs5">
                 <p >pass <input type="text" class="input" id="word"><input type="text" class="input" id="pass">word</p>
             </div>
-            <div id="inputsshadow5"><br><span class="brownhighlight">________</span>, <span class="brownhighlight">________</span>, <br> SHINZOU WO <span class="brownhighlight">________</span></div>
+            <div id="inputsshadow5"><span class="brownhighlight">________</span>, <span class="brownhighlight">________</span>, <br> SHINZOU WO <span class="brownhighlight">________</span></div>
 
             <div class="numLabel">
                 <p id="label2">2</p>
@@ -733,6 +763,7 @@
                 <p id="label4">3</p>
                 <p id="label5">4</p>
                 <p id="label6">4</p>
+                
             </div>
 
             <div id="up" class="button">Up</div>
@@ -765,8 +796,8 @@
             var r24 = "Oh, also, there's a lot of invisible stuff. If you got this far you probably already know but I forgot to mention this earlier, lol rip.";
             var r25 = "There's a squash sitting on the floor. It's been there for almost 3 years... I wonder if it has rotten. Perhaps it is a magic squash?";
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
-            //var r28 =
-            //var r29 =
+            var r28 = "I wonder what's hiding behind the menu... ";
+            var r29 = "Lol, there's nothing there...........................yet.";
             //var r30 =
             //var r31 =
             //var r32 =
@@ -789,6 +820,8 @@
                     document.getElementById("key1").style.backgroundColor = "rgb(188, 189, 255)";
                     document.getElementById("r5").textContent = "Beware everything, actually.";
                     document.getElementById("r5").style.textAlign = "left";
+                    document.getElementById("r28").textContent = r28;
+                    document.getElementById("r28").style.textAlign = "left";
                 }
                 if (hasClicked === 2) {
                     document.getElementById("main-head").style.width = "115px";
@@ -817,10 +850,29 @@
                 document.getElementById("scene2-message").style.display = "none";
                 document.getElementById("yeah").style.display = "none";
                 document.getElementById("nope").style.display = "none";
+                document.getElementById("down").style.display = "block";
+                document.getElementById("sayDown").style.display = "block";
             }
 
             qbutton.addEventListener("click", onQClick); 
             backScene2.addEventListener("click", onback2Click); 
+
+            var night = document.getElementById("nightmode");
+            var onNightClick = function() {
+                document.body.style.backgroundColor = "black";
+            }
+            night.addEventListener("click", onNightClick);
+
+            var down = document.getElementById("down");
+            var onDownClick = function() {
+                document.getElementById("instr1").style.display = "none";
+                document.getElementById("instr2").style.display = "none";
+                document.getElementById("instr3").style.display = "none";
+                document.getElementById("instr4").style.display = "none";
+                document.getElementById("r29").innerHTML = r29;
+                document.getElementById("r29").style.textAlign = "left";
+            }
+            down.addEventListener("click", onDownClick); 
 
             var yeah = document.getElementById("yeah");
             var nope = document.getElementById("nope");
@@ -979,6 +1031,7 @@
                 if (fnVal === "Smith" && bdayVal === "werewolf" && speciesVal === "John"){
                     if (lnVal1 == "04" && lnVal2 == "01" && lnVal3 == "81"){
                         document.getElementById("inputsshadow").style.zIndex = "3";
+                        document.getElementById("nightmode").style.display = "block";
                     }
                 }
                 if (fnVal === "John"){
