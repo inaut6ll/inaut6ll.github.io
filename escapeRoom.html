@@ -163,6 +163,19 @@
                 padding: 5px;
                 display: none;
             }
+            .instructions2{
+                position: absolute;
+                top: 1400px;
+                left: 425px;
+                border: 1px double black;
+                width: 450px;
+                height: 170px;
+                color: white;
+                background-color: black;
+                padding: 10px;
+                z-index: 3;
+                display: none;
+            }
             #line1{
                 border: 1px solid black;
                 position: absolute;
@@ -234,7 +247,7 @@
             #inputs2{
                 position: absolute;
                 top: 1150px;
-                left: 200px;
+                left: 40px;
                 border: 2px solid black;
                 width: 400px;
                 height: 80px;
@@ -248,7 +261,7 @@
             #inputsshadow2{
                 position: absolute;
                 top: 1155px;
-                left: 204px;
+                left: 45px;
                 border: 2px solid black;
                 width: 400px;
                 height: 80px;
@@ -311,6 +324,34 @@
             }
             #age{
                 width: 37px;
+            }
+            #inputs5{
+                position: absolute;
+                top: 1450px;
+                left: 900px;
+                border: 2px solid black;
+                width: 300px;
+                height: 100px;
+                padding-left: 15px;
+                background-color: white;
+                z-index: 2;
+            }
+            #inputsshadow5{
+                position: absolute;
+                top: 1454px;
+                left: 905px;
+                border: 2px solid black;
+                width: 300px;
+                height: 100px;
+                padding-left: 15px;
+                text-align: center;
+                background-color: white;
+            }
+            #word{
+                width: 50px;
+            }
+            #pass{
+                width: 50px;
             }
             #menubutton{
                 position: absolute;
@@ -447,7 +488,7 @@
             #label3{
                 position: absolute;
                 top: 1180px;
-                left: 595px;
+                left: 440px;
                 z-index: 3;
             }
             #label4{
@@ -470,6 +511,12 @@
             }
             .whitecolor{
                 color: white;
+            }
+            #up{
+                position: absolute;
+                top: 1450px;
+                left: 620px;
+                display: none;
             }
         </style>
     </head>
@@ -520,6 +567,8 @@
             <p class="button" id="menubutton">Menu</p>
             <p class="button" id="instrbutton">Instructions</p>
             <p class="button" id="setbutton">Settings</p>
+
+            <p class="instructions2" id="instr4"><br>Password: Would our random doctor please assist some sailors?<br><br><br></p>
             <div id="rules">
                 <p>Info:</p>
                 <ol>
@@ -628,12 +677,19 @@
             </div>
             <div id="inputsshadow4"><br>April Fools!</div>
             
+            <div id="inputs5">
+                <p >pass <input type="text" class="input" id="word"><input type="text" class="input" id="pass">word</p>
+            </div>
+            <div id="inputsshadow5"><br>________, ________, <br> SHINZOU WO ________</div>
+
             <div class="numLabel">
                 <p id="label2">2</p>
                 <p id="label3">3</p>
                 <p id="label4">3</p>
                 <p id="label5">4</p>
             </div>
+
+            <div id="up" class="button">Up</div>
 
             <p class="whitetext" id="clickThisDeath">click this => <br> I guarantee that <br> it will benefit you</p>
             <p class="button" id="death">INSTANT DEATH</p>
@@ -658,9 +714,9 @@
             var r18 = "Google is your friend.";
             var r19 = "I am watching you."; 
             var r20 = "I am always watching.";
-            //var r21 = "Always.";
+            var r21 = "Always.";
             //var r22 = "Inputs are case sensitive.";
-            //var r24 = "Oh, also, there's a lot of invisible stuff. If you got this far you probably already know but I forgot to mention this earlier, lol rip.";
+            var r24 = "Oh, also, there's a lot of invisible stuff. If you got this far you probably already know but I forgot to mention this earlier, lol rip.";
             //var r25 = "";
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
             
@@ -787,6 +843,13 @@
             instr.addEventListener("click", onInstrClick);
             set.addEventListener("click", onSetClick);
 
+            var up = document.getElementById("up");
+            var pan4 = document.getElementById("instr4");
+            var onUpClick = function() {
+                pan4.style.display = "block";
+            }
+            up.addEventListener("click", onUpClick);
+
             var input1 = document.getElementById("inputs");
             var onInput1Click = function() {
                 document.getElementById("r7").textContent = "To enter an input, simply type something in the box and leave it there. You can change it if you change your mind. Don't press Enter and freak out when nothing happens.";
@@ -810,10 +873,17 @@
 
             var input4 = document.getElementById("inputs4");
             var onInput4Click = function() {
-                document.getElementById("r13").textContent = r13;
+                document.getElementById("r13").innerHTML = r13;
                 document.getElementById("r13").style.textAlign = "left";
             }
             input4.addEventListener("click", onInput4Click);
+
+            var input5 = document.getElementById("inputs5");
+            var onInput5Click = function() {
+                document.getElementById("r24").innerHTML = r24;
+                document.getElementById("r24").style.textAlign = "left";
+            }
+            input5.addEventListener("click", onInput5Click);
 
             var deathCount = 0;
             var deathButton = document.getElementById("death");
@@ -875,8 +945,17 @@
                 var ageVal = document.getElementById("age").value;
                 if (messVal === "Mess" && ageVal === "age"){
                     alert("April Fools!");
+                    document.getElementById("up").style.display = "block";
                     document.getElementById("r20").innerHTML = r20;
                     document.getElementById("r20").style.textAlign = "left";
+                }
+
+                var wordVal = document.getElementById("word").value;
+                var passVal = document.getElementById("pass").value;
+                if (wordVal === "word" && passVal === "pass"){
+                    document.getElementById("inputsshadow5").style.zIndex = "3";
+                    document.getElementById("r21").innerHTML = r21;
+                    document.getElementById("r21").style.textAlign = "left";
                 }
             }
             submit.addEventListener("click", onSubmitClick);
