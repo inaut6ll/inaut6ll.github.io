@@ -527,6 +527,12 @@
                 left: 1095px;
                 z-index: 3;
             }
+            #label6{
+                position: absolute;
+                top: 1500px;
+                left: 1190px;
+                z-index: 3;
+            }
             #limitWT{
                 font-family: caveat, sans-serif;
                 position: absolute;
@@ -544,6 +550,12 @@
             }
             .brownhighlight{
                 background-color: rgb(230, 139, 139);
+            }
+            #nextToPW{
+                position: absolute;
+                top: 1400px;
+                left: 900px;
+                font-family: caveat, sans-serif;
             }
         </style>
     </head>
@@ -681,6 +693,9 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                 </ol>
             </div>
+
+            <p class="whitetext" id="nextToPW">I think I've seen that color before...</p>
+
             <div id="inputs">
                 <p >First Name: <input type="text" class="input" id="fn"></p>
                 <p >Last Name: <input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln2">/<input type="text" class="input ln" id="ln3"></p>
@@ -717,6 +732,7 @@
                 <p id="label3">3</p>
                 <p id="label4">3</p>
                 <p id="label5">4</p>
+                <p id="label6">4</p>
             </div>
 
             <div id="up" class="button">Up</div>
@@ -798,6 +814,9 @@
             var onback2Click = function() {
                 document.getElementById("scene1").style.display = "block";
                 document.getElementById("scene2").style.display = "none";
+                document.getElementById("scene2-message").style.display = "none";
+                document.getElementById("yeah").style.display = "none";
+                document.getElementById("nope").style.display = "none";
             }
 
             qbutton.addEventListener("click", onQClick); 
