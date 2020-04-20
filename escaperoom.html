@@ -591,6 +591,13 @@
                 display: none;
                 z-index: 2;
             }
+            #lightmode{
+                position: absolute;
+                top: 450px;
+                left: 1100px;
+                width: 100px;
+                z-index: 2;
+            }
             #left1{
                 position: absolute;
                 top: 250px;
@@ -653,7 +660,9 @@
             #xspace{
                 position: absolute;
                 top: 400px;
-                left: 1000px;
+                left: 1003px;
+                width: 400px;
+
             }
             .whitecolor2{
                 font-family: 'permanent marker', sans-serif;
@@ -741,6 +750,12 @@
                 width: 15px;
                 height: 15px;
             }
+            #r381{
+                text-align: left;
+            }
+            #tp{
+                width: 148px;
+            }
         </style>
     </head>
     <body> 
@@ -758,7 +773,7 @@
 
             <div class="whitecolor">
                 <p id="idiot">ha, you idiot!</p>
-                <p id="xspace">x = space</p>
+                <p id="xspace">x = letter space<br>xx = word space</p>
             </div>
 
             <div class="whitecolor2">
@@ -774,9 +789,11 @@
             <p id="textDeath2" class="whitetext">you're not actually dead</p>
             <p id="textDeath3" class="whitetext">lol I bet you fell for it</p>
         </div>
+
         <div id="scene2">
             <p id="backScene2" class="button">back</p>
             <p id="submit" class="whitetext button">Submit</p>
+            <p id="lightmode" class="button whitetext">Light Mode</p>
             <p id="scene2-message">..........seriously? I just told you not to click the dang button. -_-
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>...well, since you're already here.... 
                 <br> wanna know a secret?
@@ -846,8 +863,8 @@
                     <li id="r16">???</li><li id="r17">???</li><li id="r18">???</li><li id="r19">???</li><li id="r20">???</li>
                     <li id="r21">???</li><li id="r22">???</li><li>Click.</li><li id="r24">???</li><li id="r25">???</li>
                     <li id="r26">???</li><li>The.</li><li id="r28">???</li><li id="r29">???</li><li id="r30">???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li id="r31">???</li><li id="r32">???</li><li id="r33">???</li><li id="r34">???</li><li id="r35">???</li>
+                    <li id="r36">???</li><li id="r37">???</li><li id="r38">???</li><li id="r39">???</li><li id="r40">???</li>
                     <li>???</li><li>???</li><li>On.</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
@@ -916,7 +933,7 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
+                    <li>???</li><li>???</li><li>???</li><li>???</li><li id="r381">A life without <input type="text" class="input" id="tp"> is not worth living.</li>
                 </ol>
             </div>
 
@@ -994,7 +1011,7 @@
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
             var r28 = "I wonder what's hiding behind the menu... ";
             var r29 = "Lol, there's nothing there...........................yet.";
-            //var r30 =
+            var r30 = "381 is 3053891126866912522653706897556949434 -morse code";
             //var r31 =
             //var r32 =
             //var r33 =
@@ -1029,11 +1046,13 @@
                     document.getElementById("main-head").style.width = "65px";
                     document.getElementById("key1").style.opacity = "100%";
                     document.getElementById("submit").className = "button";
+                    document.getElementById("lightmode").className = "button";
                 }
                 if (hasClicked === 4) {
                     document.getElementById("main-head").style.width = "0px";
                     document.getElementById("key1").style.zIndex = "8";
                     document.getElementById("submit").className = "button whitetext";
+                    document.getElementById("lightmode").className = "button whitetext";
                 }
                 if (hasClicked === 5) {
                     document.getElementById("r6").textContent = "Input boxes are the exact length of their respective correct inputs. Meaning you can easily find out how many letters are in each input.";
@@ -1058,6 +1077,14 @@
                 document.body.style.backgroundColor = "black";
             }
             night.addEventListener("click", onNightClick);
+
+            var light = document.getElementById("lightmode");
+            var onLightClick = function() {
+                document.body.style.backgroundColor = "white";
+                document.getElementById("r30").innerHTML = r30;
+                document.getElementById("r30").style.textAlign = "left";
+            }
+            light.addEventListener("click", onLightClick);
 
             var escape1 = document.getElementById("escape1");
             var onEscape1Click = function() {
