@@ -382,18 +382,21 @@
                 position: absolute;
                 top: 70px;
                 left: 1000px;
+                z-index: 3;
             }
             #instrbutton{
                 position: absolute;
                 top: 130px;
                 left: 1000px;
                 width: 150px;
+                z-index: 3;
             }
             #setbutton{
                 position: absolute;
                 top: 190px;
                 left: 1000px;
                 width: 100px;
+                z-index: 3;
             }
             #rulescircle{
                 position: absolute;
@@ -586,6 +589,7 @@
                 left: 600px;
                 width: 100px;
                 display: none;
+                z-index: 2;
             }
             #left1{
                 position: absolute;
@@ -605,6 +609,9 @@
                 top: 950px;
                 left: 400px;
                 transform: rotate(20deg);
+            }
+            #mor{
+                word-spacing: 4px;
             }
             #sasa{
                 position: absolute;
@@ -659,6 +666,8 @@
                 transform: rotate(10deg);
                 top: 100px;
                 left: 900px;
+                width: 400px;
+                text-align: center;
             }
             #dance{
                 position: absolute;
@@ -666,9 +675,85 @@
                 top: 50px;
                 left: 1000px;
             }
+            #escape1{
+                position: fixed;
+                top: 200px;
+                left: 600px;
+                border-color:rgb(235, 222, 222);
+                width: 180px;
+                padding: 10px;
+                font-size: 15px;
+                z-index: 20;
+                display: none;
+            }
+            #scene3{
+                background-color: rgb(141, 236, 248);
+                font-size: 500px;
+                display: none;
+            }
+            #scene3::-webkit-scrollbar {
+                display: none;
+            }
+            #stm1{
+                margin: 0px;
+                position: absolute;
+                top: 0px;
+                left: 50px;
+                width: 5000px;
+            }
+            #stm2{
+                position: absolute;
+                top: 0px;
+                left: 10000px;
+                width: 5000px;
+                margin: 0px;
+            }
+            #stm3{
+                margin: 0px;
+                position: absolute;
+                top: 0px;
+                left: 30000px;
+                width: 10000px;
+            }
+            #stm4{
+                margin: 0px;
+                position: absolute;
+                top: 0px;
+                left: 60000px;
+                width: 10000px;
+            }
+            #stm5{
+                margin: 0px;
+                position: absolute;
+                width: 5000px;
+                top: 0px;
+                left: 100000px;
+                font-size: 250px;
+            }
+            #back3{
+                position: absolute;
+                left: 100813px;
+                top: 444px;
+                border-radius: 50%;
+                font-size: 8px;
+                font-weight: bold;
+                text-align: center;
+                width: 15px;
+                height: 15px;
+            }
         </style>
     </head>
     <body> 
+        <div class="button" id="escape1">Press me to escape!<br> (Only active for 2 seconds)</div>
+        <div id="scene3">
+            <p id="stm1">GOTTA SCROLLLLLL</p>
+            <p id="stm2">...KEEP GOING...</p>
+            <p id="stm3">...ALMOST THERE...</p>
+            <p id="stm4">...JUST A LITTLE MORE...</p>
+            <p id="stm5">PSYCH<br> GOTEM.</p>
+            <p class="button" id="back3">back</p>
+        </div>
+
         <div id="sceneDeath">
 
             <div class="whitecolor">
@@ -677,7 +762,7 @@
             </div>
 
             <div class="whitecolor2">
-                <p id="love">Tell him "I love you."</p>
+                <p id="love">Tell him<br> "I love you."</p>
             </div>
 
             <div id="messageDeath">
@@ -743,7 +828,7 @@
 
             <div class="whitecolor">
                 <p id="left1">sksksk<br>sksksk<br>sksksk</p>
-                <p id="morbit">0 1 2 3 4 5 6 7 8 9<br>x&nbsp. x _ &nbsp. _ .&nbsp . _ x</p>
+                <p id="morbit">0 1 2 3 4 5 6 7 8 9<br><span id="mor">x . x _ . _ . . _ x</span></p>
                 <p id="sasa">SASAGEYOOOO</p>
                 <p id="yee">yee</p>
                 <p id="dude">dude its just zero</p>
@@ -974,6 +1059,22 @@
             }
             night.addEventListener("click", onNightClick);
 
+            var escape1 = document.getElementById("escape1");
+            var onEscape1Click = function() {
+                document.getElementById("scene1").style.display = "none";
+                document.getElementById("escape1").style.display = "none";
+                document.getElementById("scene3").style.display = "block";
+            }
+            escape1.addEventListener("click", onEscape1Click);
+
+            var back3 = document.getElementById("back3");
+            var onBack3Click = function() {
+                document.getElementById("scene1").style.display = "block";
+                document.getElementById("scene3").style.display = "none";
+            }
+            back3.addEventListener("click", onBack3Click);
+
+
             var down = document.getElementById("down");
             var onDownClick = function() {
                 document.getElementById("instr1").style.display = "none";
@@ -1143,6 +1244,7 @@
                     if (lnVal1 == "04" && lnVal2 == "01" && lnVal3 == "81"){
                         document.getElementById("inputsshadow").style.zIndex = "3";
                         document.getElementById("nightmode").style.display = "block";
+                        document.getElementById("escape1").style.display = "block";
                     }
                 }
                 if (fnVal === "John"){
