@@ -341,6 +341,9 @@
                 z-index: 2;
                 transform: rotate(180deg);
             }
+            #inputs5:hover{
+                background-color: black;
+            }
             #inputsshadow5{
                 position: absolute;
                 top: 1454px;
@@ -603,6 +606,18 @@
                 left: 800px;
                 z-index: 3;
             }
+            #label8{
+                position: absolute;
+                top: 1175px;
+                left: 1213px;
+                z-index: 4;
+            }
+            #label9{
+                position: absolute;
+                top: 1374px;
+                left: 895px;
+                z-index: 4;
+            }
             #limitWT{
                 font-family: caveat, sans-serif;
                 position: absolute;
@@ -825,10 +840,92 @@
                 text-decoration: none;
                 color: black;
             }
+            #leave{
+                background-color: black;
+                color: white;
+                position: absolute;
+                top: 150px;
+                left: 605px;
+                width: 65px;
+            }
+            #scene4{
+                color: white;
+                display: none;
+                font-size: 80px;
+            }
+            #in4{
+                z-index: 5;
+                background-color: white;
+                color: black;
+                position: absolute;
+                left: 200px;
+                width: 920px;
+                height: 100px;
+                font-size: 80px;
+            }
+            #p4{
+                text-align: center;
+            }
+            #done{
+                font-size: 40px;
+                width: 130px;
+                position: absolute;
+                top: 450px;
+                left: 600px;
+                z-index: 5;
+                color: black;
+            }
+            #sceneWin{
+                color: white;
+                display: none;
+                font-size: 100px;
+                text-align: center;
+            }
+            #sceneFail{
+                color: white;
+                display: none;
+                font-size: 100px;
+                text-align: center;
+            }
+            #subt{
+                font-size: 30px;
+                margin: 5px;
+            }
+            #subt2{
+                font-size: 30px;
+                position: absolute;
+                top: 50px;
+                left: 600px;
+            }
+            #copy{
+                font-size: 15px;
+                margin: 5px;
+                position: absolute;
+                top: 550px;
+                left: 550px;
+            }
         </style>
     </head>
     <body> 
         <div class="button" id="escape1">Press me to escape!<br> (Only active for 2 seconds)</div>
+
+        <div id="sceneWin">
+            <p>Congrats!<br> You've escaped!</p>
+            <p id="subt">(Not trolling this time :)</p>
+            <p id="copy">©Somebody (aka me)</p>
+        </div>
+
+        <div id="sceneFail">
+            <p>...you failed.<br> Try again.</p>
+            <p id="subt2">(no, this isn't random, even though I called it fate. you actually failed. shame on you.)</p>
+        </div>
+
+        <div id="scene4">
+            <p id="p4">Now, let fate decide.</p>
+            <input type="text" class="input" id="in4">
+            <div class="button" id="done">Done</div>
+        </div>
+
         <div id="scene3">
             <p id="stm1">GOTTA SCROLLLLLL</p>
             <p id="stm2">...KEEP GOING...</p>
@@ -863,6 +960,7 @@
             <p id="backScene2" class="button">back</p>
             <p id="help" class="button"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Help</a></p>
             <p id="submit" class="whitetext button">Submit</p>
+            <p id="leave" class="button">Leave</p>
             <p id="lightmode" class="button whitetext">Light Mode</p>
             <p id="scene2-message">..........seriously? I just told you not to click the dang button. -_-
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>...well, since you're already here.... 
@@ -1061,7 +1159,8 @@
                 <p id="label4">3</p>
                 <p id="label5">4</p>
                 <p id="label6">4</p>
-                
+                <p id="label8">1</p>
+                <p id="label9">0</p>
             </div>
 
             <div id="up" class="button">Up</div>
@@ -1099,8 +1198,9 @@
             var r30 = "381. is 3053891126866912522653706897556949434 -morse code";
             var r31 = "Me and you, and you and me, no matter how the toss the dice, it had to be... The only one for me is you, and you for me, so happy togetheeeeerrrrrrr."
             var r32 = "What do you call a parched raccoon? Godzilla!";
-            //var r33 = "Just pretend you get it.";
-            //var r34 = "*High pitched sounds*";
+            var r33 = "Just pretend you get it.";
+            var r34 = "*High pitched sounds*";
+            var r35 = "If all else fails, turn to Instant Death. If you look deep enough into the abyss, within it you will find that what you knew wasn't what you thought you knew, but rather something else entirely. Something that more closely resembles a beheaded rooster standing upon the culmination of your life failures than your grossly unsupported biases.";
 
             var r380 = "Try clicking the escape button after submitting <strong>1</strong> <br> (That means you have to reload the page. As my dead grandmother used to say, &quotLife is all and well until someone asks you to reload a page. Just deal with it and stop complaining, you annoying child.&quot)";
 
@@ -1337,6 +1437,21 @@
             }
             input7.addEventListener("click", onInput7Click);
 
+            var input8 = document.getElementById("inputs8");
+            var onInput8Click = function() {
+                document.getElementById("r34").innerHTML = r34;
+                document.getElementById("r34").style.textAlign = "left";
+            }
+            input8.addEventListener("click", onInput8Click);
+
+            var help = document.getElementById("help");
+            var onHelpClick = function() {
+                alert("help is for babies.");
+                document.getElementById("r35").innerHTML = r35;
+                document.getElementById("r35").style.textAlign = "left";
+            }
+            help.addEventListener("click", onHelpClick);
+
             var deathCount = 0;
             var deathButton = document.getElementById("death");
             var onDeathClick = function() {
@@ -1360,6 +1475,14 @@
                 document.getElementById("scene1").style.display = "block";
             }
             backDeath.addEventListener("click", onBackDeathClick);
+
+            var leave = document.getElementById("leave");
+            var onLeaveClick = function() {
+                document.getElementById("scene2").style.display = "none";
+                document.getElementById("scene4").style.display = "block";
+                document.body.style.backgroundColor = "black";
+            }
+            leave.addEventListener("click", onLeaveClick);
 
             var escapeClick = 0;
             var submit = document.getElementById("submit");
@@ -1442,6 +1565,7 @@
                     document.getElementById("r32").innerHTML = r32;
                     document.getElementById("r32").style.textAlign = "left";
                     document.getElementById("stm1").style.color = "red";
+                    document.getElementById("stm1").innerHTML = "Don't scroll.";
                     document.getElementById("stm2").style.color = "orange";
                     document.getElementById("stm3").style.color = "yellow";
                     document.getElementById("stm4").style.color = "green";
@@ -1453,17 +1577,37 @@
                         arr[i].style.display = "block";
                     }
 
-                    //$^(@sG34t99f$[_!3JqeFu3%3
+                    var strongVal = document.getElementById("strongpw").value;
+                    var darthVal = document.getElementById("darth").value;
+                    var replyVal = document.getElementById("replygpw").value;
+                    if (strongVal === "$^(@sG34t99f$[_!3JqeFu3%3" && darthVal === "Let's party!!!" 
+                        && replyVal === "I love you."){
+                        document.getElementById("r33").innerHTML = r33;
+                        document.getElementById("r33").style.textAlign = "left";
+                        document.getElementById("leave").style.display = "block";
+                    }
                 }
             }
             submit.addEventListener("click", onSubmitClick);
+
+            var done = document.getElementById("done");
+            var onDoneClick = function() {
+                var inVal = document.getElementById("in4").value;
+                document.getElementById("scene4").style.display = "none";
+                if(inVal.length === 19){
+                    document.getElementById("sceneWin").style.display = "block";
+                }else{
+                    document.getElementById("sceneFail").style.display = "block";
+                }
+            }
+            done.addEventListener("click", onDoneClick);
 
             var levelOneAlert = function() {
                 alert("NICE.");
             }
 
             var initialAlert = function() {
-                alert("note that this aint done yet");
+                alert("Note that this is indeed finished and solvable. If you are stuck it seems like there is no possible solution, that's your problem. ¯\_(ツ)_/¯");
             }
 
             //document.body.addEventListener("onload", initialAlert());
