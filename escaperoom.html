@@ -309,6 +309,9 @@
                 background-color: white;
                 z-index: 2;
             }
+            #inputs4:hover{
+                background-color: rgb(250, 150, 150);
+            }
             #inputsshadow4{
                 position: absolute;
                 top: 1394px;
@@ -336,6 +339,7 @@
                 padding-left: 15px;
                 background-color: white;
                 z-index: 2;
+                transform: rotate(180deg);
             }
             #inputsshadow5{
                 position: absolute;
@@ -377,6 +381,62 @@
             }
             #pass{
                 width: 50px;
+            }
+            #inputs7{
+                position: absolute;
+                top: 1100px;
+                left:900px;
+                border: 2px solid black;
+                width: 320px;
+                height: 120px;
+                padding-left: 15px;
+                background-color: white;
+                z-index: 2;
+            }
+            #inputsshadow7{
+                position: absolute;
+                top: 1094px;
+                left: 905px;
+                border: 2px solid black;
+                width: 320px;
+                height: 120px;
+                padding-left: 15px;
+                text-align: center;
+                background-color: white;
+            }
+            #troll{
+                width: 208px;
+            }
+            #inputs8{
+                position: absolute;
+                top: 1200px;
+                left:500px;
+                border: 2px solid black;
+                width: 400px;
+                height: 220px;
+                padding-left: 15px;
+                background-color: white;
+                z-index: 2;
+            }
+            #inputsshadow8{
+                position: absolute;
+                top: 1194px;
+                left: 505px;
+                border: 2px solid black;
+                width: 400px;
+                height: 220px;
+                padding-left: 15px;
+                text-align: center;
+                background-color: white;
+            }
+            #strongpw{ 
+                width: 304px;
+            }
+            #darth{
+                width: 170px;
+            }
+            #reply{
+                width: 135px;
             }
             #menubutton{
                 position: absolute;
@@ -552,8 +612,8 @@
             .whitecolor{
                 font-family: 'permanent marker', sans-serif;
                 font-size: 50px;
-                /*color: white;
-                display: none;*/
+                color: white;
+                display: none;
             }
             #up{
                 position: absolute;
@@ -630,12 +690,12 @@
                 position: absolute;
                 transform: rotate(-60deg);
                 top: 1330px;
-                left: 500px;
+                left: 400px;
             }
             #dude{
                 position: absolute;
                 transform: rotate(-60deg);
-                top: 900px;
+                top: 850px;
                 left: 1000px;
             }
             #friend{
@@ -667,8 +727,8 @@
             .whitecolor2{
                 font-family: 'permanent marker', sans-serif;
                 font-size: 50px;
-                /*color: white;
-                display: none;*/
+                color: white;
+                display: none;
             }
             #love{
                 position: absolute; 
@@ -756,6 +816,15 @@
             #tp{
                 width: 148px;
             }
+            #help{
+                position: absolute;
+                top: 0px;
+                left: 1170px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
         </style>
     </head>
     <body> 
@@ -792,6 +861,7 @@
 
         <div id="scene2">
             <p id="backScene2" class="button">back</p>
+            <p id="help" class="button"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Help</a></p>
             <p id="submit" class="whitetext button">Submit</p>
             <p id="lightmode" class="button whitetext">Light Mode</p>
             <p id="scene2-message">..........seriously? I just told you not to click the dang button. -_-
@@ -803,14 +873,14 @@
                 <p id="left2">Night mode's pretty cool, huh?</p>
             </div>
 
-            <div class="whitecolor2">
+            <div class="whitecolor">
                 <p id="dance">Anakin Skywalker loves to dance.</p>
             </div>
 
             <p id="yeah" class="button">yeah</p>
             <p id="nope" class="button">nope</p>
             <p><input type="text" class="input whitetext" id="sasageyo"></p>
-            <div id="inputsshadow6">Agent _____<br>Granny _____<br>John _____<br>Black_____</div>
+            <div id="inputsshadow6">Agent _____<br>Granny _____<br>_____ereens<br>Black_____</div>
             <p class="numLabel" id="label7">3</p>
             <div class="button whitetext" id="down">down</div>
             <p id="sayDown">down</p>
@@ -837,7 +907,7 @@
             <p id="line1"></p>
             <p class="instructions" id="instr1">Hi! Welcome to the Escape "Room". This is an escape room game where there is neither a physical nor a virtual room. Lol. Oof. Feel free to eat a brownie while you're here.<br><br>- Yours Truly</p>
             <p class="instructions" id="instr2">Who the heck are you?! Get off my freaking lawn, you pest! <br><br> - God</p>
-            <p class="instructions" id="instr3">Blob. Glob. ...... Blug glub glug blub.</p>
+            <p class="instructions" id="instr3">Blob. Glob. ...... Blug glub glug blub. <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>This message is of no value to you. <br>I am not sure why I made it.</p>
             <p class="button" id="menubutton">Menu</p>
             <p class="button" id="instrbutton">Instructions</p>
             <p class="button" id="setbutton">Settings</p>
@@ -845,7 +915,6 @@
 
             <div class="whitecolor">
                 <p id="left1">sksksk<br>sksksk<br>sksksk</p>
-                <p id="morbit">0 1 2 3 4 5 6 7 8 9<br><span id="mor">x . x _ . _ . . _ x</span></p>
                 <p id="sasa">SASAGEYOOOO</p>
                 <p id="yee">yee</p>
                 <p id="dude">dude its just zero</p>
@@ -853,7 +922,11 @@
                 <p id="random">$^(@sG34t99f$[_!3JqeFu3%3</p>
             </div>
 
-            <p class="instructions2" id="instr4"><br>Password: would our random doctor  please assist some sailors?<br><br><br></p>
+            <div class="whitecolor2">
+                <p id="morbit">0 1 2 3 4 5 6 7 8 9<br><span id="mor">x . x _ . _ . . _ x</span></p>
+            </div>
+
+            <p class="instructions2" id="instr4"><br>password: would our random doctor  please assist some sailors?<br><br><br></p>
             <div id="rules">
                 <p>Info:</p>
                 <ol>
@@ -933,42 +1006,54 @@
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
                     <li>???</li><li>???</li><li>???</li><li>???</li><li>???</li>
-                    <li>???</li><li>???</li><li>???</li><li>???</li><li id="r381">A life without <input type="text" class="input" id="tp"> is not worth living.</li>
+                    <li>???</li><li>???</li><li>???</li><li id="r380">???</li><li id="r381">A life without <input type="text" class="input" id="tp"> is not worth living.</li>
                 </ol>
             </div>
 
             <p class="whitetext" id="nextToPW">I think I've seen that color before...</p>
 
             <div id="inputs">
-                <p >First Name: <input type="text" class="input" id="fn"></p>
-                <p >Last Name: <input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln2">/<input type="text" class="input ln" id="ln3"></p>
-                <p >Birthday: <input type="text" class="input" id="bday"></p>
-                <p >Species: <input type="text" class="input" id="species"></p>
+                <p><span id="fnB">First Name: </span><input type="text" class="input" id="fn"></p>
+                <p><span id="lnB">Last Name: </span><input type="text" class="input ln" id="ln1">/<input type="text" class="input ln" id="ln2">/<input type="text" class="input ln" id="ln3"></p>
+                <p><span id="bdayB">Birthday: </span><input type="text" class="input" id="bday"></p>
+                <p><span id="speciesB">Species: </span><input type="text" class="input" id="species"></p>
             </div>
             <div id="inputsshadow"><br><br><br><br> zpvkvtuhpuuspmmfe <br><br>hint: caesar shift 1 <br><br><br><br>re: 28</div>
 
             <div id="inputs2">
-                <p >Your favorite color: <input type="text" class="input" id="spiders"></p>
+                <p>Your favorite color: <input type="text" class="input" id="spiders"></p>
             </div>
             <div id="inputsshadow2"><br>first name of the main character of unOrdinary</div>
             
             <div id="inputs3">
-                <p >The limit of<br> (56x^2 + 0.35x + 603/7)/(2.56^x - 3029534)<br> as x approaches infinity: <input type="text" class="input" id="limit"></p>
+                <p>The limit of<br> (56x^2 + 0.35x + 603/7)/(2.56^x - 3029534)<br> as x approaches infinity: <input type="text" class="input" id="limit"></p>
             </div>
             <div id="inputsshadow3"><br>doubleclick the black circle</div>
 
             <p id="limitWT" class="whitetext">^ this is in <br> written form</p>
             
             <div id="inputs4">
-                <p ><input type="text" class="input" id="mess">iah</p>
-                <p ><input type="text" class="input" id="age">nda</p>
+                <p><input type="text" class="input" id="mess">iah</p>
+                <p><input type="text" class="input" id="age">nda</p>
             </div>
             <div id="inputsshadow4"><br>April Fools!</div>
             
             <div id="inputs5">
-                <p >pass <input type="text" class="input" id="word"><input type="text" class="input" id="pass">word</p>
+                <p><br>pass <input type="text" class="input" id="word"><input type="text" class="input" id="pass">word</p>
             </div>
-            <div id="inputsshadow5"><span class="brownhighlight">________</span>, <span class="brownhighlight">________</span>, <br> SHINZOU WO <span class="brownhighlight">________</span></div>
+            <div id="inputsshadow5"><br><span class="brownhighlight">________</span>, <span class="brownhighlight">________</span>, <br> SHINZOU WO <span class="brownhighlight">________</span></div>
+
+            <div id="inputs7">
+                <p><input type="text" class="input" id="troll">!!! ^-^</p>
+            </div>
+            <div id="inputsshadow7"><br>Perhaps you should try reclicking a few buttons...</div>
+
+            <div id="inputs8">
+                <p>Strong password: <input type="text" class="input" id="strongpw"></p>
+                <p>Darth Vader: "<input type="text" class="input" id="darth">"</p>
+                <p>Your reply: "<input type="text" class="input" id="reply">"</p>
+            </div>
+            <div id="inputsshadow8"><br>Something.</div>
 
             <div class="numLabel">
                 <p id="label2">2</p>
@@ -1006,16 +1091,18 @@
             var r20 = "I am always watching.";
             var r21 = "Always.";
             var r22 = "Inputs are case sensitive.";
-            var r24 = "Oh, also, there's a lot of invisible stuff. If you got this far you probably already know but I forgot to mention this earlier, lol rip.";
+            var r24 = "Oh, also, there's a lot of invisible stuff. A lot of... important, invisible stuff. Good luck.";
             var r25 = "There's a squash sitting on the floor. It's been there for almost 3 years... I wonder if it has rotten. Perhaps it is a magic squash?";
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
             var r28 = "I wonder what's hiding behind the menu... ";
             var r29 = "Lol, there's nothing there...........................yet.";
-            var r30 = "381 is 3053891126866912522653706897556949434 -morse code";
-            //var r31 =
-            //var r32 =
-            //var r33 =
-            //var r34 =
+            var r30 = "381. is 3053891126866912522653706897556949434 -morse code";
+            var r31 = "Me and you, and you and me, no matter how the toss the dice, it had to be... The only one for me is you, and you for me, so happy togetheeeeerrrrrrr."
+            var r32 = "What do you call a parched raccoon? Godzilla!";
+            //var r33 = "Just pretend you get it.";
+            //var r34 = "*High pitched sounds*";
+
+            var r380 = "Try clicking the escape button after submitting <strong>1</strong> <br> (That means you have to reload the page. As my dead grandmother used to say, &quotLife is all and well until someone asks you to reload a page. Just deal with it and stop complaining, you annoying child.&quot)";
 
             //rules end
 
@@ -1075,6 +1162,10 @@
             var night = document.getElementById("nightmode");
             var onNightClick = function() {
                 document.body.style.backgroundColor = "black";
+                var arr = document.getElementsByClassName("whitecolor");
+                for (var i = 0; i < arr.length; i++) {
+                    arr[i].style.display = "block";
+                }
             }
             night.addEventListener("click", onNightClick);
 
@@ -1089,6 +1180,8 @@
             var escape1 = document.getElementById("escape1");
             var onEscape1Click = function() {
                 document.getElementById("scene1").style.display = "none";
+                document.getElementById("scene2").style.display = "none";
+                document.getElementById("sceneDeath").style.display = "none";
                 document.getElementById("escape1").style.display = "none";
                 document.getElementById("scene3").style.display = "block";
             }
@@ -1098,6 +1191,8 @@
             var onBack3Click = function() {
                 document.getElementById("scene1").style.display = "block";
                 document.getElementById("scene3").style.display = "none";
+                document.getElementById("scene2").style.display = "none";
+                document.getElementById("sceneDeath").style.display = "none";
             }
             back3.addEventListener("click", onBack3Click);
 
@@ -1235,6 +1330,13 @@
             }
             input6.addEventListener("click", onInput6Click);
 
+            var input7 = document.getElementById("inputs7");
+            var onInput7Click = function() {
+                document.getElementById("r31").innerHTML = r31;
+                document.getElementById("r31").style.textAlign = "left";
+            }
+            input7.addEventListener("click", onInput7Click);
+
             var deathCount = 0;
             var deathButton = document.getElementById("death");
             var onDeathClick = function() {
@@ -1259,6 +1361,7 @@
             }
             backDeath.addEventListener("click", onBackDeathClick);
 
+            var escapeClick = 0;
             var submit = document.getElementById("submit");
             var onSubmitClick = function() {
                 var fnVal = document.getElementById("fn").value;
@@ -1268,10 +1371,13 @@
                 var bdayVal = document.getElementById("bday").value;
                 var speciesVal = document.getElementById("species").value;
                 if (fnVal === "Smith" && bdayVal === "werewolf" && speciesVal === "John"){
-                    if (lnVal1 == "04" && lnVal2 == "01" && lnVal3 == "81"){
+                    if (lnVal1 == "04" && lnVal2 == "01" && lnVal3 == "09"){
                         document.getElementById("inputsshadow").style.zIndex = "3";
                         document.getElementById("nightmode").style.display = "block";
-                        document.getElementById("escape1").style.display = "block";
+                        if (escapeClick === 0){
+                            document.getElementById("escape1").style.display = "block";
+                        }
+                        escapeClick++;
                     }
                 }
                 if (fnVal === "John"){
@@ -1310,6 +1416,10 @@
                     document.getElementById("r25").style.textAlign = "left";
                     document.getElementById("r18").innerHTML = r18;
                     document.getElementById("r18").style.textAlign = "left";
+                    document.getElementById("fnB").innerHTML = "Last Name: ";
+                    document.getElementById("lnB").innerHTML = "Birthday: ";
+                    document.getElementById("bdayB").innerHTML = "Species: ";
+                    document.getElementById("speciesB").innerHTML = "First Name: ";
                 }
 
                 var sasaVal = document.getElementById("sasageyo").value;
@@ -1318,6 +1428,32 @@
                     document.getElementById("r21").innerHTML = r21;
                     document.getElementById("r21").style.textAlign = "left";
                     alert("CAPS Menu: Click. On. The. Red.");
+                }
+
+                var tpVal = document.getElementById("tp").value;
+                if (tpVal === "toilet paper"){
+                    document.getElementById("r380").innerHTML = r380;
+                    document.getElementById("r380").style.textAlign = "left";
+                }
+
+                var trollVal = document.getElementById("troll").value;
+                if (trollVal === "youjustgottrolled"){
+                    document.getElementById("inputsshadow7").style.zIndex = "3";
+                    document.getElementById("r32").innerHTML = r32;
+                    document.getElementById("r32").style.textAlign = "left";
+                    document.getElementById("stm1").style.color = "red";
+                    document.getElementById("stm2").style.color = "orange";
+                    document.getElementById("stm3").style.color = "yellow";
+                    document.getElementById("stm4").style.color = "green";
+                    document.getElementById("stm5").style.color = "blue";
+                    document.getElementById("stm5").style.fontSize = "500px";
+                    document.getElementById("stm5").innerHTML = "Let's party!!!";
+                    var arr = document.getElementsByClassName("whitecolor2");
+                    for (var i = 0; i < arr.length; i++) {
+                        arr[i].style.display = "block";
+                    }
+
+                    //$^(@sG34t99f$[_!3JqeFu3%3
                 }
             }
             submit.addEventListener("click", onSubmitClick);
