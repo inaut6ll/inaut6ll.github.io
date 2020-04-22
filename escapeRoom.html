@@ -895,8 +895,8 @@
             #subt2{
                 font-size: 30px;
                 position: absolute;
-                top: 50px;
-                left: 600px;
+                top: 400px;
+                left: 150px;
             }
             #copy{
                 font-size: 15px;
@@ -918,7 +918,7 @@
 
         <div id="sceneFail">
             <p>...you failed.<br> Try again.</p>
-            <p id="subt2">(no, this isn't random, even though I called it fate. you actually failed. shame on you.)</p>
+            <p id="subt2">(no, this isn't random, even though I called it fate. <br>you actually failed. shame on you.)</p>
         </div>
 
         <div id="scene4">
@@ -1577,16 +1577,16 @@
                     for (var i = 0; i < arr.length; i++) {
                         arr[i].style.display = "block";
                     }
+                }
 
-                    var strongVal = document.getElementById("strongpw").value;
-                    var darthVal = document.getElementById("darth").value;
-                    var replyVal = document.getElementById("replygpw").value;
-                    if (strongVal === "$^(@sG34t99f$[_!3JqeFu3%3" && darthVal === "Let's party!!!" 
-                        && replyVal === "I love you."){
-                        document.getElementById("r33").innerHTML = r33;
-                        document.getElementById("r33").style.textAlign = "left";
-                        document.getElementById("leave").style.display = "block";
-                    }
+                var strongVal = document.getElementById("strongpw").value;
+                var darthVal = document.getElementById("darth").value;
+                var replyVal = document.getElementById("reply").value;
+                if (darthVal === "Let's party!!!" && strongVal === "$^(@sG34t99f$[_!3JqeFu3%3"
+                    && replyVal === "I love you."){
+                    document.getElementById("r33").innerHTML = r33;
+                    document.getElementById("r33").style.textAlign = "left";
+                    document.getElementById("leave").style.display = "block";
                 }
             }
             submit.addEventListener("click", onSubmitClick);
