@@ -844,10 +844,11 @@
                 background-color: black;
                 color: white;
                 position: absolute;
-                top: 150px;
-                left: 605px;
+                top: 1290px;
+                left: 675px;
                 width: 65px;
                 display: none;
+                z-index: 5;
             }
             #scene4{
                 color: white;
@@ -903,7 +904,31 @@
                 margin: 5px;
                 position: absolute;
                 top: 550px;
-                left: 550px;
+                left: 0px;
+            }
+            #win1{
+                font-size: 50px;
+                margin: 5px;
+                position: absolute;
+                top: 600px;
+                left: 0px;
+                text-align: center;
+                border-top: 1px solid white;
+                padding: 70px;
+            }
+            #win2{
+                position: absolute;
+                top: 900px;
+                left: 530px;
+            }
+            #faqs{
+                position: absolute;
+                top: 1140px;
+                left: 40px;
+                font-size: 35px;
+                margin: 5px;
+                text-align: left;
+                width: 1200px;
             }
         </style>
     </head>
@@ -914,6 +939,49 @@
             <p>Congrats!<br> You've escaped!</p>
             <p id="subt">(Not trolling this time :)</p>
             <p id="copy">©Somebody (aka me)</p>
+            <p id="win1">You might be wondering, &quotWhat do I get for winning?&quot Well, you're in luck, cause you'll find all the answers here.</p>
+            <p id="win2">FAQ</p>
+            <div id="faqs">
+                Q: What do I get for winning?
+                <br>A: Absolutely nothing! You just wasted your time for nothing, lol. All you get is this boring web page to look at. 
+                <br><br>Q: Why does this page look so boring? I at least expected something aesthetically pleasing.
+                <br>A: It's good enough, alright? Just bear with me.
+                <br><br>Q: This was way too easy. Couldn't you have made it more difficult?
+                <br>A: No.
+                <br><br>Q: This was way too hard. Couldn't you have made it easier?
+                <br>A: Well, it clearly wasn't <em>too</em> hard since you're here...
+                <br><br>Q: This was super boring, and a lot of the stuff didn't even make sense. 
+                <br>A: That's not even a question.
+                <br><br>Q: What the heck even is this?
+                <br>A: I don't know. The real question is, heck the what you are that is the are what you?
+                <br><br>Q: Who am I?
+                <br>A: Don't tell anyone but you're secretly the last descendant of our one and only savior, Old Man Mcdonald.
+                <br><br>Q: What am I?
+                <br>A: Annoying. Seriously, what's with all these questions?
+                <br><br>Q: WHAT'S THIS VOICE INSIDE MY HEAD?!?!! 
+                <br>A: Ah, don't worry, that's just the voice of your long lost half-brother who died years ago and was fused into your body, but then your mind was erased right afterwards so you don't oh shoot you weren't supposed to hear that just forget about what I just said that was a joke.
+                <br><br>Q: What should I do in the event of an earthquake?
+                <br>A: Ask the earthquake nicely and maybe it will stop shaking.
+                <br><br>Q: Do you like mac&cheese?
+                <br>A: Why, I'm glad you asked. No, I absolutely despise mac&cheese and I would greatly appreciate it if you never mentioned it in my presence ever again. 
+                <br><br>Q: CORONAVIRUS!!!!!!!!!
+                <br>A: Get out.
+                <br><br>Q: What does the fox say?
+                <br>A: Quack.
+                <br><br>Q: Who are you?
+                <br>A: Your dad in disguise.
+                <br><br>Q: 
+                <br>A: 
+                <br><br>Q: 
+                <br>A: 
+                <br><br>Q: 
+                <br>A: 
+                <br><br>Q: 
+                <br>A: 
+                <br><br>Q: 
+                <br>A: 
+
+            </div>
         </div>
 
         <div id="sceneFail">
@@ -961,7 +1029,7 @@
             <p id="backScene2" class="button">back</p>
             <p id="help" class="button"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Help</a></p>
             <p id="submit" class="whitetext button">Submit</p>
-            <p id="leave" class="button">Leave</p>
+            
             <p id="lightmode" class="button whitetext">Light Mode</p>
             <p id="scene2-message">..........seriously? I just told you not to click the dang button. -_-
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>...well, since you're already here.... 
@@ -985,6 +1053,7 @@
             <p id="sayDown">down</p>
         </div>
         <div id="scene1">
+            <p id="leave" class="button">Leave</p>
             <div>
                 <div>
                     <p id = "main-head" class="heading">Escape "Room"</p>
@@ -1152,7 +1221,7 @@
                 <p>Darth Vader: "<input type="text" class="input" id="darth">"</p>
                 <p>Your reply: "<input type="text" class="input" id="reply">"</p>
             </div>
-            <div id="inputsshadow8"><br>Something.</div>
+            <div id="inputsshadow8"><br>The time has come.</div>
 
             <div class="numLabel">
                 <p id="label2">2</p>
@@ -1191,7 +1260,7 @@
             var r20 = "I am always watching.";
             var r21 = "Always.";
             var r22 = "Inputs are case sensitive.";
-            var r24 = "Oh, also, there's a lot of invisible stuff. A lot of... important, invisible stuff. Good luck.";
+            var r24 = "Oh, also, there's a lot of invisible stuff. A lot of... important, invisible stuff. Good luck with that.";
             var r25 = "There's a squash sitting on the floor. It's been there for almost 3 years... I wonder if it has rotten. Perhaps it is a magic squash?";
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
             var r28 = "I wonder what's hiding behind the menu... ";
@@ -1480,6 +1549,7 @@
             var leave = document.getElementById("leave");
             var onLeaveClick = function() {
                 document.getElementById("scene2").style.display = "none";
+                document.getElementById("scene1").style.display = "none";
                 document.getElementById("scene4").style.display = "block";
                 document.body.style.backgroundColor = "black";
             }
@@ -1585,6 +1655,7 @@
                 var replyVal = document.getElementById("reply").value;
                 if (darthVal === "Let's party!!!" && strongVal === "$^(@sG34t99f$[_!3JqeFu3%3"
                     && replyVal === "I love you."){
+                    document.getElementById("inputsshadow8").style.zIndex = "3";
                     document.getElementById("r33").innerHTML = r33;
                     document.getElementById("r33").style.textAlign = "left";
                     document.getElementById("leave").style.display = "block";
