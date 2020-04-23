@@ -929,6 +929,13 @@
                 margin: 5px;
                 text-align: left;
                 width: 1200px;
+                margin-bottom: 30px;
+            }
+            #nextToDate{
+                font-family: caveat, sans-serif;
+                position: absolute;
+                top: 870px;
+                left: 400px;
             }
         </style>
     </head>
@@ -959,7 +966,7 @@
                 <br><br>Q: What am I?
                 <br>A: Annoying. Seriously, what's with all these questions?
                 <br><br>Q: WHAT'S THIS VOICE INSIDE MY HEAD?!?!! 
-                <br>A: Ah, don't worry, that's just the voice of your long lost half-brother who died years ago and was fused into your body, but then your mind was erased right afterwards so you don't oh shoot you weren't supposed to hear that just forget about what I just said that was a joke.
+                <br>A: Ah, don't worry, that's just the voice of your long lost half-brother who died years ago and was fused into your body, but then your mind was erased right afterwards so you don't oh shoot you weren't supposed to hear that just forget about what I just said I was just joking.
                 <br><br>Q: What should I do in the event of an earthquake?
                 <br>A: Ask the earthquake nicely and maybe it will stop shaking.
                 <br><br>Q: Do you like mac&cheese?
@@ -970,16 +977,41 @@
                 <br>A: Quack.
                 <br><br>Q: Who are you?
                 <br>A: Your dad in disguise.
-                <br><br>Q: 
-                <br>A: 
-                <br><br>Q: 
-                <br>A: 
-                <br><br>Q: 
-                <br>A: 
-                <br><br>Q: 
-                <br>A: 
-                <br><br>Q: 
-                <br>A: 
+                <br><br>Q: Who is my dad?
+                <br>A: Me, in disguise.
+                <br><br>Q: I would like to report grammar mistake.
+                <br>A: First of all, that's not a question. Second of all, get out.
+                <br><br>Q: Can you stop being rude to me, a hypothetical player that you created?
+                <br>A: Your sentence structure is so bad I can't understand what you're asking.
+                <br><br>Q: Why is my eye twitching?
+                <br>A: Probably because it hates you and is rebelling against your villainous ways.
+                <br><br>Q: Did actual people actually ask you these questions?
+                <br>A: Yes, of course. I don't see why you feel the need to ask me that.
+                <br><br>Q: What's your favorite color?
+                <br>A: Get out. (it's yucky brown)
+                <br><br>Q: Are you okay?
+                <br>A: No, I am not okay. I can't believe you just tried to pull a dad joke on me.
+                <br><br>Q: I'm bored. What should I do?
+                <br>A: Hi bored, I'm Dad. Since you're already here, who don't you have a cup of tea with me?
+                <br><br>Q: What is the meaning of life?
+                <br>A: Cheese.
+                <br><br>Q: Who are you really?
+                <br>A: God.
+                <br><br>Q: Can you answer any question I ask you?
+                <br>A: Why of course.
+                <br><br>Q: Why do I have no friends?
+                <br>A: Because you don't recycle enough. Try being more environmentally friendly, then you'll get more friends and you can all go save the turtles.
+                <br><br>Q: How long did it take you to make this?
+                <br>A: I didn't make this. 
+                <br><br>Q: How can I succeed in life?
+                <br>A: Believe in the power of friendship and love.
+                <br><br>Q: Where did my keys go?
+                <br>A: If you believed more in the power of friendship and love, maybe you would find them.
+                <br><br>Q: Can I eat ice cream in the middle of the night?
+                <br>A: I don't know, <em>can</em> you?
+                <br><br>Q: What brings you joy?
+                <br>A: Lettuce. Out of all wordly materials, lettuce brings me the most joy. Lettuce all rejoyce to lettuce. 
+                    <br> Ahahaha get it? Get it? Why aren't you answering me...
 
             </div>
         </div>
@@ -1179,6 +1211,7 @@
             </div>
 
             <p class="whitetext" id="nextToPW">I think I've seen that color before...</p>
+            <p class="whitetext" id="nextToDate">&lt;= MM/DD/YY</p>
 
             <div id="inputs">
                 <p><span id="fnB">First Name: </span><input type="text" class="input" id="fn"></p>
@@ -1258,14 +1291,14 @@
             var r18 = "Google is your friend.";
             var r19 = "I am watching you."; 
             var r20 = "I am always watching.";
-            var r21 = "Always.";
+            var r21 = "Always. <br> Btw, regarding Menu CAPITALS, I'm referring to the info numbers of the words.";
             var r22 = "Inputs are case sensitive.";
             var r24 = "Oh, also, there's a lot of invisible stuff. A lot of... important, invisible stuff. Good luck with that.";
             var r25 = "There's a squash sitting on the floor. It's been there for almost 3 years... I wonder if it has rotten. Perhaps it is a magic squash?";
             var r26 = "Hmmmm....... try mixing things up a bit. Also, go read #9 and #6 again.";
             var r28 = "I wonder what's hiding behind the menu... ";
             var r29 = "Lol, there's nothing there...........................yet.";
-            var r30 = "381. is 3053891126866912522653706897556949434 -morse code";
+            var r30 = "Info 381 is 3053891126866912522653706897556949434 -pollux cipher";
             var r31 = "Me and you, and you and me, no matter how the toss the dice, it had to be... The only one for me is you, and you for me, so happy togetheeeeerrrrrrr."
             var r32 = "What do you call a parched raccoon? Godzilla!";
             var r33 = "Just pretend you get it.";
@@ -1347,6 +1380,7 @@
             }
             light.addEventListener("click", onLightClick);
 
+            var countEsc = false;
             var escape1 = document.getElementById("escape1");
             var onEscape1Click = function() {
                 document.getElementById("scene1").style.display = "none";
@@ -1354,6 +1388,9 @@
                 document.getElementById("sceneDeath").style.display = "none";
                 document.getElementById("escape1").style.display = "none";
                 document.getElementById("scene3").style.display = "block";
+                if(countEsc === true){
+                    document.body.style.backgroundColor = "black";
+                }
             }
             escape1.addEventListener("click", onEscape1Click);
 
@@ -1407,7 +1444,7 @@
                 }
                 if (rCHC === 13) {
                     redCircle.style.opacity = "50%";
-                    document.getElementById("r10").textContent = "The year is the last info#.";
+                    document.getElementById("r10").textContent = "YY is the last info#.";
                     document.getElementById("r10").style.textAlign = "left";
                 }
             }
@@ -1621,7 +1658,7 @@
                     document.getElementById("inputsshadow6").style.display = "block";
                     document.getElementById("r21").innerHTML = r21;
                     document.getElementById("r21").style.textAlign = "left";
-                    alert("CAPS Menu: Click. On. The. Red.");
+                    alert("CAPITALS in the Menu: Click. On. The. Red.");
                 }
 
                 var tpVal = document.getElementById("tp").value;
@@ -1632,6 +1669,7 @@
 
                 var trollVal = document.getElementById("troll").value;
                 if (trollVal === "youjustgottrolled"){
+                    countEsc = true;
                     document.getElementById("inputsshadow7").style.zIndex = "3";
                     document.getElementById("r32").innerHTML = r32;
                     document.getElementById("r32").style.textAlign = "left";
@@ -1643,8 +1681,11 @@
                     document.getElementById("stm5").style.color = "blue";
                     document.getElementById("stm5").style.fontSize = "500px";
                     document.getElementById("stm5").innerHTML = "&quotLet's party!!!&quot";
-                    document.body.style.backgroundColor = "black";
                     var arr = document.getElementsByClassName("whitecolor2");
+                    for (var i = 0; i < arr.length; i++) {
+                        arr[i].style.display = "block";
+                    }
+                    var arr = document.getElementsByClassName("whitecolor");
                     for (var i = 0; i < arr.length; i++) {
                         arr[i].style.display = "block";
                     }
@@ -1659,6 +1700,7 @@
                     document.getElementById("r33").innerHTML = r33;
                     document.getElementById("r33").style.textAlign = "left";
                     document.getElementById("leave").style.display = "block";
+                    alert("Ew, gross.");
                 }
             }
             submit.addEventListener("click", onSubmitClick);
@@ -1675,12 +1717,9 @@
             }
             done.addEventListener("click", onDoneClick);
 
-            var levelOneAlert = function() {
-                alert("NICE.");
-            }
 
             var initialAlert = function() {
-                alert("Note that this is indeed finished and solvable. If you are stuck it seems like there is no possible solution, that's your problem. ¯\_(ツ)_/¯");
+                alert("Note that this is indeed finished and solvable. If you are stuck and it seems like there is no possible solution, that's your problem. ¯\_(ツ)_/¯");
             }
 
             //document.body.addEventListener("onload", initialAlert());
