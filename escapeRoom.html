@@ -961,7 +961,7 @@
             #hCenter{
                 text-align: center;
                 margin: 20px;
-                text-shadow: 3px 3px rgb(248, 121, 121);
+                text-shadow: 3px 3px rgb(178, 197, 250);
             }
             #spoilers{
                 position: absolute;
@@ -994,15 +994,19 @@
             }
             h2{
                 margin: 5px;
-                text-shadow: 3px 3px rgb(178, 197, 250);
+                text-shadow: 3px 3px rgb(248, 121, 121);
+            }
+            #deathH2{
+                text-shadow: 1px 1px white;
+                margin: 50px;
             }
             h3{
                 margin: 5px;
-                text-shadow: 3px 3px rgb(245, 114, 114);
+                text-shadow: 3px 3px rgb(178, 197, 250);
             }
-            /*#scene1{
+            #scene1{
                 display: none;
-            }*/
+            }
             #visible{
                 position: absolute;
                 left: 640px;
@@ -1021,6 +1025,20 @@
                 left: 0px;
                 
             }
+            #belowWT{
+                font-size: 20px;
+                margin-top: 0px;
+                margin-bottom: 20px;
+            }
+            #ssH{
+                margin-bottom: 0px;
+            }
+            .blank{
+                background-color: black;
+            }
+            .blank:hover{
+                background-color: transparent;
+            }
             #sceneHelp{
                 font-family: 'Shadows Into Light', sans-serif;
                 font-size: 50px;
@@ -1028,7 +1046,7 @@
                 left: 50px;
                 width: 1200px;
                 margin: 20px;
-                display: none;
+                /*display: none;*/
             }
         </style>
     </head>
@@ -1166,24 +1184,38 @@
                 <li>Also, some info only appears when you click on something multiple times. I'll elaborate on that in the buttons section.</li>
                 <li><span class="high">YOU PEOPLE HAVE TO FREAKING SCROLL!!!</span> There are around 30 infos or something (they are at the top of the list), and I can't predict what exact order you'll click things in so they're not gonna appear in order. So scroll to like number 30 and back every once in a while so you know you're not missing anything.</li>
             </ul>
+            <h3 id="orderH">Order of the Inputs</h3>
+            <p class="par">The numbers on each of the input boxes give a general order of what you're supposed to solve first. Start from the larger numbers, and what you find in there will eventually lead you to box zero. </p>
             <h3 id="buttonsH">Buttons</h3>
             <ul class="par">
                 <li>There are a lot of buttons. <span class="high">Many of them are either invisible or they only appear after you do something.</span></li>
                 <li><span class="high">The ??? button:</span> <br> This button brings you to a different scene. If you had the brains to try going back and forth from the main page and the ??? scene multiple times, maybe you wouldn't be here. There are like 5 invisible things in the ??? scene and I was nice enough to make them all visible the third time you go there. (They don't stay visible afterwards but dude I tell you where they are.) Also, clicking the button multiple times makes some info appear along with this thing that I won't specify but you can definitely see if you had even a modicum of observation skills.</li>
                 <li><span class="high">The Submit button:</span><br>Common question: Where the heck is the Submit button? Answer: It's in the ??? scene, and it's literally in the center of the page .-.</li>
                 <li><span class="high">The Instant Death button:</span><br>Plot twist: you don't actually fail when you click this. There's an invisible back button at the top of the page, you gotta scroll a little. There's important info in here and you have to come here multiple times, especially later in the game. </li>
-                <li><span class="high">The Escape button:</span><br>Plot twist: it doesn't actually let you escape. I know, shoooocking right? There is actually something important in the scene it takes you to, but the important thing only appears after you solve the input labeled with the number 1. But the button disappears after you click it, so you have to wait until you solve that input and then click it. What I just told you is what you would have learned if you solved the input at the bottom of the info list, so if you read this then you don't need to solve that input anymore. </li>
-                
-                <li><span class="high">All other buttons:</span><br> The Up button makes a black text box appear. The Down button makes the box that pops up when you click Menu or Instructions or Settings or Up disappear. The Break The Whole Game button is just for fun and doesn't actually do anything for you. The Light Mode button makes the background white. The Night Mode button makes the background black, and you can see the white text you couldn't see before.</li>
+                <li><span class="high">The Escape button:</span><br>Plot twist: it doesn't actually let you escape. I know, shoooocking right? There is actually something important in the scene it takes you to. Go read the specific stuff if you wanna know how to find it.</li>  
+                <li><span class="high">All other buttons:</span><br> The Up button only appears after you do something, and it makes a black text box appear. The Down button makes the box that pops up when you click Menu or Instructions or Settings or Up disappear. The Break The Whole Game button is just for fun and doesn't actually do anything for you. The Light Mode button makes the background white. The Night Mode button only appears after you do something, and it makes the background black, and you can see the white text you couldn't see before.</li>
 
             </ul>
-            <h2 id="ssH">Specific Stuff</h3>
-            <h3 id="orderH">Order of the Inputs</h3>
-            <p></p>
-            <h3 id="orderH">Order of the Inputs</h3>
-            <p></p>
-            <h3 id="orderH">Order of the Inputs</h3>
-            <p></p>
+            <h2 id="ssH">Walkthrough</h3>
+            <p id="belowWT">Hover over the <span class="blank">black highlights</span> to reveal spoilers.</p>
+            <h3>6. The Limit Thing</h3>
+            <p class="par">The input box labeled with the number 6 asks for the limit of an equation. Even if you don't know how to find the answer, the invisible text below the box tells you that the input is in written form, so you should know that the number is 4 letters long. There are only 4 numbers that are 4 letters long, so you can just guess until it's right. The answer is <span class="blank">zero</span>. When you type in the correct answer and submit, the text on the input box tells you to doubleclick the black circle and rule #19 will appear.</p>
+            <h3>5. The ____iah ___nda Thing</h3>
+            <p class="par">If you doubleclick the black circle at the top left corner of the page, info #14 will tell you to click the red circle. After you click the red circle 15 times, info #10 will be displayed, and the red circle will reveal text underneath that says <span class="blank">Mess</span> <span class="blank">age</span>. These are the two inputs that go in the input box labeled with the number 5. When you hit submit, an alert will pop up that says "April fools!", info #20 will appear, and the Up button will appear above the Instant Death button.</p>
+            <h3>4. pass word</h3>
+            <p class="par">If you click the Up button, a black box with text in it will appear. The first letters of the words in the black box put together spell out <span class="blank">word</span> <span class="blank">pass</span>. These two are the words that go in the input box labeled with the number 4. When you hit submit, info #18 and #25 will appear, the label thingies of the input box labeled with the number 2 will be switched so that it's correct, and the input box will display some reddish brown-colored text.</p>
+            <h3>The Invisible Input</h3>
+            <p class="par">There is an invisible input in the ??? scene that is the same reddish brown color as the text that appears when you solve the pass word input. The answer for this input is <span class="blank">SASAGEYO</span>, which you can find out by googling the reddish brown text to figure out the word that goes in the fill-in-the-blank space. After you type the answer in and hit submit, an alert that says "Combine the CAPITALS in the Menu in this order: Click. On. The. Red." will pop up, a box with some text in it appears under the input, and info #21 will appear.</p>
+            <h3>3. Your favorite color</h3>
+            <p class="par">As you click to the ??? scene and back more times, the box that says "Escape "Room"" will get smaller and smaller and reveal a blue highlight thingy. After you click the ??? button and back for the fifth time, the blue highlight thingy will be fully revealed, and when you hover over it, it will reveal the word <span class="blank">spiders</span>. This is the answer to the input box labeled with the number 3. After you type in the answer and hit submit, the input box will say that the First Name is the first name of the main character of unOrdinary, which you can find by searching it up. </p>
+            <h3>2. Firstname Lastname Birthday Species</h3>
+            <p class="par">Warning: this will be kind of confusing because the answers to this input box are all from different places. The answer to the Last Name input is <span class="blank">Smith</span>. You can get this from the clues from the box that appears when you solve the invisible input. The answers to the Birthday input are <span class="blank">04</span> <span class="blank">01</span> <span class="blank">09</span>. This is from the alert that says, "April Fools!" and the info that says "YY is the previous info#". If you don't know what day April Fools is, shame on you. The answer to the Species input is <span class="blank">werewolf</span>. This has to do with the alert that says to combine the capitals of the Menu in this order: "Click. On. The. Red." These words can be found in the info box, and you're supposed to use their info numbers, which are 23 43 27 68. The second capital letter in the Menu is W, the third one is E, the fourth one is R, the seventh one is O, and so on. The answer to the First Name input is <span class="blank">John</span>. You're supposed to get this from the clue that appears when you solve the input labeled with the number 3. After you type in all these answers and hit submit, the Night Mode button will appear behind the black Menu box, some info will appear, the Escape button will appear, and the input box will reveal some text that you have to decode.</p>
+            <h3>1. ! ! ! ^-^</h3>
+            <p class="par">The text that is revealed after solving the input labeled with the number 2 says "zpvkvtuhpuuspmmfe hint: caesar shift 1". If you search the caesar cipher up, you will find that it means the message has been encoded using a shifted alphabet. In this case, it means that z will be decoded to y, p to o, v to u, k to j, and so on. The resulting message, <span class="blank">youjustgottrolled</span>, is the answer to the input box labeled with the number 1. When you type this in and click submit, the input box reveals text that tells you to try reclicking some buttons.</p>
+            <h3>The Input at the Bottom of the Rules</h3>
+            <p class="par">If you click the Light Mode button, info #30 will appear. It says, "Info 381 is 3053891126866912522653706897556949434 -pollux cipher". If you search up pollux cipher, you will learn how it works. Each number represents a morse code symbol ( . or _ or x), with x being a divider between letters and xx being a space between words. If you click the Night Mode button after solving the input labeled with the number 1, you will find some new white text. One of the new things that appears has the numbers 0 through 9 and underneath them the . _ x symbols. Replace the string of numbers found in info #30 with the symbols, and then decode the symbols into letters using a morse code key you can find online. This will give you the answer to the input at the bottom of the rules, <span class="blank">toilet paper</span>. After you type this in and hit submit, info #380 will appear, and it tells you to reload the game and click the Escape Button only after you have already submitted the answer to the input labeled with the number 1. This means that you will have to reload the game, which will get rid of all your progress, but you don't need all that anyway. You only need to submit the answers to the input labeled with the number 2 again to make the Escape Button appear, then submit the answer to the input labeled with the number 1, and then click the Escape Button.</p>
+            <h3>0. </h3>
+            <p class="par"></p>
         </div>
 
         <div id="sceneWin">
@@ -1293,7 +1325,7 @@
 
             <div id="messageDeath">
                 <h1>YOU DIED.</h1>
-                <h2>Wow, you just managed to fail at an untimed online escape room. Great job, dude.</h2>
+                <h2 id="deathH2">Wow, you just managed to fail at an untimed online escape room. Great job, dude.</h2>
             </div>
             <p id="backDeath" class="button whitetext">back</p>
             <p id="textDeath1" class="whitetext">haha just kidding</p>
@@ -1505,8 +1537,8 @@
             <div class="numLabel">
                 <p id="label2">2</p>
                 <p id="label3">3</p>
-                <p id="label4">3</p>
-                <p id="label5">4</p>
+                <p id="label4">5</p>
+                <p id="label5">6</p>
                 <p id="label6">4</p>
                 <p id="label8">1</p>
                 <p id="label9">0</p>
@@ -1694,7 +1726,7 @@
                 }
                 if (rCHC === 13) {
                     redCircle.style.opacity = "50%";
-                    document.getElementById("r10").textContent = "YY is the last info#.";
+                    document.getElementById("r10").textContent = "YY is the previous info#.";
                     document.getElementById("r10").style.textAlign = "left";
                 }
             }
@@ -1947,7 +1979,7 @@
                     document.getElementById("inputsshadow6").style.display = "block";
                     document.getElementById("r21").innerHTML = r21;
                     document.getElementById("r21").style.textAlign = "left";
-                    alert("CAPITALS in the Menu: Click. On. The. Red.");
+                    alert("Combine the CAPITALS in the Menu in this order: Click. On. The. Red.");
                 }
 
                 var tpVal = document.getElementById("tp").value;
@@ -2011,7 +2043,7 @@
                 alert("Note that this is indeed finished and solvable. If you are stuck and it seems like there is no possible solution, that's your problem. ¯\_(ツ)_/¯");
             }
 
-            document.body.addEventListener("onload", initialAlert());
+            //document.body.addEventListener("onload", initialAlert());
             //¯\_(ツ)_/¯
         </script>
     </body>
