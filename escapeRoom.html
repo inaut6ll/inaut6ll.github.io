@@ -647,6 +647,7 @@
                 top: 1400px;
                 left: 900px;
                 font-family: caveat, sans-serif;
+                display: none;
             }
             #down{
                 position: absolute;
@@ -1255,10 +1256,10 @@
             <h3 id="buttonsH">Buttons</h3>
             <ul class="par">
                 <li>There are a lot of buttons. <span class="high">Many of them are either invisible or they only appear after you do something.</span></li>
-                <li><span class="high">The ??? button:</span> <br> This button brings you to a different scene. If you had the brains to try going back and forth from the main page and the ??? scene multiple times, maybe you wouldn't be here. There are like 5 invisible things in the ??? scene and I was nice enough to make them all visible the third time you go there. (They don't stay visible afterwards but dude I tell you where they are.) Also, clicking the button multiple times makes some info appear along with this thing that I won't specify but you can definitely see if you had even a modicum of observation skills.</li>
+                <li><span class="high">The ??? button:</span> <br> This button brings you to a different scene. If you had the brains to try going back and forth from the main page and the ??? scene multiple times, maybe you wouldn't be here. <span class="high">There are like 5 invisible things in the ??? scene and I was nice enough to make them all visible the third time you go there.</span> (They don't stay visible afterwards but dude I tell you where they are.) Also, clicking the button multiple times makes some info appear along with this thing that I won't specify but you can definitely see if you had even a modicum of observation ability.</li>
                 <li><span class="high">The Submit button:</span><br>Common question: Where the heck is the Submit button? Answer: It's in the ??? scene, and it's literally in the center of the page .-.</li>
                 <li><span class="high">The Instant Death button:</span><br>Plot twist: you don't actually fail when you click this. There's an invisible back button at the top of the page, you gotta scroll a little. There's important info in here and you have to come here multiple times, especially later in the game. </li>
-                <li><span class="high">The Escape button:</span><br>Plot twist: it doesn't actually let you escape. I know, shoooocking right? There is actually something important in the scene it takes you to. Go read the specific stuff if you wanna know how to find it.</li>  
+                <li><span class="high">The Escape button:</span><br>Plot twist: it doesn't actually let you escape. I know, shoooocking right? There is actually something important in the scene it takes you to. Go read the walkthrough if you wanna know how to find it.</li>  
                 <li><span class="high">All other buttons:</span><br> The Up button only appears after you do something, and it makes a black text box appear. The Down button makes the box that pops up when you click Menu or Instructions or Settings or Up disappear. The Break The Whole Game button is just for fun and doesn't actually do anything for you. The Light Mode button makes the background white. The Night Mode button only appears after you do something, and it makes the background black, and you can see the white text you couldn't see before.</li>
 
             </ul>
@@ -1269,7 +1270,7 @@
             <h3 id="TheIahThing">5. The ____iah ___nda Thing</h3>
             <p class="par">If you doubleclick the black circle at the top left corner of the page, info #14 will tell you to click the red circle. After you click the red circle 15 times, info #10 will be displayed, and the red circle will reveal text underneath that says <span class="blank">Mess</span> <span class="blank">age</span>. These are the two inputs that go in the input box labeled with the number 5. When you hit submit, an alert will pop up that says "April fools!", info #20 will appear, and the Up button will appear above the Instant Death button.</p>
             <h3 id="passwordH">4. pass word</h3>
-            <p class="par">If you click the Up button, a black box with text in it will appear. The first letters of the words in the black box put together spell out <span class="blank">word</span> <span class="blank">pass</span>. These two are the words that go in the input box labeled with the number 4. When you hit submit, info #18 and #25 will appear, the label thingies of the input box labeled with the number 2 will be switched so that it's correct, and the input box will display some reddish brown-colored text.</p>
+            <p class="par">If you click the Up button, a black box with text in it will appear. The first letters of the words in the black box put together spell out <span class="blank">word</span> <span class="blank">pass</span>. These two are the words that go in the input box labeled with the number 4. When you hit submit, info #18 and #25 will appear, the label thingies of the input box labeled with the number 2 will be switched so that it in the correct order, and the input box will display some reddish brown-colored text.</p>
             <h3 id="TheInvisibleInput">The Invisible Input</h3>
             <p class="par">There is an invisible input in the ??? scene that is the same reddish brown color as the text that appears when you solve the pass word input. The answer for this input is <span class="blank">SASAGEYO</span>, which you can find out by googling the reddish brown text to figure out the word that goes in the fill-in-the-blank space. After you type the answer in and hit submit, an alert that says "Combine the CAPITALS in the Menu in this order: Click. On. The. Red." will pop up, a box with some text in it appears under the input, and info #21 will appear.</p>
             <h3 id="YourFavoriteColor">3. Your favorite color</h3>
@@ -1554,7 +1555,7 @@
                 </ol>
             </div>
 
-            <p class="whitetext" id="nextToPW">I think I've seen that color before...</p>
+            <p id="nextToPW">I think I've seen that color before...</p>
             <p class="whitetext" id="nextToDate">&lt;= MM/DD/YY</p>
 
             <div id="inputs">
@@ -2038,6 +2039,7 @@
                     document.getElementById("lnB").innerHTML = "Birthday: ";
                     document.getElementById("bdayB").innerHTML = "Species: ";
                     document.getElementById("speciesB").innerHTML = "First Name: ";
+                    document.getElementById("nextToPW").style.display = "block";
                 }
 
                 var sasaVal = document.getElementById("sasageyo").value;
