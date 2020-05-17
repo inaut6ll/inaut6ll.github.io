@@ -1927,6 +1927,12 @@
                 document.getElementById("sceneHelp").style.display = "block";
                 document.getElementById("breath").style.display = "block";
                 document.body.style.backgroundColor = "black";
+                var temp = 1;
+                while(temp < 30){
+                    $("body").animate({opacity: "0%"}, 1000);
+                    $("body").animate({opacity: "100%"}, 1000);
+                    temp++;
+                }
             }
             br.addEventListener("click", onBreakClick);
 
