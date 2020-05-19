@@ -13,6 +13,9 @@
     <title>Project: Animation</title>
 
     <style>
+      body{
+        padding: 50px;
+      }
       .circle{
         width: 100px;
         height: 100px;
@@ -22,13 +25,71 @@
       }
       #main{
         position: absolute; 
-        top: 30px;
-        left: 30px;
+        top: 0px;
+        left: 0px;
+        width: 1px;
+        height: 1px;
       }
+      .button{
+        border: 0px outset rgb(124, 119, 119);
+        font-size: 20px;
+        border-radius:7%;
+        background-color: black;
+	      color: white;
+        width: 80px;
+        padding: 5px;
+        text-align: center;
+     }
+     .button:hover{
+         cursor: pointer;
+         background-color: rgb(66, 63, 63);
+     }
+     .button:active{
+         border-style: inset;
+         background-color: rgb(190, 186, 186);
+     }
+     .invisible{
+         opacity: 0%;
+         text-align: center;
+     }
+     .invisible:hover{
+         opacity: 100%;
+     }
+     input{
+         border: 5px groove black;
+         padding: 3px;
+         background-color: black;
+         color: white;font-family: 'cutive mono', monospace;
+         font-size: 14px;
+     }
+     .censor{
+         background-color: black;
+     }
+     .censor:hover{
+         background-color: transparent;
+     }
     </style>
   </head>
   <body>
     <div class="circle" id="main"></div>
+    <div class="button" id="this">This</div>
+    <h1 class="btn btn-danger">Bob <mark>sdfjlsdfdljfsdfsdflkjdf</mark>the Builder <small>The Musical</small></h1>
+    <p class="text-warning danger lead">sdlfjl</p>
+    <p class="text-danger bg-primary"><abbr title="death is eternal">DIE</abbr></p>
+    <div class="alert alert-success alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times; uuuu</a>
+      You suck!!!
+    </div>
+      <dd class="text-success bg-muted text-left text-uppercase">-awelkj</dd>
+    
+    <code class="text-muted  bg-warning text-right">sdlfkj</code>
+    <kbd>this is this this this</kbd>
+
+    <input class="editablesection" onkeypress="checkKey(event)" oninput="writinginput(this, 0)" maxlength="11" style="width: 110px;">
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -36,6 +97,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
+      $("#this").on("click", function() {
+        var x = parseInt($("#main").css("width")) + 1250;
+        var result = x + "px";
+        $("#main").animate({width: result, height: result}, 1000);
+      });
       window.addEventListener("keydown", function (event) {
         if (event.defaultPrevented) {
           return; // Do nothing if the event was already processed
@@ -45,20 +111,30 @@
           case "Down": // IE/Edge specific value
           case "ArrowDown":
             // Do something for "down arrow" key press.
+            var  x = parseInt($("#main").css("top")) + 200;
+            var s = x + "px";
+            $("#main").animate({top: s});
             break;
           case "Up": // IE/Edge specific value
           case "ArrowUp":
             // Do something for "up arrow" key press.
+            var  x = parseInt($("#main").css("top")) - 200;
+            var s = x + "px";
+            $("#main").animate({top: s});
             break;
           case "Left": // IE/Edge specific value
           case "ArrowLeft":
             // Do something for "left arrow" key press.
+            var  x = parseInt($("#main").css("left")) - 200;
+            var s = x + "px";
+            $("#main").animate({left: s});
             break;
           case "Right": // IE/Edge specific value
           case "ArrowRight":
             // Do something for "right arrow" key press.
-            $("#main").css("background-color", "red");
-            $("#main").animate({width: "5px"});
+            var  x = parseInt($("#main").css("left")) + 200;
+            var s = x + "px";
+            $("#main").animate({left: s});
             break;
           case "Enter":
             // Do something for "enter" or "return" key press.
