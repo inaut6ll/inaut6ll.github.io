@@ -16,9 +16,8 @@
       body{
         padding: 50px;
         font-family: 'Flamenco';
-        font-size: 300px;
+        font-size: 30px;
         overflow-y: hidden;
-        width: 100%;
         text-align: center;
       }
       .circle{
@@ -116,11 +115,12 @@
        border: none;
        background-color: rgb(179, 198, 248);
        position: absolute;
-       top: 81%;
+       top: 45%;
        left: 60%;
-       width: 50%;
+       width: 60%;
        height: 5%;
-       transform: rotate(-25deg);
+       transform: rotate(-55deg);
+       z-index: 3;
      }
      #deco3{
        position: absolute;
@@ -128,7 +128,7 @@
        width: 60%;
        background-color: rgb(252, 236, 216);
        top: -70%;
-       left: -15%;
+       left: -25%;
        transform: rotate(55deg);
      }
      #welcome{
@@ -170,6 +170,13 @@
       top: 89%;
       left: 47%;
      }
+     #scene2{
+       display: none;
+     }
+     #temp{
+       font-size: 150px;
+       line-height: 100%;;
+     }
     </style>
   </head>
   <body>
@@ -191,7 +198,7 @@
     </div>
 
     <div id="scene2">
-      
+      <div id="temp">Hello, <span class="alias">Alias</span>.<br>I've been waiting<br> for you.</div>
 
     </div>
 
@@ -211,6 +218,7 @@
       var getName = function() {
         if ($("#name").val().length > 0){ 
           name = $("#name").val();
+          $(".alias").text(name);
           $("#scene1").fadeOut();
           $("#scene2").fadeIn();
         }
