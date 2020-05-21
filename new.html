@@ -15,6 +15,11 @@
     <style>
       body{
         padding: 50px;
+        font-family: 'Flamenco';
+        font-size: 300px;
+        overflow-y: hidden;
+        width: 100%;
+        text-align: center;
       }
       .circle{
         width: 100px;
@@ -23,22 +28,16 @@
         border: black solid 1px;
         border-radius: 50%;
       }
-      #main{
-        position: absolute; 
-        top: 0px;
-        left: 0px;
-        width: 1px;
-        height: 1px;
-      }
       .button{
         border: 0px outset rgb(124, 119, 119);
         font-size: 20px;
-        border-radius:7%;
+        border-radius:5px;
         background-color: black;
 	      color: white;
         width: 80px;
         padding: 5px;
         text-align: center;
+        font-family: Quicksand;
      }
      .button:hover{
          cursor: pointer;
@@ -56,11 +55,14 @@
          opacity: 100%;
      }
      input{
-         border: 5px groove black;
-         padding: 3px;
-         background-color: black;
-         color: white;font-family: 'cutive mono', monospace;
-         font-size: 14px;
+         border: 4px groove black;
+         padding: 5px;
+         background-color: white;
+         color: black;
+         font-family: 'Josefin Slab';
+         font-size: 30px;
+         border-radius: 5px;
+
      }
      .censor{
          background-color: black;
@@ -68,41 +70,158 @@
      .censor:hover{
          background-color: transparent;
      }
+     #scene1{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(248, 207, 180);
+      /**display: none;**/
+     }
+     #balloon{
+       position: absolute;
+       top: 5%;
+       left: 5%;
+       width: 40%;
+       transform: rotate(25deg);
+       opacity: 80%;
+       z-index: 2;
+     }
+     #balloon2{
+       position: absolute;
+       left: 0%;
+       top: 0%;
+       opacity: 50%;
+       z-index: 2;
+     }
+     #balloon3{
+       position: absolute;
+       width: 400px;
+       top: -5%;
+       left: 85%;
+       transform: rotate(67deg);
+       z-index: 2;
+     }
+     #deco1{
+      background-color:white;
+      width: 20%;
+      height: 115%;
+      position: absolute;
+      top: -15%;
+      left: 90%;
+      transform: rotate(-10deg);
+     }
+     #deco2{
+       border: none;
+       background-color: rgb(179, 198, 248);
+       position: absolute;
+       top: 81%;
+       left: 60%;
+       width: 50%;
+       height: 5%;
+       transform: rotate(-25deg);
+     }
+     #deco3{
+       position: absolute;
+       height: 180%;
+       width: 60%;
+       background-color: rgb(252, 236, 216);
+       top: -70%;
+       left: -15%;
+       transform: rotate(55deg);
+     }
+     #welcome{
+       font-size: 60px;
+       font-family: Flamenco;
+     }
+     #title{
+       position: absolute;
+       font-size: 100px;
+       top: -2%;
+       left: 20%;
+       text-align: center;
+       font-family: 'Josefin Slab';
+       z-index: 3;
+     }
+     #oe{
+       font-size: 40px;
+       font-family: 'Dancing Script';
+       position: absolute;
+       top: 60%;
+       left: 42%;
+       z-index: 2;
+     }
+     #namelb{
+      position: absolute;
+      font-size: 30px;
+      top: 75%;
+      left: 28%;
+      z-index: 2;
+     }
+     #name{
+       width: 400px;
+       height: 50px;
+       font-size: 30px;
+       text-align: center;
+     }
+     #begin{
+      position: absolute;
+      top: 89%;
+      left: 47%;
+     }
     </style>
   </head>
   <body>
-    <div class="circle" id="main"></div>
-    <div class="button" id="this">This</div>
-    <h1 class="btn btn-danger">Bob <mark>sdfjlsdfdljfsdfsdflkjdf</mark>the Builder <small>The Musical</small></h1>
-    <p class="text-warning danger lead">sdlfjl</p>
-    <p class="text-danger bg-primary"><abbr title="death is eternal">DIE</abbr></p>
-    <div class="alert alert-success alert-dismissible">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times; uuuu</a>
-      You suck!!!
-    </div>
-      <dd class="text-success bg-muted text-left text-uppercase">-awelkj</dd>
     
-    <code class="text-muted  bg-warning text-right">sdlfkj</code>
-    <kbd>this is this this this</kbd>
+    <div id="scene1">
+      <div id="deco1"></div>
+      <div id="deco2"></div>
+      <div id="deco3"></div>
 
-    <input class="editablesection" onkeypress="checkKey(event)" oninput="writinginput(this, 0)" maxlength="11" style="width: 110px;">
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd">
+      <img id="balloon" src="https://lh3.googleusercontent.com/proxy/x5wNJsIzFB88mLGaRb8fVy3LqOhECBTB1PLJ9GVd5OS6DK4NbWFsl2GBbl9NBNVM67CrvdHIB-nqt1c6750Fm3qUYvFlNjk" alt="Balloon">
+      <img id="balloon2" src="https://lh3.googleusercontent.com/proxy/x5wNJsIzFB88mLGaRb8fVy3LqOhECBTB1PLJ9GVd5OS6DK4NbWFsl2GBbl9NBNVM67CrvdHIB-nqt1c6750Fm3qUYvFlNjk" alt="balloons">
+      <img id="balloon3" src="https://lh3.googleusercontent.com/proxy/x5wNJsIzFB88mLGaRb8fVy3LqOhECBTB1PLJ9GVd5OS6DK4NbWFsl2GBbl9NBNVM67CrvdHIB-nqt1c6750Fm3qUYvFlNjk" alt="balloons">
+      
+      <h1 id="title"><span id="welcome">Welcome to:</span><br>Choose Your Own <br>Adventure</h1>
+      <div id="oe"><em>Online Edition</em></div> 
+      <div class="button" id="begin">Begin</div>
+      <div id="namelb">Alias: <input id="name" onkeypress="checkKey(event)" maxlength="29"></div>
+    
     </div>
+
+    <div id="scene2">
+      
+
+    </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
     <script>
-      $("#this").on("click", function() {
-        var x = parseInt($("#main").css("width")) + 1250;
-        var result = x + "px";
-        $("#main").animate({width: result, height: result}, 1000);
+      //***$("#scene1").fadeIn(4000); 
+
+
+      var name = "";
+      var getName = function() {
+        if ($("#name").val().length > 0){ 
+          name = $("#name").val();
+          $("#scene1").fadeOut();
+          $("#scene2").fadeIn();
+        }
+      }
+
+      $("#begin").on("click", function() {
+        getName();
       });
-      window.addEventListener("keydown", function (event) {
+
+      //keydown function
+      var checkKey = function (event) {
         if (event.defaultPrevented) {
           return; // Do nothing if the event was already processed
         }
@@ -111,33 +230,27 @@
           case "Down": // IE/Edge specific value
           case "ArrowDown":
             // Do something for "down arrow" key press.
-            var  x = parseInt($("#main").css("top")) + 200;
-            var s = x + "px";
-            $("#main").animate({top: s});
+            
             break;
           case "Up": // IE/Edge specific value
           case "ArrowUp":
             // Do something for "up arrow" key press.
-            var  x = parseInt($("#main").css("top")) - 200;
-            var s = x + "px";
-            $("#main").animate({top: s});
+            
             break;
           case "Left": // IE/Edge specific value
           case "ArrowLeft":
             // Do something for "left arrow" key press.
-            var  x = parseInt($("#main").css("left")) - 200;
-            var s = x + "px";
-            $("#main").animate({left: s});
+            
             break;
           case "Right": // IE/Edge specific value
           case "ArrowRight":
             // Do something for "right arrow" key press.
-            var  x = parseInt($("#main").css("left")) + 200;
-            var s = x + "px";
-            $("#main").animate({left: s});
+            
             break;
           case "Enter":
             // Do something for "enter" or "return" key press.
+            //if the correct string is entered, do something
+            getName();
             break;
           case "Esc": // IE/Edge specific value
           case "Escape":
@@ -149,7 +262,7 @@
 
         // Cancel the default action to avoid it being handled twice
         event.preventDefault();
-      }, true);
+      };
 
 
     </script>
