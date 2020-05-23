@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Project: Animation</title>
+    <title>Choose Ur Own Adventure</title>
 
     <style>
       body{
@@ -156,7 +156,7 @@
         </div>
       </div>
 
-      <div id="namelb">Alias: <input id="name" onkeypress="checkKey(event)" maxlength="29"></div>
+      <div id="namelb">Alias: <input id="name" onkeypress="checkKey(event)" maxlength="29" placeholder="e.g. Ory Jin Alneim"></div>
       <div class="button" id="begin">Begin</div>
     </div>
 
@@ -183,7 +183,7 @@
           name = $("#name").val();
           $(".alias").text(name);
           $("#scene1").fadeOut();
-          $("#scene2").fadeIn();
+          $("#scene2").slideDown(2000);
         }
       }
 
