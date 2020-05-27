@@ -191,9 +191,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 score += 10;
                 scoreDisplay.innerHTML = score;
                 for (var j = i; j < i + width; j++){
+                    squares[j].classList.remove("taken"); 
                     squares[j].classList.remove("tetromino"); 
                 }
                 const squaresRemoved = squares.splice(i, width);
+                squares = squaresRemoved.concat(squares);
+                squares.forEach(item => grid.appendChild(item));
             }
         }
     };
