@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const width = 10;
     let nextRandom = 0;
     let timerId;
+    let score = 0;
 
     //The Tetrominoes
     const lTetromino = [
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentPosition = 4;
             draw();
             displayShape();
+            addScore();
         }
     };
 
@@ -176,6 +178,25 @@ document.addEventListener("DOMContentLoaded", () => {
             displayShape();
         }
     });
+
+    function addScore() {
+        for (let i = 0; i < squares.length; i += width){
+            var count = 0;
+            for (var j = i; j < i + width; j++){
+                if (squares[j].classList.contains("tetromino")){
+                    count++;
+                }
+            }
+            if (count === width){
+                score += 10;
+                scoreDisplay.innerHTML = score;
+                for (var j = i; j < i + width; j++){
+                    squares[j].classList.remove("tetromino"); 
+                }
+                const squaresRemoved = squares.splice(i, width);
+            }
+        }
+    };
 
 
 
