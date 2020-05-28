@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let nextRandom = 0;
     let timerId;
     let score = 0;
+    const opacity = ["100%", "80%", "60%", "40%", "20%"];
 
     //The Tetrominoes
     const lTetromino = [
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function draw() {
         current.forEach(item => {
             squares[currentPosition + item].classList.add("tetromino");
+            squares[currentPosition + item].style.opacity = opacity[random];
         })
     };
 
@@ -60,18 +62,19 @@ document.addEventListener("DOMContentLoaded", () => {
     function undraw() {
         current.forEach(item => {
             squares[currentPosition + item].classList.remove("tetromino"); 
+            squares[currentPosition + item].style.opacity = "";
         })
     };
 
     //assign functions to keyCodes
     function control(e) {
-        if (e.keyCode === 37){
+        if (e.keyCode === 37 || e.keyCode === 65){
             moveLeft();
-        } else if (e.keyCode === 38){
+        } else if (e.keyCode === 38 || e.keyCode === 87){
             rotate();
-        } else if (e.keyCode === 39){
+        } else if (e.keyCode === 39 || e.keyCode === 68){
             moveRight();
-        } else if (e.keyCode === 40){
+        } else if (e.keyCode === 40 || e.keyCode === 83){
             moveDown();
         }
     };
@@ -98,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
             draw();
             displayShape();
             addScore();
+            gameOver();
         }
     };
 
@@ -143,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //show up-next tetromino in mini-grid display
     const displaySquares = document.querySelectorAll(".mini-grid div");
     const displayWidth = 4;
-    let displayIndex = 0;
+    const displayIndex = 0;
 
     //the Tetrominos without rotations
     const upNextTetrominoes = [
@@ -159,9 +163,11 @@ document.addEventListener("DOMContentLoaded", () => {
         //remove any trace of a tetromino from the entire grid
         displaySquares.forEach(item => {
             item.classList.remove("tetromino");
+            item.style.opacity = "";
         });
         upNextTetrominoes[nextRandom].forEach(item => {
-            displaySquares[item + displayIndex].classList.add("tetromino")
+            displaySquares[item + displayIndex].classList.add("tetromino");
+            displaySquares[displayIndex + item].style.opacity = opacity[nextRandom];
         });
 
     };
@@ -193,13 +199,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 for (var j = i; j < i + width; j++){
                     squares[j].classList.remove("taken"); 
                     squares[j].classList.remove("tetromino"); 
+                    squares[j].style.opacity = "";
                 }
+
+                //this part is confusing and I don't get it >:(
                 const squaresRemoved = squares.splice(i, width);
                 squares = squaresRemoved.concat(squares);
                 squares.forEach(item => grid.appendChild(item));
             }
         }
     };
+
+    //game over
+    function gameOver(){
+        if (current.some(item => squares[currentPosition + item].classList.contains("taken"))){
+            clearInterval(timerId);
+        }
+        
+    }
 
 
 
