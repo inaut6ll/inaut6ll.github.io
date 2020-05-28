@@ -2,15 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.querySelector(".grid");
     let squares = Array.from(document.querySelectorAll(".grid div"));
     const scoreDisplay = document.querySelector("#score");
+    const highScoreDisplay = document.querySelector("#high-score");
     const startBtn = document.querySelector("#start-button");
     const width = 12;
     let nextRandom = 0;
     let timerId;
     let score = 0;
-    var opacity;
+    var colors;
     if (1 === 1){
-        opacity = ["100%", "80%", "60%", "40%", "20%"];
+        colors = ["rgb(0, 0, 0)", "rgb(58, 58, 58)", "rgb(107, 106, 106)", "rgb(155, 154, 154)", "rgb(207, 204, 204)", "rgb(255, 50, 50)", "rgb(255, 145, 145)"];
     }
+    localStorage.setItem("highScore", 0);
 
     //The Tetrominoes
     const lTetromino = [
@@ -43,8 +45,20 @@ document.addEventListener("DOMContentLoaded", () => {
         [1, width + 1, width * 2 + 1, width * 3 + 1],
         [width, width + 1, width + 2, width + 3]
     ];
+    const lTetromino2 = [
+        [0, 1, width + 1, width * 2 + 1],
+        [width, width + 1, width + 2, 2],
+        [1, width + 1, width * 2 + 1, width * 2 + 2],
+        [width, width + 1, width + 2, width * 2]
+    ];
+    const zTetromino2 = [
+        [1, width, width + 1, width * 2],
+        [0, 1, width + 1, width + 2],
+        [1, width, width + 1, width * 2],
+        [0, 1, width + 1, width + 2]
+    ];
 
-    const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
+    const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino, lTetromino2, zTetromino2];
 
     let currentPosition = 5;
     let currentRotation = 0;
@@ -57,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function draw() {
         current.forEach(item => {
             squares[currentPosition + item].classList.add("tetromino");
-            squares[currentPosition + item].style.opacity = opacity[random];
+            squares[currentPosition + item].style.backgroundColor = colors[random];
         })
     };
 
@@ -65,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function undraw() {
         current.forEach(item => {
             squares[currentPosition + item].classList.remove("tetromino"); 
-            squares[currentPosition + item].style.opacity = "";
+            squares[currentPosition + item].style.backgroundColor = "";
         })
     };
 
@@ -158,7 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
         [displayWidth + 1, displayWidth + 2, displayWidth * 2, displayWidth * 2 + 1], //zTetronimo
         [1, displayWidth, displayWidth + 1, displayWidth + 2], //tTetromino
         [0, 1, displayWidth, displayWidth + 1], //oTetromino
-        [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1] //iTetromino
+        [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1], //iTetromino
+        [0, 1, displayWidth + 1, displayWidth * 2 + 1], //lTetromino2
+        [1, displayWidth, displayWidth + 1, displayWidth * 2]//zTetromino2
     ];
 
     //display the shape in the mini-grid display
@@ -166,11 +182,11 @@ document.addEventListener("DOMContentLoaded", () => {
         //remove any trace of a tetromino from the entire grid
         displaySquares.forEach(item => {
             item.classList.remove("tetromino");
-            item.style.opacity = "";
+            item.style.backgroundColor = "";
         });
         upNextTetrominoes[nextRandom].forEach(item => {
             displaySquares[item + displayIndex].classList.add("tetromino");
-            displaySquares[displayIndex + item].style.opacity = opacity[nextRandom];
+            displaySquares[displayIndex + item].style.backgroundColor = colors[nextRandom];
         });
 
     };
@@ -187,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
             random = Math.floor(Math.random() * theTetrominoes.length);
             current = theTetrominoes[random][currentRotation];
             draw();
-            timerId = setInterval(moveDown, 500); //make the tetromino move down every second
+            timerId = setInterval(moveDown, 1000); //make the tetromino move down every second
             nextRandom = Math.floor(Math.random() * theTetrominoes.length);
             displayShape();
         }else if (timerId != null) {
@@ -214,10 +230,14 @@ document.addEventListener("DOMContentLoaded", () => {
         for (var i = 0; i < squares.length - width; i++){
             squares[i].classList.remove("tetromino");
             squares[i].classList.remove("taken");
-            squares[i].style.opacity = "";
+            squares[i].style.backgroundColor = "";
+        }
+        if (localStorage.getItem("highScore") < score){
+            localStorage.setItem("highScore", score);
+            highScoreDisplay.innerHTML = localStorage.getItem("highScore");
         }
         score = 0;
-        document.querySelector("#score").innerHTML = score;
+        scoreDisplay.innerHTML = score;
         rs = true;
         startGame();
     });
@@ -236,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 for (var j = i; j < i + width; j++){
                     squares[j].classList.remove("taken"); 
                     squares[j].classList.remove("tetromino"); 
-                    squares[j].style.opacity = "";
+                    squares[j].style.backgroundColor = "";
                 }
 
                 //this part is confusing and I don't get it >:(
@@ -250,6 +270,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //game over
     function gameOver(){
         if (current.some(item => squares[currentPosition + item].classList.contains("taken"))){
+            if (localStorage.getItem("highScore") < score){
+                localStorage.setItem("highScore", score);
+                highScoreDisplay.innerHTML = localStorage.getItem("highScore");
+            }
             clearInterval(timerId);
             if(score < 80){
                 alert("You already lost? Wow, you really suck.");
@@ -264,6 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }
 
+    //add functionality to rules button
     $("#rules-button").on("click", function() {
         $("#rules").fadeToggle();
     });

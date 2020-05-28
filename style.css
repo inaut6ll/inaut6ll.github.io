@@ -132,16 +132,25 @@
     font-family: "Quicksand", sans-serif;
 }
 
+#hs{
+    font-size: 4rem;
+    position: absolute;
+    top: 42%;
+    left: 2%;
+    margin-left: 40px;
+    font-family: "Quicksand", sans-serif;
+}
+
 #start-button{
     position: absolute;
-    top: 52%;
-    left: 7%;
+    top: 62%;
+    left: 5%;
 }
 
 #restart{
     position: absolute;
     top: 62%;
-    left: 7%;
+    left: 18%;
 }
 
 #title{
@@ -191,7 +200,7 @@
     width: 60%;
     z-index: 5;
     background-color: rgba(78, 6, 21, 0.938);
-    color: white;
+    color: rgb(255, 255, 255);
     box-shadow: 15px 20px 30px 5px rgba(10, 8, 8, 0.904);
     display: none;
 }
