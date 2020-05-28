@@ -3,11 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let squares = Array.from(document.querySelectorAll(".grid div"));
     const scoreDisplay = document.querySelector("#score");
     const startBtn = document.querySelector("#start-button");
-    const width = 10;
+    const width = 12;
     let nextRandom = 0;
     let timerId;
     let score = 0;
-    const opacity = ["100%", "80%", "60%", "40%", "20%"];
+    var opacity;
+    if (1 === 1){
+        opacity = ["100%", "80%", "60%", "40%", "20%"];
+    }
 
     //The Tetrominoes
     const lTetromino = [
@@ -43,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
 
-    let currentPosition = 4;
+    let currentPosition = 5;
     let currentRotation = 0;
 
     //randomly select a Tetromino and its first rotation
@@ -123,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //move the tetromino right, unless is at the edge or there is a blockage
     function moveRight() {
         undraw();
-        const isAtRightEdge = current.some(item => (item + currentPosition  + 1) % 10 === 0);
+        const isAtRightEdge = current.some(item => (item + currentPosition  + 1) % width === 0);
         const isTouchingTaken = current.some(item => squares[currentPosition + item + 1].classList.contains("taken"));
 
         if (!isAtRightEdge && !isTouchingTaken) {
@@ -172,17 +175,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
-    //add functionality to the button
-    startBtn.addEventListener("click", () => {
-        if (timerId != null) {
+    var fs = true;
+    var rs = false;
+    //start function
+    function startGame() {
+        if (rs === true){
+            rs = false;
             clearInterval(timerId);
             timerId = null;
-        }else {
+            currentPosition = 5;
+            random = Math.floor(Math.random() * theTetrominoes.length);
+            current = theTetrominoes[random][currentRotation];
             draw();
             timerId = setInterval(moveDown, 500); //make the tetromino move down every second
             nextRandom = Math.floor(Math.random() * theTetrominoes.length);
             displayShape();
+        }else if (timerId != null) {
+            clearInterval(timerId);
+            timerId = null;
+        } else {
+            draw();
+            timerId = setInterval(moveDown, 500); //make the tetromino move down every second
+            if (fs === true){
+                nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+                displayShape();
+                fs = false;
+            }
         }
+    };
+
+    //add functionality to the start button
+    startBtn.addEventListener("click", startGame);
+
+    //add functionality to the restart button
+    var restart = document.querySelector("#restart");
+    restart.addEventListener("click", () => {
+        //remove all from entire grid
+        for (var i = 0; i < squares.length - width; i++){
+            squares[i].classList.remove("tetromino");
+            squares[i].classList.remove("taken");
+            squares[i].style.opacity = "";
+        }
+        score = 0;
+        document.querySelector("#score").innerHTML = score;
+        rs = true;
+        startGame();
     });
 
     function addScore() {
