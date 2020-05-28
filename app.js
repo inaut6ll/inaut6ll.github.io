@@ -8,12 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let nextRandom = 0;
     let timerId;
     let score = 0;
+
+    //different color themes for all the tetrominoes
     var colors;
     if (1 === 1){
         colors = ["rgb(0, 0, 0)", "rgb(58, 58, 58)", "rgb(107, 106, 106)", "rgb(155, 154, 154)", "rgb(207, 204, 204)", "rgb(255, 50, 50)", "rgb(255, 145, 145)"];
     }
-    localStorage.setItem("highScore", 0);
 
+    //set high score to 0 only if high score didn't exist previously
+    if(localStorage.getItem("highScore") === null){
+        localStorage.setItem("highScore", 0);
+    }
+    highScoreDisplay.innerHTML = localStorage.getItem("highScore");
+    
     //The Tetrominoes
     const lTetromino = [
         [1, width + 1, width * 2 + 1, 2],
