@@ -251,11 +251,22 @@ document.addEventListener("DOMContentLoaded", () => {
     function gameOver(){
         if (current.some(item => squares[currentPosition + item].classList.contains("taken"))){
             clearInterval(timerId);
+            if(score < 80){
+                alert("You already lost? Wow, you really suck.");
+            } else if(score < 150){
+                alert("Welp, you ain't the best at this game. At least you tried.");
+            } else if(score < 600){
+                alert("Good game, bro.");
+            } else{
+                alert("...no comment.");
+            }
         }
         
     }
 
-
+    $("#rules-button").on("click", function() {
+        $("#rules").fadeToggle();
+    });
 
 
 
