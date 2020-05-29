@@ -2,11 +2,16 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <script src="app.js" charset="utf-8"></script>
         <link rel="stylesheet" href="style.css"></link>
 
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat&family=Cutive+Mono&family=Dancing+Script&family=Flamenco&family=Josefin+Slab&family=Permanent+Marker&family=Quicksand:wght@300;400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
       
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
         <title>Tetris</title>
     </head>
     <body>
@@ -305,6 +310,29 @@
 
         <div class="button2" id="rules-button">Rules</div>
         <div id="rules">...dude, this is Tetris. You don't know the rules to Tetris?</div>
+
+
+        <div id="d">Difficulty:</div>
+        <form>
+            <div id="difficulty" class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active" for="milk">
+                    <input type="radio" name="diff" id="milk" autocomplete="on" value="milk" checked> Milk
+                </label>
+                <label class="btn btn-secondary" for="penguin">
+                    <input type="radio" name="diff" id="penguin" value="penguin" autocomplete="on"> Penguin
+                </label>
+                <label class="btn btn-secondary" for="party">
+                    <input type="radio" name="diff" id="party" value="party" autocomplete="off"> Party
+                </label>
+                <label class="btn btn-dark" for="ghost">
+                    <input type="radio" name="diff" id="ghost" value="ghost" autocomplete="off"> Ghost
+                </label>
+                <label class="btn btn-danger" for="exclamation">
+                    <input type="radio" name="diff" id="exclamation" value="exclamation" autocomplete="off"> ! ! !
+                </label>
+            </div>
+        </form>
+
 
         <div id="menu-bg"></div>
         <div class="button2" id="save-button">Save</div>

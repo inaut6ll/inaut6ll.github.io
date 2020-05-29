@@ -18,13 +18,13 @@
 }
 
 .grid{
-    width: 275px; /**200 by 400 **/
-    height: 465px;
+    width: 280px; /**200 by 400 **/
+    height: 485px;
     display: flex;
     flex-wrap: wrap;
     /**background: url(annpic.jpg);**/
     background-color: white;
-    padding: 15px 0px 5px 11px;
+    padding: 15px 5px 5px 11px;
     margin-bottom: 0px;
     border-radius: 3px;
     position: absolute;
@@ -74,7 +74,7 @@
     z-index: 3;
     transform: scale(1.05);
     position: relative;
-    top: -15%;
+    top: -20%;
     left: 40%;
 }
 
@@ -126,7 +126,7 @@
 #s{
     font-size: 5rem;
     position: absolute;
-    top: 27%;
+    top: 38%;
     left: 3%;
     margin-left: 40px;
     font-family: "Quicksand", sans-serif;
@@ -135,7 +135,7 @@
 #hs{
     font-size: 4rem;
     position: absolute;
-    top: 42%;
+    top: 50%;
     left: 2%;
     margin-left: 40px;
     font-family: "Quicksand", sans-serif;
@@ -156,7 +156,7 @@
 #title{
     font-size: 12rem;
     position: absolute;
-    top: -6%;
+    top: 10%;
     left: 3%;
     font-family: 'Quicksand', sans-serif;
     text-shadow: 2px 2px rgb(253, 253, 253);
@@ -230,10 +230,30 @@
 
 #save-button{
     position: absolute;
-    top: 85%;
+    top: 82%;
     left: 75%;
     padding: 6px 10px 6px 10px;
 }
+
+#d{
+    position: absolute;
+    top: 25%;
+    left: 63%;
+    z-index: 3;
+    font-size: 3rem;
+    font-family: Quicksand, sans-serif;
+    text-shadow: 2px 2px rgb(211, 210, 210);
+}
+
+#difficulty{
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    z-index: 3;
+    font-family: "Quicksand", sans-serif;
+    transform: scale(2);
+}
+
 
 
 
@@ -243,7 +263,7 @@
     top: 5%;
     left: 61%;
     width: 100px;
-    height: 70px;
+    height: 100px;
     background-color: black;
     border-radius: 5px;
     animation-name: rotate;

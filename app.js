@@ -11,16 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //add function to save button
     $("#save-button").on("click", function() {
+
         restartF();
     });
 
     //different color themes for all the tetrominoes
     var colors;
-    if (1 === 1){
-        colors = ["rgb(0, 0, 0)", "rgb(58, 58, 58)", "rgb(107, 106, 106)", "rgb(155, 154, 154)", "rgb(207, 204, 204)", "rgb(255, 50, 50)", "rgb(255, 145, 145)"];
-    } else if (1 === 11){
-        colors = [];
-    }
+    colors = ["rgb(0, 0, 0)", "rgb(58, 58, 58)", "rgb(107, 106, 106)", "rgb(155, 154, 154)", "rgb(207, 204, 204)", "rgb(255, 50, 50)", "rgb(255, 145, 145)"];
 
     //set high score to 0 only if high score didn't exist previously
     if(localStorage.getItem("highScore") === null){
@@ -218,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
             random = Math.floor(Math.random() * theTetrominoes.length);
             current = theTetrominoes[random][currentRotation];
             draw();
-            timerId = setInterval(moveDown, 500); //make the tetromino move down every second
+            timerId = setInterval(moveDown, 200); //make the tetromino move down every second
             nextRandom = Math.floor(Math.random() * theTetrominoes.length);
             displayShape();
         }else if (timerId != null) {
@@ -226,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
             timerId = null;
         } else {
             draw();
-            timerId = setInterval(moveDown, 500); //make the tetromino move down every second
+            timerId = setInterval(moveDown, 200); //make the tetromino move down every second
             if (fs === true){
                 nextRandom = Math.floor(Math.random() * theTetrominoes.length);
                 displayShape();
@@ -294,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             clearInterval(timerId);
             if(score < 80){
-                alert("You already lost? Wow, you really suck.");
+                alert("You lost already? Wow, you really suck.");
             } else if(score < 150){
                 alert("Welp, you ain't the best at this game. At least you tried.");
             } else if(score < 600){
@@ -311,7 +308,44 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#rules").fadeToggle();
     });
 
+    //make radio active
+    $("#milk").on("click", () => {
+        $("[for='milk']").addClass("active");
+        $("[for='penguin']").removeClass("active");
+        $("[for='party']").removeClass("active");
+        $("[for='ghost']").removeClass("active");
+        $("[for='exclamation']").removeClass("active");
+    });
+    $("#penguin").on("click", () => {
+        $("[for='penguin']").addClass("active");
+        $("[for='milk']").removeClass("active");
+        $("[for='party']").removeClass("active");
+        $("[for='ghost']").removeClass("active");
+        $("[for='exclamation']").removeClass("active");
 
+        
+    });
+    $("#party").on("click", () => {
+        $("[for='party']").addClass("active");
+        $("[for='penguin']").removeClass("active");
+        $("[for='milk']").removeClass("active");
+        $("[for='ghost']").removeClass("active");
+        $("[for='exclamation']").removeClass("active");
+    });
+    $("#ghost").on("click", () => {
+        $("[for='ghost']").addClass("active");
+        $("[for='penguin']").removeClass("active");
+        $("[for='party']").removeClass("active");
+        $("[for='milk']").removeClass("active");
+        $("[for='exclamation']").removeClass("active");
+    });
+    $("#exclamation").on("click", () => {
+        $("[for='exclamation']").addClass("active");
+        $("[for='penguin']").removeClass("active");
+        $("[for='party']").removeClass("active");
+        $("[for='ghost']").removeClass("active");
+        $("[for='milk']").removeClass("active");
+    });
 
 
 
