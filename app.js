@@ -9,10 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let timerId;
     let score = 0;
 
+    //add function to save button
+    $("#save-button").on("click", function() {
+        restartF();
+    });
+
     //different color themes for all the tetrominoes
     var colors;
     if (1 === 1){
         colors = ["rgb(0, 0, 0)", "rgb(58, 58, 58)", "rgb(107, 106, 106)", "rgb(155, 154, 154)", "rgb(207, 204, 204)", "rgb(255, 50, 50)", "rgb(255, 145, 145)"];
+    } else if (1 === 11){
+        colors = [];
     }
 
     //set high score to 0 only if high score didn't exist previously
@@ -92,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //assign functions to keyCodes
     function control(e) {
+        e.preventDefault();
         if (e.keyCode === 37 || e.keyCode === 65){
             moveLeft();
         } else if (e.keyCode === 38 || e.keyCode === 87){
@@ -210,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
             random = Math.floor(Math.random() * theTetrominoes.length);
             current = theTetrominoes[random][currentRotation];
             draw();
-            timerId = setInterval(moveDown, 1000); //make the tetromino move down every second
+            timerId = setInterval(moveDown, 500); //make the tetromino move down every second
             nextRandom = Math.floor(Math.random() * theTetrominoes.length);
             displayShape();
         }else if (timerId != null) {
@@ -232,7 +240,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //add functionality to the restart button
     var restart = document.querySelector("#restart");
-    restart.addEventListener("click", () => {
+    restart.addEventListener("click", restartF);
+
+    //restart function
+    function restartF() {
         //remove all from entire grid
         for (var i = 0; i < squares.length - width; i++){
             squares[i].classList.remove("tetromino");
@@ -247,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scoreDisplay.innerHTML = score;
         rs = true;
         startGame();
-    });
+    };
 
     function addScore() {
         for (let i = 0; i < squares.length; i += width){

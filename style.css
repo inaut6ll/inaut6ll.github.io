@@ -8,7 +8,7 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, rgba(7, 0, 0, 0.678), rgba(165, 2, 2, 0.692), white);
+    background: linear-gradient(-45deg, rgba(95, 1, 1, 0.918), rgba(255, 0, 0, 0.692), white);
     overflow: hidden;
     margin: 0px;
 }
@@ -182,10 +182,22 @@
     font-family: "Flamenco";
 }
 
+#menu{
+    font-family: "Quicksand", sans-serif;
+    font-size: 5rem;
+    text-shadow: 2px 2px rgb(211, 210, 210);
+    position: absolute;
+    top: 4%;
+    left: 73%;
+    z-index: 3;
+}
+
 #rules-button{
     position: absolute;
-    top: 10%;
-    left: 90%;
+    top: 6%;
+    left: 88%;
+    padding: 6px 10px 6px 10px;
+    z-index: 2;
 }
 
 #rules{
@@ -199,8 +211,113 @@
     padding: 4%;
     width: 60%;
     z-index: 5;
-    background-color: rgba(78, 6, 21, 0.938);
+    background-color: rgba(5, 0, 1, 0.808);
     color: rgb(255, 255, 255);
-    box-shadow: 15px 20px 30px 5px rgba(10, 8, 8, 0.904);
+    box-shadow: 15px 20px 40px 5px rgba(10, 8, 8, 0.904);
     display: none;
+}
+
+#menu-bg{
+    position: absolute;
+    width: 35%;
+    height: 90%;
+    top: 3%;
+    left: 60%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 5px double black;
+}
+
+#save-button{
+    position: absolute;
+    top: 85%;
+    left: 75%;
+    padding: 6px 10px 6px 10px;
+}
+
+
+
+
+#deco-pic1{
+    position: absolute;
+    top: 5%;
+    left: 61%;
+    width: 100px;
+    height: 70px;
+    background-color: black;
+    border-radius: 5px;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    color: white;
+    font-size: 2rem;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#deco-pic{
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 31%;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+}
+
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+        border-radius: 0%;
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+    }
+    15%{
+        background-color: rgb(255, 0, 0);
+    }
+    25%{
+        background-color: rgb(255, 145, 0);
+    }
+    40%{
+        background-color: rgb(255, 217, 0);
+    }
+    50%{
+        border-radius: 50%;
+        background-color: rgb(188, 255, 2);
+        width: 470px;
+        height: 470px;
+    }
+    65%{
+        background-color: rgb(0, 255, 221);
+    }
+    75%{
+        background-color: rgb(0, 26, 255);
+    }
+    90%{
+        background-color: rgb(183, 0, 255);
+    }
+    100%{
+        transform: rotate(720deg);
+        border-radius: 0%;
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
