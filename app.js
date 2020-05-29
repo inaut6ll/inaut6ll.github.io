@@ -9,10 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
     let timerId;
     let score = 0;
 
+    var ghostOn = false;
+    var distrOn = false;
     //add function to save button
     $("#save-button").on("click", function() {
 
         restartF();
+        if(ghostOn){
+            $(".grid").css("animation-play-state", "running");
+        }else{
+            $(".grid").css("animation-play-state", "paused");
+        }
+        if(distrOn){
+            $("#deco-pic").css("display", "block");
+        }else{
+            $("#deco-pic").css("display", "none");
+        }
     });
 
     //different color themes for all the tetrominoes
@@ -203,6 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
+    var time = 350;
     var fs = true;
     var rs = false;
     //start function
@@ -215,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
             random = Math.floor(Math.random() * theTetrominoes.length);
             current = theTetrominoes[random][currentRotation];
             draw();
-            timerId = setInterval(moveDown, 200); //make the tetromino move down every second
+            timerId = setInterval(moveDown, time); //make the tetromino move down every second
             nextRandom = Math.floor(Math.random() * theTetrominoes.length);
             displayShape();
         }else if (timerId != null) {
@@ -223,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
             timerId = null;
         } else {
             draw();
-            timerId = setInterval(moveDown, 200); //make the tetromino move down every second
+            timerId = setInterval(moveDown, time); //make the tetromino move down every second
             if (fs === true){
                 nextRandom = Math.floor(Math.random() * theTetrominoes.length);
                 displayShape();
@@ -313,38 +326,73 @@ document.addEventListener("DOMContentLoaded", () => {
         $("[for='milk']").addClass("active");
         $("[for='penguin']").removeClass("active");
         $("[for='party']").removeClass("active");
+        $("[for='sad']").removeClass("active");
         $("[for='ghost']").removeClass("active");
         $("[for='exclamation']").removeClass("active");
+
+        time = 600;
+        ghostOn = false;
+        distrOn = false;
     });
     $("#penguin").on("click", () => {
         $("[for='penguin']").addClass("active");
         $("[for='milk']").removeClass("active");
         $("[for='party']").removeClass("active");
+        $("[for='sad']").removeClass("active");
         $("[for='ghost']").removeClass("active");
         $("[for='exclamation']").removeClass("active");
 
-        
+        time = 350;
+        ghostOn = false;
+        distrOn = false;
     });
     $("#party").on("click", () => {
         $("[for='party']").addClass("active");
         $("[for='penguin']").removeClass("active");
         $("[for='milk']").removeClass("active");
+        $("[for='sad']").removeClass("active");
         $("[for='ghost']").removeClass("active");
         $("[for='exclamation']").removeClass("active");
+
+        time = 200;
+        ghostOn = false;
+        distrOn = false;
+    });
+    $("#sad").on("click", () => {
+        $("[for='party']").removeClass("active");
+        $("[for='penguin']").removeClass("active");
+        $("[for='milk']").removeClass("active");
+        $("[for='sad']").addClass("active");
+        $("[for='ghost']").removeClass("active");
+        $("[for='exclamation']").removeClass("active");
+
+        time = 100;
+        ghostOn = false;
+        distrOn = false;
     });
     $("#ghost").on("click", () => {
         $("[for='ghost']").addClass("active");
         $("[for='penguin']").removeClass("active");
         $("[for='party']").removeClass("active");
+        $("[for='sad']").removeClass("active");
         $("[for='milk']").removeClass("active");
         $("[for='exclamation']").removeClass("active");
+
+        time = 200;
+        ghostOn = true;
+        distrOn = false;
     });
     $("#exclamation").on("click", () => {
         $("[for='exclamation']").addClass("active");
         $("[for='penguin']").removeClass("active");
         $("[for='party']").removeClass("active");
+        $("[for='sad']").removeClass("active");
         $("[for='ghost']").removeClass("active");
         $("[for='milk']").removeClass("active");
+
+        time = 200;
+        ghostOn = false;
+        distrOn = true;
     });
 
 

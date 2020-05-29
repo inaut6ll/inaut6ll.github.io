@@ -31,6 +31,23 @@
     top: 8%;
     left: 32%;
     transform: scale(1.05);
+    animation-name: ghost;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-play-state: paused;
+}
+
+@keyframes ghost{
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 
 .grid div{
@@ -188,14 +205,14 @@
     text-shadow: 2px 2px rgb(211, 210, 210);
     position: absolute;
     top: 4%;
-    left: 73%;
+    left: 63%;
     z-index: 3;
 }
 
 #rules-button{
     position: absolute;
     top: 6%;
-    left: 88%;
+    left: 78%;
     padding: 6px 10px 6px 10px;
     z-index: 2;
 }
@@ -237,7 +254,7 @@
 
 #d{
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 63%;
     z-index: 3;
     font-size: 3rem;
@@ -247,7 +264,7 @@
 
 #difficulty{
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 70%;
     z-index: 3;
     font-family: "Quicksand", sans-serif;
@@ -261,7 +278,7 @@
 #deco-pic1{
     position: absolute;
     top: 5%;
-    left: 61%;
+    left: 86.3%;
     width: 100px;
     height: 100px;
     background-color: black;
