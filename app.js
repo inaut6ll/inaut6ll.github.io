@@ -285,6 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         score = 0;
         scoreDisplay.innerHTML = score;
+        paused = false;
         rs = true;
         startGame();
     };
