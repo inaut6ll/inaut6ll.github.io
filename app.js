@@ -585,8 +585,8 @@ document.addEventListener("DOMContentLoaded", () => {
         $("body").css("color", "rgb(43, 16, 0)");
         $("#title").css("text-shadow", "2px 2px white");
         $("#deco-pic1").css("color", "white");
-        $("#deco-pic1").css("background", "linear-gradient(0deg, black, black)");
-        $("#deco-pic1").html("¯\_(ツ)_/¯");
+        $("#deco-pic1").css("background", "linear-gradient(45deg, rgb(58, 22, 1), rgb(218, 100, 32))");
+        $("#deco-pic1").html("♪(´▽｀ )");
         $("#deco-pic1").css("border", "0px solid transparent");
         $(".button").css("border", "");
         $(".grid").css("background", "linear-gradient(0deg, white, white)");

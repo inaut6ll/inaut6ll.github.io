@@ -375,7 +375,7 @@
     position: relative;
     top: -5%;
     left: 77.5%;
-    background: linear-gradient(180deg, rgb(124, 32, 32), brown);
+    background: linear-gradient(180deg, rgb(124, 32, 32), rgb(218, 100, 32));
 }
 
 
@@ -404,7 +404,7 @@
     z-index: 3;
     width: 20px;
     height: 20px;
-    background-color: rgb(43, 16, 0);
+    background-color: rgb(218, 100, 32);
     animation-name: spin;
     animation-duration: 1s;
     animation-iteration-count: infinite;
