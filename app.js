@@ -341,9 +341,9 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if(score < 150){
                 alert("You are at age in which no one will every be able to tell what age you are.");
             } else if(score < 170){
-                alert("We must save the bees.");
+                alert("You must save the bees.");
             } else if(score < 190){
-                alert("Where oh where has my father gone? Perhaps he is in the woods.");
+                alert("Go check if you left the oven on. Chances are, you haven't, but go check just in case.");
             } else if(score < 210){
                 alert("I'm lost in the wooooooodssss");
             } else if(score < 230){
@@ -359,11 +359,11 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if(score < 330){
                 alert("Why are you still here?");
             } else if(score < 350){
-                alert("I'm so hungry right now.");
+                alert("I'm so hungry right now. Go buy me a taco.");
             } else if(score < 370){
                 alert("Ann is our one and only lord and savior.");
             } else if(score < 390){
-                alert("WHappy Birthday!!!");
+                alert("Happy Birthday!!!");
             }else{
                 alert("...no comment.");
             }
