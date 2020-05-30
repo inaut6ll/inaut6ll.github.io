@@ -403,21 +403,21 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#bg").css("background", "linear-gradient(-45deg, rgba(95, 1, 1, 0.918), rgba(255, 0, 0, 0.692), white)");
         $("body").css("color", "black");
         $("#title").css("text-shadow", "2px 2px white");
-        $("#deco-pic1").css("background-color", "black");
         $("#deco-pic1").css("color", "white");
-        $("#deco-pic1").css("background", "");
+        $("#deco-pic1").css("background", "linear-gradient(0deg, black, black)");
         $("#deco-pic1").html("¯\_(ツ)_/¯");
         $("#deco-pic1").css("border", "0px solid transparent");
         $(".button").css("border", "");
         $(".grid").css("background", "linear-gradient(0deg, white, white)");
+        $(".grid").css("border", "")
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "0px solid transparent");
         $("#menu-bg").css("color", "black");
         $("#menu-bg").css("background", "linear-gradient(90deg, white, white)");
         $("#menu-bg").css("border", "5px double black");
         $("#container").css("border", "1px solid transparent");
-        $("#container").css("background-color", "white");
-        $(".mini-grid").css("background-color", "white");
+        $("#container").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
     });
@@ -432,14 +432,15 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#bg").css("background", "linear-gradient(-45deg, rgba(204, 241, 255, 0.918), rgba(218, 255, 210, 0.692), rgb(255, 216, 216))");
         $(".button").css("border", "");
         $(".grid").css("background", "linear-gradient(0deg, white, white)");
+        $(".grid").css("border", "")
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "0px solid transparent");
         $("#menu-bg").css("color", "black");
         $("#menu-bg").css("background", "linear-gradient(90deg, white, white)");
         $("#menu-bg").css("border", "5px double black");
         $("#container").css("border", "1px solid transparent");
-        $("#container").css("background-color", "white");
-        $(".mini-grid").css("background-color", "white");
+        $("#container").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
     });
@@ -457,11 +458,12 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#menu-bg").css("border", "5px double white");
         $(".button").css("border", "1px solid white");
         $(".grid").css("background", "linear-gradient(0deg, white, white)");
+        $(".grid").css("border", "")
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "0px solid transparent");
         $("#container").css("border", "1px solid transparent");
-        $("#container").css("background-color", "white");
-        $(".mini-grid").css("background-color", "white");
+        $("#container").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
     });
@@ -477,14 +479,15 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#menu-bg").css("color", "black");
         $(".button").css("border", "white");
         $(".grid").css("background", "linear-gradient(0deg, black, black)");
+        $(".grid").css("border", "")
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "1px solid white");
         $("#menu-bg").css("color", "black");
         $("#menu-bg").css("background", "linear-gradient(90deg, white, white)");
         $("#menu-bg").css("border", "5px double black");
         $("#container").css("border", "1px solid white");
-        $("#container").css("background-color", "black");
-        $(".mini-grid").css("background-color", "black");
+        $("#container").css("background", "linear-gradient(0deg, black, black)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, black, black)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "white");
     });
@@ -502,35 +505,37 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#menu-bg").css("border", "5px double white");
         $(".button").css("border", "1px solid white");
         $(".grid").css("background", "linear-gradient(180deg, white, black)");
+        $(".grid").css("border", "")
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "0px solid transparent");
         $("#container").css("border", "1px solid black");
-        $("#container").css("background-color", "white");
-        $(".mini-grid").css("background-color", "white");
+        $("#container").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
     });
     $("#ann").on("click", () => {
-        colors = ["rgb(248, 190, 190)", "rgb(248, 213, 172)", "rgb(214, 222, 250)", "rgb(221, 248, 252)", "rgb(229, 253, 206)", "rgb(247, 222, 245)", "rgb(235, 221, 252)"];
+        colors = ["red", "orange", "yellow", "green", "violet", "blue", "purple"];
         $("body").css("color", "rgb(255, 0, 255)");
         $("#title").css("text-shadow", "2px 2px white");
         $("#deco-pic1").css("color", "black");
-        $("#deco-pic1").css("background", "url(annpic11.jpeg)");
+        $("#deco-pic1").css("background", "url(annpic.jpg)");
         $("#deco-pic1").html("");
         $("#deco-pic1").css("border", "5px ridge red");
         $("#bg").css("background", "url(annpic12.jpeg)");
-        $(".button").css("border", "1px solid white");
+        $(".button").css("border", "5px ridge rgb(255, 0, 255)");
         $(".grid").css("background", "url(annpic2.jpeg)");
+        $(".grid").css("border", "3px ridge rgb(255, 0, 255)")
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "0px solid transparent");
         $("#menu-bg").css("color", "rgb(255, 0, 255)");
         $("#menu-bg").css("background", "url(annpic10.jpeg)");
         $("#menu-bg").css("border", "5px ridge orange");
-        $("#container").css("border", "1px solid transparent");
-        $("#container").css("background-color", "white");
-        $(".mini-grid").css("background-color", "white");
+        $("#container").css("border", "5px ridge yellow");
+        $("#container").css("background", "url(annpic3.jpeg)");
+        $(".mini-grid").css("background", "url(annpic11.jpeg)");
         $(".mini-grid div").css("border", "1px solid transparent");
-        $("#grid-next").css("color", "black");
+        $("#grid-next").css("color", "rgb(255, 0, 255)");
     });
 
 
