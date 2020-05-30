@@ -474,6 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
+        restartF();
     });
     $("#pastel").on("click", () => {
         colors = ["rgb(248, 190, 190)", "rgb(248, 213, 172)", "rgb(214, 222, 250)", "rgb(221, 248, 252)", "rgb(229, 253, 206)", "rgb(247, 222, 245)", "rgb(235, 221, 252)"];
@@ -497,6 +498,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
+        restartF();
     });
     $("#dark").on("click", () => {
         colors = ["", "", "", "", "", "", ""];
@@ -520,6 +522,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
+        restartF();
     });
     $("#dark2").on("click", () => {
         colors = ["white", "white", "white", "white", "white", "white", "white"];
@@ -544,6 +547,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "linear-gradient(0deg, black, black)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "white");
+        restartF();
     });
     $("#light").on("click", () => {
         colors = ["gray", "gray", "gray", "gray", "gray", "gray", "gray"];
@@ -568,6 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
+        restartF();
     });
     $("#ann").on("click", () => {
         colors = ["red", "orange", "yellow", "green", "violet", "blue", "purple"];
@@ -591,6 +596,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "url(annpic11.jpeg)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "rgb(255, 0, 255)");
+        restartF();
     });
     $("#blue").on("click", () => {
         colors = ["rgb(43, 195, 255)", "rgb(167, 226, 250)", "rgb(108, 207, 253)", "rgb(131, 178, 248)", "rgb(69, 140, 248)", "rgb(2, 103, 255)", "rgb(0, 47, 255)"];
@@ -614,6 +620,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "black");
+        restartF();
     });
     $("#coffee").on("click", () => {
         colors = ["rgb(95, 44, 14)", "rgb(59, 22, 0)", "rgb(136, 71, 34)", "rgb(161, 113, 84)", "rgb(168, 65, 0)", "rgb(216, 110, 44)", "rgb(214, 139, 93)"];
@@ -637,6 +644,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "rgb(43, 16, 0)");
+        restartF();
     });
 
 
