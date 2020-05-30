@@ -107,17 +107,33 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     };
 
+
+    var cheat = false;
+    //add function to cheat button
+    $("#cheat-button").on("click", () => {
+        if(!cheat){
+            cheat = true;
+            $("#cheat-button").css("background-color", "rgb(172, 172, 172)");
+        }else{
+            cheat = false;
+            $("#cheat-button").css("background-color", "black");
+        }
+    });
+
+    var paused = true;
     //assign functions to keyCodes
     function control(e) {
-        e.preventDefault();
-        if (e.keyCode === 37 || e.keyCode === 65){
-            moveLeft();
-        } else if (e.keyCode === 38 || e.keyCode === 87){
-            rotate();
-        } else if (e.keyCode === 39 || e.keyCode === 68){
-            moveRight();
-        } else if (e.keyCode === 40 || e.keyCode === 83){
-            moveDown();
+        if(!paused || cheat){
+            e.preventDefault();
+            if (e.keyCode === 37 || e.keyCode === 65){
+                moveLeft();
+            } else if (e.keyCode === 38 || e.keyCode === 87){
+                rotate();
+            } else if (e.keyCode === 39 || e.keyCode === 68){
+                moveRight();
+            } else if (e.keyCode === 40 || e.keyCode === 83){
+                moveDown();
+            }
         }
     };
     document.addEventListener("keyup", control);
@@ -235,7 +251,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }else if (timerId != null) {
             clearInterval(timerId);
             timerId = null;
+            paused = true;
         } else {
+            paused = false;
             draw();
             timerId = setInterval(moveDown, time); //make the tetromino move down every second
             if (fs === true){
@@ -493,19 +511,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     $("#light").on("click", () => {
         colors = ["gray", "gray", "gray", "gray", "gray", "gray", "gray"];
+        colors = ["rgb(32, 32, 32)", "rgb(64, 64, 64)", "rgb(96, 96, 96)", "rgb(128, 128, 128)", "rgb(160, 160, 160)", "rgb(192, 192, 192)", "rgb(224, 224, 224)"];
         $("body").css("color", "black");
         $("#title").css("text-shadow", "2px 2px white");
         $("#deco-pic1").css("color", "black");
         $("#deco-pic1").css("background", "linear-gradient(0deg, white, white)");
         $("#deco-pic1").html("(⓿_⓿)");
         $("#deco-pic1").css("border", "0px solid transparent");
-        $("#bg").css("background", "linear-gradient(0deg, white, black)");
+        $("#bg").css("background", "linear-gradient(0deg, black, white, black)");
         $("#menu-bg").css("color", "white");
         $("#menu-bg").css("background", "linear-gradient(90deg, white, black)");
         $("#menu-bg").css("border", "5px double white");
         $(".button").css("border", "1px solid white");
-        $(".grid").css("background", "linear-gradient(180deg, white, black)");
-        $(".grid").css("border", "")
+        $(".grid").css("background", "linear-gradient(0deg, white, black, white)");
+        $(".grid").css("border", "1px solid white")
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "0px solid transparent");
         $("#container").css("border", "1px solid black");
@@ -537,7 +556,52 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".mini-grid div").css("border", "1px solid transparent");
         $("#grid-next").css("color", "rgb(255, 0, 255)");
     });
-
+    $("#blue").on("click", () => {
+        colors = ["rgb(43, 195, 255)", "rgb(167, 226, 250)", "rgb(108, 207, 253)", "rgb(131, 178, 248)", "rgb(69, 140, 248)", "rgb(2, 103, 255)", "rgb(0, 47, 255)"];
+        $("#bg").css("background", "linear-gradient(180deg, white, rgb(193, 248, 250), rgb(0, 153, 255), rgb(23, 56, 204), rgb(0, 27, 145), rgb(0, 23, 126))");
+        $("body").css("color", "black");
+        $("#title").css("text-shadow", "2px 2px white");
+        $("#deco-pic1").css("color", "black");
+        $("#deco-pic1").css("background", "linear-gradient(0deg, rgb(162, 240, 250), rgb(162, 178, 250))");
+        $("#deco-pic1").html("╮(╯-╰)╭");
+        $("#deco-pic1").css("border", "0px solid transparent");
+        $(".button").css("border", "");
+        $(".grid").css("background", "linear-gradient(180deg, transparent, transparent)");
+        $(".grid").css("border", "")
+        $(".grid div").css("margin", "1px");
+        $(".grid div").css("border", "0px solid transparent");
+        $("#menu-bg").css("color", "black");
+        $("#menu-bg").css("background", "linear-gradient(90deg, white, white)");
+        $("#menu-bg").css("border", "5px double black");
+        $("#container").css("border", "1px solid transparent");
+        $("#container").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid div").css("border", "1px solid transparent");
+        $("#grid-next").css("color", "black");
+    });
+    $("#coffee").on("click", () => {
+        colors = ["rgb(95, 44, 14)", "rgb(59, 22, 0)", "rgb(136, 71, 34)", "rgb(161, 113, 84)", "rgb(168, 65, 0)", "rgb(216, 110, 44)", "rgb(214, 139, 93)"];
+        $("#bg").css("background", "url(coffee-bg.jpg)");//"linear-gradient(135deg, rgb(211, 123, 72), rgb(153, 75, 31), rgb(94, 30, 30)");
+        $("body").css("color", "rgb(43, 16, 0)");
+        $("#title").css("text-shadow", "2px 2px white");
+        $("#deco-pic1").css("color", "white");
+        $("#deco-pic1").css("background", "linear-gradient(0deg, black, black)");
+        $("#deco-pic1").html("¯\_(ツ)_/¯");
+        $("#deco-pic1").css("border", "0px solid transparent");
+        $(".button").css("border", "");
+        $(".grid").css("background", "linear-gradient(0deg, white, white)");
+        $(".grid").css("border", "3px double rgb(153, 75, 31)")
+        $(".grid div").css("margin", "1px");
+        $(".grid div").css("border", "0px solid transparent");
+        $("#menu-bg").css("color", "rgb(43, 16, 0)");
+        $("#menu-bg").css("background", "linear-gradient(0deg, white, white)");
+        $("#menu-bg").css("border", "5px double rgb(153, 75, 31)");
+        $("#container").css("border", "5px double rgb(153, 75, 31)");
+        $("#container").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
+        $(".mini-grid div").css("border", "1px solid transparent");
+        $("#grid-next").css("color", "rgb(43, 16, 0)");
+    });
 
 
 
