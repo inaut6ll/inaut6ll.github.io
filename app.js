@@ -322,13 +322,47 @@ document.addEventListener("DOMContentLoaded", () => {
                 highScoreDisplay.innerHTML = localStorage.getItem("highScore");
             }
             clearInterval(timerId);
-            if(score < 80){
-                alert("You lost already? Wow, you really suck.");
+            if(score < 10){
+                alert(".....no comment.");
+            } else if(score < 30){
+                alert("Welp, at least you tried.");
+            } else if(score < 50){
+                alert("Hi, I'm Joe. How are you?");
+            } else if(score < 70){
+                alert("There is no place like home, and home is where the galoobers are.");
+            } else if(score < 90){
+                alert("IT'S TIME TO DDDDDDDDDUEL");
+            } else if(score < 110){
+                alert("I am the globglogabgalab, swibbledooblewibblewobblejibblejobjab!");
+            } else if(score < 130){
+                alert("Money is happiness. Call 342-235-2353 to prove me wrong.");
             } else if(score < 150){
-                alert("Welp, you ain't the best at this game. At least you tried.");
-            } else if(score < 600){
-                alert("Good game, bro.");
-            } else{
+                alert("You are at age in which no one will every be able to tell what age you are.");
+            } else if(score < 170){
+                alert("We must save the bees.");
+            } else if(score < 190){
+                alert("Where oh where has my father gone? Perhaps he is in the woods.");
+            } else if(score < 210){
+                alert("I'm lost in the wooooooodssss");
+            } else if(score < 230){
+                alert("Do you get these references?");
+            } else if(score < 250){
+                alert("SASAGEYOOO SASAGEYOOOO SHINZOU WO SASAGEYOOOOO");
+            } else if(score < 270){
+                alert("You don't belong here.");
+            } else if(score < 290){
+                alert("Shut up. No, just shut up.");
+            } else if(score < 310){
+                alert("Seriously, you gotta shut up, bro.");
+            } else if(score < 330){
+                alert("Why are you still here?");
+            } else if(score < 350){
+                alert("I'm so hungry right now.");
+            } else if(score < 370){
+                alert("Ann is our one and only lord and savior.");
+            } else if(score < 390){
+                alert("WHappy Birthday!!!");
+            }else{
                 alert("...no comment.");
             }
         }
