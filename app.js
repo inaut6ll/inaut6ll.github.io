@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    alert("Want some insight on life? Play, and I will tell you your fortune. Seriously.                                                                                    Also, remember to hit Save to save your Settings selections.  ");
     const grid = document.querySelector(".grid");
     let squares = Array.from(document.querySelectorAll(".grid div"));
     const scoreDisplay = document.querySelector("#score");
