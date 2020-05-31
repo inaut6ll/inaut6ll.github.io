@@ -458,7 +458,7 @@
     position: absolute;
     top: 5%;
     left: 31%;
-    z-index: 3;
+    z-index: 15;
     width: 20px;
     height: 20px;
     background-color: rgb(218, 100, 32);
