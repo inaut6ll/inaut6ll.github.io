@@ -13,12 +13,9 @@
     <title>Choose Ur Own Adventure</title>
 
     <style>
-      :root{
-        font-size: 62.5%;
-      }
       body{
         font-family: 'Flamenco';
-        font-size: 3rem;
+        font-size: 3vw;
         text-align: center;
       }
       .circle{
@@ -29,7 +26,7 @@
         border-radius: 50%;
       }
       .button{
-        font-size: 2.3rem;
+        font-size: 2vw;
         border-radius:5px;
         background-color: black;
 	      color: white;
@@ -59,7 +56,7 @@
          background-color: white;
          color: black;
          font-family: 'Josefin Slab';
-         font-size: 1.6rem;
+         font-size: 1.6vw;
          border-radius: 5px;
      }
      .censor{
@@ -85,35 +82,37 @@
        width: 100%;
      }
      #welcome{
-       font-size: 6rem;
+       font-size: 4.8vw;
        font-family: Flamenco;
      }
      #title{
-       font-size: 9.3rem;
+       font-size: 7.3vw;
        justify-self: center;
        font-family: 'Josefin Slab';
        z-index: 3;
        position: relative;
      }
      #oe{
-       font-size: 3.5rem;
+       font-size: 2.8vw;
        font-family: 'Dancing Script';
        justify-self: center;
        z-index: 2;
        position: relative;
-       top: -10%;
+       top: -20%;
      }
      #namelb{
-       font-size: 3rem;
+       font-size: 2.7vw;
        z-index: 2;
        margin: auto;
        position: relative;
-       top: 5%;
+       top: 10%;
+       left: -3%;
+       width: 50%;
      }
      #name{
-       width: 33%;
+       width: 80%;
        height: 100%;
-       font-size: 3rem;
+       font-size: 2.7vw;
        text-align: center;
      }
      #begin{
@@ -121,13 +120,13 @@
       width: 8%;
       height: 8%;
       position: relative;
-      top: 10%;
+      top: 7%;
      }
      #scene2{
        display: none;
      }
      #temp{
-       font-size: 18rem;
+       font-size: 15vw;
        line-height: 100%;;
      }
     </style>
@@ -154,7 +153,9 @@
         </div>
       </div>
 
-      <div id="namelb">Alias: <input id="name" onkeypress="checkKey(event)" maxlength="29" placeholder="e.g. Ory Jin Alneim"></div>
+      <label id="namelb">
+        Alias: <input id="name" onkeypress="checkKey(event)" maxlength="29" placeholder="e.g. Ory Jin Alneim">
+      </label>
       <div class="button" id="begin">Begin</div>
     </div>
 
