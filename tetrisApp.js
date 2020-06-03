@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    //alert("Want some insight on life? Play, and I will tell you your fortune. Seriously.                                                                                    Also, remember to hit Save to save your Settings selections.  ");
+    alert("Want some advice on life? Play, and I will tell you something extremely insightful. Seriously.                                                                                    Also, remember to hit Save to save your Settings selections.  ");
     const grid = document.querySelector(".grid");
     let squares = Array.from(document.querySelectorAll(".grid div"));
     const scoreDisplay = document.querySelector("#score");
@@ -364,6 +364,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Ann is our one and only lord and savior.");
             } else if(score < 390){
                 alert("Happy Birthday!!!");
+            } else if(score < 410){
+                alert("It's-a me! Mario!");
+            } else if(score < 430){
+                alert("As my mother used to always say, \"Don't pick your nose.\"");
+            }
+            else if(score < 450){
+                alert("Who farted?");
+            }
+            else if(score < 470){
+                alert("That's called bribery.");
+            }
+            else if(score < 490){
+                alert("Last week, god spoke to me. He told me to go away and leave him alone.");
+            }
+            else if(score < 510){
+                alert("Every time I see you, I scream in terror.");
+            }
+            else if(score < 530){
+                alert("Here's a secret: I let the dogs out.");
+            }
+            else if(score < 550){
+                alert("\"As you get older, it becomes harder to hold your pee in. Older people have weaker bladders. Check your privilege.\"");
+            }
+            else if(score < 570){
+                alert("You've got the best hair in the world. Don't let anyone take that away from you.");
+            }
+            else if(score < 590){
+                alert("If you ever feel discouraged, think about what Alexander the Great did at your age. Then, you'll feel even more discouraged. :)");
+            }
+            else if(score < 610){
+                alert("So... you think you got a high score? Think again.");
             }else{
                 alert("...no comment.");
             }
