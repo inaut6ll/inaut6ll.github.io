@@ -1,1 +1,185 @@
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat&family=Cutive+Mono&family=Dancing+Script&family=Flamenco&family=Josefin+Slab&family=Permanent+Marker&family=Quicksand:wght@300;400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ 
+    <title></title>
+ 
+    <style>
+        body{
+            font-family: "Cutive Mono", monospace;
+            font-size: 1.7vw;
+            padding-top: 3%;
+            padding-left: 5%;
+            padding-bottom: 3%;
+        }
+        h1{
+            font-size: 5vw;
+        }
+        textarea{
+            background-color: black;
+            color: white;
+        }
+        select{
+            background-color: black;
+            color: white;
+        }
+      .circle{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(166, 181, 248);
+        border: black solid 1px;
+        border-radius: 50%;
+      }
+      .button{
+        font-size: 1.8vw;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        padding: .4%;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        }
+        .button:hover{
+            cursor: pointer;
+            background-color: rgb(66, 63, 63);
+            transform: scale(1.1);
+        }
+        .button:active{
+            border-style: inset;
+            background-color: rgb(190, 186, 186);
+        }
+        .button2{
+            font-size: 1.8vw;
+            border-radius:5px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: .4%;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .button2:hover{
+            cursor: pointer;
+            background-color: rgb(160, 154, 154);
+            transform: scale(1.1);
+        }
+        .button2:active{
+            border-style: inset;
+            background-color: rgb(80, 77, 77);
+        }
+     .input{
+         border: 5px groove black;
+         padding: 3px;
+         background-color: black;
+         color: white;
+        font-family: 'cutive mono', monospace;
+         font-size: 1.7vw;
+         height: 4%;
+         width: 30%;
+     }
+ 
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+
+    <p id="description">We need to talk.</p>
+    <br>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input class="input" type="text" id="name" placeholder="e.g. Ur Mom" required>
+        <br>
+        <br>
+        
+        <label id="email-label" for="email" >Email:</label>
+        <input class="input" type="email" id="email" placeholder="e.g. imUrMom@gmail.com" required>
+        <br>
+        <br>
+        
+        <label id="number-label" for="number">How many people named Joe do you know?</label>
+        <input class="input" type="number" id="number" min="0" max="100000000" placeholder="e.g. 300">
+        <br><br>
+        
+        <label for="eat">Which of these would you rather eat?</label>
+        <select name="eat" id="dropdown">
+            <option value="foot">Satan's foot</option>
+            <option value="baguette">Moldy baguette</option>
+            <option value="chem">Chemistry textbook</option>
+            <option value="socks">Sweaty socks</option>
+            <option value="sewage">Sewage</option>
+        </select>
+        <br><br>
+        
+        <div>Why did you kill Bob?</div>
+        <label for="ate">
+            <input type="radio" id="ate" name="oscar" value="ate"> He ate my chemistry textbook.
+        </label>
+        <br>
+        <label for="laughed">
+            <input type="radio" id="laughed" name="oscar" value="laughed"> He laughed at my new glowing sneakers!
+        </label>
+        <br>
+        <label for="die">
+            <input type="radio" id="die" name="oscar" value="ate"> He would have died sooner or later. Sooner rather than later.
+        </label>
+        <br>
+        <label for="all">
+            <input type="radio" id="all" name="oscar" value="all"> All of the above.
+        </label>
+        <br><br>
+        
+        <div>Where is my sandwich?</div>
+        <label for="butt">
+            <input type="checkbox" id="butt" name="sandwich" value="butt"> Up your butt and around the corner.
+        </label>
+        <br>
+        <label for="mouth">
+            <input type="checkbox" id="mouth" name="sandwich" value="mouth"> In my mouth.
+        </label>
+        <br>
+        <label for="trash">
+            <input type="checkbox" id="trash" name="sandwich" value="trash"> I threw it in the trash.
+        </label>
+        <br>
+        <label for="you">
+            <input type="checkbox" id="you" name="sandwich" value="you"> But what if the sandwich was you and you were being eaten by the sandwich all along?
+        </label>
+        <br><br>
+        
+        <label for="comments">Comments:</label>
+        <br>
+        <textarea id="comments" rows="3" cols="50">You are my mother.</textarea>
+        <br>
+        <br>
+        
+        <button type="submit" id="submit">Submit</button>
+    </form>
+ 
+ 
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	
+    <script>
+        $("#submit").on("click", () => {
+            alert("Ha! You just submitted this form for nothing because I currently do not know how to use server side languages!");
+        });
+    </script>
+  </body>
+</html>
+ 
+
+
