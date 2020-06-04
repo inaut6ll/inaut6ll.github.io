@@ -119,18 +119,44 @@
             font-size: 1.8vw;
         }
 
+
         .grid{
             position: relative;
             display: grid;
-            margin-top: 5%;
             padding: 3%;
             grid-template-rows: 50% 50%;
             grid-template-columns: 50% 50%;
             grid-gap: 5% 0%;
             width: auto;
             height: auto;
-            background-color:rgb(0, 0, 0);
-            border-radius: 5px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .grid2{
+            position: relative;
+            display: grid;
+            padding: 3%;
+            grid-template-rows: 33% 33% 33%;
+            grid-template-columns: 50% 50%;
+            grid-gap: 5% 0%;
+            width: auto;
+            height: auto;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .grid3{
+            position: relative;
+            display: grid;
+            padding: 3%;
+            grid-template-rows: 25% 25% 25% 25%;
+            grid-template-columns: 50% 50%;
+            grid-gap: 5% 0%;
+            width: auto;
+            height: auto;
+            background-color: white;
+            border: 1px solid black;
         }
 
         /* The container */
@@ -159,34 +185,48 @@
         .checkmark {
             position: relative;
             display: block;
-            height: 100%;
+            height: auto;
             width: 100%;
-            margin-bottom: 8%;
             padding: 3%;
             text-align: center;
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(3, 3, 3);
+            color: white;
             border-radius: 5px;
-            border: 1px solid black;
-            font-size: 1.2vw;
+            border: 1px solid rgb(255, 255, 255);
+            font-size: 1.5vw;
         }
 
         /* On mouse-over, add a grey background color */
         .container:hover input ~ .checkmark{
-            background-color: rgb(228, 226, 226);
+            background-color: rgb(104, 104, 104);
         }
 
         /* On click, add a grey background color */
         .container:active input ~ .checkmark{
-            background-color: rgb(104, 104, 104);
+            background-color: rgb(228, 226, 226);
             color: white;
         }
 
         /* On mouseUp, add a black background color */
         .container input:checked ~ .checkmark {
-            background-color: black;
-            color: white;
-            border: 1px solid white;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
         }
+
+        .q-a{
+            background-color: black;
+            margin-top: 3%;
+            margin-bottom: 5%;
+            box-shadow: 0px 0px 10px black;
+            border: 1px solid black;
+        }
+        .question{
+            font-size: 2vw;
+            color: white;
+            padding: 3%;
+        }
+
                 
     </style>
   </head>
@@ -194,25 +234,124 @@
     <h1>Your Previous Life Quiz</h1>
     <div class="sub">Want to know who/what you were your past life and how you died? Answer a few questions, and the truth shall be revealed.</div>
 
-    <div class="grid">
-        <label class="container"> 
-            <input type="radio" name="radio">
-            <span class="checkmark">One </span>
-        </label>
-        <label class="container">
-            <input type="radio" name="radio">
-            <span class="checkmark">Two</span>
-        </label>
-        <label class="container">
-            <input type="radio" name="radio">
-            <span class="checkmark">Three</span>
-        </label>
-        <label class="container">
-            <input type="radio" name="radio">
-            <span class="checkmark">Four</span>
-        </label>
+    <div class="q-a" id="q1">
+        <div class="question">1. Who are you?</div>
+        <div class="grid2">
+            <label class="container"> 
+                <input type="radio" name="q1">
+                <span class="checkmark">I don't know</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q1">
+                <span class="checkmark">Ur mom</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q1">
+                <span class="checkmark">God</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q1">
+                <span class="checkmark">No one in particular</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q1">
+                <span class="checkmark">I'm Batman</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q1">
+                <span class="checkmark">Somebody</span>
+            </label>
+        </div>
     </div>
- 
+
+    <div class="q-a" id="q2" style="background-color: rgb(255, 93, 93);">
+        <div class="question"></div>
+        <div class="grid">
+            <label class="container"> 
+                <input type="radio" name="q2">
+                <span class="checkmark">One </span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q2">
+                <span class="checkmark">Two</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q2">
+                <span class="checkmark">Three</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q2">
+                <span class="checkmark">Four</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="q-a" id="q3">
+        <div class="question"></div>
+        <div class="grid">
+            <label class="container"> 
+                <input type="radio" name="q3">
+                <span class="checkmark">One </span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q3">
+                <span class="checkmark">Two</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q3">
+                <span class="checkmark">Three</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q3">
+                <span class="checkmark">Four</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="q-a" id="q4" style="background-color: rgb(84, 84, 253);">
+        <div class="question"></div>
+        <div class="grid">
+            <label class="container"> 
+                <input type="radio" name="q4">
+                <span class="checkmark">One </span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q4">
+                <span class="checkmark">Two</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q4">
+                <span class="checkmark">Three</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q4">
+                <span class="checkmark">Four</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="q-a" id="q5">
+        <div class="question"></div>
+        <div class="grid">
+            <label class="container"> 
+                <input type="radio" name="q5">
+                <span class="checkmark">One </span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q5">
+                <span class="checkmark">Two</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q5">
+                <span class="checkmark">Three</span>
+            </label>
+            <label class="container">
+                <input type="radio" name="q5">
+                <span class="checkmark">Four</span>
+            </label>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
