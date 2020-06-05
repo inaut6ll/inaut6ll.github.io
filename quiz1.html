@@ -45,7 +45,7 @@
             color: white;
             padding: .4%;
             text-align: center;
-            font-family: 'Quicksand', sans-serif;
+            font-family: "Major Mono Display", monospace;
         }
         .button:hover{
             cursor: pointer;
@@ -119,6 +119,10 @@
             font-size: 1.8vw;
         }
 
+        .gri{
+            padding: 2%;
+            padding-bottom: 3%;
+        }
 
         .grid{
             position: relative;
@@ -244,366 +248,721 @@
             padding: 3%;
         }
 
-                
+        .box{
+            background-color: black;
+            box-shadow: 0px 0px 10px black;
+            border: 1px solid black;
+            padding: 3%;
+            color: rgb(173, 173, 173);
+            font-size: 3vw;
+            text-align: center;
+        }
+        .box:hover{
+            cursor: pointer;
+        }
+        .box:active{
+            background-color: rgb(48, 48, 48);
+            color: white;
+        }
+
+        #scene1{
+            display: none;
+        }
+        #submit{
+            position: relative;
+            display: block;
+            width: 17%;
+            padding: 1%;
+            margin: auto;
+        }
+
+        #scene2{
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 45vw;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 33% 33% 33%;
+            justify-items: center;
+            align-items: center;
+            grid-gap: .5%;
+        }
+        #results{
+            text-align: center;
+            grid-column: 2 / 3;
+            position: relative;
+            top: -10%;
+            text-decoration: underline rgba(0, 0, 0, 0.658);
+        }
+        #first{
+            width: 95%;
+            height: 100%;
+            position: relative;
+            top: -30%;
+            color: white;
+            background-color: rgb(184, 62, 102);
+        }
+        #first:active{
+            background-color: rgb(209, 94, 132);
+        }
+        #second{
+            width: 95%;
+            height: 100%;
+            position: relative;
+            top: -30%;
+        }
+        #third{
+            width: 95%;
+            height: 100%;
+            position: relative;
+            top: -30%;
+            color: white;
+            background-color: rgb(184, 62, 102);
+        }
+        #third:active{
+            background-color: rgb(209, 94, 132);
+        }
+        #fourth{
+            width: 95%;
+            height: 100%;
+            position: relative;
+            top: -12%;
+        }
+        #fifth{
+            width: 95%;
+            height: 100%;
+            position: relative;
+            top: -12%;
+            color: white;
+            background-color: rgb(184, 62, 102);
+        }
+        #fifth:active{
+            background-color: rgb(209, 94, 132);
+        }
+        #sixth{
+            width: 95%;
+            height: 100%;
+            position: relative;
+            top: -12%;
+        }
+
+        .line{
+            background-color: black;
+            margin-top: 3%;
+            margin-bottom: 5%;
+            box-shadow: 0px 0px 10px black;
+            border: 1px solid black;
+        }  
+        .info{
+            background-color: black;
+            box-shadow: 0px 0px 15px black;
+            border: 1px solid black;
+            width: 60%;
+            margin: auto;
+            margin-top: 3%;
+            margin-bottom: 5%;
+            padding: 2%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            color: white;
+            font-size: 1.5vw;
+        } 
+        #sceneFirst{
+            /*display: none;*/
+            display: block;
+        } 
+        #sceneSecond{
+            display: none;
+        } 
+        #sceneThird{
+            display: none;
+        } 
+        #sceneFourth{
+            display: none;
+        } 
+        #sceneFifth{
+            display: none;
+        } 
+        #sceneSixth{
+            display: none;
+        } 
+        .you-got{
+            text-align: center;
+        } 
+        .large{
+            text-align: center;
+            margin: auto;
+            font-size: 6vw;
+        }
+         
     </style>
   </head>
   <body>
-    <h1>Your Previous Life Quiz</h1>
-    <div class="sub">Want to know who/what you were your past life and how you died? Answer a few questions, and the truth shall be revealed.</div>
+    <div id="scene1">
+        <h1>Your Previous Life Quiz</h1>
+        <div class="sub">Want to know who/what you were your past life and how you died? Answer a few questions, and the truth shall be revealed.</div>
 
-    <div class="q-a" id="q1">
-        <div class="question">1. Who are you?</div>
-        <div class="grid2">
-            <label class="container"> 
-                <input type="radio" name="q1">
-                <span class="checkmark">I don't know</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q1">
-                <span class="checkmark">Ur mom</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q1">
-                <span class="checkmark">God</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q1">
-                <span class="checkmark">No one in particular</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q1">
-                <span class="checkmark">I'm Batman</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q1">
-                <span class="checkmark">Somebody</span>
-            </label>
+        <div class="q-a" id="q1">
+            <div class="question">1. Who are you?</div>
+            <div class="grid2">
+                <label class="container"> 
+                    <input type="radio" name="q1">
+                    <span class="checkmark">I don't know</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q1">
+                    <span class="checkmark">Ur mom</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q1">
+                    <span class="checkmark">God</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q1">
+                    <span class="checkmark">No one in particular</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q1">
+                    <span class="checkmark">I'm Batman</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q1">
+                    <span class="checkmark">Somebody</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="q-a" id="q2" style="background-color: rgb(255, 93, 93);">
+            <div class="question" style="color: black;">2. Would you rather: <br> &nbsp &nbsp (1) Rip off 5 of your own fingernails or <br> &nbsp &nbsp (2) Drink a liter of toxic sewage waste</div>
+            <div class="grid1">
+                <label class="container"> 
+                    <input type="radio" name="q2">
+                    <span class="checkmark">One </span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q2">
+                    <span class="checkmark">Two</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="q-a" id="q3">
+            <div class="question">3. Which one of these abilities would be the coolest to &nbsp; &nbsp;have?</div>
+            <div class="grid2">
+                <label class="container"> 
+                    <input type="radio" name="q3">
+                    <span class="checkmark">The ability to see through people's hair</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q3">
+                    <span class="checkmark">The ability to pee out of your finger</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q3">
+                    <span class="checkmark">The ability to instantaneously kill one random ant on the planet every time you snap your fingers</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q3">
+                    <span class="checkmark">The ability to make the number 4 appear wherever you want by pointing at things</span>
+                </label>
+                <label class="container"> 
+                    <input type="radio" name="q3">
+                    <span class="checkmark">The ability to shine an extremely dim light out of your butthole</span>
+                </label>
+                <label class="container"> 
+                    <input type="radio" name="q3">
+                    <span class="checkmark">The ability to call your mom without a phone</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="q-a" id="q4" style="background-color: rgb(84, 84, 253);">
+            <div class="question">4. Why did the chicken cross the road?</div>
+            <div class="grid">
+                <label class="container"> 
+                    <input type="radio" name="q4">
+                    <span class="checkmark">To get to the other side</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q4">
+                    <span class="checkmark">....seriously?</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q4">
+                    <span class="checkmark">Because it felt like it. Who are you to question the intentions of a chicken?</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q4">
+                    <span class="checkmark">To demonstrate the harmful effects of industrialization on wildlife</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="q-a" id="q5">
+            <div class="question">5. The meaning of life is...</div>
+            <div class="gri">
+                <label class="container"> 
+                    <input type="radio" name="q5">
+                    <span class="checkmark">to give life a meaning.</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q5">
+                    <span class="checkmark">TO MAKE THOSE WHO HAVE WRONGED YOU SUFFER.</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q5">
+                    <span class="checkmark">I don't care and all of these answers are stupid.</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q5">
+                    <span class="checkmark">ur mom</span>
+                </label>
+                <label class="container"> 
+                    <input type="radio" name="q5">
+                    <span class="checkmark">cereal</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q5">
+                    <span class="checkmark">There is no meaning to life. We are only a temporary, pointless existance that will someday cease to exist.</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q5">
+                    <span class="checkmark">currently not important. First of all, go get a life.</span>
+                </label>
+            </div>
+        </div>
+
+        
+        
+        <div class="q-a" id="q6" style="background-color: rgb(137, 253, 84);">
+            <div class="question" style="color: black;">6. You just broke into someone's house. What do you do &nbsp; &nbsp; &nbsp;next?</div>
+            <div class="grid">
+                <label class="container"> 
+                    <input type="radio" name="q6">
+                    <span class="checkmark">Leave immediately</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q6">
+                    <span class="checkmark">Take all their stuff</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q6">
+                    <span class="checkmark">It was my house and I had to break in because I live alone and I lost my keys</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q6">
+                    <span class="checkmark">Find the person who owns the house and kick them in the face because their security was so bad</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q7">
+            <div class="question">7. You just decided to go rob a guy named Rob. What is &nbsp; &nbsp; &nbsp;your incentive?</div>
+            <div class="grid">
+                <label class="container"> 
+                    <input type="radio" name="q7">
+                    <span class="checkmark">I was just bored</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q7">
+                    <span class="checkmark">I'm broke and I need food</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q7">
+                    <span class="checkmark">Rob borrowed my pencil in fourth grade and never gave it back</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q7">
+                    <span class="checkmark">To demonstrate the harmful effects of capitalism</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q8" style="background-color: rgb(253, 185, 84);">
+            <div class="question" style="color: black;">8. Oh no! Rob just caught you robbing his house! What do you say to him?</div>
+            <div class="grid">
+                <label class="container"> 
+                    <input type="radio" name="q8">
+                    <span class="checkmark">Hey there, Rob. I'm your dentist. Remember me?</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q8">
+                    <span class="checkmark">....er....I'm uh....um, I'm a raccoon! Yeah, yeah that...</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q8">
+                    <span class="checkmark">aaaahhhh!!!! who the hell are you and what are you doing in my house??!?!</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q8">
+                    <span class="checkmark">Please don't mind me, I'm just here to rob you. I won't take too long I promise.</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q9">
+            <div class="question">9. Well, whatever you said to poor Rob, it scared him to &nbsp; &nbsp;death. Literally. How do you feel about killing Rob?</div>
+            <div class="gri">
+                <label class="container"> 
+                    <input type="radio" name="q9">
+                    <span class="checkmark">I have no sympathy for Rob. He should've seen this coming. After all, his name was Rob.</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q9">
+                    <span class="checkmark">Rob, I am so sorry. I will be sure to attend your funeral.</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q9">
+                    <span class="checkmark">Who's Rob? I don't know anyone named Rob.</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q9">
+                    <span class="checkmark">Well <em>technically</em> it wasn't me who killed him...</span>
+                </label>
+                <label class="container"> 
+                    <input type="radio" name="q9">
+                    <span class="checkmark">I feel like a champ.</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q10" style="background-color: rgb(147, 201, 252);">
+            <div class="question">10. You can hear cars pulling up in the driveway. As it &nbsp; &nbsp; turns out, Rob's dog called the police. What do you  &nbsp; &nbsp; do?</div>
+            <div class="gri">
+                <label class="container"> 
+                    <input type="radio" name="q10">
+                    <span class="checkmark">Pretend to be a rock.</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q10">
+                    <span class="checkmark">Kill the dog too. How dare it frame me like this?</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q10">
+                    <span class="checkmark">Take so long deciding what to do that by the time I've decided what to do I've already been caught</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q10">
+                    <span class="checkmark">Throw Rob's body out the window as a distraction and escape through the front door</span>
+                </label>
+                <label class="container"> 
+                    <input type="radio" name="q10">
+                    <span class="checkmark">d) no change.</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q11">
+            <div class="question">11. What is your greatest sin?</div>
+            <div class="gri">
+                <label class="container"> 
+                    <input type="radio" name="q11">
+                    <span class="checkmark">Hypothetically killing Rob</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q11">
+                    <span class="checkmark">Littering</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q11">
+                    <span class="checkmark">Tax evasion</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q11">
+                    <span class="checkmark">Cutting in line</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q11">
+                    <span class="checkmark">Being annoying</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q11">
+                    <span class="checkmark">Taking more than 2 pieces of candy</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q11">
+                    <span class="checkmark">Existing</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q12" style="background-color: rgb(253, 197, 241);">
+            <div class="question" style="color: black;">12. What color is this?</div>
+            <div class="grid">
+                <label class="container"> 
+                    <input type="radio" name="q12">
+                    <span class="checkmark">Trashcan</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q12">
+                    <span class="checkmark">McDonald's</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q12">
+                    <span class="checkmark">Anarchy</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q12">
+                    <span class="checkmark">Light Turquoise</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q13">
+            <div class="question">13. Is it too late to apologize?</div>
+            <div class="grid">
+                <label class="container"> 
+                    <input type="radio" name="q13">
+                    <span class="checkmark">Yes</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q13">
+                    <span class="checkmark">No</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q13">
+                    <span class="checkmark">It's too laaaaaaaaaaatteeee</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q13">
+                    <span class="checkmark">I don't care. Sorry not sorry</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q14" style="background-color: rgb(180, 248, 209);">
+            <div class="question" style="color: black;">14. Which name is the smelliest?</div>
+            <div class="grid3">
+                <label class="container"> 
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Varth Dader</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Vord Loldemort</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Nicken Chuggets</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Worox Clipes</span>
+                </label>
+                <label class="container"> 
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Bater Wottle</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Moyo Ya</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Lamp</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q14">
+                    <span class="checkmark">Chresus Jist</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="q-a" id="q15">
+            <div class="question">15. On a scale of one to ten, where are my keys?</div>
+            <div class="grid2">
+                <label class="container"> 
+                    <input type="radio" name="q15">
+                    <span class="checkmark">On earth</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q15">
+                    <span class="checkmark">Everywhere and nowhere</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q15">
+                    <span class="checkmark">Seven</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q15">
+                    <span class="checkmark">Literally right there.</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q15">
+                    <span class="checkmark">-2323523495.53583</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q15">
+                    <span class="checkmark">Canada</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="q-a" id="q16" style="background-color: rgb(212, 105, 42);">
+            <div class="question">16. Look into your soul, and you shall find......</div>
+            <div class="grid3">
+                <label class="container"> 
+                    <input type="radio" name="q16">
+                    <span class="checkmark">＼(((￣(￣(￣▽￣)￣)￣)))／</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q16">
+                    <span class="checkmark">(☞ﾟヮﾟ)☞</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q16">
+                    <span class="checkmark">( •_•)>⌐■-■..............(⌐■_■)</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q16">
+                    <span class="checkmark">( ͡• ͜ʖ ͡• )</span>
+                </label>
+                <label class="container"> 
+                    <input type="radio" name="q16">
+                    <span class="checkmark">ο(=•ω＜=)ρ⌒☆</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q16">
+                    <span class="checkmark">(┬┬﹏┬┬)</span>
+                </label>
+                <label class="container" style="align-self: center;">
+                    <input type="radio" name="q16">
+                    <span class="checkmark">(╯‵□′)╯︵┻━┻</span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="q16">
+                    <span class="checkmark">(°ー°〃)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="button" id="submit" onclick="submitClicked()">I'm done!</div>
+    </div>
+
+    <div id="scene2">
+        <h1 id="results">results</h1>
+        <div></div>
+        <div class="box" id="first">Extremely Paranoid Grandmother</div>
+        <div class="box" id="second">Tape Dispenser</div>
+        <div class="box" id="third"></div>
+        <div class="box" id="fourth"></div>
+        <div class="box" id="fifth"></div>
+        <div class="box" id="sixth"></div>
+    </div>
+
+    <div id="sceneFirst">
+        <h1 class="you-got">You got:</h1>
+        <div class="large">Extremely Paranoid Grandmother</div>
+        <div class="line"></div>
+        <div class="info">
+
+            <strong>Strengths:</strong>
+
+            <br>
+            <br>
+            <strong>Weaknesses:</strong>
+
+            <br>
+            <br>
+            <strong>Cause of Death:</strong>
+
         </div>
     </div>
 
-    <div class="q-a" id="q2" style="background-color: rgb(255, 93, 93);">
-        <div class="question" style="color: black;">2. Would you rather: <br> &nbsp &nbsp (1) Rip off 5 of your own fingernails or <br> &nbsp &nbsp (2) Drink a liter of toxic sewage waste</div>
-        <div class="grid1">
-            <label class="container"> 
-                <input type="radio" name="q2">
-                <span class="checkmark">One </span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q2">
-                <span class="checkmark">Two</span>
-            </label>
+    <div id="sceneSecond">
+        <h1 class="you-got">You got:</h1>
+        <div class="large">Tape Dispenser</div>
+        <div class="line"></div>
+        <div class="info">
+
+            <strong>Strengths:</strong>
+
+            <br>
+            <br>
+            <strong>Weaknesses:</strong>
+
+            <br>
+            <br>
+            <strong>Cause of Death:</strong>
+
         </div>
     </div>
 
-    <div class="q-a" id="q3">
-        <div class="question">3. Which one of these abilities would be the coolest to &nbsp; &nbsp;have?</div>
-        <div class="grid2">
-            <label class="container"> 
-                <input type="radio" name="q3">
-                <span class="checkmark">The ability to see through people's hair</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q3">
-                <span class="checkmark">The ability to pee out of your finger</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q3">
-                <span class="checkmark">The ability to instantaneously kill one random ant on the planet every time you snap your fingers</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q3">
-                <span class="checkmark">The ability to make the number 4 appear wherever you want by pointing at things</span>
-            </label>
-            <label class="container"> 
-                <input type="radio" name="q3">
-                <span class="checkmark">The ability to shine an extremely dim light out of your butthole</span>
-            </label>
-            <label class="container"> 
-                <input type="radio" name="q3">
-                <span class="checkmark">The ability to call your mom without a phone</span>
-            </label>
+    <div id="sceneThird">
+        <h1 class="you-got">You got:</h1>
+        <div class="large">Third</div>
+        <div class="line"></div>
+        <div class="info">
+
+            <strong>Strengths:</strong>
+
+            <br>
+            <br>
+            <strong>Weaknesses:</strong>
+
+            <br>
+            <br>
+            <strong>Cause of Death:</strong>
+
         </div>
     </div>
 
-    <div class="q-a" id="q4" style="background-color: rgb(84, 84, 253);">
-        <div class="question">4. Why did the chicken cross the road?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q4">
-                <span class="checkmark">To get to the other side</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">....seriously?</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q4">
-                <span class="checkmark">Because it felt like it. Who are you to question the intentions of a chicken?</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">To demonstrate the harmful effects of industrialization on wildlife</span>
-            </label>
+    <div id="sceneFourth">
+        <h1 class="you-got">You got:</h1>
+        <div class="large">Fourth</div>
+        <div class="line"></div>
+        <div class="info">
+
+            <strong>Strengths:</strong>
+
+            <br>
+            <br>
+            <strong>Weaknesses:</strong>
+
+            <br>
+            <br>
+            <strong>Cause of Death:</strong>
+
         </div>
     </div>
 
-    <div class="q-a" id="q5">
-        <div class="question">5. The meaning of life is...</div>
-        <div class="grid3">
-            <label class="container"> 
-                <input type="radio" name="q5">
-                <span class="checkmark">to give life a meaning.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q5">
-                <span class="checkmark">TO MAKE THOSE WHO HAVE WRONGED YOU SUFFER.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q5">
-                <span class="checkmark">I don't care and all of these answers are stupid.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q5">
-                <span class="checkmark">ur mom</span>
-            </label>
-            <label class="container"> 
-                <input type="radio" name="q5">
-                <span class="checkmark">cereal</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q5">
-                <span class="checkmark">There is no meaning to life. We are only a temporary, pointless existance that will someday cease to exist.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q5">
-                <span class="checkmark">cooler than you.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q5">
-                <span class="checkmark">currently not important. First of all, go get a life.</span>
-            </label>
+    <div id="sceneFifth">
+        <h1 class="you-got">You got:</h1>
+        <div class="large">Fifth</div>
+        <div class="line"></div>
+        <div class="info">
+
+            <strong>Strengths:</strong>
+
+            <br>
+            <br>
+            <strong>Weaknesses:</strong>
+
+            <br>
+            <br>
+            <strong>Cause of Death:</strong>
+
         </div>
     </div>
 
-    
-    
-    <div class="q-a" id="q6" style="background-color: rgb(137, 253, 84);">
-        <div class="question" style="color: black;">6. You just broke into someone's house. What do you do &nbsp; &nbsp; &nbsp;next?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q6">
-                <span class="checkmark">Leave immediately</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q6">
-                <span class="checkmark">Take all their stuff</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q6">
-                <span class="checkmark">It was my house and I had to break in because I live alone and I lost my keys</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q6">
-                <span class="checkmark">Find the person who owns the house and kick them in the face because their security was so bad</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q7">
-        <div class="question">7. You just decided to go rob a guy named Rob. What is &nbsp; &nbsp; &nbsp;your incentive?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q7">
-                <span class="checkmark">I was just bored</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q7">
-                <span class="checkmark">I'm broke and I need food</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q7">
-                <span class="checkmark">Rob borrowed my pencil in fourth grade and never gave it back</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q7">
-                <span class="checkmark">To demonstrate the harmful effects of capitalism</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q8" style="background-color: rgb(253, 185, 84);">
-        <div class="question" style="color: black;">8. Oh no! Rob just caught you robbing his house! What do you say to him?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q8">
-                <span class="checkmark">Hey there, Rob. Remember me?</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q8">
-                <span class="checkmark">....er....I'm uh....um, I'm a raccoon! Yeah, yeah that...</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q8">
-                <span class="checkmark">aaaahhhh!!!! who the hell are you and what are you doing in my house??!?!</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q8">
-                <span class="checkmark">Please don't mind me, I'm just here to rob you. I won't take too long I promise.</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q9">
-        <div class="question">9. Well, whatever you said to poor Rob, it scared him to &nbsp; &nbsp;death. Literally. How do you feel about killing Rob?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q9">
-                <span class="checkmark">I have no sympathy for Rob. He should've seen this coming. After all, his name was Rob.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q9">
-                <span class="checkmark">Rob, I am so sorry. I will be sure to attend your funeral.</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q9">
-                <span class="checkmark">Who's Rob? I don't know anyone named Rob.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q9">
-                <span class="checkmark">Well <em>technically</em> it wasn't me who killed him...</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q10" style="background-color: rgb(147, 201, 252);">
-        <div class="question">10. You can hear cars pulling up in the driveway. As it &nbsp; &nbsp; turns out, Rob's dog called the police. What do you  &nbsp; &nbsp; do?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q10">
-                <span class="checkmark">Pretend to be a rock.</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q10">
-                <span class="checkmark">Kill the dog too. How dare it frame me like this?</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q10">
-                <span class="checkmark">Take so long deciding what to do that by the time I've decided what to do I've already been caught</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q10">
-                <span class="checkmark">Throw Rob's body out the window as a distraction and escape through the front door</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q11">
-        <div class="question">11. What is your greatest sin?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q11">
-                <span class="checkmark">Killing Rob</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q11">
-                <span class="checkmark">Littering</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q11">
-                <span class="checkmark">Tax evasion</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q11">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q4" style="background-color: rgb(84, 84, 253);">
-        <div class="question">4. Why did the chicken cross the road?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q4">
-                <span class="checkmark">To get to the other side</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">....seriously?</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q4">
-                <span class="checkmark">Because it felt like it. Who are you to question the intentions of a chicken?</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">To demonstrate the harmful effects of industrialization on wildlife</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q4" style="background-color: rgb(84, 84, 253);">
-        <div class="question">4. Why did the chicken cross the road?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q4">
-                <span class="checkmark">To get to the other side</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">....seriously?</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q4">
-                <span class="checkmark">Because it felt like it. Who are you to question the intentions of a chicken?</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">To demonstrate the harmful effects of industrialization on wildlife</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q4" style="background-color: rgb(84, 84, 253);">
-        <div class="question">4. Why did the chicken cross the road?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q4">
-                <span class="checkmark">To get to the other side</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">....seriously?</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q4">
-                <span class="checkmark">Because it felt like it. Who are you to question the intentions of a chicken?</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">To demonstrate the harmful effects of industrialization on wildlife</span>
-            </label>
-        </div>
-    </div>
-    
-    <div class="q-a" id="q4" style="background-color: rgb(84, 84, 253);">
-        <div class="question">4. Why did the chicken cross the road?</div>
-        <div class="grid">
-            <label class="container"> 
-                <input type="radio" name="q4">
-                <span class="checkmark">To get to the other side</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">....seriously?</span>
-            </label>
-            <label class="container" style="align-self: center;">
-                <input type="radio" name="q4">
-                <span class="checkmark">Because it felt like it. Who are you to question the intentions of a chicken?</span>
-            </label>
-            <label class="container">
-                <input type="radio" name="q4">
-                <span class="checkmark">To demonstrate the harmful effects of industrialization on wildlife</span>
-            </label>
+    <div id="sceneSixth">
+        <h1 class="you-got">You got:</h1>
+        <div class="large">Sixth</div>
+        <div class="line"></div>
+        <div class="info">
+
+            <strong>Strengths:</strong>
+
+            <br>
+            <br>
+            <strong>Weaknesses:</strong>
+
+            <br>
+            <br>
+            <strong>Cause of Death:</strong>
+
         </div>
     </div>
 
@@ -614,7 +973,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	
     <script>
- 
+        var firstPoints = 0;
+        var secondPoints = 0;
+        var thirdPoints = 0;
+        var fourthPoints = 0;
+        var fifthPoints = 0;
+        var sixthPoints = 0;
+        var submitClicked = function() {
+            
+            $("#scene1").css("display", "none");
+            $("#scene2").css("display", "none");
+        };
+        
     </script>
   </body>
 </html>
