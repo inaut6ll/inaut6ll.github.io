@@ -268,8 +268,8 @@
         }
 
         #scene1{
-            display: none;
             display: block;
+            display: none;
         }
         #submit{
             position: relative;
@@ -281,6 +281,7 @@
 
         #scene2{
             display: none;
+            display: grid;
             position: absolute;
             top: 0px;
             left: 0px;
@@ -294,45 +295,45 @@
         }
         #results{
             text-align: center;
-            grid-column: 2 / 3;
+            grid-column: 1 / 4;
             position: relative;
             top: -10%;
-            text-decoration: underline rgba(0, 0, 0, 0.658);
+            text-decoration: underline rgba(255, 0, 0, 0.623);
         }
         #first{
-            width: 95%;
+            width: 90%;
             height: 100%;
             position: relative;
             top: -30%;
             font-size: 2.8vw;
         }
         #second{
-            width: 95%;
+            width: 90%;
             height: 100%;
             position: relative;
             top: -30%;
             font-size: 2.5vw;
         }
         #third{
-            width: 95%;
+            width: 90%;
             height: 100%;
             position: relative;
             top: -30%;
         }
         #fourth{
-            width: 95%;
+            width: 90%;
             height: 100%;
             position: relative;
             top: -12%;
         }
         #fifth{
-            width: 95%;
+            width: 90%;
             height: 100%;
             position: relative;
             top: -12%;
         }
         #sixth{
-            width: 95%;
+            width: 90%;
             height: 100%;
             position: relative;
             top: -12%;
@@ -432,7 +433,7 @@
                     <span class="checkmark">God</span>
                 </label>
                 <label class="container">
-                    <input type="radio" name="q1">
+                    <input type="radio" name="q1" value="d">
                     <span class="checkmark" value="d">No one in particular</span>
                 </label>
                 <label class="container">
@@ -854,14 +855,13 @@
     </div>
 
     <div id="scene2">
-        <h1 id="results">results</h1>
-        <div></div>
-        <div class="box" id="first">Extremely Paranoid Grandmother</div>
-        <div class="box" id="second">Slighty Malfunctional Tape Dispenser</div>
-        <div class="box" id="third"></div>
-        <div class="box" id="fourth"></div>
-        <div class="box" id="fifth"></div>
-        <div class="box" id="sixth"></div>
+        <h1 id="results">Possible results</h1>
+        <div class="box" id="first" onclick="r1Clicked()">Extremely Paranoid Grandmother</div>
+        <div class="box" id="second" onclick="r2Clicked()">Slighty Malfunctional Tape Dispenser</div>
+        <div class="box" id="third" onclick="r3Clicked()">Abnormally Adhesive Pile of Dung</div>
+        <div class="box" id="fourth" onclick="r4Clicked()"></div>
+        <div class="box" id="fifth" onclick="r5Clicked()"></div>
+        <div class="box" id="sixth" onclick="r6Clicked()"></div>
     </div>
 
     <div id="sceneFirst">
@@ -885,7 +885,7 @@
 
     <div id="sceneSecond">
         <h1 class="you-got">You got:</h1>
-        <div class="large">Slightly Malfunctional Tape Dispenser</div>
+        <div class="large" style="font-size: 5.4vw;">Slightly Malfunctional Tape Dispenser</div>
         <div class="line"></div>
         <div class="info">
 
@@ -904,7 +904,7 @@
 
     <div id="sceneThird">
         <h1 class="you-got">You got:</h1>
-        <div class="large">A pile of </div>
+        <div class="large">Abnormally Adhesive Pile of Dung</div>
         <div class="line"></div>
         <div class="info">
 
@@ -987,25 +987,287 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	
     <script>
-        var firstPoints = 0;
-        var secondPoints = 0;
-        var thirdPoints = 0;
-        var fourthPoints = 0;
-        var fifthPoints = 0;
-        var sixthPoints = 0;
-        var allPoints;
-
+        //add function to submit button
+        //calculate result
         var submitClicked = function() {
-            $('input[name=q1]:checked').val();
+            var firstPoints = 0;
+            var secondPoints = 0;
+            var thirdPoints = 0;
+            var fourthPoints = 0;
+            var fifthPoints = 0;
+            var sixthPoints = 0;
+            var allPoints;
 
             //get the checked vals
             const ans1 = $('input[name=q1]:checked').val();
+            const ans2 = $('input[name=q2]:checked').val();
+            const ans3 = $('input[name=q3]:checked').val();
+            const ans4 = $('input[name=q4]:checked').val();
+            const ans5 = $('input[name=q5]:checked').val();
+            const ans6 = $('input[name=q6]:checked').val();
+            const ans7 = $('input[name=q7]:checked').val();
+            const ans8 = $('input[name=q8]:checked').val();
+            const ans9 = $('input[name=q9]:checked').val();
+            const ans10 = $('input[name=q10]:checked').val();
+            const ans11 = $('input[name=q11]:checked').val();
+            const ans12 = $('input[name=q12]:checked').val();
+            const ans13 = $('input[name=q13]:checked').val();
+            const ans14 = $('input[name=q14]:checked').val();
+            const ans15 = $('input[name=q15]:checked').val();
+            const ans16 = $('input[name=q16]:checked').val();
 
             //update points
-            if ($('input[name=q1]:checked').val() === "a"){
-
+            if (ans1 === "a"){
+                firstPoints++;
+            } else if(ans1 === "b"){
+                secondPoints++;
+            } else if(ans1 === "c"){
+                thirdPoints++;
+            } else if(ans1 === "d"){
+                fourthPoints++;
+            } else if(ans1 === "e"){
+                fifthPoints++;
+            } else if(ans1 === "f"){
+                sixthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
             }
 
+            if (ans2 === "a"){
+                firstPoints++;
+                secondPoints++;
+                thirdPoints++;
+            } else if(ans2 === "b"){
+                fourthPoints++;
+                fifthPoints++;
+                sixthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans3 === "a"){
+                secondPoints++;
+            } else if(ans3 === "b"){
+                firstPoints++;
+            } else if(ans3 === "c"){
+                fifthPoints++;
+            } else if(ans3 === "d"){
+                sixthPoints++;
+            } else if(ans3 === "e"){
+                thirdPoints++;
+            } else if(ans3 === "f"){
+                fourthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans4 === "a"){
+                firstPoints++;
+            } else if(ans4 === "b"){
+                secondPoints++;
+            } else if(ans4 === "c"){
+                thirdPoints++;
+            } else if(ans4 === "d"){
+                fourthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans5 === "a"){
+                secondPoints++;
+            } else if(ans5 === "b"){
+                firstPoints++;
+            } else if(ans5 === "c"){
+                fifthPoints++;
+            } else if(ans5 === "d"){
+                sixthPoints++;
+            } else if(ans5 === "e"){
+                thirdPoints++;
+            } else if(ans5 === "f"){
+                fourthPoints++;
+            } else if(ans5 === "g"){
+                firstPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans6 === "a"){
+                fifthPoints++;
+            } else if(ans6 === "b"){
+                sixthPoints++;
+            } else if(ans6 === "c"){
+                firstPoints++;
+            } else if(ans6 === "d"){
+                secondPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans7 === "a"){
+                thirdPoints++;
+            } else if(ans7 === "b"){
+                fourthPoints++;
+            } else if(ans7 === "c"){
+                fifthPoints++;
+            } else if(ans7 === "d"){
+                sixthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans8 === "a"){
+                firstPoints++;
+            } else if(ans8 === "b"){
+                secondPoints++;
+            } else if(ans8 === "c"){
+                thirdPoints++;
+            } else if(ans8 === "d"){
+                fourthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans9 === "a"){
+                sixthPoints++;
+            } else if(ans9 === "b"){
+                secondPoints++;
+            } else if(ans9 === "c"){
+                thirdPoints++;
+            } else if(ans9 === "d"){
+                fourthPoints++;
+            } else if (ans9 === "e") {
+                fifthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans10 === "a"){
+                sixthPoints++;
+            } else if(ans10 === "b"){
+                firstPoints++;
+            } else if(ans10 === "c"){
+                thirdPoints++;
+            } else if(ans10 === "d"){
+                fourthPoints++;
+            } else if (ans10 === "e") {
+                fifthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans11 === "a"){
+                secondPoints++;
+            } else if(ans11 === "b"){
+                firstPoints++;
+            } else if(ans11 === "c"){
+                fifthPoints++;
+            } else if(ans11 === "d"){
+                sixthPoints++;
+            } else if(ans11 === "e"){
+                thirdPoints++;
+            } else if(ans11 === "f"){
+                fourthPoints++;
+            } else if(ans11 === "g"){
+                secondPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans12 === "a"){
+                fifthPoints++;
+            } else if(ans12 === "b"){
+                sixthPoints++;
+            } else if(ans12 === "c"){
+                firstPoints++;
+            } else if(ans12 === "d"){
+                secondPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans13 === "a"){
+                thirdPoints++;
+            } else if(ans13 === "b"){
+                fourthPoints++;
+            } else if(ans13 === "c"){
+                fifthPoints++;
+            } else if(ans13 === "d"){
+                sixthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans14 === "a"){
+                secondPoints++;
+            } else if(ans14 === "b"){
+                firstPoints++;
+            } else if(ans14 === "c"){
+                fifthPoints++;
+            } else if(ans14 === "d"){
+                sixthPoints++;
+            } else if(ans14 === "e"){
+                thirdPoints++;
+            } else if(ans14 === "f"){
+                fourthPoints++;
+            } else if(ans14 === "g"){
+                fifthPoints++;
+            } else if(ans14 === "h"){
+                sixthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans15 === "a"){
+                secondPoints++;
+            } else if(ans15 === "b"){
+                firstPoints++;
+            } else if(ans15 === "c"){
+                fifthPoints++;
+            } else if(ans15 === "d"){
+                sixthPoints++;
+            } else if(ans15 === "e"){
+                thirdPoints++;
+            } else if(ans15 === "f"){
+                fourthPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
+
+            if (ans16 === "a"){
+                secondPoints++;
+            } else if(ans16 === "b"){
+                firstPoints++;
+            } else if(ans16 === "c"){
+                fifthPoints++;
+            } else if(ans16 === "d"){
+                sixthPoints++;
+            } else if(ans16 === "e"){
+                thirdPoints++;
+            } else if(ans16 === "f"){
+                fourthPoints++;
+            } else if(ans16 === "g"){
+                fourthPoints++;
+            } else if(ans16 === "h"){
+                thirdPoints++;
+            } else{
+                alert("You didn't answer all the questions! (。_。)");
+                return;
+            }
 
             //find the result with the most points
             allPoints = [firstPoints, secondPoints, thirdPoints, fourthPoints, fifthPoints, sixthPoints];
@@ -1020,22 +1282,29 @@
             //change scene according to result with most points
             if(maxIndex === 0){
                 $("#sceneFirst").css("display", "block");
+                $("#first").css("box-shadow", "0px 0px 20px 5px red");
             } else if(maxIndex === 1){
                 $("#sceneSecond").css("display", "block");
+                $("3second").css("box-shadow", "0px 0px 20px 5px red");
             } else if(maxIndex === 2){
                 $("#sceneThird").css("display", "block");
+                $("#third").css("box-shadow", "0px 0px 20px 5px red");
             } else if(maxIndex === 3){
                 $("#sceneFourth").css("display", "block");
+                $("#fourth").css("box-shadow", "0px 0px 20px 5px red");
             } else if(maxIndex === 4){
                 $("#sceneFifth").css("display", "block");
+                $("#fifth").css("box-shadow", "0px 0px 20px 5px red");
             } else {
                 $("#sceneSixth").css("display", "block");
+                $("#sixth").css("box-shadow", "0px 0px 20px 5px red");
             }
             $("#scene1").css("display", "none");
             $("#scene2").css("display", "none");
             $("#back").css("display", "block");
         };
 
+        //add function to back button
         var backClicked = function() {
             $("#scene1").css("display", "none");
             $("#scene2").css("display", "grid");
@@ -1047,6 +1316,84 @@
             $("#sceneFourth").css("display", "none");
             $("#sceneFifth").css("display", "none");
             $("#sceneSixth").css("display", "none");
+        };
+
+        //add function to result buttons
+        var r1Clicked = function() {
+            $("#back").css("display", "block");
+            $("#scene1").css("display", "none");
+            $("#scene2").css("display", "none");
+
+            $("#sceneFirst").css("display", "block");
+            $("#sceneSecond").css("display", "none");
+            $("#sceneThird").css("display", "none");
+            $("#sceneFourth").css("display", "none");
+            $("#sceneFifth").css("display", "none");
+            $("#sceneSixth").css("display", "none");
+        };
+        var r2Clicked = function() {
+            $("#back").css("display", "block");
+            $("#scene1").css("display", "none");
+            $("#scene2").css("display", "none");
+
+            $("#sceneFirst").css("display", "none");
+            $("#sceneSecond").css("display", "block");
+            $("#sceneThird").css("display", "none");
+            $("#sceneFourth").css("display", "none");
+            $("#sceneFifth").css("display", "none");
+            $("#sceneSixth").css("display", "none");
+        };
+
+        var r3Clicked = function() {
+            $("#back").css("display", "block");
+            $("#scene1").css("display", "none");
+            $("#scene2").css("display", "none");
+
+            $("#sceneFirst").css("display", "none");
+            $("#sceneSecond").css("display", "none");
+            $("#sceneThird").css("display", "block");
+            $("#sceneFourth").css("display", "none");
+            $("#sceneFifth").css("display", "none");
+            $("#sceneSixth").css("display", "none");
+        };
+
+        var r4Clicked = function() {
+            $("#back").css("display", "block");
+            $("#scene1").css("display", "none");
+            $("#scene2").css("display", "none");
+
+            $("#sceneFirst").css("display", "none");
+            $("#sceneSecond").css("display", "none");
+            $("#sceneThird").css("display", "none");
+            $("#sceneFourth").css("display", "block");
+            $("#sceneFifth").css("display", "none");
+            $("#sceneSixth").css("display", "none");
+        };
+
+        var r5Clicked = function() {
+            $("#back").css("display", "block");
+            $("#scene1").css("display", "none");
+            $("#scene2").css("display", "none");
+
+            $("#sceneFirst").css("display", "none");
+            $("#sceneSecond").css("display", "none");
+            $("#sceneThird").css("display", "none");
+            $("#sceneFourth").css("display", "none");
+            $("#sceneFifth").css("display", "block");
+            $("#sceneSixth").css("display", "none");
+        };
+
+        var r6Clicked = function() {
+            $("#back").css("display", "block");
+            $("#scene1").css("display", "none");
+            $("#scene2").css("display", "none");
+
+            $("#sceneFirst").css("display", "none");
+            $("#sceneSecond").css("display", "none");
+            $("#sceneThird").css("display", "none");
+            $("#sceneFourth").css("display", "none");
+            $("#sceneFifth").css("display", "none");
+            $("#sceneSixth").css("display", "block");
         };
         
     </script>
