@@ -28,7 +28,7 @@
         h1{
             font-size: 5vw;
             color: black;
-            text-shadow: 5px -5px rgb(0, 0, 0);
+            text-shadow: 5px -5px rgb(255, 0, 0);
             margin-bottom: 3%;
         }
         .circle{
@@ -263,7 +263,7 @@
             cursor: pointer;
         }
         .box:active{
-            background-color: rgb(48, 48, 48);
+            background-color: rgb(71, 71, 71);
             color: white;
         }
 
@@ -298,7 +298,7 @@
             grid-column: 1 / 4;
             position: relative;
             top: -10%;
-            text-decoration: underline rgba(255, 0, 0, 0.623);
+            text-decoration: underline rgba(0, 0, 0, 0.767);
         }
         #first{
             width: 90%;
@@ -343,12 +343,12 @@
             background-color: black;
             margin-top: 3%;
             margin-bottom: 5%;
-            box-shadow: 0px 0px 10px black;
+            box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
             border: 1px solid black;
         }  
         .info{
             background-color: black;
-            box-shadow: 0px 0px 15px black;
+            box-shadow: 0px 0px 15px 5px rgb(255, 1, 1);
             border: 1px solid black;
             width: 60%;
             margin: auto;
@@ -381,6 +381,7 @@
         } 
         .you-got{
             text-align: center;
+            text-shadow: 5px -5px red;
         } 
         .large{
             text-align: center;
@@ -856,25 +857,27 @@
 
     <div id="scene2">
         <h1 id="results">Possible results</h1>
-        <div class="box" id="first" onclick="r1Clicked()">Extremely Paranoid Grandmother</div>
+        <div class="box" id="first" onclick="r1Clicked()">Extremely Paranoid <br> Old Man</div>
         <div class="box" id="second" onclick="r2Clicked()">Slighty Malfunctional Tape Dispenser</div>
         <div class="box" id="third" onclick="r3Clicked()">Abnormally Adhesive Pile of Dung</div>
-        <div class="box" id="fourth" onclick="r4Clicked()"></div>
-        <div class="box" id="fifth" onclick="r5Clicked()"></div>
-        <div class="box" id="sixth" onclick="r6Clicked()"></div>
+        <div class="box" id="fourth" onclick="r4Clicked()">Passionately unsuccessful Bus driver</div>
+        <div class="box" id="fifth" onclick="r5Clicked()"><br>ugly Plant</div>
+        <div class="box" id="sixth" onclick="r6Clicked()">Constantly Constipated Caterpillar</div>
     </div>
 
     <div id="sceneFirst">
         <h1 class="you-got">You got:</h1>
-        <div class="large">Extremely Paranoid Grandmother</div>
+        <div class="large">Extremely Paranoid Old Man</div>
         <div class="line"></div>
         <div class="info">
-
-            <strong>Strengths:</strong>
+            
+            <br>
+            <br>
+            <strong>Strengths:</strong> smelly breath, annoying muttering, occasionally creepy
 
             <br>
             <br>
-            <strong>Weaknesses:</strong>
+            <strong>Weaknesses:</strong> bad knees, oldness, easily cold, rotten teeth
 
             <br>
             <br>
@@ -923,7 +926,7 @@
 
     <div id="sceneFourth">
         <h1 class="you-got">You got:</h1>
-        <div class="large">Fourth</div>
+        <div class="large">Passionately unsuccessful Bus driver</div>
         <div class="line"></div>
         <div class="info">
 
@@ -942,7 +945,7 @@
 
     <div id="sceneFifth">
         <h1 class="you-got">You got:</h1>
-        <div class="large">Fifth</div>
+        <div class="large">ugly Plant</div>
         <div class="line"></div>
         <div class="info">
 
