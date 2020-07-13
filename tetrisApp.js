@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    alert("Want some advice on life? Play, and I will tell you something extremely insightful. Seriously.                                                                                    Also, remember to hit Save to save your Settings selections.  ");
+    alert("   Want some advice on life? Play, and I will tell you something extremely insightful. Seriously.                                                                    Also, remember to hit Save to save your Settings selections.");
     const grid = document.querySelector(".grid");
     let squares = Array.from(document.querySelectorAll(".grid div"));
     const scoreDisplay = document.querySelector("#score");
@@ -329,48 +329,48 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if(score < 30){
                 alert("Welp, at least you tried.");
             } else if(score < 50){
-                alert("Hi, I'm Joe. How are you?");
+                alert("Hi, I'm Joe. I am permanently stuck inside this game. How are you?");
             } else if(score < 70){
                 alert("There is no place like home, and home is where the galoobers are.");
             } else if(score < 90){
-                alert("IT'S TIME TO DDDDDDDDDUEL");
+                alert("IT'S TIME TO DDDDDDDDDUEL!");
             } else if(score < 110){
                 alert("I am the globglogabgalab, swibbledooblewibblewobblejibblejobjab!");
             } else if(score < 130){
                 alert("Money is happiness. Call 342-235-2353 to prove me wrong.");
             } else if(score < 150){
-                alert("You are at age in which no one will every be able to tell what age you are.");
+                alert("You are at age where no one will every be able to tell what age you are, and every guess will be at least 10 years off.");
             } else if(score < 170){
-                alert("You must save the bees.");
+                alert("We must save the bees.");
             } else if(score < 190){
                 alert("Go check if you left the oven on. Chances are, you haven't, but go check just in case.");
             } else if(score < 210){
-                alert("I'm lost in the wooooooodssss");
+                alert("I'm lost in the wooooooodssss... Up is down, down is up, something somethingggg");
             } else if(score < 230){
-                alert("Do you get these references?");
+                alert("Do you get an occasional splitting headache? That's someone trying to summon you from the other side of the world.");
             } else if(score < 250){
                 alert("SASAGEYOOO SASAGEYOOOO SHINZOU WO SASAGEYOOOOO");
             } else if(score < 270){
-                alert("You don't belong here.");
+                alert("You don't belong here. Where exactly is here? That is something for you to figure out.");
             } else if(score < 290){
-                alert("Shut up. No, just shut up.");
+                alert("You are on the verge of an extremely important discovery, except.... it might not actually be that important. You might discover the cure for cancer, or maybe you'll just find that sock you lost three years ago.");
             } else if(score < 310){
-                alert("Seriously, you gotta shut up, bro.");
+                alert("Happy birthday! Remember to brush your teeth regularly ^-^ (unless you want rotten teeth)");
             } else if(score < 330){
-                alert("Why are you still here?");
+                alert("Why are you still here? They're about to find you, you need to go!!!");
             } else if(score < 350){
-                alert("I'm so hungry right now. Go buy me a taco.");
+                alert("So... you think you got a high score? Think again.");
             } else if(score < 370){
                 alert("Ann is our one and only lord and savior.");
             } else if(score < 390){
-                alert("Happy Birthday!!!");
+                alert("Happy Birthday!!! (it's me again)");
             } else if(score < 410){
-                alert("It's-a me! Mario!");
+                alert("Don't freak out when you see the unicorn on your lawn.");
             } else if(score < 430){
-                alert("As my mother used to always say, \"Don't pick your nose.\"");
+                alert("As my mother always used to say, \"Don't pick your nose.\"");
             }
             else if(score < 450){
-                alert("Who farted?");
+                alert("Who farted? It definitely wasn't me.");
             }
             else if(score < 470){
                 alert("That's called bribery.");
@@ -379,22 +379,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Last week, god spoke to me. He told me to go away and leave him alone.");
             }
             else if(score < 510){
-                alert("Every time I see you, I scream in terror.");
+                alert("Every time I see you, I scream in terror. Then again, I haven't ever seen you before.");
             }
             else if(score < 530){
                 alert("Here's a secret: I let the dogs out.");
             }
             else if(score < 550){
-                alert("\"As you get older, it becomes harder to hold your pee in. Older people have weaker bladders. Check your privilege.\"");
+                alert("Do you think you're amazing? If so, think again.");
             }
             else if(score < 570){
                 alert("You've got the best hair in the world. Don't let anyone take that away from you.");
             }
             else if(score < 590){
-                alert("If you ever feel discouraged, think about what Alexander the Great did at your age. Then, you'll feel even more discouraged. :)");
+                alert("If you ever feel down, think about what Alexander the Great did at your age. Then, you'll feel even more down. :)");
             }
             else if(score < 610){
-                alert("So... you think you got a high score? Think again.");
+                alert("Want to save the world? Well, you sure aren't doing that by spending 15 minutes playing Tetris... or are you?");
             }else{
                 alert("...no comment.");
             }
