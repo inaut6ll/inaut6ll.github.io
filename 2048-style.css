@@ -1,7 +1,17 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     background-color: red;
+}
+
+.grid div {
+    width: 125px;
+    height: 125px;
+    background-color: orange;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(black, white);
 }
