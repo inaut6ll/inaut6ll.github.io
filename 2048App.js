@@ -39,6 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 row = [parseInt(one), parseInt(two), parseInt(three), parseInt(four)];
 
                 console.log(row);
+
+                let filteredRow = row.filter(num => num);
+                console.log(filteredRow);
+                let missing = 4 - filteredRow.length;
+                let zeros = Array(missing).fill(0);
+                console.log(zeros);
+                let newRow = zeros.concat(filteredRow);
+                console.log(newRow);
+
+                squares[i].html(newRow[0]);
+                squares[i + 1].html(newRow[1]);
+                squares[i + 2].html(newRow[2]);
+                squares[i + 3].html(newRow[3]);
             }
         }
     };
