@@ -402,9 +402,17 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }
 
+    let close = false;
     //add functionality to rules button
     $("#rules-button").on("click", function() {
         $("#rules").fadeToggle();
+        if(close === false) {
+            $("#rules-button").html("Close");
+            close = true;
+        }else{
+            $("#rules-button").html("Info");
+            close = false;
+        }
     });
 
     //make radio active
