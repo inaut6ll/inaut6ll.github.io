@@ -254,45 +254,58 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateBG() {
         for (let i = 0; i < width * width; i++) {
             if(squares[i].html() == 0){
-                squares[i].css("color", "white");
+                squares[i].css("color", "transparent");
                 squares[i].css("background", "white");
+                squares[i].css("border", "5px solid white");
             }else if(squares[i].html() == 2){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(troll-2048.jpg)");
+                squares[i].css("background", "url(ann1-2048.jpg)");
+                squares[i].css("border", "5px solid white");
             }else if(squares[i].html() == 4){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(agnes1-2048.jpg)");
+                squares[i].css("border", "5px solid white");
             }else if(squares[i].html() == 8){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(linda1-2048.jpg)");
+                squares[i].css("border", "5px solid white");
             }
             else if(squares[i].html() == 16){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(abby-2048.jpg)");
+                squares[i].css("border", "5px solid black");
             }else if(squares[i].html() == 32){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(joyce-2048.jpg)");
+                squares[i].css("border", "5px solid black");
             }else if(squares[i].html() == 64){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(jieg1-2048.jpg)");
+                squares[i].css("border", "5px solid black");
             }else if(squares[i].html() == 128){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(ann2-2048.jpg)");
+                squares[i].css("border", "5px double rgb(44, 255, 255)");
             }else if(squares[i].html() == 256){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(agnes2-2048.jpg)");
+                squares[i].css("border", "5px double rgb(247, 1, 255)");
             }else if(squares[i].html() == 512){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(linda2-2048.jpg)");
+                squares[i].css("border", "5px double red");
             }else if(squares[i].html() == 1024){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(ann3-2048.jpg)");
+                squares[i].css("border", "5px double white");
             }else if(squares[i].html() == 2048){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(troll-2048.jpg)");
+                squares[i].css("border", "5px double black");
             }else if(squares[i].html() == 4096){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(me-2048.jpg)");
+                squares[i].css("border", "5px dotted black");
             }
         }
     };
