@@ -30,33 +30,235 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //swipe right
     function moveRight() {
-        for (let i = 0; i < width * width; i++){
-            if (i % 4 === 0){
-                let one = squares[i].html();
-                let two = squares[i + 1].html();
-                let three = squares[i + 2].html();
-                let four = squares[i + 3].html();
-                row = [parseInt(one), parseInt(two), parseInt(three), parseInt(four)];
+        let a = false;
+        for (let i = 0; i < width * width; i += 4){
+            let row = [];
+            for (let j = 0; j < width; j++){
+                let temp = squares[i + j].html();
+                row.push(parseInt(temp));
+            }
+            let oldRow = row;
 
-                console.log(row);
+            let filteredRow = row.filter(num => num);
+            let missing = width - filteredRow.length;
+            let zeros = Array(missing).fill(0);
+            let newRow = zeros.concat(filteredRow);
 
-                let filteredRow = row.filter(num => num);
-                console.log(filteredRow);
-                let missing = 4 - filteredRow.length;
-                let zeros = Array(missing).fill(0);
-                console.log(zeros);
-                let newRow = zeros.concat(filteredRow);
-                console.log(newRow);
+            for (let j = 0; j < width; j++){
+                squares[i + j].html(newRow[j]);
+            }
 
-                squares[i].html(newRow[0]);
-                squares[i + 1].html(newRow[1]);
-                squares[i + 2].html(newRow[2]);
-                squares[i + 3].html(newRow[3]);
+            for (let j = 0; j < oldRow.length; j++) {
+                if(oldRow[j] != newRow[j]){
+                    a = true; //a move happened
+                }
             }
         }
+        return a;
     };
 
-    moveRight();
+    //swipe left
+    function moveLeft() {
+        let a = false;
+        for (let i = 0; i < width * width; i += width){
+            let row = [];
+            for (let j = 0; j < width; j++){
+                let temp = squares[i + j].html();
+                row.push(parseInt(temp));
+            }
+            let oldRow = row;
+
+            let filteredRow = row.filter(num => num);
+            let numMissing = width - filteredRow.length;
+            let zeros = Array(numMissing).fill(0);
+            let newRow = filteredRow.concat(zeros);
+
+            for (let j = 0; j < width; j++){
+                squares[i + j].html(newRow[j]);
+            }
+
+            for (let j = 0; j < oldRow.length; j++) {
+                if(oldRow[j] != newRow[j]){
+                    a = true; //a move happened
+                }
+            }
+        }
+        return a;
+    };
+
+    //combine row for when move right
+    function combineRight() {
+        let a = false;
+        for (let i = width * width - 2; i > -1; i--) {
+            if ((i + 1) % width !== 0 && squares[i].html() != 0 && squares[i].html() == squares[i + 1].html()){
+                let total = parseInt(squares[i].html()) + parseInt(squares[i + 1].html());
+                squares[i].html(0);
+                squares[i + 1].html(total);
+                a = true; //a combination happened
+            }
+        }
+        return a;
+    }
+
+    //combine row for when move left
+    function combineLeft() {
+        let a = false;
+        for (let i = 0; i < width * width - 1; i++) {
+            if ((i + 1) % width !== 0 && squares[i].html() != 0 && squares[i].html() == squares[i + 1].html()){
+                let total = parseInt(squares[i].html()) + parseInt(squares[i + 1].html());
+                squares[i].html(total);
+                squares[i + 1].html(0);
+                a = true; //a combination happened
+            }
+        }
+        return a;
+    }
+
+    function keyRight() {
+        moveRight();
+        combineRight();
+        moveRight();
+        gen();
+    };
+
+    function keyLeft() {
+        moveLeft();
+        combineLeft();
+        moveLeft();
+        gen();
+    };
+
+    //swipe up
+    function moveUp() {
+        let a = false;
+        for (let i = 0; i < width; i++) {
+            let col = [];
+            for (let j = 0; j < width; j++) {
+                let temp = squares[i + j * 4].html();
+                col.push(parseInt(temp));
+            }
+            let oldCol = col;
+
+            let filteredCol = col.filter(num => num);
+            let numMissing = width - filteredCol.length;
+            let zeros = Array(numMissing).fill(0);
+            let newCol = filteredCol.concat(zeros);
+
+            for (let j = 0; j < width; j++) {
+                squares[i + j * 4].html(newCol[j]);
+            }
+
+            for (let j = 0; j < oldCol.length; j++) {
+                if(oldCol[j] != newCol[j]){
+                    a = true; //a move happened
+                }
+            }
+        }
+        return a;
+    }
+
+    //swipe down
+    function moveDown() {
+        let a = false;
+        for (let i = 0; i < width; i++) {
+            let col = [];
+            for (let j = 0; j < width; j++) {
+                let temp = squares[i + j * 4].html();
+                col.push(parseInt(temp));
+            }
+            let oldCol = col;
+
+            let filteredCol = col.filter(num => num);
+            let numMissing = width - filteredCol.length;
+            let zeros = Array(numMissing).fill(0);
+            let newCol = zeros.concat(filteredCol);
+
+            for (let j = 0; j < width; j++) {
+                squares[i + j * 4].html(newCol[j]);
+            }
+
+            for (let j = 0; j < oldCol.length; j++) {
+                if(oldCol[j] != newCol[j]){
+                    a = true; //a move happened
+                }
+            }
+        }
+        return a;
+    }
+
+    //combine col for when move up
+    function combineUp() {
+        let a = false;
+        for (let i = 0; i < width * (width - 1); i++) {
+            if(squares[i].html() != 0 && squares[i].html() === squares[i + width].html()){
+                let total = parseInt(squares[i].html()) + parseInt(squares[i + width].html());
+                squares[i].html(total);
+                squares[i + 4].html(0);
+                a = true; //a combination happened
+            }
+        }
+        return a;
+    };
+
+    //combine col for when move down
+    function combineDown() {
+        let a = false;
+        for (let i = width * (width - 1) - 1; i >= 0; i--) {
+            if(squares[i].html() != 0 && squares[i].html() === squares[i + width].html()){
+                let total = parseInt(squares[i].html()) + parseInt(squares[i + width].html());
+                squares[i].html(0);
+                squares[i + 4].html(total);
+                a = true; //a combination happened
+            }
+        }
+        return a;
+    };
+
+    function keyUp() {
+        moveUp();
+        combineUp();
+        moveUp();
+        gen();
+    };
+
+    function keyDown() {
+        moveDown();
+        combineDown();
+        moveDown();
+        gen();
+    };
+
+    $(document).keydown((e) => {
+        if(e.keyCode === 39) {
+            keyRight();
+        }else if(e.keyCode === 37) {
+            keyLeft();
+        }else if(e.keyCode === 38) {
+            keyUp();
+        }else if(e.keyCode === 40) {
+            keyDown();
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
