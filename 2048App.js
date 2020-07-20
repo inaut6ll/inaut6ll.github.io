@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 squares[i].css("background", "white");
             }else if(squares[i].html() == 2){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(ann1-2048.jpg)");
+                squares[i].css("background", "url(troll-2048.jpg)");
             }else if(squares[i].html() == 4){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(agnes1-2048.jpg)");
@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 squares[i].css("background", "url(ann3-2048.jpg)");
             }else if(squares[i].html() == 2048){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(troll-2048)");
+                squares[i].css("background", "url(troll-2048.jpg)");
             }else if(squares[i].html() == 4096){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(me-2048.jpg)");
