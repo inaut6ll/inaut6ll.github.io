@@ -261,17 +261,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 squares[i].css("background", "url(ann1-2048.jpg)");
             }else if(squares[i].html() == 4){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(ann2-2048.jpg)");
+                squares[i].css("background", "url(agnes1-2048.jpg)");
             }else if(squares[i].html() == 8){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(linda1-2048.jpg)");
             }
             else if(squares[i].html() == 16){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(abby1-2048.jpg)");
+                squares[i].css("background", "url(abby-2048.jpg)");
             }else if(squares[i].html() == 32){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(joyce1-2048.jpg)");
+                squares[i].css("background", "url(joyce-2048.jpg)");
             }else if(squares[i].html() == 64){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(jieg1-2048.jpg)");
@@ -286,13 +286,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 squares[i].css("background", "url(linda2-2048.jpg)");
             }else if(squares[i].html() == 1024){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(abby2-2048.jpg)");
+                squares[i].css("background", "url(ann3-2048.jpg)");
             }else if(squares[i].html() == 2048){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(joyce2-2048.jpg)");
+                squares[i].css("background", "url(troll-2048)");
             }else if(squares[i].html() == 4096){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url()");
+                squares[i].css("background", "url(me-2048.jpg)");
             }
         }
     };
