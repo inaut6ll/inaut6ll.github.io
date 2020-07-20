@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function gen() {
         let r = Math.floor(Math.random() * squares.length);
         if(squares[r].html() == "0"){
-            squares[r].animate({height: "40px", width: "40px"}, 10);
+            squares[r].animate({height: "40px", width: "40px"}, 50);
             squares[r].animate({height: "110px", width: "110px"}, 300);
             squares[r].html("2");
         }else {
@@ -257,23 +257,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 squares[i].css("color", "white");
                 squares[i].css("background", "white");
             }else if(squares[i].html() == 2){
-                squares[i].css("color", "black");
-                squares[i].css("background", "linear-gradient(red, yellow)");
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(annpic12.jpeg)");
             }else if(squares[i].html() == 4){
-                squares[i].css("color", "black");
-                squares[i].css("background", "orange");
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(annpic3.jpeg)");
             }else if(squares[i].html() == 8){
-                squares[i].css("color", "black");
-                squares[i].css("background", "yellow");
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(annpic8.jpeg)");
             }
             else if(squares[i].html() == 16){
-                squares[i].css("color", "black");
-                squares[i].css("background", "green");
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(annpic10.jpeg)");
             }else if(squares[i].html() == 32){
-                squares[i].css("color", "blue");
-                squares[i].css("background", "blue");
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(annpic11.jpeg)");
             }else if(squares[i].html() == 64){
-                squares[i].css("color", "purple");
+                squares[i].css("color", "transparent");
                 squares[i].css("background", "purple");
             }
         }
@@ -297,6 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function checkForWin() {
         for (let i = 0; i < width * width; i++) {
             if (squares[i].html() == 2048){
+                //this is what happens when you win
                 resultDisplay.html("You won.");
                 
             }
@@ -305,7 +306,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //check for lose... literally
     function checkForLose() {
-
+        let lost = true;
+        for (let i = 0; i < width * width; i++) {
+            if (squares[i].html() == 0){
+                lost = false;
+            }
+        }
+        if (lost === true) {
+            //this is what happens when you lose
+        }
     }
 
 
