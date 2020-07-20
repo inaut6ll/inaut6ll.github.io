@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 a = true; //a combination happened
             }
         }
+        checkForWin();
         return a;
     }
 
@@ -111,21 +112,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 a = true; //a combination happened
             }
         }
+        checkForWin();
         return a;
     }
 
     function keyRight() {
-        moveRight();
-        combineRight();
-        moveRight();
-        gen();
+        let a = moveRight();
+        let b = combineRight();
+        let c = moveRight();
+        if (a || b || c){
+            gen();
+        }
     };
 
     function keyLeft() {
-        moveLeft();
-        combineLeft();
-        moveLeft();
-        gen();
+        let a = moveLeft();
+        let b = combineLeft();
+        let c = moveLeft();
+        if (a || b || c){
+            gen();
+        }
     };
 
     //swipe up
@@ -197,6 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 a = true; //a combination happened
             }
         }
+        checkForWin();
         return a;
     };
 
@@ -211,21 +218,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 a = true; //a combination happened
             }
         }
+        checkForWin();
         return a;
     };
 
     function keyUp() {
-        moveUp();
-        combineUp();
-        moveUp();
-        gen();
+        let a = moveUp();
+        let b = combineUp();
+        let c = moveUp();
+        if (a || b || c){
+            gen();
+        }
     };
 
     function keyDown() {
-        moveDown();
-        combineDown();
-        moveDown();
-        gen();
+        let a = moveDown();
+        let b = combineDown();
+        let c = moveDown();
+        if (a || b || c){
+            gen();
+        }
     };
 
     $(document).keydown((e) => {
@@ -239,6 +251,25 @@ document.addEventListener("DOMContentLoaded", () => {
             keyDown();
         }
     });
+
+    //check for win... literally
+    function checkForWin() {
+        for (let i = 0; i < width * width; i++) {
+            if (squares[i].html() == 2048){
+                resultDisplay.html("You won.");
+                
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 
 
