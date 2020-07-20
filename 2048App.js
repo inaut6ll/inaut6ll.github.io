@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function gen() {
         let r = Math.floor(Math.random() * squares.length);
         if(squares[r].html() == "0"){
+            squares[r].animate({height: "40px", width: "40px"}, 10);
+            squares[r].animate({height: "110px", width: "110px"}, 300);
             squares[r].html("2");
         }else {
             gen();
@@ -91,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let a = false;
         for (let i = width * width - 2; i > -1; i--) {
             if ((i + 1) % width !== 0 && squares[i].html() != 0 && squares[i].html() == squares[i + 1].html()){
+                squares[i + 1].animate({height: "40px", width: "40px"}, 10);
+                squares[i + 1].animate({height: "110px", width: "110px"}, 300);
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + 1].html());
                 squares[i].html(0);
                 squares[i + 1].html(total);
@@ -106,6 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let a = false;
         for (let i = 0; i < width * width - 1; i++) {
             if ((i + 1) % width !== 0 && squares[i].html() != 0 && squares[i].html() == squares[i + 1].html()){
+                squares[i].animate({height: "40px", width: "40px"}, 10);
+                squares[i].animate({height: "110px", width: "110px"}, 300);
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + 1].html());
                 squares[i].html(total);
                 squares[i + 1].html(0);
@@ -197,6 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let a = false;
         for (let i = 0; i < width * (width - 1); i++) {
             if(squares[i].html() != 0 && squares[i].html() === squares[i + width].html()){
+                squares[i].animate({height: "40px", width: "40px"}, 10);
+                squares[i].animate({height: "110px", width: "110px"}, 300);
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + width].html());
                 squares[i].html(total);
                 squares[i + 4].html(0);
@@ -212,6 +220,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let a = false;
         for (let i = width * (width - 1) - 1; i >= 0; i--) {
             if(squares[i].html() != 0 && squares[i].html() === squares[i + width].html()){
+                squares[i + 4].animate({height: "40px", width: "40px"}, 10);
+                squares[i + 4].animate({height: "110px", width: "110px"}, 300);
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + width].html());
                 squares[i].html(0);
                 squares[i + 4].html(total);
@@ -240,16 +250,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    //update tile backgrounds
+    function updateBG() {
+        for (let i = 0; i < width * width; i++) {
+            if(squares[i].html() == 0){
+                squares[i].css("color", "white");
+                squares[i].css("background", "white");
+            }else if(squares[i].html() == 2){
+                squares[i].css("color", "black");
+                squares[i].css("background", "linear-gradient(red, yellow)");
+            }else if(squares[i].html() == 4){
+                squares[i].css("color", "black");
+                squares[i].css("background", "orange");
+            }else if(squares[i].html() == 8){
+                squares[i].css("color", "black");
+                squares[i].css("background", "yellow");
+            }
+            else if(squares[i].html() == 16){
+                squares[i].css("color", "black");
+                squares[i].css("background", "green");
+            }else if(squares[i].html() == 32){
+                squares[i].css("color", "blue");
+                squares[i].css("background", "blue");
+            }else if(squares[i].html() == 64){
+                squares[i].css("color", "purple");
+                squares[i].css("background", "purple");
+            }
+        }
+    };
+    updateBG();
+
     $(document).keydown((e) => {
-        if(e.keyCode === 39) {
+        if(e.keyCode === 39 || e.keyCode === 68) {
             keyRight();
-        }else if(e.keyCode === 37) {
+        }else if(e.keyCode === 37 || e.keyCode === 65) {
             keyLeft();
-        }else if(e.keyCode === 38) {
+        }else if(e.keyCode === 38 || e.keyCode === 87) {
             keyUp();
-        }else if(e.keyCode === 40) {
+        }else if(e.keyCode === 40 || e.keyCode === 83) {
             keyDown();
         }
+        updateBG();
     });
 
     //check for win... literally
@@ -260,6 +301,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 
             }
         }
+    }
+
+    //check for lose... literally
+    function checkForLose() {
+
     }
 
 

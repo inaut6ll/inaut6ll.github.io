@@ -7,13 +7,17 @@
     background-color: black;
     align-items: center;
     justify-items: center;
+    border-radius: 5px;
 }
 
 .grid div {
     width: 110px;
     height: 110px;
     background-color: white;
-    font-size: 60px;
+    font-size: 350%;
     text-align: center;
     font-weight: bold;
+    font-family: "cutive mono";
+    line-height: 150%;
+    border-radius: 5px;
 }
