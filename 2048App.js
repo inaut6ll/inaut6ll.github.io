@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function gen() {
         let r = Math.floor(Math.random() * squares.length);
         if(squares[r].html() == "0"){
-            squares[r].animate({height: "40px", width: "40px"}, 50);
+            squares[r].animate({height: "10px", width: "10px"}, 50);
             squares[r].animate({height: "110px", width: "110px"}, 300);
             squares[r].html("2");
         }else {
@@ -258,23 +258,41 @@ document.addEventListener("DOMContentLoaded", () => {
                 squares[i].css("background", "white");
             }else if(squares[i].html() == 2){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(annpic12.jpeg)");
+                squares[i].css("background", "url(ann1-2048.jpg)");
             }else if(squares[i].html() == 4){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(annpic3.jpeg)");
+                squares[i].css("background", "url(ann2-2048.jpg)");
             }else if(squares[i].html() == 8){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(annpic8.jpeg)");
+                squares[i].css("background", "url(linda1-2048.jpg)");
             }
             else if(squares[i].html() == 16){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(annpic10.jpeg)");
+                squares[i].css("background", "url(abby1-2048.jpg)");
             }else if(squares[i].html() == 32){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "url(annpic11.jpeg)");
+                squares[i].css("background", "url(joyce1-2048.jpg)");
             }else if(squares[i].html() == 64){
                 squares[i].css("color", "transparent");
-                squares[i].css("background", "purple");
+                squares[i].css("background", "url(jieg1-2048.jpg)");
+            }else if(squares[i].html() == 128){
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(ann2-2048.jpg)");
+            }else if(squares[i].html() == 256){
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(agnes2-2048.jpg)");
+            }else if(squares[i].html() == 512){
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(linda2-2048.jpg)");
+            }else if(squares[i].html() == 1024){
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(abby2-2048.jpg)");
+            }else if(squares[i].html() == 2048){
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url(joyce2-2048.jpg)");
+            }else if(squares[i].html() == 4096){
+                squares[i].css("color", "transparent");
+                squares[i].css("background", "url()");
             }
         }
     };
