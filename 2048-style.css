@@ -1,3 +1,21 @@
+body {
+    background: rgb(243, 236, 228);
+    font-family: "Barlow", sans-serif;
+    font-size: 3vw;
+}
+
+#title{
+    font-size: 8vw;
+}
+
+.score-container{
+    text-align: center;
+}
+
+.highscore-container{
+    text-align: center;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 125px);
@@ -7,6 +25,7 @@
     background: linear-gradient(135deg, rgb(255, 0, 0), orange, yellow, rgb(2, 238, 255), blue, rgb(234, 0, 255));
     align-items: center;
     justify-items: center;
+    margin: auto;
     border-radius: 5px;
     padding: 1%;
 }
@@ -15,10 +34,9 @@
     width: 110px;
     height: 110px;
     background-color: rgb(44, 253, 2);
-    font-size: 350%;
+    font-size: 100%;
     text-align: center;
     font-weight: bold;
-    font-family: "cutive mono";
     line-height: 150%;
     border-radius: 5px;
 }

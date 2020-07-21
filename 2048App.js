@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     const gridDisplay = $(".grid");
     const scoreDisplay = $("#score");
+    const highDisplay = $("#highscore");
     const resultDisplay = $("#result");
     const width = 4;
     let squares = [];
+    let score = 0;
+    if (localStorage.getItem("high") === null){
+        localStorage.setItem("high", 0);
+    }else{
+        highDisplay.html(localStorage.getItem("high"));
+    }
 
     //create a playing board
     function createBoard() {
@@ -27,6 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
             squares[r].html("2");
         }else {
             gen();
+        }
+    };
+
+    //update score
+    function updateScore(number) {
+        score += number;
+        scoreDisplay.html(score);
+        if (score > localStorage.getItem("high")){
+            localStorage.setItem("high", score);
+            highDisplay.html(score);
         }
     };
 
@@ -98,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + 1].html());
                 squares[i].html(0);
                 squares[i + 1].html(total);
+                updateScore(total);
                 a = true; //a combination happened
             }
         }
@@ -115,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + 1].html());
                 squares[i].html(total);
                 squares[i + 1].html(0);
+                updateScore(total);
                 a = true; //a combination happened
             }
         }
@@ -208,6 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + width].html());
                 squares[i].html(total);
                 squares[i + 4].html(0);
+                updateScore(total);
                 a = true; //a combination happened
             }
         }
@@ -225,6 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let total = parseInt(squares[i].html()) + parseInt(squares[i + width].html());
                 squares[i].html(0);
                 squares[i + 4].html(total);
+                updateScore(total);
                 a = true; //a combination happened
             }
         }
@@ -313,12 +334,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $(document).keydown((e) => {
         if(e.keyCode === 39 || e.keyCode === 68) {
+            e.preventDefault();
             keyRight();
         }else if(e.keyCode === 37 || e.keyCode === 65) {
+            e.preventDefault();
             keyLeft();
         }else if(e.keyCode === 38 || e.keyCode === 87) {
+            e.preventDefault();
             keyUp();
         }else if(e.keyCode === 40 || e.keyCode === 83) {
+            e.preventDefault();
             keyDown();
         }
         updateBG();

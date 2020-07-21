@@ -6,13 +6,22 @@
 
         <link rel="stylesheet" href="2048-style.css">
 
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat&family=Cutive+Mono&family=Dancing+Script&family=Flamenco&family=Josefin+Slab&family=Permanent+Marker&family=Quicksand:wght@300;400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     </head>
     <body>
 
-        <div class="score-container">
-            <div class="score-title">Score</div>
-            <span id="score">0</span>
+        <div id="title">
+            2048
+        </div>
+
+        <div id="scores-container">
+            <div class="score-container">
+                <div class="score-title">Score</div> <span id="score">0</span>
+            </div>
+            <div class="highscore-container">
+                <div class="highscore-title">High Score</div> <span id="highscore">0</span>
+            </div>
         </div>
 
         <div id="result"></div>
