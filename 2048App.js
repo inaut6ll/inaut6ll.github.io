@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < width * width; i++) {
             if (squares[i].html() == 2048){
                 //this is what happens when you win
-                
+
                 resultDisplay.html("You won.");
             }
         }
@@ -372,6 +372,18 @@ document.addEventListener("DOMContentLoaded", () => {
             //this is what happens when you lose
         }
     }
+
+    function reset() {
+        for (let i = 0; i < width * width; i++) {
+            squares[i].html(0);
+        }
+        score = 0;
+        scoreDisplay.html(0);
+        gen();
+        gen();
+        updateBG();
+    };
+    $("#new-game").click(reset);
 
 
 

@@ -28,26 +28,41 @@ body {
 }
 
 .button1{
-    background-color: rgb(224, 109, 67);
-    border-radius: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 2vw;
 }
 
 .button1:hover{
-    background-color: rgb(197, 96, 59);
     cursor: pointer;
 }
 
 .button1:active{
-    background-color: rgb(163, 71, 37);
+    background-color: rgb(150, 62, 30);
+}
+
+.button2{
+    font-size: 2vw;
+    border-radius: 3px;
+    background-color: rgb(238, 184, 139);
+}
+
+.button2:hover{
+    cursor: pointer;
+}
+
+.button2:active{
+    background-color: rgb(226, 160, 110);
 }
 
 #themes{
     position: relative;
     left: 1%;
-    padding: .75%;
-    width: 9vw;
-    height: 3vw;
+    padding-top: .8%;
+    width: 10vw;
+    height: 3.2vw;
     text-align: center;
+    align-self: flex-start;
 }
 
 .score-container{
@@ -66,6 +81,16 @@ body {
 
 #highscore{
     font-size: 4vw;
+}
+
+#new-game{
+    padding: .7%;
+    text-align: center;
+    width: 10vw;
+    height: auto;
+    position: fixed;
+    top: 13vw;
+    left: 78vw;
 }
 
 .grid {
