@@ -354,8 +354,8 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < width * width; i++) {
             if (squares[i].html() == 2048){
                 //this is what happens when you win
-                resultDisplay.html("You won.");
                 
+                resultDisplay.html("You won.");
             }
         }
     }
