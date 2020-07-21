@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }else if(squares[i].html() == 4096){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(me-2048.jpg)");
-                squares[i].css("border", "5px dotted black");
+                squares[i].css("border", "100px double black");
             }
         }
     };
