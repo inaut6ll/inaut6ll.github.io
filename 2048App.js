@@ -285,15 +285,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }else if(squares[i].html() == 128){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(ann2-2048.jpg)");
-                squares[i].css("border", "5px double rgb(44, 255, 255)");
+                squares[i].css("border", "5px dashed black");
             }else if(squares[i].html() == 256){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(agnes2-2048.jpg)");
-                squares[i].css("border", "5px double rgb(247, 1, 255)");
+                squares[i].css("border", "5px dashed black");
             }else if(squares[i].html() == 512){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(linda2-2048.jpg)");
-                squares[i].css("border", "5px double red");
+                squares[i].css("border", "5px dashed black");
             }else if(squares[i].html() == 1024){
                 squares[i].css("color", "transparent");
                 squares[i].css("background", "url(ann3-2048.jpg)");
