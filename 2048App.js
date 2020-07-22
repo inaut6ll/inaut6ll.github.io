@@ -280,6 +280,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateBG() {
         for (let i = 0; i < width * width; i++) {
             if(squares[i].html() == 0){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "black");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "lightgray");
@@ -291,6 +296,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px solid white");
                 }  
             }else if(squares[i].html() == 2){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(250, 175, 187), rgb(178, 250, 250))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -302,6 +312,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset white");
                 }
             }else if(squares[i].html() == 4){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(255, 0, 0), rgb(251, 255, 0))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -313,6 +328,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset lightgreen");
                 }
             }else if(squares[i].html() == 8){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(251, 255, 0), rgb(83, 226, 0))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -325,6 +345,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             else if(squares[i].html() == 16){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(255, 166, 2), rgb(163, 5, 255))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -336,6 +361,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(44, 253, 2)");
                 }
             }else if(squares[i].html() == 32){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(147, 255, 255), rgb(0, 34, 226))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -347,6 +377,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset violet");
                 }
             }else if(squares[i].html() == 64){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(75, 72, 253), rgb(255, 136, 0))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -358,6 +393,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset darkgray");
                 }
             }else if(squares[i].html() == 128){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(195, 248, 171), rgb(138, 255, 138), rgb(1, 255, 242))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -369,6 +409,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(234, 0, 255)");
                 }
             }else if(squares[i].html() == 256){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(229, 255, 0), rgb(0, 255, 255), rgb(255, 66, 223))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -380,6 +425,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(2, 238, 255)");
                 }
             }else if(squares[i].html() == 512){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, white, black, white)");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -391,6 +441,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset red");
                 }
             }else if(squares[i].html() == 1024){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, black, rgb(48, 0, 0), rgb(170, 0, 0), red, red)");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -402,6 +457,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px double white");
                 }
             }else if(squares[i].html() == 2048){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(250, 126, 126), rgb(255, 209, 125), rgb(250, 250, 121), rgb(174, 245, 174), rgb(161, 161, 248), rgb(205, 133, 247))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -413,6 +473,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px double black");
                 }
             }else if(squares[i].html() == 4096){
+                if(theme === "gray"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "linear-gradient(135deg, rgb(255, 0, 0), orange, yellow, rgb(2, 238, 255), blue, rgb(234, 0, 255))");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "boring"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "black");
@@ -513,12 +578,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $("#gray").click(() => {
         theme = "gray";
-        $(".grid").css("background", "linear-gradient()");
+        $(".grid").css("background", "linear-gradient(white, white)");
         updateBG();
 
         $("#gray").css("color", "rgb(214, 154, 42)");
         $("#gray").css("font-weight", "bolder");
-        $("#gray").css("text-decoration" ,"underline wavy");
+        $("#gray").css("text-decoration" ,"underline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -541,12 +606,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $("#boring").click(() => {
         theme = "boring";
-        $(".grid").css("background", "linear-gradient()");
+        $(".grid").css("background", "linear-gradient(white, white)");
         updateBG();
 
         $("#boring").css("color", "rgb(214, 154, 42)");
         $("#boring").css("font-weight", "bolder");
-        $("#boring").css("text-decoration" ,"underline wavy");
+        $("#boring").css("text-decoration" ,"underline");
         $("#gray").css("color", "black");
         $("#gray").css("font-weight", "normal");
         $("#gray").css("text-decoration" ,"none");
@@ -574,7 +639,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#food").css("color", "rgb(214, 154, 42)");
         $("#food").css("font-weight", "bolder");
-        $("#food").css("text-decoration" ,"underline wavy");
+        $("#food").css("text-decoration" ,"underline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -602,7 +667,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#random").css("color", "rgb(214, 154, 42)");
         $("#random").css("font-weight", "bolder");
-        $("#random").css("text-decoration" ,"underline wavy");
+        $("#random").css("text-decoration" ,"underline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -630,7 +695,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#q").css("color", "rgb(214, 154, 42)");
         $("#q").css("font-weight", "bolder");
-        $("#q").css("text-decoration" ,"underline wavy");
+        $("#q").css("text-decoration" ,"underline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -658,7 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#faces").css("color", "rgb(214, 154, 42)");
         $("#faces").css("font-weight", "bolder");
-        $("#faces").css("text-decoration" ,"underline wavy");
+        $("#faces").css("text-decoration" ,"underline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -686,7 +751,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#ann").css("color", "rgb(214, 154, 42)");
         $("#ann").css("font-weight", "bolder");
-        $("#ann").css("text-decoration" ,"underline wavy");
+        $("#ann").css("text-decoration" ,"underline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
