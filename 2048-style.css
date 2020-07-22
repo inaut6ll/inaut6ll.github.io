@@ -93,6 +93,38 @@ body {
     left: 78vw;
 }
 
+@media (max-width: 1160px){
+    #bar{position: absolute}
+    #new-game{position: absolute}
+}
+
+#result{
+    display: none;
+    font-size: 60px;
+    position: fixed;
+    width: 500px;
+    top: 50%;
+    margin-top: -200px;
+    left: 50vw;
+    margin-left: -350px;
+    background-color: rgb(255, 250, 245);
+    border-radius: 5px;
+    text-align: center;
+    padding: 90px;
+}
+
+#play-again{
+    width: 30%;
+    padding: 1%;
+    margin: 5% auto;
+}
+
+#keep-going{
+    width: 30%;
+    padding: 1%;
+    margin: 5% auto 0% auto;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 125px);

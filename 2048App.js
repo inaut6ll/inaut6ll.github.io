@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let c = moveRight();
         if (a || b || c){
             gen();
+            checkForLose();
         }
     };
 
@@ -156,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let c = moveLeft();
         if (a || b || c){
             gen();
+            checkForLose();
         }
     };
 
@@ -259,6 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let c = moveUp();
         if (a || b || c){
             gen();
+            checkForLose();
         }
     };
 
@@ -268,6 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let c = moveDown();
         if (a || b || c){
             gen();
+            checkForLose();
         }
     };
 
@@ -349,13 +353,16 @@ document.addEventListener("DOMContentLoaded", () => {
         updateBG();
     });
 
+    let won = false;
     //check for win... literally
     function checkForWin() {
         for (let i = 0; i < width * width; i++) {
-            if (squares[i].html() == 2048){
+            if (won === false && squares[i].html() == 2048){
                 //this is what happens when you win
-
-                resultDisplay.html("You won.");
+                won = true;
+                $("#winlose").html("You won!");
+                $("#keep-going").show();
+                resultDisplay.fadeIn(1000);
             }
         }
     }
@@ -368,8 +375,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 lost = false;
             }
         }
+        for (let i = 0; i < width * (width - 1); i++) { //check if there are possible vertical combos
+            if(squares[i].html() != 0 && squares[i].html() === squares[i + width].html()){
+                lost = false;
+            }
+        }
+        for (let i = 0; i < width * width - 1; i++) { //check if there are possible horizontal combos
+            if ((i + 1) % width !== 0 && squares[i].html() != 0 && squares[i].html() == squares[i + 1].html()){
+                lost = false;
+            }
+        }
         if (lost === true) {
             //this is what happens when you lose
+            $("#winlose").html("Game over.");
+            $("#keep-going").hide();
+            resultDisplay.fadeIn(1000);
         }
     }
 
@@ -382,9 +402,14 @@ document.addEventListener("DOMContentLoaded", () => {
         gen();
         gen();
         updateBG();
+        resultDisplay.fadeOut(1000);
     };
     $("#new-game").click(reset);
+    $("#play-again").click(reset);
 
+    $("#keep-going").click(() => {
+        resultDisplay.fadeOut(1000);
+    });
 
 
 
