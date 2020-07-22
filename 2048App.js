@@ -411,6 +411,15 @@ document.addEventListener("DOMContentLoaded", () => {
         resultDisplay.fadeOut(1000);
     });
 
+    $("#theme-button").click(() => {
+        $("#themes").fadeIn();
+    });
+
+    $("#close-themes").click(() => {
+        $("#themes").fadeOut();
+    });
+
+
 
 
 

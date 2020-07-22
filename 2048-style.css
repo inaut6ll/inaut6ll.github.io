@@ -38,7 +38,7 @@ body {
 }
 
 .button1:active{
-    background-color: rgb(150, 62, 30);
+    background-color: rgba(172, 159, 154, 0.651);
 }
 
 .button2{
@@ -55,20 +55,29 @@ body {
     background-color: rgb(226, 160, 110);
 }
 
-#themes{
+#theme-button{
     position: relative;
     left: 1%;
     padding-top: .8%;
-    width: 10vw;
+    width: 8vw;
     height: 3.2vw;
     text-align: center;
     align-self: flex-start;
 }
 
+#info{
+    position: relative;
+    left: -18%;
+    padding-top: .8%;
+    width: 8vw;
+    height: 3.2vw;
+    text-align: center;
+}
+
 .score-container{
     text-align: center;
     position: relative;
-    left: 30%;
+    left: 16%;
 }
 
 #score{
@@ -123,6 +132,44 @@ body {
     width: 30%;
     padding: 1%;
     margin: 5% auto 0% auto;
+}
+
+#themes{
+    font-size: 100%;
+    position: fixed;
+    width: 60%;
+    height: 70%;
+    top: 50%;
+    margin-top: -200px;
+    left: 50vw;
+    margin-left: -350px;
+    background-color: rgb(255, 250, 245);
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+#themes-title{
+    font-size: 140%;
+    padding-bottom: 2%;
+}
+
+.mode:hover{
+    cursor: pointer;
+    margin: auto;
+    width: 40%;
+}
+
+#food{
+    color: rgb(214, 154, 42);
+    font-weight: bolder;
+    text-decoration: underline wavy;
+}
+
+#close-themes{
+    padding: 1%;
+    width: 50%;
+    margin: 3% auto;
 }
 
 .grid {
