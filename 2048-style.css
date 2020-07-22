@@ -178,7 +178,7 @@ body {
     grid-template-rows: repeat(4, auto);
     width: 500px;
     height: 500px;
-    background: linear-gradient(135deg, rgb(255, 0, 0), orange, yellow, rgb(2, 238, 255), blue, rgb(234, 0, 255));
+    background: linear-gradient(white, white);
     align-items: center;
     justify-items: center;
     margin: auto;

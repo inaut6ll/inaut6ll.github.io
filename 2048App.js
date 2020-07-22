@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultDisplay = $("#result");
     const width = 4;
     let squares = [];
+    let theme = "food";
     let score = 0;
     if (localStorage.getItem("high") === null){
         localStorage.setItem("high", 0);
@@ -419,7 +420,203 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#themes").fadeOut();
     });
 
+    $("#gray").click(() => {
+        theme = "gray";
+        $(".grid").css("background", "linear-gradient()");
+        updateBG();
 
+        $("#gray").css("color", "rgb(214, 154, 42)");
+        $("#gray").css("font-weight", "bolder");
+        $("#gray").css("text-decoration" ,"underline wavy");
+        $("#boring").css("color", "black");
+        $("#boring").css("font-weight", "normal");
+        $("#boring").css("text-decoration" ,"none");
+        $("#food").css("color", "black");
+        $("#food").css("font-weight", "normal");
+        $("#food").css("text-decoration" ,"none");
+        $("#random").css("color", "black");
+        $("#random").css("font-weight", "normal");
+        $("#random").css("text-decoration" , "none");
+        $("#q").css("color", "black");
+        $("#q").css("font-weight", "normal");
+        $("#q").css("text-decoration" ,"none");
+        $("#faces").css("color", "black");
+        $("#faces").css("font-weight", "normal");
+        $("#faces").css("text-decoration" ,"none");
+        $("#ann").css("color", "black");
+        $("#ann").css("font-weight", "normal");
+        $("#ann").css("text-decoration" ,"none");
+    });
+
+    $("#boring").click(() => {
+        theme = "boring";
+        $(".grid").css("background", "linear-gradient()");
+        updateBG();
+
+        $("#boring").css("color", "rgb(214, 154, 42)");
+        $("#boring").css("font-weight", "bolder");
+        $("#boring").css("text-decoration" ,"underline wavy");
+        $("#gray").css("color", "black");
+        $("#gray").css("font-weight", "normal");
+        $("#gray").css("text-decoration" ,"none");
+        $("#food").css("color", "black");
+        $("#food").css("font-weight", "normal");
+        $("#food").css("text-decoration" ,"none");
+        $("#random").css("color", "black");
+        $("#random").css("font-weight", "normal");
+        $("#random").css("text-decoration" , "none");
+        $("#q").css("color", "black");
+        $("#q").css("font-weight", "normal");
+        $("#q").css("text-decoration" ,"none");
+        $("#faces").css("color", "black");
+        $("#faces").css("font-weight", "normal");
+        $("#faces").css("text-decoration" ,"none");
+        $("#ann").css("color", "black");
+        $("#ann").css("font-weight", "normal");
+        $("#ann").css("text-decoration" ,"none");
+    });
+
+    $("#food").click(() => {
+        theme = "food";
+        $(".grid").css("background", "linear-gradient()");
+        updateBG();
+
+        $("#food").css("color", "rgb(214, 154, 42)");
+        $("#food").css("font-weight", "bolder");
+        $("#food").css("text-decoration" ,"underline wavy");
+        $("#boring").css("color", "black");
+        $("#boring").css("font-weight", "normal");
+        $("#boring").css("text-decoration" ,"none");
+        $("#gray").css("color", "black");
+        $("#gray").css("font-weight", "normal");
+        $("#gray").css("text-decoration" ,"none");
+        $("#random").css("color", "black");
+        $("#random").css("font-weight", "normal");
+        $("#random").css("text-decoration" , "none");
+        $("#q").css("color", "black");
+        $("#q").css("font-weight", "normal");
+        $("#q").css("text-decoration" ,"none");
+        $("#faces").css("color", "black");
+        $("#faces").css("font-weight", "normal");
+        $("#faces").css("text-decoration" ,"none");
+        $("#ann").css("color", "black");
+        $("#ann").css("font-weight", "normal");
+        $("#ann").css("text-decoration" ,"none");
+    });
+
+    $("#random").click(() => {
+        theme = "random";
+        $(".grid").css("background", "linear-gradient()");
+        updateBG();
+
+        $("#random").css("color", "rgb(214, 154, 42)");
+        $("#random").css("font-weight", "bolder");
+        $("#random").css("text-decoration" ,"underline wavy");
+        $("#boring").css("color", "black");
+        $("#boring").css("font-weight", "normal");
+        $("#boring").css("text-decoration" ,"none");
+        $("#food").css("color", "black");
+        $("#food").css("font-weight", "normal");
+        $("#food").css("text-decoration" ,"none");
+        $("#gray").css("color", "black");
+        $("#gray").css("font-weight", "normal");
+        $("#gray").css("text-decoration" , "none");
+        $("#q").css("color", "black");
+        $("#q").css("font-weight", "normal");
+        $("#q").css("text-decoration" ,"none");
+        $("#faces").css("color", "black");
+        $("#faces").css("font-weight", "normal");
+        $("#faces").css("text-decoration" ,"none");
+        $("#ann").css("color", "black");
+        $("#ann").css("font-weight", "normal");
+        $("#ann").css("text-decoration" ,"none");
+    });
+
+    $("#q").click(() => {
+        theme = "q";
+        $(".grid").css("background", "linear-gradient()");
+        updateBG();
+
+        $("#q").css("color", "rgb(214, 154, 42)");
+        $("#q").css("font-weight", "bolder");
+        $("#q").css("text-decoration" ,"underline wavy");
+        $("#boring").css("color", "black");
+        $("#boring").css("font-weight", "normal");
+        $("#boring").css("text-decoration" ,"none");
+        $("#gray").css("color", "black");
+        $("#gray").css("font-weight", "normal");
+        $("#gray").css("text-decoration" ,"none");
+        $("#random").css("color", "black");
+        $("#random").css("font-weight", "normal");
+        $("#random").css("text-decoration" , "none");
+        $("#food").css("color", "black");
+        $("#food").css("font-weight", "normal");
+        $("#food").css("text-decoration" ,"none");
+        $("#faces").css("color", "black");
+        $("#faces").css("font-weight", "normal");
+        $("#faces").css("text-decoration" ,"none");
+        $("#ann").css("color", "black");
+        $("#ann").css("font-weight", "normal");
+        $("#ann").css("text-decoration" ,"none");
+    });
+
+    $("#faces").click(() => {
+        theme = "faces";
+        $(".grid").css("background", "linear-gradient()");
+        updateBG();
+
+        $("#faces").css("color", "rgb(214, 154, 42)");
+        $("#faces").css("font-weight", "bolder");
+        $("#faces").css("text-decoration" ,"underline wavy");
+        $("#boring").css("color", "black");
+        $("#boring").css("font-weight", "normal");
+        $("#boring").css("text-decoration" ,"none");
+        $("#gray").css("color", "black");
+        $("#gray").css("font-weight", "normal");
+        $("#gray").css("text-decoration" ,"none");
+        $("#random").css("color", "black");
+        $("#random").css("font-weight", "normal");
+        $("#random").css("text-decoration" , "none");
+        $("#food").css("color", "black");
+        $("#food").css("font-weight", "normal");
+        $("#food").css("text-decoration" ,"none");
+        $("#q").css("color", "black");
+        $("#q").css("font-weight", "normal");
+        $("#q").css("text-decoration" ,"none");
+        $("#ann").css("color", "black");
+        $("#ann").css("font-weight", "normal");
+        $("#ann").css("text-decoration" ,"none");
+    });
+
+    $("#ann").click(() => {
+        theme = "ann";
+        $(".grid").css("background", "linear-gradient(135deg, rgb(255, 0, 0), orange, yellow, rgb(2, 238, 255), blue, rgb(234, 0, 255))");
+        updateBG();
+
+        $("#ann").css("color", "rgb(214, 154, 42)");
+        $("#ann").css("font-weight", "bolder");
+        $("#ann").css("text-decoration" ,"underline wavy");
+        $("#boring").css("color", "black");
+        $("#boring").css("font-weight", "normal");
+        $("#boring").css("text-decoration" ,"none");
+        $("#gray").css("color", "black");
+        $("#gray").css("font-weight", "normal");
+        $("#gray").css("text-decoration" ,"none");
+        $("#random").css("color", "black");
+        $("#random").css("font-weight", "normal");
+        $("#random").css("text-decoration" , "none");
+        $("#food").css("color", "black");
+        $("#food").css("font-weight", "normal");
+        $("#food").css("text-decoration" ,"none");
+        $("#faces").css("color", "black");
+        $("#faces").css("font-weight", "normal");
+        $("#faces").css("text-decoration" ,"none");
+        $("#q").css("color", "black");
+        $("#q").css("font-weight", "normal");
+        $("#q").css("text-decoration" ,"none");
+    });
+
+    
 
 
 
