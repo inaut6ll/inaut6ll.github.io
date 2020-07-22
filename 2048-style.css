@@ -188,10 +188,10 @@ body {
 }
 
 .grid div {
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0);
     width: 110px;
     height: 110px;
-    background: linear-gradient(135deg, rgb(251, 255, 0),  rgb(202, 255, 133), rgb(60, 255, 0));
+    background: rgb(255, 248, 235);
     font-size: 50px;
     text-align: center;
     font-weight: bold;

@@ -280,6 +280,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateBG() {
         for (let i = 0; i < width * width; i++) {
             if(squares[i].html() == 0){
+                if(theme === "q"){
+                    let random = Math.floor(Math.random() * 253);
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "rgb(" + random + ", " + random + ", " + random + ")");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "gray"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "black");
@@ -296,6 +302,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px solid white");
                 }  
             }else if(squares[i].html() == 2){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(250, 175, 187), rgb(178, 250, 250))");
@@ -312,6 +323,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset white");
                 }
             }else if(squares[i].html() == 4){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(255, 0, 0), rgb(251, 255, 0))");
@@ -328,6 +344,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset lightgreen");
                 }
             }else if(squares[i].html() == 8){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(251, 255, 0),  rgb(202, 255, 133), rgb(60, 255, 0))");
@@ -345,6 +366,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             else if(squares[i].html() == 16){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(251, 255, 0), rgb(255, 111, 248))");
@@ -361,6 +387,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(44, 253, 2)");
                 }
             }else if(squares[i].html() == 32){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(199, 255, 162), rgb(0, 204, 255), blue)");
@@ -377,6 +408,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset violet");
                 }
             }else if(squares[i].html() == 64){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, white, rgb(203, 255, 169),  rgb(162, 0, 255), black)");
@@ -393,6 +429,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset darkgray");
                 }
             }else if(squares[i].html() == 128){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(255, 0, 242), rgb(255, 141, 255), rgb(253, 225, 229))");
@@ -409,6 +450,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(234, 0, 255)");
                 }
             }else if(squares[i].html() == 256){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(229, 255, 0), rgb(0, 255, 255), rgb(255, 66, 223))");
@@ -425,6 +471,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(2, 238, 255)");
                 }
             }else if(squares[i].html() == 512){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "black");
                     squares[i].css("background", "linear-gradient(135deg, black, white, black)");
@@ -441,6 +492,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset red");
                 }
             }else if(squares[i].html() == 1024){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, black, rgb(48, 0, 0), rgb(170, 0, 0), red, red)");
@@ -457,6 +513,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px double white");
                 }
             }else if(squares[i].html() == 2048){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(250, 126, 126), rgb(255, 209, 125), rgb(250, 250, 121), rgb(174, 245, 174), rgb(161, 161, 248), rgb(205, 133, 247))");
@@ -473,6 +534,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px double black");
                 }
             }else if(squares[i].html() == 4096){
+                if(theme === "q"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(q-2048.jpg)");
+                    squares[i].css("border", "");
+                } 
                 if(theme === "gray"){
                     squares[i].css("color", "white");
                     squares[i].css("background", "linear-gradient(135deg, rgb(255, 0, 0), orange, yellow, rgb(2, 238, 255), blue, rgb(234, 0, 255))");
@@ -491,7 +557,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     };
-    //updateBG();
+    updateBG();
 
     $(document).keydown((e) => {
         if(e.keyCode === 39 || e.keyCode === 68) {
@@ -690,7 +756,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $("#q").click(() => {
         theme = "q";
-        $(".grid").css("background", "linear-gradient()");
+        $(".grid").css("background", "black");
         updateBG();
 
         $("#q").css("color", "rgb(214, 154, 42)");
