@@ -77,7 +77,7 @@ body {
 .score-container{
     text-align: center;
     position: relative;
-    left: 16%;
+    left: 18%;
 }
 
 #score{
@@ -163,13 +163,13 @@ body {
 #boring{
     color: rgb(214, 154, 42);
     font-weight: bolder;
-    text-decoration: underline;
+    text-decoration: underline overline;
 }
 
 #close-themes{
     padding: 1%;
     width: 50%;
-    margin: 3% auto;
+    margin: 5% auto;
 }
 
 .grid {

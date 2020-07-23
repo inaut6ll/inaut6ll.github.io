@@ -280,6 +280,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateBG() {
         for (let i = 0; i < width * width; i++) {
             if(squares[i].html() == 0){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "");
+                    squares[i].css("border", "");
+                }  
                 if(theme === "q"){
                     let random = Math.floor(Math.random() * 253);
                     squares[i].css("color", "transparent");
@@ -302,6 +307,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px solid white");
                 }  
             }else if(squares[i].html() == 2){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face1-2048.png)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -323,6 +333,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset white");
                 }
             }else if(squares[i].html() == 4){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face2-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -344,6 +359,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset lightgreen");
                 }
             }else if(squares[i].html() == 8){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face3-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -366,6 +386,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             else if(squares[i].html() == 16){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face4-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -387,6 +412,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(44, 253, 2)");
                 }
             }else if(squares[i].html() == 32){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face5-2048.png)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -408,6 +438,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset violet");
                 }
             }else if(squares[i].html() == 64){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face6-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -429,6 +464,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset darkgray");
                 }
             }else if(squares[i].html() == 128){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face7-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -450,6 +490,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(234, 0, 255)");
                 }
             }else if(squares[i].html() == 256){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face8-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -471,6 +516,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset rgb(2, 238, 255)");
                 }
             }else if(squares[i].html() == 512){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face9-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -492,6 +542,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px outset red");
                 }
             }else if(squares[i].html() == 1024){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face10-2048.png)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -513,6 +568,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px double white");
                 }
             }else if(squares[i].html() == 2048){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(troll-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -534,6 +594,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "5px double black");
                 }
             }else if(squares[i].html() == 4096){
+                if(theme === "faces"){
+                    squares[i].css("color", "transparent");
+                    squares[i].css("background", "url(face12-2048.jpg)");
+                    squares[i].css("border", "2px solid black");
+                } 
                 if(theme === "q"){
                     squares[i].css("color", "transparent");
                     squares[i].css("background", "url(q-2048.jpg)");
@@ -649,7 +714,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#gray").css("color", "rgb(214, 154, 42)");
         $("#gray").css("font-weight", "bolder");
-        $("#gray").css("text-decoration" ,"underline");
+        $("#gray").css("text-decoration" ,"underline overline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -677,7 +742,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#boring").css("color", "rgb(214, 154, 42)");
         $("#boring").css("font-weight", "bolder");
-        $("#boring").css("text-decoration" ,"underline");
+        $("#boring").css("text-decoration" ,"underline overline");
         $("#gray").css("color", "black");
         $("#gray").css("font-weight", "normal");
         $("#gray").css("text-decoration" ,"none");
@@ -705,7 +770,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#food").css("color", "rgb(214, 154, 42)");
         $("#food").css("font-weight", "bolder");
-        $("#food").css("text-decoration" ,"underline");
+        $("#food").css("text-decoration" ,"underline overline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -733,7 +798,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#random").css("color", "rgb(214, 154, 42)");
         $("#random").css("font-weight", "bolder");
-        $("#random").css("text-decoration" ,"underline");
+        $("#random").css("text-decoration" ,"underline overline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -761,7 +826,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#q").css("color", "rgb(214, 154, 42)");
         $("#q").css("font-weight", "bolder");
-        $("#q").css("text-decoration" ,"underline");
+        $("#q").css("text-decoration" ,"underline overline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -784,12 +849,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $("#faces").click(() => {
         theme = "faces";
-        $(".grid").css("background", "linear-gradient()");
+        $(".grid").css("background", "white");
         updateBG();
 
         $("#faces").css("color", "rgb(214, 154, 42)");
         $("#faces").css("font-weight", "bolder");
-        $("#faces").css("text-decoration" ,"underline");
+        $("#faces").css("text-decoration" ,"underline overline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
@@ -817,7 +882,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $("#ann").css("color", "rgb(214, 154, 42)");
         $("#ann").css("font-weight", "bolder");
-        $("#ann").css("text-decoration" ,"underline");
+        $("#ann").css("text-decoration" ,"underline overline");
         $("#boring").css("color", "black");
         $("#boring").css("font-weight", "normal");
         $("#boring").css("text-decoration" ,"none");
