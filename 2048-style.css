@@ -98,8 +98,8 @@ body {
     width: 10vw;
     height: auto;
     position: fixed;
-    top: 13vw;
-    left: 78vw;
+    top: 30%;
+    left: 80%;
 }
 
 @media (max-width: 1160px){
@@ -115,23 +115,23 @@ body {
     top: 50%;
     margin-top: -200px;
     left: 50vw;
-    margin-left: -350px;
+    margin-left: -320px;
     background-color: rgb(255, 250, 245);
     border-radius: 5px;
     text-align: center;
-    padding: 90px;
+    padding: 60px;
 }
 
 #play-again{
     width: 30%;
     padding: 1%;
-    margin: 5% auto;
+    margin: 10% auto 5% auto;
 }
 
 #keep-going{
     width: 30%;
     padding: 1%;
-    margin: 5% auto 0% auto;
+    margin: 1% auto 0% auto;
 }
 
 #themes{

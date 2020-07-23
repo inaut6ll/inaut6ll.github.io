@@ -281,8 +281,11 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < width * width; i++) {
             if(squares[i].html() == 0){
                 if(theme === "faces"){
+                    let random = Math.floor(Math.random() * 253);
+                    let random2 = Math.floor(Math.random() * 253);
+                    let random3 = Math.floor(Math.random() * 253);
                     squares[i].css("color", "transparent");
-                    squares[i].css("background", "");
+                    squares[i].css("background", "rgb(" + random + ", " + random2 + ", " + random3 + ")");
                     squares[i].css("border", "");
                 }  
                 if(theme === "q"){
@@ -649,7 +652,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 //this is what happens when you win
                 won = true;
                 $("#winlose").html("You won!");
-                $("#keep-going").show();
+                $("#keep-going").html("Keep Going");
                 resultDisplay.fadeIn(1000);
             }
         }
@@ -676,7 +679,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (lost === true) {
             //this is what happens when you lose
             $("#winlose").html("Game over.");
-            $("#keep-going").hide();
+            $("#keep-going").html("Ok, Cool.");
             resultDisplay.fadeIn(1000);
         }
     }
