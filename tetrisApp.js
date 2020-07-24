@@ -343,11 +343,11 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if(score < 170){
                 alert("The Oracle says: We must save the bees.");
             } else if(score < 190){
-                alert("The Oracle says: Go check if you left the oven on. Chances are, you haven't, but go check just in case.");
+                alert("The Oracle says: Go check if you left the oven on. Chances are you haven't, but go check just in case.");
             } else if(score < 210){
                 alert("The Oracle says: Sorry, but I am currently lost in the woods. Please check back again later.");
             } else if(score < 230){
-                alert("The Oracle says: Do you get an occasional splitting headache? That's someone trying to summon you from the other side of the world.");
+                alert("The Oracle says: Do you get occasional splitting headaches? That's someone trying to summon you from the other side.");
             } else if(score < 250){
                 alert("The Oracle says: SASAGEYOOO SASAGEYOOOO SHINZOU WO SASAGEYOOOOO");
             } else if(score < 270){
