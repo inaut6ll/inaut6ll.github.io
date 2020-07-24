@@ -135,6 +135,7 @@ body {
 }
 
 #info-box{
+    display: none;
     border-top: 3px double black;
     border-bottom: 3px double black;
     font-size: 80%;
@@ -158,7 +159,6 @@ body {
 #themes{
     border-top: 3px double black;
     border-bottom: 3px double black;
-    display: none;
     font-size: 90%;
     position: fixed;
     width: 25%;
