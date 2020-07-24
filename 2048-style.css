@@ -134,30 +134,52 @@ body {
     margin: 1% auto 0% auto;
 }
 
-#themes{
-    font-size: 100%;
+#info-box{
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+    font-size: 80%;
     position: fixed;
-    width: 60%;
-    height: 70%;
-    top: 50%;
-    margin-top: -200px;
-    left: 50vw;
-    margin-left: -350px;
-    background-color: rgb(255, 250, 245);
+    width: 22%;
+    height: auto;
+    top: 17%;
+    left: 3%;
+    line-height: 150%;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     text-align: center;
-    padding: 20px;
+    padding: 2% 1% 2% 1%;
+}
+
+#info-title{
+    font-size: 130%;
+    padding-bottom: 3%;
+}
+
+#themes{
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+    display: none;
+    font-size: 90%;
+    position: fixed;
+    width: 25%;
+    height: auto;
+    top: 18%;
+    left: 2.5%;
+    line-height: 150%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 0% 2% 0%;
 }
 
 #themes-title{
-    font-size: 140%;
-    padding-bottom: 2%;
+    font-size: 130%;
+    padding-bottom: 8%;
 }
 
 .mode:hover{
     cursor: pointer;
     margin: auto;
-    width: 40%;
 }
 
 #boring{
@@ -166,10 +188,11 @@ body {
     text-decoration: underline overline;
 }
 
-#close-themes{
-    padding: 1%;
+.close{
+    font-size:80%;
+    padding: 0%;
     width: 50%;
-    margin: 5% auto;
+    margin: 8% auto 0% auto;
 }
 
 .grid {

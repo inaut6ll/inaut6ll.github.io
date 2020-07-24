@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         highDisplay.html(localStorage.getItem("high"));
     }
 
-    //create a playing board
+    //create the playing board
     function createBoard() {
         for (let i = 0; i < width * width; i++){
             let square = $("<div></div>");
@@ -582,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     squares[i].css("border", "");
                 } 
                 if(theme === "gray"){
-                    squares[i].css("color", "white");
+                    squares[i].css("color", "black");
                     squares[i].css("background", "linear-gradient(135deg, rgb(250, 126, 126), rgb(255, 209, 125), rgb(250, 250, 121), rgb(174, 245, 174), rgb(161, 161, 248), rgb(205, 133, 247))");
                     squares[i].css("border", "");
                 }  
@@ -704,10 +704,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $("#theme-button").click(() => {
         $("#themes").fadeIn();
+        $("#info-box").fadeOut();
     });
 
-    $("#close-themes").click(() => {
+    $("#info").click(() => {
         $("#themes").fadeOut();
+        $("#info-box").fadeIn();
+    });
+
+    $(".close").click(() => {
+        $("#themes").fadeOut();
+        $("#info-box").fadeOut();
     });
 
     $("#gray").click(() => {
