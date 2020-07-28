@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     let random3 = Math.floor(Math.random() * 253);
                     $(".grid").css("background", "linear-gradient(135deg, rgb(" + random + ", " + random2 + ", " + random3 + "), rgb(" + random2 + ", " + random3 + ", " + random + "))");
                     squares[i].css("color", "transparent");
-                    squares[i].css("background", "url(white)");
+                    squares[i].css("background", "white");
                     squares[i].css("border", "");
                 }  
                 if(theme === "faces"){
