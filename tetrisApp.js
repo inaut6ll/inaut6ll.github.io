@@ -608,10 +608,10 @@ document.addEventListener("DOMContentLoaded", () => {
         $(".grid div").css("margin", "1px");
         $(".grid div").css("border", "0px solid transparent");
         $("#container").css("border", "1px solid black");
-        $("#container").css("background", "linear-gradient(0deg, white, white)");
-        $(".mini-grid").css("background", "linear-gradient(0deg, white, white)");
+        $("#container").css("background", "linear-gradient(0deg, black, black)");
+        $(".mini-grid").css("background", "linear-gradient(0deg, black, black)");
         $(".mini-grid div").css("border", "1px solid transparent");
-        $("#grid-next").css("color", "black");
+        $("#grid-next").css("color", "white");
         restartF();
     });
     $("#ann").on("click", () => {
