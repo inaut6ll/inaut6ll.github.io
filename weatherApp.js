@@ -61,7 +61,7 @@ $(document).ready(() => {
             lat = position.coords.latitude;
             
             const proxy = "https://cors-anywhere.herokuapp.com/";
-            const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=70&lon=37&appid=6c8801566f1c76a01f1321935af57876`;
+            const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6c8801566f1c76a01f1321935af57876`;
             
             fetch(api)
                 .then(response => {
