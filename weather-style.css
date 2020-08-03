@@ -39,6 +39,7 @@ i{
 
 #loc{
     font-size: 80px;
+    padding-top:1.2%;
 }
 
 @media (min-width: 768px) {

@@ -55,55 +55,55 @@ $(document).ready(() => {
         }
     };
 
+    $("body").css("background-color", "pink");
+
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
             
-            const proxy = "https://cors-anywhere.herokuapp.com/";
-            const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=6c8801566f1c76a01f1321935af57876`;
-            
-            fetch(api)
-                .then(response => {
-                    return response.json();
-                })
-                .then(data => {
-                    $("#note").fadeOut();
-                    console.log(data);
-
-                    //convert kelvins to celsius
-                    tempC = parseInt(data.main.temp) - 273;
-                    tempF = Math.round((tempC * 9 / 5) + 32);
-
-                    city = data.name;
-                    country = data.sys.country;
-                    windSpeed = data.wind.speed;
-
-                    //capitalize first word of descrip
-                    info = data.weather[0].description;
-                    let a = info.substring(0, 1).toUpperCase();
-                    let b = info.substring(1, info.length);
-                    infoDis = a + b;
-
-                    //update data
-                    $("#info").html(infoDis);
-                    $("#deg").html(tempC);
-                    updateIcon();
-
-                    //change font size if too many letters
-                    if(city.length + country.length > 20){
-                        $("#loc").css("font-size", "50px");
-                    }else {
-                        $("#loc").css("font-size", "80px");
-                    }
-                    $("#loc").html(city + " / " + country);
-
-                    console.log(tempC);
-                    console.log(info);
-                    console.log(city);
-                    console.log(country);
-                });
+            updateWeather(lat, long);
         });
+    }
+
+    function updateWeather(la, lo){
+        const proxy = "https://cors-anywhere.herokuapp.com/";
+        const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${la}&lon=${lo}&appid=6c8801566f1c76a01f1321935af57876`;
+        
+        fetch(api)
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                $("#note").fadeOut();
+
+                //convert kelvins to celsius
+                tempC = parseInt(data.main.temp) - 273;
+                tempF = Math.round((tempC * 9 / 5) + 32);
+
+                city = data.name;
+                country = data.sys.country;
+                windSpeed = data.wind.speed;
+
+                //capitalize first word of descrip
+                info = data.weather[0].description;
+                let a = info.substring(0, 1).toUpperCase();
+                let b = info.substring(1, info.length);
+                infoDis = a + b;
+
+                //update data
+                $("#info").html(infoDis);
+                $("#deg").html(tempC);
+                updateIcon();
+
+                //change font size if too many letters
+                if(city.length + country.length > 20){
+                    $("#loc").css("font-size", "50px");
+                }else {
+                    $("#loc").css("font-size", "80px");
+                }
+                $("#loc").html(city + " / " + country);
+            });
     }
 
     let units = "c";
