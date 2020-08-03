@@ -55,16 +55,15 @@ $(document).ready(() => {
         }
     };
 
-    $("body").css("background-color", "pink");
-
-    if (navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(position => {
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
-            
-            updateWeather(lat, long);
-        });
-    }
+    //add function to submit button
+    $("#submit").on("click", () => {
+        let latitude = $("#latInput").val();
+        let longitude = $("#longInput").val();
+        if (latitude != "" && longitude != "" && latitude >= -90 && latitude <= 90 && longitude >= -180 && longitude <= 80){
+            $("body").css("background-color", "pink");
+            updateWeather(latitude, longitude);
+        }
+    });
 
     function updateWeather(la, lo){
         const proxy = "https://cors-anywhere.herokuapp.com/";
@@ -76,6 +75,7 @@ $(document).ready(() => {
             })
             .then(data => {
                 $("#note").fadeOut();
+                //$("#something").fadeIn();
 
                 //convert kelvins to celsius
                 tempC = parseInt(data.main.temp) - 273;
@@ -105,7 +105,20 @@ $(document).ready(() => {
                 $("#loc").html(city + " / " + country);
             });
     }
+    
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(position => {
+            long = position.coords.longitude;
+            lat = position.coords.latitude;
+            
+            updateWeather(lat, long);
+        });
+    }else{
+        $("#note").fadeOut();
+        //$("#something").fadeIn();
+    }
 
+    //change unit of temp when u click on it
     let units = "c";
     $("#temp").on("click", () => {
         if(units === "c"){
@@ -119,6 +132,7 @@ $(document).ready(() => {
         }
     });
 
+    //add function to light mode/dark mode button
     let mode = "light";
     $("#mode").on("click", () => {
         if(mode === "light"){
