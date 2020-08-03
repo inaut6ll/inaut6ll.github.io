@@ -1,0 +1,47 @@
+body{
+    font-size: 90px;
+    font-family: "Barlow", sans-serif;
+    overflow: hidden;
+}
+
+#container1{
+    padding: 5%;
+}
+
+i{
+    font-size: 150px;
+}
+
+#col2{
+    text-align: center;
+}
+
+#deg{
+    font-size: 140px;
+    text-align: right;
+}
+#unit{
+    font-size: 50px;
+    text-align: left;
+}
+
+#info{
+    font-size: 30px;
+    text-align: center;
+}
+
+#loc{
+    font-size: 80px;
+}
+
+@media (min-width: 768px) {
+    #container1{
+        padding-top: 10%;
+    }
+    #info{
+        padding-top: 10%;
+    }
+    i{
+        font-size: 200px;
+    }
+}
