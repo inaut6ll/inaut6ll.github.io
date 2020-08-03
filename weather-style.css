@@ -69,3 +69,12 @@ i{
     color: white;
     background-color: rgb(59, 59, 59);
 }
+
+#note{
+    font-size: 40%;
+    text-align: center;
+    color: white;
+    background-color: rgb(59, 59, 59);
+    border-radius: 10px;
+    margin: 2% 1%;
+}

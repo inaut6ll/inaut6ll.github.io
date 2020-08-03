@@ -21,7 +21,7 @@ $(document).ready(() => {
                 })
                 .then(data => {
                     console.log(data);
-
+                    $("#note").fadeOut();
                     tempC = parseInt(data.main.temp) - 273;
                     tempF = Math.round((tempC * 9 / 5) + 32);
                     info = data.weather[0].description;
@@ -46,8 +46,6 @@ $(document).ready(() => {
                     $("#loc").html(city + " / " + country);
                 });
         });
-    } else{
-        $("body").html("Please allow access to location.");
     }
 
     let mode = "light";
