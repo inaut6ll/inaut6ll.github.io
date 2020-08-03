@@ -3,7 +3,7 @@ $(document).ready(() => {
     let lat;
     let tempF = 18032;
     let tempC = 10000;
-    let info = "";
+    let info = "rain";
     let infoDis = "";
     let city = "";
     let country = "";
@@ -60,6 +60,7 @@ $(document).ready(() => {
         let latitude = $("#latInput").val();
         let longitude = $("#longInput").val();
         if (latitude != "" && longitude != "" && latitude >= -90 && latitude <= 90 && longitude >= -180 && longitude <= 180){
+            $("#loc").html("N/A");
             updateWeather(latitude, longitude);
         }
     });
@@ -94,12 +95,12 @@ $(document).ready(() => {
                 updateIcon();
 
                 //change font size if too many letters
-                if(city.length + country.length > 20){
+                if(city.length() + country.length() > 20){
                     $("#loc").css("font-size", "50px");
                 }else {
                     $("#loc").css("font-size", "80px");
                 }
-                if(country == null || country == "" || country == " " || city == null || city == "" || city == " "){
+                if(country == null || country == "" || country == " "){
                     $("#loc").html("N/A");
                 }else{
                     $("#loc").html(city + " / " + country);
