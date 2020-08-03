@@ -45,3 +45,21 @@ i{
         font-size: 200px;
     }
 }
+
+@media (max-width: 370px){
+    #loc{
+        font-size: 55px;
+    }
+    #deg{
+        font-size: 120px;
+    }
+}
+
+#mode{
+    position: absolute;
+    top: 90vh;
+    left: 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(59, 59, 59);
+}
