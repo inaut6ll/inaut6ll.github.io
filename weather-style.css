@@ -1,7 +1,6 @@
 body{
     font-size: 90px;
     font-family: "Barlow", sans-serif;
-    overflow: hidden;
 }
 
 #container1{
@@ -9,11 +8,15 @@ body{
 }
 
 i{
-    font-size: 150px;
+    font-size: 230% !important; 
 }
 
 #col2{
     text-align: center;
+}
+
+#temp{
+    margin-bottom: 1%;
 }
 
 #deg{
@@ -35,8 +38,11 @@ i{
 }
 
 @media (min-width: 768px) {
+    body{
+        overflow: hidden;
+    }
     #container1{
-        padding-top: 10%;
+        padding-top: 7%;
     }
     #info{
         padding-top: 10%;
@@ -57,7 +63,7 @@ i{
 
 #mode{
     position: absolute;
-    top: 90vh;
+    top: 4vh;
     left: 20px;
     font-size: 20px;
     color: white;
