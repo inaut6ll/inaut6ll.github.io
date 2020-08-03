@@ -60,7 +60,6 @@ $(document).ready(() => {
         let latitude = $("#latInput").val();
         let longitude = $("#longInput").val();
         if (latitude != "" && longitude != "" && latitude >= -90 && latitude <= 90 && longitude >= -180 && longitude <= 80){
-            $("body").css("background-color", "pink");
             updateWeather(latitude, longitude);
         }
     });
