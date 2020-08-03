@@ -95,7 +95,7 @@ $(document).ready(() => {
                 updateIcon();
 
                 //change font size if too many letters
-                if(city.length() + country.length() > 20){
+                if(city != null && country != null && city.length + country.length > 20){
                     $("#loc").css("font-size", "50px");
                 }else {
                     $("#loc").css("font-size", "80px");
