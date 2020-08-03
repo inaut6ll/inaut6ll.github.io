@@ -59,7 +59,7 @@ $(document).ready(() => {
     $("#submit").on("click", () => {
         let latitude = $("#latInput").val();
         let longitude = $("#longInput").val();
-        if (latitude != "" && longitude != "" && latitude >= -90 && latitude <= 90 && longitude >= -180 && longitude <= 80){
+        if (latitude != "" && longitude != "" && latitude >= -90 && latitude <= 90 && longitude >= -180 && longitude <= 180){
             updateWeather(latitude, longitude);
         }
     });
@@ -99,7 +99,11 @@ $(document).ready(() => {
                 }else {
                     $("#loc").css("font-size", "80px");
                 }
-                $("#loc").html(city + " / " + country);
+                if(country == null || country == "" || country == " " || city == null || city == "" || city == " "){
+                    $("#loc").html("N/A");
+                }else{
+                    $("#loc").html(city + " / " + country);
+                }
             });
     }
     
