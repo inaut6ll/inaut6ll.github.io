@@ -74,8 +74,6 @@ $(document).ready(() => {
                 return response.json();
             })
             .then(data => {
-                $("#note").fadeOut();
-                //$("#something").fadeIn();
 
                 //convert kelvins to celsius
                 tempC = parseInt(data.main.temp) - 273;
@@ -113,9 +111,6 @@ $(document).ready(() => {
             
             updateWeather(lat, long);
         });
-    }else{
-        $("#note").fadeOut();
-        //$("#something").fadeIn();
     }
 
     //change unit of temp when u click on it
@@ -137,16 +132,28 @@ $(document).ready(() => {
     $("#mode").on("click", () => {
         if(mode === "light"){
             mode = "dark";
+            $("#mode").html("Light Mode");
             $("#mode").css("color", "rgb(59, 59, 59)");
             $("#mode").css("background-color", "white");
             $("body").css("color", "white");
             $("body").css("background-color", "rgb(40, 40, 40)");
+            $("#submit").css("border", "1px solid white");
+            $("#submit").css("color", "white");
+            $("#submit").css("background-color", "rgb(40, 40, 40)");
+            $("input").css("background-color", "white");
+            $("input").css("color", "black");
         }else {
             mode = "light";
+            $("#mode").html("Dark Mode");
             $("#mode").css("color", "white");
             $("#mode").css("background-color", "rgb(59, 59, 59)");
             $("body").css("color", "rgb(59, 59, 59)");
             $("body").css("background-color", "white");
+            $("#submit").css("border", "1px solid black");
+            $("#submit").css("color", "black");
+            $("#submit").css("background-color", "white");
+            $("input").css("background-color", "rgb(40, 40, 40)");
+            $("input").css("color", "white");
         }
     });
 

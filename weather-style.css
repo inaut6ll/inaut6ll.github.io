@@ -5,6 +5,7 @@ body{
 
 #container1{
     padding: 0% 5% 0% 5%;
+    margin-top: -4%;
 }
 
 i{
@@ -42,10 +43,11 @@ i{
     padding-top:1.2%;
 }
 
+hr{
+    height: 1px;
+}
+
 @media (min-width: 768px) {
-    body{
-        overflow: hidden;
-    }
     #container1{
         padding-top: 7%;
     }
@@ -87,4 +89,30 @@ i{
 
 #container2{
     font-size: 30%;
+    text-align: center;
+}
+
+.small{
+    font-size: 70%;
+}
+
+#inputRow{
+    margin-top: 3%;
+    line-height: 105%;
+}
+
+input{
+    width: 76px;
+    text-align: center;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border-radius: 5px;
+}
+
+#submit{
+    height: 43px;
+    width: 100px;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: white;;
 }
