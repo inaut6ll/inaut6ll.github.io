@@ -19,6 +19,10 @@ i{
     margin-bottom: 1%;
 }
 
+#temp:hover{
+    cursor: pointer;
+}
+
 #deg{
     font-size: 140px;
     text-align: right;
