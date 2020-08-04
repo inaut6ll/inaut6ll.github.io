@@ -95,6 +95,13 @@ $(document).ready(() => {
                 $("#deg").html(tempC);
                 updateIcon();
 
+                //change unit 
+                if(units === "c"){
+                    $("#unit").html("°C");
+                }else{
+                    $("#unit").html("°F");
+                }
+
                 //change font size if too many letters
                 if(city != null && country != null && city.length + country.length > 20){
                     $("#loc").css("font-size", "50px");
