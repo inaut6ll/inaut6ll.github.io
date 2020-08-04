@@ -8,6 +8,7 @@ $(document).ready(() => {
     let city = "";
     let country = "";
     let windSpeed = 0;
+    alert("github has updated!");
 
     //change icon based on descrip
     function updateIcon() {
@@ -53,6 +54,7 @@ $(document).ready(() => {
         }else{
             icon.addClass("fa-cloud-sun");
         }
+        alert("updating icon worked!");
     };
 
     //add function to submit button
@@ -100,11 +102,12 @@ $(document).ready(() => {
                 }else {
                     $("#loc").css("font-size", "80px");
                 }
-                if(country == null || country == "" || country == " "){
-                    $("#loc").html("N/A");
-                }else{
+                //if(country == null || country == "" || country == " "){
+                //    $("#loc").html("N/A");
+                //}else{
                     $("#loc").html(city + " / " + country);
-                }
+                    alert("updating loc worked!");
+                //}
             });
     }
     
