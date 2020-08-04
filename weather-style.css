@@ -75,6 +75,7 @@ hr{
     font-size: 20px;
     color: white;
     background-color: rgb(59, 59, 59);
+    z-index: 5;
 }
 
 #note{
