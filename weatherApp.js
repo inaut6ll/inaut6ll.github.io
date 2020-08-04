@@ -8,7 +8,7 @@ $(document).ready(() => {
     let city = "";
     let country = "";
     let windSpeed = 0;
-    alert("github has updated!");
+    alert("github has updated 2.0!");
 
     //change icon based on descrip
     function updateIcon() {
@@ -102,12 +102,13 @@ $(document).ready(() => {
                 }else {
                     $("#loc").css("font-size", "80px");
                 }
-                //if(country == null || country == "" || country == " "){
-                //    $("#loc").html("N/A");
-                //}else{
+                if(country === null || country === "" || country === " "){
+                    $("#loc").html("N/A");
+                    alert("loc is N/A worked!");
+                }else{
                     $("#loc").html(city + " / " + country);
                     alert("updating loc worked!");
-                //}
+                }
             });
     }
     
