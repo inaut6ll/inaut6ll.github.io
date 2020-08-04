@@ -3,12 +3,11 @@ $(document).ready(() => {
     let lat;
     let tempF = 18032;
     let tempC = 10000;
-    let info = "rain";
+    let info = "";
     let infoDis = "";
     let city = "";
     let country = "";
     let windSpeed = 0;
-    alert("github has updated 2.0!");
 
     //change icon based on descrip
     function updateIcon() {
@@ -20,7 +19,8 @@ $(document).ready(() => {
             night = true;
         }
         let icon = $("i");
-        icon.removeClass("fa-poo-storm");
+        document.querySelector("i").className = "";
+        icon.addClass("fa");
         if((info.includes("snow") && info.includes("storm")) || info.includes("hail") || info.includes("ice") || info.includes("icy")){
             icon.addClass("fa-cloud-meatball");
         }else if(info.includes("snow")){
@@ -54,7 +54,6 @@ $(document).ready(() => {
         }else{
             icon.addClass("fa-cloud-sun");
         }
-        alert("updating icon worked!");
     };
 
     //add function to submit button
@@ -102,12 +101,10 @@ $(document).ready(() => {
                 }else {
                     $("#loc").css("font-size", "80px");
                 }
-                if(country === null || country === "" || country === " "){
+                if(country === undefined || country === null || country === "" || country === " "){
                     $("#loc").html("N/A");
-                    alert("loc is N/A worked!");
                 }else{
                     $("#loc").html(city + " / " + country);
-                    alert("updating loc worked!");
                 }
             });
     }
