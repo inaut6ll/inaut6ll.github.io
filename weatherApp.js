@@ -96,14 +96,13 @@ $(document).ready(() => {
 
                 //update data
                 $("#info").html(infoDis);
-                $("#deg").html(tempC);
                 updateIcon();
 
                 //change unit 
                 if(units === "c"){
-                    $("#unit").html("°C");
+                    $("#deg").html(tempC);
                 }else{
-                    $("#unit").html("°F");
+                    $("#deg").html(tempF);
                 }
 
                 //change font size if too many letters
