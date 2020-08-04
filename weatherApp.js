@@ -17,6 +17,8 @@ $(document).ready(() => {
         let n = d.getHours();
         if(n >= 20 || n <=4){
             night = true;
+        }else{
+            night = false;
         }
         let icon = $("i");
         document.querySelector("i").className = "";
@@ -25,6 +27,8 @@ $(document).ready(() => {
             icon.addClass("fa-cloud-meatball");
         }else if(info.includes("snow")){
             icon.addClass("fa-snowflake");
+        }else if(info.includes("fog")){
+            icon.addClass("fa-smog");
         }else if(info.includes("lightning") || info.includes("storm") || info.includes("thunder")){
             icon.addClass("fa-bolt");
         }else if(night && (info.includes("rain") || info.includes("sleet") || info.includes("hail"))){
