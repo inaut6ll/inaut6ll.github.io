@@ -37,7 +37,6 @@
      .button:hover{
          cursor: pointer;
          background-color: rgb(66, 63, 63);
-         transform: scale(1.1);
      }
      .button:active{
          border-style: inset;
@@ -126,8 +125,8 @@
        display: none;
      }
      #temp{
-       font-size: 15vw;
-       line-height: 100%;;
+       font-size: 7vw;
+       line-height: 100%;
      }
     </style>
   </head>
@@ -154,13 +153,13 @@
       </div>
 
       <label id="namelb">
-        Alias: <input id="name" onkeypress="checkKey(event)" maxlength="29" placeholder="e.g. Ory Jin Alneim">
+        Alias: <input id="name" onkeypress="checkKey(event)" maxlength="29" placeholder="e.g. Darth Vader III">
       </label>
       <div class="button" id="begin">Begin</div>
     </div>
 
     <div id="scene2">
-      <div id="temp">Hello, <span class="alias">Alias</span>.<br>I've been waiting<br> for you.</div>
+      <div id="temp">Hello, <span class="alias">Alias</span>.<br> Unfortunately, I started this project a few weeks ago and then completely forgot about it. Who knows if I'll ever finish this thing...</div>
 
     </div>
 
@@ -189,50 +188,6 @@
       $("#begin").on("click", function() {
         getName();
       });
-
-      //keydown function
-      var checkKey = function (event) {
-        if (event.defaultPrevented) {
-          return; // Do nothing if the event was already processed
-        }
-
-        switch (event.key) {
-          case "Down": // IE/Edge specific value
-          case "ArrowDown":
-            // Do something for "down arrow" key press.
-            
-            break;
-          case "Up": // IE/Edge specific value
-          case "ArrowUp":
-            // Do something for "up arrow" key press.
-            
-            break;
-          case "Left": // IE/Edge specific value
-          case "ArrowLeft":
-            // Do something for "left arrow" key press.
-            
-            break;
-          case "Right": // IE/Edge specific value
-          case "ArrowRight":
-            // Do something for "right arrow" key press.
-            
-            break;
-          case "Enter":
-            // Do something for "enter" or "return" key press.
-            //if the correct string is entered, do something
-            getName();
-            break;
-          case "Esc": // IE/Edge specific value
-          case "Escape":
-            // Do something for "esc" key press.
-            break;
-          default:
-            return; // Quit when this doesn't handle the key event.
-        }
-
-        // Cancel the default action to avoid it being handled twice
-        event.preventDefault();
-      };
 
 
     </script>
