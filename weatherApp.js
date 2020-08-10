@@ -112,7 +112,7 @@ $(document).ready(() => {
                     $("#loc").css("font-size", "80px");
                 }
                 if(country === undefined || country === null || country === "" || country === " "){
-                    $("#loc").html("N/A");
+                    $("#loc").html("Not Land");
                 }else{
                     $("#loc").html(city + " / " + country);
                 }
