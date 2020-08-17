@@ -27,7 +27,7 @@ $(document).ready(() => {
             icon.addClass("fa-cloud-meatball");
         }else if(info.includes("snow")){
             icon.addClass("fa-snowflake");
-        }else if(info.includes("fog")){
+        }else if(info.includes("fog") || info.includes("smog") || info.includes("smoke")){
             icon.addClass("fa-smog");
         }else if(info.includes("lightning") || info.includes("storm") || info.includes("thunder")){
             icon.addClass("fa-bolt");
