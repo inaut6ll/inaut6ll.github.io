@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat&display=swap');
 
 :root {
-    --main: rgb(0,0,0);
+    --main: rgb(151, 243, 255);
 }
 
 html{
     font-size: 62.7%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -17,6 +18,21 @@ body{
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    transition: color 350ms ease;
+}
+
+a:hover,
+a:focus{
+    color: rgb(50, 146, 255);
+}
+
+a:active{
+    color: rgb(38, 139, 255);
 }
 
 .section{
@@ -45,17 +61,28 @@ div{
 }
 
 .top-bar{
-    margin: 30px 0;
+    margin: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#name-btn{
+.name{
+    display: flex;
     flex-grow: 2;
     font-size: 4rem;
     font-weight: 600;
     font-family: Montserrat;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.canvas{
+    margin-left: 15px;
+}
+
+.canvas:hover {
+    cursor: pointer;
 }
 
 #menu{
@@ -63,14 +90,32 @@ div{
     justify-content: space-between;
     align-items: flex-end;
     flex-grow: 1;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 5px;
 }
 
 .home-flex-main{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .b{
     text-align: right;
+}
+
+.up-arrow{
+    font-size: 3.6rem; 
+    color: black;
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    transition: color 350ms ease;
+}
+
+.up-arrow:hover{
+    cursor: pointer;
+    color: rgb(110, 110, 110);
 }

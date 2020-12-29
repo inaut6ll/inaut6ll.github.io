@@ -12,24 +12,29 @@
         <link rel="stylesheet" href="index-style.css">
     </head>
     <body>
-      <div class="section top-bar">
-        <a id="name-btn">Lilian Zhao</a>
-          <div id="menu">
-            <a>Home</a>
-            <a>About</a>
-            <a>Projects</a>
-            <a>Contact</a>
-          </div>
+      <div class="section top-bar" id="top">
+        <div class="name">
+          <a href="#">Lilian Zhao</a>
+          <canvas class="canvas" width="70" height="60"></canvas>
+        </div>
+        <div id="menu">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Projects</a>
+          <a href="#">Contact</a>
+        </div>
       </div>
       <div class="section home-flex-main">
-          <div>
-            <img src="ann1-2048.jpg" alt="ann" width="300"> 
-          </div>
+          <canvas class="canvas2" width="600" height="600"></canvas>
           <div>
             <h1 class="b">Hi, I'm Lilian</h1>
             <h2 class="b">and I'm cooler than you</h2>
             <h2 class="b">you dumbutt</h2>
           </div>
+      </div>
+
+      <div class="up-arrow">
+        <a href="#top" class="fas fa-chevron-circle-up up-arrow"></a>
       </div>
 
       <div class="section">
@@ -45,6 +50,7 @@
       </div>
 
       <!--my js-->
+      <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
       <script src="indexApp.js" charset="utf-8"></script>
     </body>
 </html>
