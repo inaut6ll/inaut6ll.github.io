@@ -41,15 +41,15 @@ a:active{
 }
 
 h1{
-    font-size: 8rem;
-}
-
-h2{
     font-size: 6rem;
 }
 
+h2{
+    font-size: 5rem;
+}
+
 h3{
-    font-size: 4.5rem;
+    font-size: 4rem;
 }
 
 h4{
@@ -70,7 +70,7 @@ div{
 .name{
     display: flex;
     flex-grow: 2;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 600;
     font-family: Montserrat;
     justify-content: flex-start;
@@ -100,6 +100,7 @@ div{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 150px;
 }
 
 .b{
@@ -118,4 +119,9 @@ div{
 .up-arrow:hover{
     cursor: pointer;
     color: rgb(110, 110, 110);
+}
+
+.frag{
+    font-size: 9rem;
+    position: absolute;
 }
