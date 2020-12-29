@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat&display=swap');
+
 :root {
     --main: rgb(0,0,0);
 }
@@ -19,8 +21,7 @@ body{
 
 .section{
     margin: 0 auto;
-    max-width: 1400px;
-    padding: 20px;
+    padding: 40px 100px;
 }
 
 h1{
@@ -41,4 +42,35 @@ h4{
 
 div{
     font-size: 1.6rem;
+}
+
+.top-bar{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#name-btn{
+    flex-grow: 2;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: Montserrat;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.home-flex-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.b{
+    text-align: right;
 }
