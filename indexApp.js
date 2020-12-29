@@ -1,1 +1,1 @@
-alert("Note: This page is currently under reconstruction, which is why it likely looks terrible at the moment.");
+//alert("Note: This page is currently under reconstruction, which is why it likely looks terrible at the moment.");
