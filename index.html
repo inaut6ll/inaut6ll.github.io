@@ -10,49 +10,37 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!--my css-->
         <link rel="stylesheet" href="index-style.css">
+        <link rel="stylesheet" href="top-bar.css">
     </head>
     <body>
       <div class="section top-bar" id="top">
         <div class="name">
-          <a href="#">Lilian Zhao</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Lilian Zhao</a>
           <canvas class="canvas" width="70" height="60"></canvas>
         </div>
         <div id="menu">
-          <a href="#">Home</a>
-          <a href="#">About</a>
           <a href="#">Projects</a>
+          <a href="#">About</a>
+          <a href="#">Resume</a>
           <a href="#">Contact</a>
-        </div>
-      </div>
-      <div class="section home-flex-main">
-          <div id="circle-container">
-            <div class="circle c1"></div>
-            <div class="circle c2"></div>
-            <div class="circle c3"></div>
-          </div>
-          <div id="home-text-container">
-            <h2 class="home-text">Hi, I'm Lilian <br> and I like trees.</h2>
-            <h4 class="home-text">I'm not really sure what to write here. Turtles and trains will eat your brains</h4>
-          </div>
-      </div>
-
-      <div class="section">
-        <div id="frag-container">
-          <div class="frag" data-speed="7" style="top: 70%; left: 12%; color:rgb(105, 105, 105); font-size: 8.5vw;"><i class="fas fa-user-secret"></i></div>
-          <div class="frag" data-speed="2" style="top: 50%; left: 28%; color:rgb(255, 146, 146); font-size: 12vw;"><i class="fas fa-keyboard"></i></div>
-          <div class="frag" data-speed="6" style="top: 75%; left: 52%; color:rgb(0, 0, 0); font-size: 5vw;"><i class="fas fa-tree"></i></div>
-          <div class="frag" data-speed="7" style="top: 65%; left: 2%; color:rgb(201, 201, 201); font-size: 5vw;"><i class="fas fa-file-code"></i></div>
-          <div class="frag" data-speed="9" style="top: 20%; left: 42%; color:rgb(123, 115, 236); font-size: 8vw;"><i class="fas fa-meteor"></i></div>
-          <div class="frag" data-speed="5" style="top: 20%; left: 12%; color:rgb(73, 73, 73); font-size: 5vw;"><i class="fas fa-cat"></i></div>
-          <div class="frag" data-speed="2" style="top: 48%; left: 9%; color:rgb(138, 138, 138); font-size: 5.8vw;"><i class="fas fa-frog"></i></div>
-          <div class="frag" data-speed="3" style="top: 30%; left: 27%; color:rgb(37, 37, 37); font-size: 7vw;"><i class="fas fa-headphones"></i></div>
-          <div class="frag" data-speed="5" style="top: 85%; left: 32%; color:rgb(71, 71, 71); font-size: 3vw;"><i class="fas fa-smile-beam"></i></div>
-          <div class="frag" data-speed="9" style="top: 20%; left: 2%; color:rgb(255, 249, 169); font-size: 7.4vw;"><i class="fas fa-lightbulb"></i></div>
         </div>
       </div>
 
       <div class="up-arrow">
         <a href="#top" class="fas fa-chevron-circle-up up-arrow"></a>
+      </div>
+
+      <div class="section home-flex-main">
+          <div id="circle-container">
+            <div class="circle c1"><br><br><i class="fas fa-tree" style="font-size: 5rem;"></i></div>
+            <div class="circle c2">(⌐■_■)</div>
+            <div class="circle c3"></div>
+          </div>
+          <div id="home-text-container">
+            <h2 class="home-text"><span style="color: rgb(82, 151, 255)">Hey there!</span></h2>
+            <h2 class="home-text">I'm Lilian, a person who likes to make cool stuff.</h2>
+            <h3 class="home-text"></h3>
+          </div>
       </div>
 
       <div class="section">
@@ -70,5 +58,6 @@
       <!--my js-->
       <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
       <script src="indexApp.js" charset="utf-8"></script>
+      <script src="cubeAnim.js" charset="utf-8"></script>
     </body>
 </html>

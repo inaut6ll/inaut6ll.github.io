@@ -20,21 +20,6 @@ body{
 
 }
 
-a{
-    color: black;
-    text-decoration: none;
-    transition: color 350ms ease;
-}
-
-a:hover,
-a:focus{
-    color: rgb(50, 146, 255);
-}
-
-a:active{
-    color: rgb(38, 139, 255);
-}
-
 .section{
     margin: 0 auto;
     padding: 40px 100px;
@@ -64,55 +49,19 @@ div{
     font-size: 1.6rem;
 }
 
-.top-bar{
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.name{
-    display: flex;
-    flex-grow: 2;
-    font-size: 3.2rem;
-    font-weight: 600;
-    font-family: Montserrat;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.canvas{
-    margin-left: 15px;
-}
-
-.canvas:hover {
-    cursor: pointer;
-}
-
-#menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-grow: 1;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    padding: 5px;
-}
-
 .home-flex-main{
     display: flex;
     justify-content: space-between;
-    align-items: flex-center;
+    align-items: center;
     height: 80vh;
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
 }
 
 #circle-container{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex: 1;
+    flex: 2;
     padding-bottom: 10rem;
 }
 
@@ -122,6 +71,13 @@ div{
     width: 8rem;
     height: 8rem;
     transition: 1s ease-out;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle:hover{
@@ -129,7 +85,30 @@ div{
     height: 20rem;
     border-width: 5px;
     background-color: rgb(255, 255, 255);
-    transform: rotate(90deg);
+    transform: rotate(0deg);
+    cursor: pointer;
+    border-color: black;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.719);
+}
+
+.circle-hover{
+    border: 5px solid tomato;
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(0deg);
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    transition: 1s ease-out;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.719);
+}
+
+.circle-hover:hover{
     cursor: pointer;
 }
 
@@ -142,10 +121,10 @@ div{
         height: 20rem;
         border-width: 5px;
         background-color: rgb(255, 255, 255);
-        transform: rotate(180deg);
+        transform: rotate(90deg);
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotate(270deg);
     }
 }
 
@@ -157,10 +136,10 @@ div{
         width: 20rem;
         height: 20rem;
         border-width: 5px;
-        transform: rotate(180deg);
+        transform: rotate(90deg);
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotate(270deg);
     }
 }
 
@@ -173,21 +152,22 @@ div{
         width: 20rem;
         height: 20rem;
         border-width: 5px;
-        transform: rotate(180deg);
+        transform: rotate(90deg);
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotate(270deg);
     }
 }
 
 #home-text-container{
-    flex: 1;
+    flex: 1.5;
+    min-width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
     text-align: right;
-    padding-bottom: 0rem;
+    padding: 10rem 0rem 0rem 10rem;
     animation: fadeIn ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -218,12 +198,4 @@ div{
 .up-arrow:hover{
     cursor: pointer;
     color: rgb(110, 110, 110);
-}
-
-#frag-container{
-    position: absolute;
-}
-
-.frag{
-    font-size: 9rem;
 }
