@@ -1,17 +1,20 @@
-//animate mouse parallax
-const mouseParallax = (element, xDistance, yDistance, speed) => {
-    let x = (window.innerWidth - xDistance * speed) / 100;
-    let y = (window.innerHeight - yDistance * speed) / 100;
+document.addEventListener("DOMContentLoaded", () => {
 
-    let deg = (window.innerHeight - yDistance * speed) / 300
+    //animate mouse parallax
+    const mouseParallax = (element, xDistance, yDistance, speed) => {
+        let x = (window.innerWidth - xDistance * speed) / 100;
+        let y = (window.innerHeight - yDistance * speed) / 100;
 
-    element.style.transform = `translate(${-x}px,${-y}px) skew(${deg}deg)`;
-}
+        let deg = (window.innerHeight - yDistance * speed) / 300
 
-document.addEventListener("mousemove", e=> {
-    document.querySelectorAll(".frag").forEach(frag => {
-        const speed = frag.getAttribute("data-speed");
+        element.style.transform = `translate(${-x}px,${-y}px) skew(${deg}deg)`;
+    }
 
-        mouseParallax(frag, e.pageX, e.pageY, speed);
+    document.addEventListener("mousemove", e=> {
+        document.querySelectorAll(".frag").forEach(frag => {
+            const speed = frag.getAttribute("data-speed");
+
+            mouseParallax(frag, e.pageX, e.pageY, speed);
+        })
     })
 })
