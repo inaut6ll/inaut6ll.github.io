@@ -42,18 +42,22 @@ a:active{
 
 h1{
     font-size: 6rem;
+    font-family: Montserrat;
 }
 
 h2{
     font-size: 5rem;
+    font-family: Montserrat;
 }
 
 h3{
     font-size: 4rem;
+    font-family: Montserrat;
 }
 
 h4{
     font-size: 3rem;
+    font-family: Montserrat;
 }
 
 div{
@@ -70,11 +74,11 @@ div{
 .name{
     display: flex;
     flex-grow: 2;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 600;
     font-family: Montserrat;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .canvas{
@@ -99,12 +103,107 @@ div{
 .home-flex-main{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 150px;
+    align-items: flex-center;
+    height: 80vh;
+    margin-bottom: 8rem;
 }
 
-.b{
+#circle-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    padding-bottom: 10rem;
+}
+
+.circle{
+    border: 30px solid black;
+    border-radius: 50px;
+    width: 8rem;
+    height: 8rem;
+    transition: 1s ease-out;
+}
+
+.circle:hover{
+    width: 20rem;
+    height: 20rem;
+    border-width: 5px;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.c1{
+    animation: cAnim1 ease 3s 0s 1;
+}
+@keyframes cAnim1{
+    50%{
+        width: 20rem;
+        height: 20rem;
+        border-width: 5px;
+        background-color: rgb(255, 255, 255);
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.c2{
+    animation: cAnim2 ease 3s .5s 1;
+}
+@keyframes cAnim2{
+    50%{
+        width: 20rem;
+        height: 20rem;
+        border-width: 5px;
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.c3{
+    animation: cAnim3 ease 3s 1s 1;
+    border-color: tomato;
+}
+@keyframes cAnim3{
+    50%{
+        width: 20rem;
+        height: 20rem;
+        border-width: 5px;
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#home-text-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
     text-align: right;
+    padding-bottom: 0rem;
+    animation: fadeIn ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.home-text{
+    margin: 3rem;
 }
 
 .up-arrow{
@@ -121,7 +220,10 @@ div{
     color: rgb(110, 110, 110);
 }
 
+#frag-container{
+    position: absolute;
+}
+
 .frag{
     font-size: 9rem;
-    position: absolute;
 }

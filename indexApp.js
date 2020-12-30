@@ -3,7 +3,7 @@ let isSpinning = true;
 
 const illo = new Zdog.Illustration({
     element: '.canvas',
-    zoom: .6,
+    zoom: .5,
     dragRotate: true,
     onDragStart: function() {
         isSpinning = false;
@@ -15,7 +15,7 @@ const cube = new Zdog.Box({
     width: 50,
     height: 50, 
     depth: 50,
-    stroke: false,
+    stroke: 25,
     leftFace: "rgb(200,200,200)",
     rightFace: "rgb(0,0,0)",
     topFace: "rgb(255, 101, 101)",
@@ -41,7 +41,9 @@ const mouseParallax = (element, xDistance, yDistance, speed) => {
     let x = (window.innerWidth - xDistance * speed) / 100;
     let y = (window.innerHeight - yDistance * speed) / 100;
 
-    element.style.transform = `translate(${-x}px,${y}px)`;
+    let deg = (window.innerHeight - yDistance * speed) / 200
+
+    element.style.transform = `translate(${-x}px,${-y}px) skew(${deg}deg) rotate(${deg}deg)`;
 }
 
 document.addEventListener("mousemove", e=> {
