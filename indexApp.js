@@ -2,7 +2,7 @@
 document.querySelector("#contact-btn").addEventListener("click", (e) => {
     console.log("test pasdfe");
     document.querySelector("#c3").className = "circle-hover";
-    document.querySelector("#contact3").style.display = "block";
+    document.querySelector("#contact3").style.display = "grid";
 });
 
 
@@ -15,15 +15,15 @@ elements.forEach(element => {
             a.className = "circle";
             if (a.id == "c2") {
                 document.querySelector("#contact2").style.display = "none";
-            } else {
+            } else if (a.id == "c3") {
                 document.querySelector("#contact3").style.display = "none";
             }
         } else if (a.className.includes("circle")){
             a.className = "circle-hover";
             if (a.id == "c2") {
-                document.querySelector("#contact2").style.display = "block";
-            } else {
-                document.querySelector("#contact3").style.display = "block";
+                document.querySelector("#contact2").style.display = "flex";
+            } else if (a.id == "c3") {
+                document.querySelector("#contact3").style.display = "grid";
             }
         }
     });

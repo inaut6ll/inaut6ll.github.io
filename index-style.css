@@ -73,6 +73,7 @@ div{
     transition: 1s ease-out;
     font-size: 3rem;
     text-align: center;
+    color: white;
     transform: rotate(-90deg);
     display: flex;
     justify-content: center;
@@ -100,6 +101,7 @@ div{
     transition: 1s ease-out;
     text-align: center;
     font-size: 3rem;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,11 +114,6 @@ div{
 
 .contact{
     display: none;
-    transition: 1s ease-out;
-}
-
-.contact-show{
-    display: block;
     transition: 1s ease-out;
 }
 
@@ -194,16 +191,56 @@ div{
     margin: 3rem;
 }
 
-.up-arrow{
-    font-size: 3.6rem; 
-    color: black;
+#up-arrow{
     position: fixed;
     top: 90%;
     left: 95%;
+    font-size: 3.6rem;
+    display: block;
+}
+
+.icon{
+    font-size: 3.6rem; 
     transition: color 350ms ease;
 }
 
-.up-arrow:hover{
+.icon:hover{
     cursor: pointer;
     color: rgb(110, 110, 110);
+}
+
+#con1{
+    font-size: 6rem;
+    margin: 1rem;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+#con2{
+    font-size: 6rem;
+    margin: 1rem;
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+#con3{
+    font-size: 6rem;
+    margin: 1rem;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+
+#con4{
+    font-size: 6rem;
+    margin: 1rem;
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+#contact3{
+    display: none;
+    flex-wrap: wrap;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-content: center;
 }
