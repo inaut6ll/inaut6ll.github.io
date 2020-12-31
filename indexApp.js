@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#contact-btn").addEventListener("click", (e) => {
         document.querySelector("#c3").className = "circle-hover";
         document.querySelector("#contact3").style.display = "grid";
+        a.style.borderColor = "rgb(134, 173, 255)";
     });
 
 
@@ -36,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (a.className.includes("circle")){
                 a.className = "circle-hover";
                 if (a.id == "c2") {
-                    a.style.borderColor = "rgb(151, 243, 255)";
+                    a.style.borderColor = "tomato";
                     document.querySelector("#contact2").style.display = "flex";
                 } else if (a.id == "c3") {
-                    a.style.borderColor = "black";
+                    a.style.borderColor = "rgb(134, 173, 255)";
                     document.querySelector("#contact3").style.display = "grid";
                 } else {
-                    a.style.borderColor = "tomato";
+                    a.style.borderColor = "black";
                 }
             }
         });
