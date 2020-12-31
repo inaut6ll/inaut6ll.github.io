@@ -25,6 +25,10 @@ body{
     padding: 40px 100px;
 }
 
+p{
+    color: white;
+}
+
 h1{
     font-size: 6rem;
     font-family: Montserrat;
