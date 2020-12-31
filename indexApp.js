@@ -1,6 +1,12 @@
-//contact
 document.addEventListener("DOMContentLoaded", () => {
+    /**
+    //make first box open
+    setTimeout(() => {
+        document.querySelector("#c1").className = "circle-hover";
+    }, 3100);
+     */
 
+    //contact
     document.querySelector("#contact-btn").addEventListener("click", (e) => {
         document.querySelector("#c3").className = "circle-hover";
         document.querySelector("#contact3").style.display = "grid";

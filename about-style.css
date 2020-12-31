@@ -42,11 +42,127 @@ h3{
 
 h4{
     font-size: 3rem;
-    font-family: Montserrat;
+    font-family: Barlow;
 }
 
 div{
-    font-size: 1.6rem;
+    font-size: 2rem;
+}
+
+.icon{
+    color: black;
+    font-size: 3.6rem;
+    margin-left: 1rem;
+}
+
+#icon-box{
+    position: fixed;
+    top: 90vh;
+    left: calc(100vw - 22rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1.5s ease;
+}
+
+#email{
+    animation: icon1 ease 2s 0s 1;
+    transition: .5s ease;
+}
+@keyframes icon1{
+    0%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-100px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(-40px);
+    }
+    95%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+#linkedin{
+    animation: icon2 ease 2s .2s 1;
+    transition: .5s ease;
+}
+@keyframes icon2{
+    0%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-100px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+    84%{
+        transform: translateY(-50px);
+    }
+    93%{
+        transform: translateY(-50px);
+    }
+    95%{
+        transform: translateY(0px);
+    }
+}
+
+#github{
+    animation: icon3 ease 2s .4s 1;
+    transition: .5s ease;
+}
+@keyframes icon3{
+    0%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-100px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+    88%{
+        transform: translateY(-70px);
+    }
+    95%{
+        transform: translateY(-70px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+#question{
+    animation: icon4 ease 2s .6s 1;
+    transition: .5s ease;
+}
+@keyframes icon4{
+    0%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-100px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+    85%{
+        transform: translateY(-60px);
+    }
+    95%{
+        transform: translateY(-60px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 #frag-container{
@@ -57,13 +173,28 @@ div{
 .frag{
     font-size: 9rem;
     position: absolute;
+    display: none;
 }
 
 .about{
-    width: 100vw;
-    height: 100vh
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-.about-text-container{
+.about-container-1{
     color: black;
+    width: 50%;
+    padding: 10px 40px;
+}
+
+.about-container-2{
+    width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#list-container{
+    margin: 10%;
 }

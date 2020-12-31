@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Lilian Zhao</title>
+        <title>Lilian Zhao | About</title>
         <!--fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat&family=Cutive+Mono&family=Dancing+Script&family=Flamenco&family=Josefin+Slab&family=Quicksand&display=swap" rel="stylesheet">
@@ -13,27 +13,63 @@
         <link rel="stylesheet" href="top-bar.css">
     </head>
     <body>
-        <div class="section about">
-            <div id="frag-container">
-              <div class="frag" data-speed="7" style="top: 70%; left: 12%; color:rgb(105, 105, 105); font-size: 8.5vw;"><i class="fas fa-user-secret"></i></div>
-              <div class="frag" data-speed="2" style="top: 50%; left: 28%; color:rgb(255, 146, 146); font-size: 12vw;"><i class="fas fa-keyboard"></i></div>
-              <div class="frag" data-speed="-6" style="top: 75%; left: 52%; color:rgb(255, 255, 255); font-size: 5vw;"><i class="fas fa-tree"></i></div>
-              <div class="frag" data-speed="7" style="top: 65%; left: 2%; color:rgb(201, 201, 201); font-size: 5vw;"><i class="fas fa-file-code"></i></div>
-              <div class="frag" data-speed="-9" style="top: 20%; left: 42%; color:rgb(123, 115, 236); font-size: 8vw;"><i class="fas fa-meteor"></i></div>
-              <div class="frag" data-speed="-5" style="top: 20%; left: 12%; color:rgb(73, 73, 73); font-size: 5vw;"><i class="fas fa-cat"></i></div>
-              <div class="frag" data-speed="2" style="top: 48%; left: 9%; color:rgb(138, 138, 138); font-size: 5.8vw;"><i class="fas fa-frog"></i></div>
-              <div class="frag" data-speed="-3" style="top: 30%; left: 27%; color:rgb(37, 37, 37); font-size: 7vw;"><i class="fas fa-headphones"></i></div>
-              <div class="frag" data-speed="5" style="top: 85%; left: 32%; color:rgb(71, 71, 71); font-size: 3vw;"><i class="fas fa-cloud"></i></div>
-              <div class="frag" data-speed="9" style="top: 20%; left: 2%; color:rgb(255, 249, 169); font-size: 7.4vw;"><i class="fas fa-lightbulb"></i></div>
-            </div>
-            <div class="about-text-container">
-              <h4>About</h4>
-              
+      <div class="section top-bar" id="top">
+        <div class="name">
+          <a id="name" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">Lilian Zhao</a>
+          <canvas class="canvas" width="70" height="60"></canvas>
+        </div>
+        <div id="menu">
+          <a href="https://lilianzlettuce.github.io/#">Projects</a>
+          <a href="https://lilianzlettuce.github.io/about">About</a>
+          <a href="#">Resume</a>
+          <a href="#top" id="contact-btn">Contact</a>
+        </div>
+      </div>
+
+      <div id="icon-box">
+        <div id="email"><a target="_blank" href="mailto:milanzq309@gmail.com" class="fas fa-envelope icon" id="con1"></a></div>
+        <div id="linkedin"><a target="_blank" href="https://www.linkedin.com/in/lilian-zhao/" class="fab fa-linkedin icon" id="con2"></a></div>
+        <div id="github"><a target="_blank" href="https://github.com/lilianzlettuce" class="fab fa-github icon" id="con3"></a></div>
+        <div id="question"><a target="_blank" href="#top" class="fas fa-question icon" id="con4"></a></div>
+      </div>
+
+      <div class="section about">
+          <div class="about-container-1">
+            <h4>About</h4>
+            <p>Hello! I’m Lilian, a high school junior from California, and I love creating weird games and fun stuff, especially when it involves __. 
+              I am familiar with coding interactive websites using HTML/CSS & Javascript, implementing APIs & JS libraries, and using the ReactJS framework.
+              <br><br> My focus is currently on web development, but I am also proficient in Java and have some experience with building mobile applications. 
+              <br><br> Feel free to email me at milanzq309@gmail.com if you would like to reach out or chat. I am always open to exploring new learning opportunities!</p>
+          </div>
+          <div class="about-container-2">
+            <div id="list-container">
+              <h4>Things I like</h4>
+              <ul>
+                <li>sandwiches</li>
+                <li>cool rocks</li>
+                <li>toothpaste</li>
+                <li>origami</li>
+                <li>anime</li>
+              </ul>
             </div>
           </div>
+      </div>
 
-        <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
-        <script src="indexApp.js" charset="utf-8"></script>
-        <script src="cubeAnim.js" charset="utf-8"></script>
+      <div id="frag-container">
+        <div class="frag" data-speed="-7" style="top: 70%; left: 12%; color:rgb(105, 105, 105); font-size: 8.5vw;"><i class="fas fa-user-secret"></i></div>
+        <div class="frag" data-speed="2" style="top: 50%; left: 28%; color:rgb(255, 136, 115); font-size: 12vw;"><i class="fas fa-keyboard"></i></div>
+        <div class="frag" data-speed="-16" style="top: 75%; left: 52%; color:rgb(0, 0, 0); font-size: 5vw;"><i class="fas fa-tree"></i></div>
+        <div class="frag" data-speed="7" style="top: 65%; left: 2%; color:rgb(201, 201, 201); font-size: 5vw;"><i class="fas fa-file-code"></i></div>
+        <div class="frag" data-speed="25" style="top: 20%; left: 42%; color:rgb(123, 115, 236); font-size: 8vw;"><i class="fas fa-meteor"></i></div>
+        <div class="frag" data-speed="-5" style="top: 20%; left: 12%; color:rgb(73, 73, 73); font-size: 5vw;"><i class="fas fa-cat"></i></div>
+        <div class="frag" data-speed="12" style="top: 48%; left: 9%; color:rgb(138, 138, 138); font-size: 5.8vw;"><i class="fas fa-frog"></i></div>
+        <div class="frag" data-speed="-13" style="top: 30%; left: 27%; color:rgb(37, 37, 37); font-size: 7vw;"><i class="fas fa-headphones"></i></div>
+        <div class="frag" data-speed="5" style="top: 85%; left: 32%; color:rgb(71, 71, 71); font-size: 3vw;"><i class="fas fa-cloud"></i></div>
+        <div class="frag" data-speed="-9" style="top: 20%; left: 2%; color:rgb(169, 252, 255); font-size: 7.4vw;"><i class="fas fa-lightbulb"></i></div>
+      </div>
+
+      <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+      <script src="aboutApp.js" charset="utf-8"></script>
+      <script src="cubeAnim.js" charset="utf-8"></script>
     </body>
 </html>
