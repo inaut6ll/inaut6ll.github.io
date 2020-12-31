@@ -2,127 +2,71 @@
     position: relative;
     top: -6rem;
     left: 0rem;
-    animation: frag1 ease 4s 2.5s 1 normal forwards;
+    animation: frag1 ease 4s 1.5s 1 normal forwards;
 }
 @keyframes frag1{
     100%{
         opacity: 100%;
     }
 }
-
 #f4{
     position: relative;
     top: -3rem;
     left: 3rem;
-    animation: frag2 ease 4s 3.5s 1 normal forwards;
+    animation: frag1 ease 4s 2.5s 1 normal forwards;
 }
-@keyframes frag2{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f7{
-    animation: frag3 ease 3.5s 4.5s 1 normal forwards;
+    animation: frag1 ease 3.5s 3.5s 1 normal forwards;
 }
-@keyframes frag3{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f8{
     position: relative;
     top: 4rem;
     left: 0rem;
-    animation: frag4 ease 3s 4.7s 1 normal forwards;
+    animation: frag1 ease 3s 3.7s 1 normal forwards;
 }
-@keyframes frag4{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f10{
     position: relative;
     top: -10rem;
     left: 6rem;
-    animation: frag5 ease 3s 5.3s 1 normal forwards;
+    animation: frag1 ease 3s 4.3s 1 normal forwards;
 }
-@keyframes frag5{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f6{
     position: relative;
     top: 5rem;
     left: 8.6rem;
-    animation: frag6 ease 3s 5.5s 1 normal forwards;
+    animation: frag1 ease 3s 4.5s 1 normal forwards;
 }
-@keyframes frag6{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f1{
     position: relative;
     top: 10rem;
     left: 7rem;
-    animation: frag7 ease 3s 5.7s 1 normal forwards;
+    animation: frag1 ease 3s 4.7s 1 normal forwards;
 }
-@keyframes frag7{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f9{
     position: relative;
     top: 5rem;
     left: -5rem;
-    animation: frag8 ease 3s 6.1s 1 normal forwards;
+    animation: frag1 ease 3s 5.1s 1 normal forwards;
 }
-@keyframes frag8{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f3{
     position: relative;
     top: 0rem;
     left: 7rem;
-    animation: frag9 ease 2.5s 6.3s 1 normal forwards;
+    animation: frag1 ease 2.5s 5.3s 1 normal forwards;
 }
-@keyframes frag9{
-    100%{
-        opacity: 100%;
-    }
-}
-
 #f5{
     position: relative;
     top: 10rem;
     left: -17rem;
-    animation: frag10 ease 2.5s 6.5s 1 normal forwards;
+    animation: frag1 ease 2.5s 5.5s 1 normal forwards;
 }
-@keyframes frag10{
-    100%{
-        opacity: 100%;
-    }
-}
-
-
 
 
 #email{
-    animation: icon1 ease 2.5s 0s 1;
+    animation: icon ease 2.5s 0s 1;
     transition: .5s ease;
 }
-@keyframes icon1{
+@keyframes icon{
     0%{
         transform: translateY(0px);
     }
@@ -147,85 +91,14 @@
 }
 
 #linkedin{
-    animation: icon2 ease 2.5s .2s 1;
+    animation: icon ease 2.5s .2s 1;
     transition: .5s ease;
 }
-@keyframes icon2{
-    0%{
-        transform: translateY(0px);
-    }
-    55%{
-        transform: translateY(-100px);
-    }
-    65%{
-        transform: translateY(0px);
-    }
-    80%{
-        transform: translateY(-50px);
-    }
-    90%{
-        transform: translateY(-50px);
-    }
-    95%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
 #github{
-    animation: icon3 ease 2.5s .4s 1;
+    animation: icon ease 2.5s .4s 1;
     transition: .5s ease;
 }
-@keyframes icon3{
-    0%{
-        transform: translateY(0px);
-    }
-    55%{
-        transform: translateY(-100px);
-    }
-    65%{
-        transform: translateY(0px);
-    }
-    80%{
-        transform: translateY(-70px);
-    }
-    90%{
-        transform: translateY(-70px);
-    }
-    95%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
 #question{
-    animation: icon4 ease 2.5s .6s 1;
+    animation: icon ease 2.5s .6s 1;
     transition: .5s ease;
-}
-@keyframes icon4{
-    0%{
-        transform: translateY(0px);
-    }
-    55%{
-        transform: translateY(-100px);
-    }
-    65%{
-        transform: translateY(0px);
-    }
-    80%{
-        transform: translateY(-60px);
-    }
-    90%{
-        transform: translateY(-60px);
-    }
-    95%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
 }
