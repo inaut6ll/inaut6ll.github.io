@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     //add function to contact button -- the icon buttons animated
     document.querySelector("#contact-btn").addEventListener("click", () => {
         let email = document.querySelector("#email");
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let x = (window.innerWidth - xDistance * speed) / 100;
         let y = (window.innerHeight - yDistance * speed) / 100;
 
-        let deg = (window.innerHeight - yDistance * speed + xDistance) / 300;
+        let deg = (window.innerHeight - yDistance * speed + xDistance) / 500;
 
         element.style.transform = `translate(${-x}px,${-y}px) skew(${deg}deg)`;
     }
