@@ -108,6 +108,10 @@ div{
     }
 }
 
+.faded{
+    color: rgb(148, 148, 148);
+}
+
 .about-container-2{
     width: 50%;
     display: flex;

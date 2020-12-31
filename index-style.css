@@ -27,35 +27,45 @@ body{
 
 h1{
     font-size: 6rem;
-    font-family: Montserrat;
+    font-weight: 500;
 }
 
 h2{
     font-size: 5rem;
-    font-family: Montserrat;
+    font-weight: 400;
 }
 
 h3{
     font-size: 4rem;
-    font-family: Montserrat;
+    font-weight: 300;
 }
 
 h4{
     font-size: 3rem;
-    font-family: Montserrat;
+    font-family: Barlow;
+    font-weight: 500;
+}
+
+h5{
+    font-size: 2.2rem;
+    font-weight: 200;
 }
 
 div{
     font-size: 1.6rem;
 }
 
+.faded{
+    color: rgb(148, 148, 148);
+}
+
 .home-flex-main{
     display: flex;
-    padding: 0rem;
+    padding: 0rem 0rem 15rem 0rem;
     justify-content: space-between;
     align-items: center;
     height: 80vh;
-    margin-bottom: 3rem;
+    margin: 0rem;
 }
 
 #circle-container{
@@ -64,7 +74,7 @@ div{
     justify-content: space-evenly;
     flex: 2;
     margin-left: 4rem;
-    padding: 0rem 0rem 10rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
     transform: rotate(0deg);
 }
 
@@ -172,11 +182,10 @@ div{
     min-width: 40px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    text-align: right;
+    align-items: flex-start;
+    justify-content: left;
+    text-align: left;
     margin-right: 4rem;
-    padding: 3rem 3rem 0rem 10rem;
     animation: fadeIn ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -192,10 +201,9 @@ div{
 }
 
 .home-text{
-    min-width: 300px;
-    margin: 0rem;
-    padding: 5%;
-    line-height: 7rem;
+    width: 80%;
+    margin: 1rem 0rem;
+    line-height: 4rem;
 }
 
 #up-arrow{
@@ -221,7 +229,7 @@ div{
 
 .icon:hover{
     cursor: pointer;
-    color: rgb(107, 166, 255);
+    color: rgb(99, 99, 99);
 }
 
 #email{
@@ -299,4 +307,9 @@ div{
 }
 #con4{
     font-size: 6rem;
+}
+
+#projects{
+    border-top: 1px solid gray;
+    padding: 150px 100px;
 }
