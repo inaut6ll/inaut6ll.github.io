@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    /**
-    //make first box open
+    
+    //make cover disappear after animation ends
     setTimeout(() => {
-        document.querySelector("#c1").className = "circle-hover";
-    }, 3100);
-     */
+        document.querySelector("#cover").style.display = "none";
+    }, 4100);
+    
 
     //contact
     document.querySelector("#contact-btn").addEventListener("click", (e) => {
@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(element => {
         element.addEventListener("click", (e) => {
             let a = e.target;
+            let email = document.querySelector("#email");
+            let linkedin = document.querySelector("#linkedin");
+            let github = document.querySelector("#github");
+            let question = document.querySelector("#question");
             if (a.className == "circle-hover"){
                 a.className = "circle";
                 if (a.id == "c2") {
