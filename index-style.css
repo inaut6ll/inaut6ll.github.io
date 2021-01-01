@@ -325,6 +325,7 @@ div{
     flex-wrap: wrap;
     flex-direction: row-reverse;
     margin-left: 7%;
+    margin-bottom: 10rem;
 }
 
 .title{
@@ -371,6 +372,29 @@ div{
     position: relative;
 }
 
+.white-hover{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0%;
+    transition: .8s ease;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: 900;
+    z-index: 100;
+    position: relative;
+    top: calc(-44vw * 4 / 3);
+}
+
+.white-hover:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
 .descrip-box{
     transform: translateX(-80px);
     padding: 0;
@@ -413,12 +437,12 @@ div{
     position: relative;
     left: 30px;
     font-size: 3rem;
-    color: orange;
+    color: tomato;
     transition: 1s ease;
 }
 
 .right-arrow:hover{
-    color: rgb(255, 133, 111);
+    color: rgb(255, 160, 144);
 }
 
 .descrip-text{
@@ -426,6 +450,24 @@ div{
     width: 300px;
     left: 80px;
     line-height: 2.7rem;
+}
+
+#weather{
+    background-image: url(weatherpic1.png);
+}
+
+#weather2{
+    background-image: url(weatherpic2.png);
+}
+
+#weather3{
+    background-image: url(weatherpic3.png);
+    top: calc(-44vw * 2 / 3);
+}
+
+#weather-dot1{
+    border: none;
+    background-color: rgb(71, 166, 255);
 }
 
 #two{
@@ -443,35 +485,31 @@ div{
 
 #two-dot1{
     border: none;
-    background-color: tomato;
+    background-color: orange;
+}
+
+#two-hex{
+    transform: rotate(70deg);
 }
 
 #tetris{
-    background: url(tetrispic1.png) 0px 0px/702px 468px no-repeat;
-    width: 702px;
-    height: 468px;
-    transition: 1s ease;
+    background-image: url(tetrispic1.png);
 }
 
-.white-hover{
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0%;
-    transition: .8s ease;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-family: Montserrat;
-    font-weight: 900;
-    z-index: 100;
-    position: relative;
-    top: calc(-44vw * 4 / 3);
+#tetris2{
+    background-image: url(tetrispic2.png);
 }
 
-.white-hover:hover{
-    opacity: 50%;
-    cursor: pointer;
+#tetris3{
+    background-image: url(tetrispic3.png);
+    top: calc(-44vw * 2 / 3);
+}
+
+#tetris-dot1{
+    border: none;
+    background-color: rgb(103, 219, 151);
+}
+
+#tetris-hex{
+    transform: rotate(90deg);
 }
