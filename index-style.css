@@ -33,7 +33,7 @@ h1{
 h2{
     font-size: 3rem;
     font-family: Barlow;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 h3{
@@ -324,6 +324,7 @@ div{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row-reverse;
+    margin-left: 7%;
 }
 
 .title{
@@ -349,28 +350,25 @@ div{
 }
 
 .image{
-    width: 702px;
-    height: 468px;
+    width: 44vw;
+    height: calc(44vw * 2 / 3);
     transition: 1s ease;
     transform: translateX(-100px);
-    background: 0px 0px/702px 468px no-repeat;
+    background: 0px 0px/100% 100% no-repeat;
     margin-bottom: 5rem;
     z-index: 0;
 }
 
 .image-over{
-    background: 0px 0px/702px 468px no-repeat;
+    background: 0px 0px/100% 100% no-repeat;
     width: 100%;
     height: 100%;
     opacity: 0%;
     transition: 1s ease;
-    background-color: white;
+    margin: 0;
+    padding: 0;
     z-index: 50;
-}
-
-.image-over:hover{
-    opacity: 95%;
-    background-color: rgb(255, 255, 255);
+    position: relative;
 }
 
 .descrip-box{
@@ -385,16 +383,16 @@ div{
 .dots{
     position: relative;
     display: flex;
-    width: 300px;
+    width: 350px;
     align-items: center;
     justify-content: space-between;
-    left: -50px;
+    left: -60px;
 }
 
 .hex{
     position: relative;
     top: -10px;
-    left: -10px;
+    left: -5px;
     border: 1px solid rgb(3, 3, 3);
     background-color: rgba(255, 255, 255, 0.164);
     width: 100px;
@@ -411,9 +409,16 @@ div{
     transition: .5s ease;
 }
 
-.dot:hover{
-    cursor: pointer;
-    background-color: rgb(255, 173, 159);
+.right-arrow{
+    position: relative;
+    left: 30px;
+    font-size: 3rem;
+    color: orange;
+    transition: 1s ease;
+}
+
+.right-arrow:hover{
+    color: rgb(255, 133, 111);
 }
 
 .descrip-text{
@@ -428,7 +433,12 @@ div{
 }
 
 #two2{
-    background: url(2048pic2.png);
+    background-image: url(2048pic2.png);
+}
+
+#two3{
+    background-image: url(2048pic3.png);
+    top: calc(-44vw * 2 / 3);
 }
 
 #two-dot1{
@@ -437,7 +447,7 @@ div{
 }
 
 #tetris{
-    background: url(tetrispic2.png) 0px 0px/702px 468px no-repeat;
+    background: url(tetrispic1.png) 0px 0px/702px 468px no-repeat;
     width: 702px;
     height: 468px;
     transition: 1s ease;
@@ -457,9 +467,11 @@ div{
     font-family: Montserrat;
     font-weight: 900;
     z-index: 100;
+    position: relative;
+    top: calc(-44vw * 4 / 3);
 }
 
 .white-hover:hover{
-    opacity: 95%;
+    opacity: 50%;
     cursor: pointer;
 }

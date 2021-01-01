@@ -48,4 +48,42 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    //add functionality to image (takes you to the project) 
+    document.querySelector("#two-hover").addEventListener("click", () => {
+        window.open("https://lilianzlettuce.github.io/2048", "_blank");
+    });
+
+    //add functionality to right arrow (changes images when clicked)
+    let currentDot = 1;
+    document.querySelector("#two-icon").addEventListener("click", () => {
+        let dot1 = document.querySelector("#two-dot1");
+        let dot2 = document.querySelector("#two-dot2");
+        let dot3 = document.querySelector("#two-dot3");
+        let pic2 = document.querySelector("#two2");
+        let pic3 = document.querySelector("#two3");
+        if(currentDot === 1){
+            currentDot = 2;
+            dot1.style.backgroundColor = "white";
+            dot1.style.border = "1px solid black";
+            dot2.style.backgroundColor = "tomato";
+            dot2.style.border = "none";
+            pic2.style.opacity = "100%";
+        } else if(currentDot === 2){
+            currentDot = 3;
+            dot2.style.backgroundColor = "white";
+            dot2.style.border = "1px solid black";
+            dot3.style.backgroundColor = "tomato";
+            dot3.style.border = "none";
+            pic2.style.opacity = "0%";
+            pic3.style.opacity = "100%";
+        } else{
+            currentDot = 1;
+            dot3.style.backgroundColor = "white";
+            dot3.style.border = "1px solid black";
+            dot1.style.backgroundColor = "tomato";
+            dot1.style.border = "none";
+            pic3.style.opacity = "0%";
+        }
+    });
 });
