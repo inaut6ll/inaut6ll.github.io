@@ -4,9 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         document.querySelector("#cover").style.display = "none";
     }, 4100);
+
+    //menu bottom appear disappear
+    let prevScrollPos = 0;
+    window.onscroll = function() {
+        if (window.pageYOffset < 200) {
+            document.getElementById("menu-bottom").style.top = "100%";
+        } else {
+            document.getElementById("menu-bottom").style.top = "78%";
+        }
+    }
     
     //contact
     document.querySelector("#contact-btn").addEventListener("click", (e) => {
+        document.querySelector("#c3").className = "circle-hover";
+        document.querySelector("#contact3").style.display = "grid";
+        a.style.borderColor = "rgb(134, 173, 255)";
+    });
+
+    document.querySelector("#contact-btn2").addEventListener("click", (e) => {
         document.querySelector("#c3").className = "circle-hover";
         document.querySelector("#contact3").style.display = "grid";
         a.style.borderColor = "rgb(134, 173, 255)";
@@ -136,11 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if(currentDotNum === 2) {
             currentDot = document.querySelector(`#${p}-dot2`);
             nextDot = document.querySelector(`#${p}-dot3`);
-            pic2.style.opacity = "0%";
             pic3.style.opacity = "100%";
         } else {
             currentDot = document.querySelector(`#${p}-dot3`);
             nextDot = document.querySelector(`#${p}-dot1`);
+            pic2.style.opacity = "0%";
             pic3.style.opacity = "0%";
         } 
         currentDot.style.backgroundColor = "white";
@@ -189,10 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (classArr.includes("dot2")){
             changeTo = 2;
             pic2.style.opacity = "100%";
-            pic3.style.opacity = "0%";
+            setTimeout(function(){pic3.style.opacity = "0%";}, 100);
         } else if (classArr.includes("dot3")){
             changeTo = 3;
-            pic2.style.opacity = "0%";
             pic3.style.opacity = "100%";
         } else {
             changeTo = 1;
@@ -201,6 +216,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         eval("projects." + p + `.currentDotNum = ${changeTo};`);
     }));
-
 
 });

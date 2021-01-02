@@ -218,6 +218,19 @@ div{
     display: block;
 }
 
+#menu-bottom{
+    position: fixed;
+    top: 100%;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-transform: uppercase;
+    height: 120px;
+    transition: top 0.5s;
+}
+
 #cover{
     position: absolute;
     width: 100vw;
@@ -315,7 +328,7 @@ div{
 }
 
 #projects{
-    padding: 150px 100px;
+    padding: 150px 100px 0px 100px;
 }
 
 .project-container{
@@ -324,8 +337,8 @@ div{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-    margin-left: 7%;
-    margin-bottom: 10rem;
+    margin-left: 15%;
+    margin-bottom: 15rem;
 }
 
 .title{
@@ -351,8 +364,10 @@ div{
 }
 
 .image{
-    width: 44vw;
-    height: calc(44vw * 2 / 3);
+    width: 43vw;
+    height: calc(43vw * 2 / 3);
+    box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.719);
+    border-radius: 5px;
     transition: 1s ease;
     transform: translateX(-100px);
     background: 0px 0px/100% 100% no-repeat;
@@ -370,6 +385,11 @@ div{
     padding: 0;
     z-index: 50;
     position: relative;
+    border-radius: 5px;
+}
+
+.image-over2{
+    top: calc(-43vw * 2 / 3);
 }
 
 .white-hover{
@@ -387,7 +407,7 @@ div{
     font-weight: 900;
     z-index: 100;
     position: relative;
-    top: calc(-44vw * 4 / 3);
+    top: calc(-43vw * 4 / 3);
 }
 
 .white-hover:hover{
@@ -466,7 +486,6 @@ div{
 
 #veracity3{
     background-image: url(veracitypic3.png);
-    top: calc(-44vw * 2 / 3);
 }
 
 #veracity-dot1{
@@ -479,26 +498,15 @@ div{
 }
 
 #snowball{
-    width: 40vw;
-    height: calc(40vw * 2 / 3);
-    box-shadow: 0px 5px 25px gray;
-    border-radius: 5px;
     background-image: url(snowballpic1.png);
 }
 
 #snowball2{
-    border-radius: 5px;
     background-image: url(snowballpic2.png);
 }
 
 #snowball3{
-    border-radius: 5px;
     background-image: url(snowballpic3.png);
-    top: calc(-40vw * 2 / 3);
-}
-
-#snowball-hover{
-    top: calc(-40vw * 4 / 3);
 }
 
 #snowball-dot1{
@@ -520,7 +528,6 @@ div{
 
 #weather3{
     background-image: url(weatherpic3.png);
-    top: calc(-44vw * 2 / 3);
 }
 
 #weather-dot1{
@@ -542,7 +549,6 @@ div{
 
 #two3{
     background-image: url(2048pic3.png);
-    top: calc(-44vw * 2 / 3);
 }
 
 #two-dot1{
@@ -564,7 +570,6 @@ div{
 
 #tetris3{
     background-image: url(tetrispic3.png);
-    top: calc(-44vw * 2 / 3);
 }
 
 #tetris-dot1{
