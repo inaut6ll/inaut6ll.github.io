@@ -456,6 +456,50 @@ div{
     line-height: 2.7rem;
 }
 
+#veracity{
+    background-image: url(veracitypic1.png);
+}
+
+#veracity2{
+    background-image: url(veracitypic2.png);
+}
+
+#veracity3{
+    background-image: url(veracitypic3.png);
+    top: calc(-44vw * 2 / 3);
+}
+
+#veracity-dot1{
+    border: none;
+    background-color: rgb(106, 208, 255);
+}
+
+#veracity-hex{
+    transform: rotate(10deg);
+}
+
+#snowball{
+    background-image: url(snowballpic1.png);
+}
+
+#snowball2{
+    background-image: url(snowballpic2.png);
+}
+
+#snowball3{
+    background-image: url(snowballpic3.png);
+    top: calc(-44vw * 2 / 3);
+}
+
+#snowball-dot1{
+    border: none;
+    background-color: rgb(86, 40, 255);
+}
+
+#snowball-hex{
+    transform: rotate(30deg);
+}
+
 #weather{
     background-image: url(weatherpic1.png);
 }
@@ -471,7 +515,11 @@ div{
 
 #weather-dot1{
     border: none;
-    background-color: rgb(71, 166, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+#weather-hex{
+    transform: rotate(50deg);
 }
 
 #two{
@@ -515,5 +563,5 @@ div{
 }
 
 #tetris-hex{
-    transform: rotate(90deg);
+    transform: rotate(100deg);
 }

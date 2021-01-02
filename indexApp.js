@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    //add functionality to all images except snowball
+    //add functionality to all images (snowball is exception)
     let allImages = document.querySelectorAll(".white-hover");
     let imageArr = [...allImages];
     imageArr.forEach(element => element.addEventListener("click", (e) => {
@@ -55,6 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let p;
         if (ID == "veracity-hover"){
             p = "veracity";
+        } else if (ID == "snowball-hover"){
+            window.open("https://devpost.com/software/dodoplier", "_blank");
+            return;
         } else if (ID == "weather-hover"){
             p = "weather";
         } else if (ID == "two-hover"){
@@ -65,18 +68,20 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(`https://lilianzlettuce.github.io/${p}`, "_blank");
     }));
 
+    
+
     //data for each project container
     let projects = {
         veracity: {
-            color: "black",
+            color: "rgb(106, 208, 255)",
             currentDotNum: 1
         },
         snowball: {
-            color: "black",
+            color: "rgb(86, 40, 255)",
             currentDotNum: 1
         },
         weather: {
-            color: "rgb(71, 166, 255)",
+            color: "black",
             currentDotNum: 1
         },
         two: {
