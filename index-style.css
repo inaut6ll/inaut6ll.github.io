@@ -479,16 +479,26 @@ div{
 }
 
 #snowball{
+    width: 40vw;
+    height: calc(40vw * 2 / 3);
+    box-shadow: 0px 5px 25px gray;
+    border-radius: 5px;
     background-image: url(snowballpic1.png);
 }
 
 #snowball2{
+    border-radius: 5px;
     background-image: url(snowballpic2.png);
 }
 
 #snowball3{
+    border-radius: 5px;
     background-image: url(snowballpic3.png);
-    top: calc(-44vw * 2 / 3);
+    top: calc(-40vw * 2 / 3);
+}
+
+#snowball-hover{
+    top: calc(-40vw * 4 / 3);
 }
 
 #snowball-dot1{
