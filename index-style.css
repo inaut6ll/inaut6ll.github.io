@@ -433,6 +433,10 @@ div{
     transition: .5s ease;
 }
 
+.dot:hover{
+    cursor: pointer;
+}
+
 .right-arrow{
     position: relative;
     left: 30px;

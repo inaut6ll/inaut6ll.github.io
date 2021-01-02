@@ -5,14 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#cover").style.display = "none";
     }, 4100);
     
-
     //contact
     document.querySelector("#contact-btn").addEventListener("click", (e) => {
         document.querySelector("#c3").className = "circle-hover";
         document.querySelector("#contact3").style.display = "grid";
         a.style.borderColor = "rgb(134, 173, 255)";
     });
-
 
     //onclick functions for circles
     let elements = [...document.querySelectorAll(".circle")];
@@ -49,119 +47,155 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    //add functionality to weather image 
-    document.querySelector("#weather-hover").addEventListener("click", () => {
-        window.open("https://lilianzlettuce.github.io/weather", "_blank");
-    });
+    //add functionality to all images except snowball
+    let allImages = document.querySelectorAll(".white-hover");
+    let imageArr = [...allImages];
+    imageArr.forEach(element => element.addEventListener("click", (e) => {
+        const ID = e.target.id;
+        let p;
+        if (ID == "veracity-hover"){
+            p = "veracity";
+        } else if (ID == "weather-hover"){
+            p = "weather";
+        } else if (ID == "two-hover"){
+            p = "2048";
+        } else {
+            p = "tetris";
+        }
+        window.open(`https://lilianzlettuce.github.io/${p}`, "_blank");
+    }));
 
-    //add functionality to weather right arrow
-    let currentWeatherDot = 1;
-    document.querySelector("#weather-icon").addEventListener("click", () => {
-        let dot1 = document.querySelector("#weather-dot1");
-        let dot2 = document.querySelector("#weather-dot2");
-        let dot3 = document.querySelector("#weather-dot3");
-        let pic2 = document.querySelector("#weather2");
-        let pic3 = document.querySelector("#weather3");
-        if(currentWeatherDot === 1){
-            currentWeatherDot = 2;
-            dot1.style.backgroundColor = "white";
-            dot1.style.border = "1px solid black";
-            dot2.style.backgroundColor = "rgb(71, 166, 255)";
-            dot2.style.border = "none";
+    //data for each project container
+    let projects = {
+        veracity: {
+            color: "black",
+            currentDotNum: 1
+        },
+        snowball: {
+            color: "black",
+            currentDotNum: 1
+        },
+        weather: {
+            color: "rgb(71, 166, 255)",
+            currentDotNum: 1
+        },
+        two: {
+            color: "orange",
+            currentDotNum: 1
+        },
+        tetris: {
+            color: "rgb(103, 219, 151)",
+            currentDotNum: 1
+        }
+    }
+
+    function getNextDotNum(current) {
+        if (current == 3) {
+            current = 0;
+        }
+        let arr = [1, 2, 3];
+        return arr[current];
+    }
+
+    //add functionality to all right arrows
+    let allArrows = document.querySelectorAll(".right-arrow");
+    let arrowArr = [...allArrows];
+    arrowArr.forEach(element => element.addEventListener("click", (e) => {
+        let id = e.target.id;
+        let p;
+        if (id == "veracity-icon"){
+            p = "veracity";
+        } else if (id == "snowball-icon"){
+            p = "snowball";
+        } else if (id == "weather-icon"){
+            p = "weather";
+        } else if (id == "two-icon"){
+            p = "two";
+        } else {
+            p = "tetris";
+        }
+        let color;
+        let currentDotNum;
+        eval("color = projects." + p + ".color;");
+        eval("currentDotNum = projects." + p + ".currentDotNum;");
+
+        let currentDot;
+        let nextDot;
+        let pic2 = document.querySelector(`#${p}2`);
+        let pic3 = document.querySelector(`#${p}3`);
+
+        if(currentDotNum === 1) {
+            currentDot = document.querySelector(`#${p}-dot1`);
+            nextDot = document.querySelector(`#${p}-dot2`);
             pic2.style.opacity = "100%";
-        } else if(currentWeatherDot === 2){
-            currentWeatherDot = 3;
-            dot2.style.backgroundColor = "white";
-            dot2.style.border = "1px solid black";
-            dot3.style.backgroundColor = "rgb(71, 166, 255)";
-            dot3.style.border = "none";
+        } else if(currentDotNum === 2) {
+            currentDot = document.querySelector(`#${p}-dot2`);
+            nextDot = document.querySelector(`#${p}-dot3`);
             pic2.style.opacity = "0%";
             pic3.style.opacity = "100%";
-        } else{
-            currentWeatherDot = 1;
-            dot3.style.backgroundColor = "white";
-            dot3.style.border = "1px solid black";
-            dot1.style.backgroundColor = "rgb(71, 166, 255)";
-            dot1.style.border = "none";
+        } else {
+            currentDot = document.querySelector(`#${p}-dot3`);
+            nextDot = document.querySelector(`#${p}-dot1`);
             pic3.style.opacity = "0%";
+        } 
+        currentDot.style.backgroundColor = "white";
+        currentDot.style.border = "1px solid black";
+        nextDot.style.backgroundColor = color;
+        nextDot.style.border = "none";
+        eval("projects." + p + `.currentDotNum = ${getNextDotNum(currentDotNum)};`);
+    }));
+
+    //add functionality to all dots
+    let allDots = document.querySelectorAll(".dot");
+    let dotsArr = [...allDots];
+    dotsArr.forEach(element => element.addEventListener("click", (e) => {
+        let id = e.target.id;
+        let p;
+        if (id.includes("veracity")){
+            p = "veracity";
+        } else if (id.includes("snowball")){
+            p = "snowball";
+        } else if (id.includes("weather")){
+            p = "weather";
+        } else if (id.includes("two")){
+            p = "two";
+        } else {
+            p = "tetris";
         }
-    });
+        let color;
+        let currentDotNum;
+        eval("color = projects." + p + ".color;");
+        eval("currentDotNum = projects." + p + ".currentDotNum;");
 
-    //add functionality to 2048 image 
-    document.querySelector("#two-hover").addEventListener("click", () => {
-        window.open("https://lilianzlettuce.github.io/2048", "_blank");
-    });
+        let pic2 = document.querySelector(`#${p}2`);
+        let pic3 = document.querySelector(`#${p}3`);
 
-    //add functionality to 2048 right arrow
-    let currentTwoDot = 1;
-    document.querySelector("#two-icon").addEventListener("click", () => {
-        let dot1 = document.querySelector("#two-dot1");
-        let dot2 = document.querySelector("#two-dot2");
-        let dot3 = document.querySelector("#two-dot3");
-        let pic2 = document.querySelector("#two2");
-        let pic3 = document.querySelector("#two3");
-        if(currentTwoDot === 1){
-            currentTwoDot = 2;
-            dot1.style.backgroundColor = "white";
-            dot1.style.border = "1px solid black";
-            dot2.style.backgroundColor = "orange";
-            dot2.style.border = "none";
+        let currentDot = document.querySelector(`#${p}-dot${currentDotNum}`);
+        currentDot.style.backgroundColor = "white";
+        currentDot.style.border = "1px solid black";
+
+        let nextDot = document.querySelector(`#${id}`);
+        nextDot.style.backgroundColor = color;
+        nextDot.style.border = "none";
+
+        let allClasses = e.target.classList;
+        let classArr = [...allClasses];
+        let changeTo;
+        if (classArr.includes("dot2")){
+            changeTo = 2;
             pic2.style.opacity = "100%";
-        } else if(currentTwoDot === 2){
-            currentTwoDot = 3;
-            dot2.style.backgroundColor = "white";
-            dot2.style.border = "1px solid black";
-            dot3.style.backgroundColor = "orange";
-            dot3.style.border = "none";
+            pic3.style.opacity = "0%";
+        } else if (classArr.includes("dot3")){
+            changeTo = 3;
             pic2.style.opacity = "0%";
             pic3.style.opacity = "100%";
-        } else{
-            currentTwoDot = 1;
-            dot3.style.backgroundColor = "white";
-            dot3.style.border = "1px solid black";
-            dot1.style.backgroundColor = "orange";
-            dot1.style.border = "none";
-            pic3.style.opacity = "0%";
-        }
-    });
-
-    //add functionality to tetris image 
-    document.querySelector("#tetris-hover").addEventListener("click", () => {
-        window.open("https://lilianzlettuce.github.io/tetris", "_blank");
-    });
-
-    //add functionality to tetris right arrow
-    let currenttetrisDot = 1;
-    document.querySelector("#tetris-icon").addEventListener("click", () => {
-        let dot1 = document.querySelector("#tetris-dot1");
-        let dot2 = document.querySelector("#tetris-dot2");
-        let dot3 = document.querySelector("#tetris-dot3");
-        let pic2 = document.querySelector("#tetris2");
-        let pic3 = document.querySelector("#tetris3");
-        if(currenttetrisDot === 1){
-            currenttetrisDot = 2;
-            dot1.style.backgroundColor = "white";
-            dot1.style.border = "1px solid black";
-            dot2.style.backgroundColor = "rgb(103, 219, 151)";
-            dot2.style.border = "none";
-            pic2.style.opacity = "100%";
-        } else if(currenttetrisDot === 2){
-            currenttetrisDot = 3;
-            dot2.style.backgroundColor = "white";
-            dot2.style.border = "1px solid black";
-            dot3.style.backgroundColor = "rgb(103, 219, 151)";
-            dot3.style.border = "none";
+        } else {
+            changeTo = 1;
             pic2.style.opacity = "0%";
-            pic3.style.opacity = "100%";
-        } else{
-            currenttetrisDot = 1;
-            dot3.style.backgroundColor = "white";
-            dot3.style.border = "1px solid black";
-            dot1.style.backgroundColor = "rgb(103, 219, 151)";
-            dot1.style.border = "none";
             pic3.style.opacity = "0%";
         }
-    });
+        eval("projects." + p + `.currentDotNum = ${changeTo};`);
+    }));
 
 
 });
