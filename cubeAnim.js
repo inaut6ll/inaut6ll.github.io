@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     //cube animation
-    let isSpinning = true;
+    let isSpinning = false;
+
+    document.querySelector(".canvas").addEventListener('click', () => {
+        if (isSpinning){
+            isSpinning = false;
+        } else{
+            isSpinning = true;
+        }
+    });
 
     const illo = new Zdog.Illustration({
         element: '.canvas',
@@ -27,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function animate() {
         if (isSpinning) {
-            illo.rotate.y += 0.01;
-            illo.rotate.x += 0.01;
+            illo.rotate.y += 0.008;
+            illo.rotate.x += 0.008;
         }
         illo.updateRenderGraph();
         requestAnimationFrame(animate);

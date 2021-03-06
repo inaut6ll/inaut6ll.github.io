@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.pageYOffset < 200) {
             document.getElementById("menu-bottom").style.top = "100%";
         } else {
-            document.getElementById("menu-bottom").style.top = "78%";
+            document.getElementById("menu-bottom").style.top = "74%";
         }
     }
     
