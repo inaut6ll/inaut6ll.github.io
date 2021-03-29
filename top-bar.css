@@ -18,14 +18,15 @@ a:active{
 }
 
 #name{
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 300;
-    font-family: inconsolata;
+    font-family: nanum gothic coding;
+    font-family: quicksand;
 }
 
 .top-bar{
     margin: 0 0 10px 0;
-    padding: 30px 100px 70px 100px;
+    padding: 40px 80px 60px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
