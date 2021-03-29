@@ -70,7 +70,7 @@ div{
     padding: 0rem 0rem 10rem 0rem;
     justify-content: space-between;
     align-items: center;
-    height: 70vh;
+    height: 73vh;
     margin: 0rem;
 }
 
@@ -337,8 +337,14 @@ div{
     font-size: 6rem;
 }
 
+#projects-title{
+    padding: 0 15rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+}
+
 #projects{
-    padding: 150px 100px 0px 100px;
+    padding: 130px 100px 0px 100px;
 }
 
 .project-container{
