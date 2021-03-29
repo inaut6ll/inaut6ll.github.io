@@ -19,12 +19,13 @@ a:active{
 
 #name{
     font-size: 3.2rem;
-    font-weight: 600;
-    font-family: Montserrat;
+    font-weight: 300;
+    font-family: inconsolata;
 }
 
 .top-bar{
-    margin: 10px 0;
+    margin: 0 0 10px 0;
+    padding: 30px 100px 70px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +55,6 @@ a:active{
     align-items: flex-end;
     flex-grow: 1;
     position: sticky;
-    position: -webkit-sticky;
     top: 0;
     padding: 5px;
     text-transform: uppercase;
