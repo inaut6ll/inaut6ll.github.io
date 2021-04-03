@@ -60,7 +60,8 @@
       </div>
       <div id="projects-title">Projects ↓</div>
       <div class="section" id="projects">
-        <div class="project-container">
+        <div id="veracity-project-container"></div>
+        <div class="project-container" >
           <div class="descrip-box">
             <div class="controls">
               <div class="dots">
@@ -152,7 +153,7 @@
               <h4 class="title">2048</h4>
               <h5 class="type">Website/Game</h5>
               <h6 class="date">July 2020</h6>
-              <p class="descrip">My version of the classic 2048 game built with Javascript (using a lot of array methods)-- complete with original styling and themes. </p>
+              <p class="descrip">My version of the classic 2048 game built with Javascript (using a lot of array methods)— complete with original styling and themes. </p>
             </div>
           </div>
           <div class="image" id="two">
@@ -194,5 +195,13 @@
       <!--my js-->
       <script src="indexApp.js" charset="utf-8"></script>
       <script src="cubeAnim.js" charset="utf-8"></script>
+
+      <!-- Load React. -->
+      <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+      <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+      <!-- Load our React component. -->
+      <script src="projectCard.js"></script>
     </body>
 </html>
