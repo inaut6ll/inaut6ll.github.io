@@ -14,9 +14,9 @@ class ProjectCard extends React.Component {
     }
 
     return e(
-    <button onClick={() => this.setState({ liked: true })}>
-        Like
-      </button>
+        <button onClick={() => this.setState({ liked: true })}>
+            Like
+        </button>
     );
   }
 }
