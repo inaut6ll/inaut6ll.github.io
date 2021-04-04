@@ -5,36 +5,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#cover").style.display = "none" 
     }, 4100) 
 
-    let projectArr = [projects.sleep, projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
+    let projectNames = ['sleep', 'veracity', 'snowball', 'weather', 'two', 'tetris']
     //scroll animations
     window.onscroll = function() {
+        console.log(window.pageYOffset)
         if (window.pageYOffset < 1800) {
             document.querySelector('#menu-bottom').style.top = '100%' 
         } else {
             document.querySelector('#menu-bottom').style.top = '74%' 
         }
-        if (window.pageYOffset < 100) {
-            document.querySelector('#projects-title').style.top = '100px'
+        if (window.pageYOffset < 200) {
+            document.querySelector('#projects-title').style.top = '200px'
             document.querySelector('#projects-title').style.opacity = '0%'
         } else {
             document.querySelector('#projects-title').style.top = '-20px'
             document.querySelector('#projects-title').style.opacity = '100%'
         }
-
-
-        if (window.pageYOffset < 300) {
-            document.querySelector('#sleepPC').style.top = '100px'
-            document.querySelector('#sleepPC').style.opacity = '0%'
-        } else {
-            document.querySelector('#sleepPC').style.top = '-20px'
-            document.querySelector('#sleepPC').style.opacity = '100%'
-        }
-        if (window.pageYOffset < 1000) {
-            document.querySelector('#veracityPC').style.top = '100px'
-            document.querySelector('#veracityPC').style.opacity = '0%'
-        } else {
-            document.querySelector('#veracityPC').style.top = '-20px'
-            document.querySelector('#veracityPC').style.opacity = '100%'
+        for (let i = 0; i < projectNames.length; i++) {
+            if (window.pageYOffset < 300 + 600 * i) {
+                document.querySelector(`#${projectNames[i]}PC`).style.top = '100px'
+                document.querySelector(`#${projectNames[i]}PC`).style.opacity = '0%'
+            } else {
+                document.querySelector(`#${projectNames[i]}PC`).style.top = '-20px'
+                document.querySelector(`#${projectNames[i]}PC`).style.opacity = '100%'
+            }
         }
     }
     
