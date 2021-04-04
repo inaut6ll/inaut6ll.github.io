@@ -49,7 +49,7 @@ let projects = {
 }
 let projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
 
-class ProjectCard extends React.Component {
+class Project extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -92,4 +92,4 @@ class ProjectCard extends React.Component {
 }
 
 const domContainer = document.querySelector('#projects');
-ReactDOM.render(<ProjectCard/>, domContainer);
+ReactDOM.render(<Project/>, domContainer);
