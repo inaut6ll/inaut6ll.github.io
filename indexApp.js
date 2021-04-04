@@ -66,15 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //data for each project container
     let projects = {
+        sleep: {
+            color: "orange",
+            currentDotNum: 1,
+        },
         veracity: {
             color: "rgb(106, 208, 255)",
             currentDotNum: 1,
-            name: 'veracity',
-            title: 'Veracity',
-            type: 'React Web App',
-            date: 'November 2020',
-            descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click <a style="font-size: 1.6rem; color:rgb(255, 136, 115)" href="https://youtu.be/gMbwmaDJzTM" target="_blank">here</a> to see demo video.',
-
         },
         snowball: {
             color: "rgb(86, 40, 255)",
@@ -100,7 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
     imageArr.forEach(element => element.addEventListener("click", (e) => {
         const ID = e.target.id 
         let p 
-        if (ID == "veracity-hover"){
+        if (ID == 'sleep-hover') {
+            p = 'chamomile'
+        } else if (ID == "veracity-hover"){
             p = "veracity" 
         } else if (ID == "snowball-hover"){
             window.open("https://devpost.com/software/dodoplier", "_blank") 
@@ -130,7 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
     arrowArr.forEach(element => element.addEventListener("click", (e) => {
         let id = e.target.id 
         let p 
-        if (id == "veracity-icon"){
+        if (id == 'sleep-icon') {
+            p = 'sleep'
+        } else if (id == "veracity-icon"){
             p = "veracity" 
         } else if (id == "snowball-icon"){
             p = "snowball" 
@@ -178,7 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
     dotsArr.forEach(element => element.addEventListener("click", (e) => {
         let id = e.target.id 
         let p 
-        if (id.includes("veracity")){
+        if (id.includes("sleep")){
+            p = "sleep" 
+        } else if (id.includes("veracity")){
             p = "veracity" 
         } else if (id.includes("snowball")){
             p = "snowball" 

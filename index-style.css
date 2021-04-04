@@ -511,6 +511,27 @@ div{
     line-height: 2.7rem;
 }
 
+#sleep{
+    background-image: url(img/sleeppic1.jpg);
+}
+
+#sleep2{
+    background-image: url(img/sleeppic2.jpg);
+}
+
+#sleep3{
+    background-image: url(img/sleeppic3.jpg);
+}
+
+#sleep-dot1{
+    border: none;
+    background-color: orange;
+}
+
+#sleep-hex{
+    transform: rotate(100deg);
+}
+
 #veracity{
     background-image: url(img/veracitypic1.png);
 }

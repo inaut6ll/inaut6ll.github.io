@@ -1,9 +1,21 @@
 'use strict';
 
 let projects = {
+  new: {
+    name: '',
+    title: '',
+    type: '',
+    date: '',
+    descrip: '',
+  },
+  sleep: {
+    name: 'sleep',
+    title: 'Chamomile',
+    type: '???',
+    date: 'Right Now',
+    descrip: 'not the tea',
+  },
   veracity: {
-      color: "rgb(106, 208, 255)",
-      currentDotNum: 1,
       name: 'veracity',
       title: 'Veracity',
       type: 'React Web App',
@@ -11,8 +23,6 @@ let projects = {
       descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click ',
   },
   snowball: {
-      color: "rgb(86, 40, 255)",
-      currentDotNum: 1,
       name: 'snowball',
       title: 'Snowball',
       type: 'Mobile Android App',
@@ -20,8 +30,6 @@ let projects = {
       descrip: 'Takes advantage of corporate matching programs to maximize the impact of individual donations. Developed with a partner using Android Studio (Java & XML). Won Best Overall Hack @ the Creativa 2020 Hackathon.',
   },
   weather: {
-      color: "black",
-      currentDotNum: 1,
       name: 'weather',
       title: 'Weather',
       type: 'Website',
@@ -29,8 +37,6 @@ let projects = {
       descrip: 'Uses a weather API to display forecast data from user\'s current location if allowed. Can also get data and location from manually entered coordinates.',
   },
   two: {
-      color: "orange",
-      currentDotNum: 1,
       name: 'two',
       title: '2048',
       type: 'Website/Game',
@@ -38,8 +44,6 @@ let projects = {
       descrip: 'My version of the classic 2048 game built with Javascript (using a lot of array methods)— complete with original styling and themes.',
   },
   tetris: {
-      color: "rgb(103, 219, 151)",
-      currentDotNum: 1,
       name: 'tetris',
       title: 'Tetris',
       type: 'Website/Game',
@@ -47,7 +51,7 @@ let projects = {
       descrip: 'Customized version of Tetris developed from scratch using HTML/CSS, JavaScript, & jQuery. Incorporates many different creative modes including multiple themes and difficulty levels.',
   }
 }
-let projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
+let projectArr = [projects.sleep, projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
 
 class Project extends React.Component {
   constructor(props) {
