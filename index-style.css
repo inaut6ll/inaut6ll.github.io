@@ -2,7 +2,7 @@
 
 :root {
     --main: rgb(134, 173, 255);
-    --width: 550px;
+    --width: 565px;
     overflow-x: hidden;
 }
 
@@ -512,15 +512,15 @@ div{
 }
 
 #sleep{
-    background-image: url(img/sleeppic1.jpg);
+    background-image: url(img/sleeppic1.png);
 }
 
 #sleep2{
-    background-image: url(img/sleeppic2.jpg);
+    background-image: url(img/sleeppic2.png);
 }
 
 #sleep3{
-    background-image: url(img/sleeppic3.jpg);
+    background-image: url(img/sleeppic3.png);
 }
 
 #sleep-dot1{
