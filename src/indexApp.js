@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    let projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
+    /**let projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
     projectArr.forEach(project => {
         document.querySelector(`#`).textContent = `
         <div class="descrip-box">
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div id="${project.name}3" class="image-over image-over2"></div>
             <div id="${project.name}-hover" class="white-hover"></div>
         </div> `
-    })
+    })**/
 
     //add functionality to all images (snowball is exception)
     let allImages = document.querySelectorAll(".white-hover") 
