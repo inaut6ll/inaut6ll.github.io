@@ -10,8 +10,7 @@ let projects = {
       title: 'Veracity',
       type: 'React Web App',
       date: 'November 2020',
-      descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click <a style="font-size: 1.6rem; color:rgb(255, 136, 115)" href="https://youtu.be/gMbwmaDJzTM" target="_blank">here</a> to see demo video.',
-
+      descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click ',
   },
   snowball: {
       color: "rgb(86, 40, 255)",
@@ -30,7 +29,6 @@ let projects = {
       currentDotNum: 1
   }
 }
-
 let projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
 
 class ProjectCard extends React.Component {
@@ -57,7 +55,9 @@ class ProjectCard extends React.Component {
                   <h4 className="title">{project.title}</h4>
                   <h5 className="type">{project.type}</h5>
                   <h6 className="date">{project.date}</h6>
-                  <p className="descrip">{project.descrip}</p>
+                  <p className="descrip">{project.descrip}
+                    {project.name == 'veracity' && <span><a style={{fontSize: 1.6 + 'rem', color: 'rgb(255, 136, 115)'}} href="https://youtu.be/gMbwmaDJzTM" target="_blank">here</a> to see a demo video.</span>}
+                  </p>
               </div>
             </div>
             <div className="image" id={project.name}>

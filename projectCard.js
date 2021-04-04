@@ -18,8 +18,7 @@ var projects = {
     title: 'Veracity',
     type: 'React Web App',
     date: 'November 2020',
-    descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click <a style="font-size: 1.6rem; color:rgb(255, 136, 115)" href="https://youtu.be/gMbwmaDJzTM" target="_blank">here</a> to see demo video.'
-
+    descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click '
   },
   snowball: {
     color: "rgb(86, 40, 255)",
@@ -38,7 +37,6 @@ var projects = {
     currentDotNum: 1
   }
 };
-
 var projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris];
 
 var ProjectCard = function (_React$Component) {
@@ -97,7 +95,17 @@ var ProjectCard = function (_React$Component) {
                 React.createElement(
                   'p',
                   { className: 'descrip' },
-                  project.descrip
+                  project.descrip,
+                  project.name == 'veracity' && React.createElement(
+                    'span',
+                    null,
+                    React.createElement(
+                      'a',
+                      { style: { fontSize: 1.6 + 'rem', color: 'rgb(255, 136, 115)' }, href: 'https://youtu.be/gMbwmaDJzTM', target: '_blank' },
+                      'here'
+                    ),
+                    ' to see a demo video.'
+                  )
                 )
               )
             ),
