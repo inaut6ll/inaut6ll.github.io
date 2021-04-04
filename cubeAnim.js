@@ -1,35 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     //cube animation
-    var isSpinning = false;
+    let isSpinning = false;
 
-    document.querySelector(".canvas").addEventListener('click', function () {
-        if (isSpinning) {
+    document.querySelector(".canvas").addEventListener('click', () => {
+        if (isSpinning){
             isSpinning = false;
-        } else {
+        } else{
             isSpinning = true;
         }
     });
 
-    var illo = new Zdog.Illustration({
+    const illo = new Zdog.Illustration({
         element: '.canvas',
         zoom: .5,
         dragRotate: true,
-        onDragStart: function onDragStart() {
+        onDragStart: function() {
             isSpinning = false;
         }
-    });
+    })
 
-    var cube = new Zdog.Box({
+    const cube = new Zdog.Box({
         addTo: illo,
         width: 50,
-        height: 50,
+        height: 50, 
         depth: 50,
         stroke: 25,
         leftFace: "rgb(200,200,200)",
         rightFace: "rgb(0,0,0)",
         topFace: "rgb(255, 101, 101)",
-        bottomFace: "rgb(151, 243, 255)"
-    });
+        bottomFace: "rgb(151, 243, 255)",
+    })
 
     illo.updateRenderGraph();
 

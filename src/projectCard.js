@@ -7,7 +7,7 @@ class ProjectCard extends React.Component {
 
   render() {
     return (
-      <div>test</div>
+      <div>test 2.0</div>
     );
   }
 }

@@ -8,6 +8,37 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var projects = {
+  veracity: {
+    color: "rgb(106, 208, 255)",
+    currentDotNum: 1,
+    name: 'veracity',
+    title: 'Veracity',
+    type: 'React Web App',
+    date: 'November 2020',
+    descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click <a style="font-size: 1.6rem; color:rgb(255, 136, 115)" href="https://youtu.be/gMbwmaDJzTM" target="_blank">here</a> to see demo video.'
+
+  },
+  snowball: {
+    color: "rgb(86, 40, 255)",
+    currentDotNum: 1
+  },
+  weather: {
+    color: "black",
+    currentDotNum: 1
+  },
+  two: {
+    color: "orange",
+    currentDotNum: 1
+  },
+  tetris: {
+    color: "rgb(103, 219, 151)",
+    currentDotNum: 1
+  }
+};
+
+var projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris];
+
 var ProjectCard = function (_React$Component) {
   _inherits(ProjectCard, _React$Component);
 
@@ -20,14 +51,63 @@ var ProjectCard = function (_React$Component) {
   _createClass(ProjectCard, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       return React.createElement(
-        'button',
-        { onClick: function onClick() {
-            return _this2.setState({ liked: true });
-          } },
-        'Like'
+        'div',
+        null,
+        projectArr.map(function (project) {
+          return React.createElement(
+            'div',
+            null,
+            React.createElement(
+              'div',
+              { 'class': 'descrip-box' },
+              React.createElement(
+                'div',
+                { 'class': 'controls' },
+                React.createElement(
+                  'div',
+                  { 'class': 'dots' },
+                  React.createElement('div', { 'class': 'hex', id: project.name + "-hex", style: 'z-index: -100;' }),
+                  React.createElement('div', { 'class': "dot dot1 " + project.name + "-dot", id: project.name + "-dot1" }),
+                  React.createElement('div', { 'class': "dot dot2 " + project.name + "-dot", id: project.name + "-dot2" }),
+                  React.createElement('div', { 'class': "dot dot3 " + project.name + "-dot", id: project.name + "-dot3" }),
+                  React.createElement('i', { id: project.name + "-icon", 'class': 'fas fa-angle-right icon right-arrow' })
+                )
+              ),
+              React.createElement(
+                'div',
+                { 'class': 'descrip-text' },
+                React.createElement(
+                  'h4',
+                  { 'class': 'title' },
+                  project.title
+                ),
+                React.createElement(
+                  'h5',
+                  { 'class': 'type' },
+                  project.type
+                ),
+                React.createElement(
+                  'h6',
+                  { 'class': 'date' },
+                  project.date
+                ),
+                React.createElement(
+                  'p',
+                  { 'class': 'descrip' },
+                  project.descrip
+                )
+              )
+            ),
+            React.createElement(
+              'div',
+              { 'class': 'image', id: project.name },
+              React.createElement('div', { id: '${project.name}2', 'class': 'image-over' }),
+              React.createElement('div', { id: '${project.name}3', 'class': 'image-over image-over2' }),
+              React.createElement('div', { id: '${project.name}-hover', 'class': 'white-hover' })
+            )
+          );
+        })
       );
     }
   }]);
