@@ -1,7 +1,5 @@
 'use strict';
 
-let test = 'poop'
-
 let projects = {
   veracity: {
       color: "rgb(106, 208, 255)",
@@ -14,19 +12,39 @@ let projects = {
   },
   snowball: {
       color: "rgb(86, 40, 255)",
-      currentDotNum: 1
+      currentDotNum: 1,
+      name: 'snowball',
+      title: 'Snowball',
+      type: 'Mobile Android App',
+      date: 'October 2020',
+      descrip: 'Takes advantage of corporate matching programs to maximize the impact of individual donations. Developed with a partner using Android Studio (Java & XML). Won Best Overall Hack @ the Creativa 2020 Hackathon.',
   },
   weather: {
       color: "black",
-      currentDotNum: 1
+      currentDotNum: 1,
+      name: 'weather',
+      title: 'Weather',
+      type: 'Website',
+      date: 'August 2020',
+      descrip: 'Uses a weather API to display forecast data from user\'s current location if allowed. Can also get data and location from manually entered coordinates.',
   },
   two: {
       color: "orange",
-      currentDotNum: 1
+      currentDotNum: 1,
+      name: 'two',
+      title: '2048',
+      type: 'Website/Game',
+      date: 'July 2020',
+      descrip: 'My version of the classic 2048 game built with Javascript (using a lot of array methods)— complete with original styling and themes.',
   },
   tetris: {
       color: "rgb(103, 219, 151)",
-      currentDotNum: 1
+      currentDotNum: 1,
+      name: 'tetris',
+      title: 'Tetris',
+      type: 'Website/Game',
+      date: 'June 2020',
+      descrip: 'Customized version of Tetris developed from scratch using HTML/CSS, JavaScript, & jQuery. Incorporates many different creative modes including multiple themes and difficulty levels.',
   }
 }
 let projectArr = [projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
@@ -55,7 +73,8 @@ class ProjectCard extends React.Component {
                   <h4 className="title">{project.title}</h4>
                   <h5 className="type">{project.type}</h5>
                   <h6 className="date">{project.date}</h6>
-                  <p className="descrip">{project.descrip}
+                  <p className="descrip">
+                    {project.descrip}
                     {project.name == 'veracity' && <span><a style={{fontSize: 1.6 + 'rem', color: 'rgb(255, 136, 115)'}} href="https://youtu.be/gMbwmaDJzTM" target="_blank">here</a> to see a demo video.</span>}
                   </p>
               </div>
@@ -72,5 +91,5 @@ class ProjectCard extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('#veracity-project-container');
+const domContainer = document.querySelector('#projects');
 ReactDOM.render(<ProjectCard/>, domContainer);
