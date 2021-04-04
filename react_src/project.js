@@ -62,7 +62,7 @@ class Project extends React.Component {
     return (
       <div>
         {projectArr.map(project =>
-          <div className="project-container" key={project.name}>
+          <div className="project-container" key={project.name} id={project.name + "PC"}>
             <div className="descrip-box">
               <div className="controls">
                   <div className="dots">

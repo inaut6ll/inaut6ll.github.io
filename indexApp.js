@@ -5,13 +5,36 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#cover").style.display = "none" 
     }, 4100) 
 
-    //menu bottom appear disappear
-    let prevScrollPos = 0 
+    let projectArr = [projects.sleep, projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
+    //scroll animations
     window.onscroll = function() {
-        if (window.pageYOffset < 200) {
-            document.getElementById("menu-bottom").style.top = "100%" 
+        if (window.pageYOffset < 1800) {
+            document.querySelector('#menu-bottom').style.top = '100%' 
         } else {
-            document.getElementById("menu-bottom").style.top = "74%" 
+            document.querySelector('#menu-bottom').style.top = '74%' 
+        }
+        if (window.pageYOffset < 100) {
+            document.querySelector('#projects-title').style.top = '100px'
+            document.querySelector('#projects-title').style.opacity = '0%'
+        } else {
+            document.querySelector('#projects-title').style.top = '-20px'
+            document.querySelector('#projects-title').style.opacity = '100%'
+        }
+
+
+        if (window.pageYOffset < 300) {
+            document.querySelector('#sleepPC').style.top = '100px'
+            document.querySelector('#sleepPC').style.opacity = '0%'
+        } else {
+            document.querySelector('#sleepPC').style.top = '-20px'
+            document.querySelector('#sleepPC').style.opacity = '100%'
+        }
+        if (window.pageYOffset < 1000) {
+            document.querySelector('#veracityPC').style.top = '100px'
+            document.querySelector('#veracityPC').style.opacity = '0%'
+        } else {
+            document.querySelector('#veracityPC').style.top = '-20px'
+            document.querySelector('#veracityPC').style.opacity = '100%'
         }
     }
     

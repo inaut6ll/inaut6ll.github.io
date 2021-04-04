@@ -21,7 +21,7 @@ var projects = {
     title: 'Chamomile',
     type: 'THING',
     date: '????????',
-    descrip: 'This is here right now purely for aesthetic purposes.'
+    descrip: 'This is here right now solely for aesthetic purposes.'
   },
   veracity: {
     name: 'veracity',
@@ -79,7 +79,7 @@ var Project = function (_React$Component) {
         projectArr.map(function (project) {
           return React.createElement(
             'div',
-            { className: 'project-container', key: project.name },
+            { className: 'project-container', key: project.name, id: project.name + "PC" },
             React.createElement(
               'div',
               { className: 'descrip-box' },
