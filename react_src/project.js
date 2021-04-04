@@ -11,9 +11,9 @@ let projects = {
   sleep: {
     name: 'sleep',
     title: 'Chamomile',
-    type: '???',
-    date: 'Right Now',
-    descrip: 'not the tea',
+    type: 'THING',
+    date: '????????',
+    descrip: 'This is here right now solely for aesthetic purposes.',
   },
   veracity: {
       name: 'veracity',

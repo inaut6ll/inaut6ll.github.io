@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cube = new Zdog.Box({
         addTo: illo,
-        width: 50,
-        height: 50, 
-        depth: 50,
+        width: 40,
+        height: 40, 
+        depth: 40,
         stroke: 25,
         leftFace: "rgb(200,200,200)",
         rightFace: "rgb(0,0,0)",
