@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
             //scroll pov above
             document.querySelector(`#${projectNames[0]}PC`).style.top = '400px'
             document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
-            document.querySelector(`#${projectNames[0]}-link`).classList.add('faded')
-            document.querySelector(`#${projectNames[0]}-link`).style.fontWeight = '400'
+            document.querySelector(`#${projectNames[0]}-link`).classList.remove('faded')
+            document.querySelector(`#${projectNames[0]}-link`).style.fontWeight = '600'
         } else if (window.pageYOffset > scrollB + scrollM) {
             //scroll pov below
             document.querySelector(`#${projectNames[0]}PC`).style.top = '-200px'
