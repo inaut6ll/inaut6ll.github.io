@@ -6,11 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 4100) 
 
     let projectNames = ['sleep', 'veracity', 'snowball', 'weather', 'two', 'tetris']
+    let scrollB = 400 //offset where first project appears
+    let scrollM = 450 //how much offset is added each time
+    let offsets = [scrollB + 200]
+
+    //fill offsets array
+    for (let i = 1; i < projectNames.length; i++) {
+        offsets.push(scrollB + 200 + scrollM * i)
+    }
+
+    //add functionality to project anchors (normal linking doesn't work correctly)
+    for (let i = 0; i < projectNames.length; i++) {
+        document.querySelector(`#${projectNames[i]}-link`).addEventListener('click', () => {
+            window.scrollTo(0, offsets[i])
+        })
+    }
+
     //scroll animations
     window.onscroll = function() {
-        console.log(window.pageYOffset)
         //project nav bar
-        if (window.pageYOffset < 350 || window.pageYOffset > 700 + 450 * (projectNames.length - 1)) {
+        if (window.pageYOffset < 350 || window.pageYOffset > 700 + scrollM * (projectNames.length - 1)) {
             //document.querySelector('#menu-bottom').style.left = '-20%' 
             document.querySelector('#menu-bottom').style.opacity = '0%' 
         } else {
@@ -25,14 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#projects-title').style.top = '-20px'
             document.querySelector('#projects-title').style.opacity = '100%'
         }
+
         //first project
-        if (window.pageYOffset < 450) {
+        if (window.pageYOffset < scrollM) {
             //scroll pov above
             document.querySelector(`#${projectNames[0]}PC`).style.top = '400px'
             document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
             document.querySelector(`#${projectNames[0]}-link`).classList.add('faded')
             document.querySelector(`#${projectNames[0]}-link`).style.fontWeight = '400'
-        } else if (window.pageYOffset > 400 + 450) {
+        } else if (window.pageYOffset > scrollB + scrollM) {
             //scroll pov below
             document.querySelector(`#${projectNames[0]}PC`).style.top = '-200px'
             document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
@@ -45,15 +61,16 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(`#${projectNames[0]}-link`).classList.remove('faded')
             document.querySelector(`#${projectNames[0]}-link`).style.fontWeight = '600'
         }
+
         //projects after the first one
         for (let i = 1; i < projectNames.length; i++) {
-            if (window.pageYOffset < 400 + 450 * i) {
+            if (window.pageYOffset < scrollB + scrollM * i) {
                 //scroll pov above
                 document.querySelector(`#${projectNames[i]}PC`).style.top = '400px'
                 document.querySelector(`#${projectNames[i]}PC`).style.opacity = '0%'
                 document.querySelector(`#${projectNames[i]}-link`).classList.add('faded')
                 document.querySelector(`#${projectNames[i]}-link`).style.fontWeight = '400'
-            } else if (window.pageYOffset > 400 + 450 * (i + 1)) {
+            } else if (window.pageYOffset > scrollB + scrollM * (i + 1)) {
                 //scroll pov below
                 document.querySelector(`#${projectNames[i]}PC`).style.top = '-200px'
                 document.querySelector(`#${projectNames[i]}PC`).style.opacity = '0%'

@@ -63,6 +63,7 @@ div{
 
 .faded{
     color: rgb(148, 148, 148);
+    cursor: pointer;
 }
 
 .home-flex-main{
