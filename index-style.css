@@ -226,20 +226,21 @@ div{
 
 #menu-bottom{
     position: fixed;
-    top: 100%;
+    top: 30%;
     left: 2%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    text-transform: uppercase;
+    text-transform: lowercase;
     height: 120px;
-    transition: top 0.5s;
+    transition: left 1s, opacity 1s;
     background-color: rgba(255, 255, 255, 0.712);
     z-index: 100;
     border-radius: 10px;
     padding: 15px 10px;
-    height: 140px;
+    height: 240px;
+    opacity: 0%;
 }
 
 #cover{

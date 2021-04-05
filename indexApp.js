@@ -9,11 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     //scroll animations
     window.onscroll = function() {
         console.log(window.pageYOffset)
-        if (window.pageYOffset < 1800) {
-            document.querySelector('#menu-bottom').style.top = '100%' 
+        //project nav bar
+        if (window.pageYOffset < 350 || window.pageYOffset > 700 + 450 * (projectNames.length - 1)) {
+            //document.querySelector('#menu-bottom').style.left = '-20%' 
+            document.querySelector('#menu-bottom').style.opacity = '0%' 
         } else {
-            document.querySelector('#menu-bottom').style.top = '74%' 
+            //document.querySelector('#menu-bottom').style.left = '2%'
+            document.querySelector('#menu-bottom').style.opacity = '100%'  
         }
+        //project title
         if (window.pageYOffset < 200) {
             document.querySelector('#projects-title').style.top = '200px'
             document.querySelector('#projects-title').style.opacity = '0%'
@@ -26,14 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
             //scroll pov above
             document.querySelector(`#${projectNames[0]}PC`).style.top = '400px'
             document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
+            document.querySelector(`#${projectNames[0]}-link`).classList.add('faded')
+            document.querySelector(`#${projectNames[0]}-link`).style.fontWeight = '400'
         } else if (window.pageYOffset > 400 + 450) {
             //scroll pov below
             document.querySelector(`#${projectNames[0]}PC`).style.top = '-200px'
             document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
+            document.querySelector(`#${projectNames[0]}-link`).classList.add('faded')
+            document.querySelector(`#${projectNames[0]}-link`).style.fontWeight = '400'
         } else {
             //scroll pov seen
             document.querySelector(`#${projectNames[0]}PC`).style.top = '-20px'
             document.querySelector(`#${projectNames[0]}PC`).style.opacity = '100%'
+            document.querySelector(`#${projectNames[0]}-link`).classList.remove('faded')
+            document.querySelector(`#${projectNames[0]}-link`).style.fontWeight = '600'
         }
         //projects after the first one
         for (let i = 1; i < projectNames.length; i++) {
@@ -41,14 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 //scroll pov above
                 document.querySelector(`#${projectNames[i]}PC`).style.top = '400px'
                 document.querySelector(`#${projectNames[i]}PC`).style.opacity = '0%'
+                document.querySelector(`#${projectNames[i]}-link`).classList.add('faded')
+                document.querySelector(`#${projectNames[i]}-link`).style.fontWeight = '400'
             } else if (window.pageYOffset > 400 + 450 * (i + 1)) {
                 //scroll pov below
                 document.querySelector(`#${projectNames[i]}PC`).style.top = '-200px'
                 document.querySelector(`#${projectNames[i]}PC`).style.opacity = '0%'
+                document.querySelector(`#${projectNames[i]}-link`).classList.add('faded')
+                document.querySelector(`#${projectNames[i]}-link`).style.fontWeight = '400'
             } else {
                 //scroll pov seen
                 document.querySelector(`#${projectNames[i]}PC`).style.top = '-20px'
                 document.querySelector(`#${projectNames[i]}PC`).style.opacity = '100%'
+                document.querySelector(`#${projectNames[i]}-link`).classList.remove('faded')
+                document.querySelector(`#${projectNames[i]}-link`).style.fontWeight = '600'
             }
         }
     }
