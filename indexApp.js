@@ -22,10 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#projects-title').style.opacity = '100%'
         }
         for (let i = 0; i < projectNames.length; i++) {
-            if (window.pageYOffset < 300 + 600 * i) {
-                document.querySelector(`#${projectNames[i]}PC`).style.top = '100px'
+            if (window.pageYOffset < 400 + 450 * i) {
+                //scroll pov above
+                document.querySelector(`#${projectNames[i]}PC`).style.top = '400px'
+                document.querySelector(`#${projectNames[i]}PC`).style.opacity = '0%'
+            } else if (window.pageYOffset > 400 + 450 * (i + 1)) {
+                //scroll pov below
+                document.querySelector(`#${projectNames[i]}PC`).style.top = '-200px'
                 document.querySelector(`#${projectNames[i]}PC`).style.opacity = '0%'
             } else {
+                //scroll pov seen
                 document.querySelector(`#${projectNames[i]}PC`).style.top = '-20px'
                 document.querySelector(`#${projectNames[i]}PC`).style.opacity = '100%'
             }
