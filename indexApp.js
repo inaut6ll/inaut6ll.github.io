@@ -21,7 +21,22 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#projects-title').style.top = '-20px'
             document.querySelector('#projects-title').style.opacity = '100%'
         }
-        for (let i = 0; i < projectNames.length; i++) {
+        //first project
+        if (window.pageYOffset < 450) {
+            //scroll pov above
+            document.querySelector(`#${projectNames[0]}PC`).style.top = '400px'
+            document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
+        } else if (window.pageYOffset > 400 + 450) {
+            //scroll pov below
+            document.querySelector(`#${projectNames[0]}PC`).style.top = '-200px'
+            document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
+        } else {
+            //scroll pov seen
+            document.querySelector(`#${projectNames[0]}PC`).style.top = '-20px'
+            document.querySelector(`#${projectNames[0]}PC`).style.opacity = '100%'
+        }
+        //projects after the first one
+        for (let i = 1; i < projectNames.length; i++) {
             if (window.pageYOffset < 400 + 450 * i) {
                 //scroll pov above
                 document.querySelector(`#${projectNames[i]}PC`).style.top = '400px'
