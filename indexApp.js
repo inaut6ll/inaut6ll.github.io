@@ -93,12 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
         a.style.borderColor = "rgb(134, 173, 255)" 
     }) 
 
-    document.querySelector("#contact-btn2").addEventListener("click", (e) => {
-        document.querySelector("#c3").className = "circle-hover" 
-        document.querySelector("#contact3").style.display = "grid" 
-        a.style.borderColor = "rgb(134, 173, 255)" 
-    }) 
-
     //onclick functions for circles
     let elements = [...document.querySelectorAll(".circle")] 
     elements.forEach(element => {

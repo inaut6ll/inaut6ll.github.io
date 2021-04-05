@@ -19,9 +19,9 @@ var projects = {
   sleep: {
     name: 'sleep',
     title: 'Chamomile',
-    type: 'THING',
-    date: '????????',
-    descrip: 'This is here right now solely for aesthetic purposes.'
+    type: 'THING?????',
+    date: 'Work in Progress',
+    descrip: 'React/Firebase web app made to help you get more sleep... I\'ve promised myself I\'ll finish this by the end of Spring Break, but we\'ll see about that.'
   },
   veracity: {
     name: 'veracity',
