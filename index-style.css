@@ -701,13 +701,27 @@ div{
     transition: 3s ease;
 }
 
-#squiggly{
+#svg-container{
     position: absolute;
-    top: 330em;
+    top: 193em;
     left: 40vw;
+    transform: scale(1.2);
 }
 @media (max-width: 1280px) {
-    #squiggly{
-        top: 315em;
+    #svg-container{
+        top: 185em;
     }
+}
+
+#squiggly{
+    position: absolute;
+    z-index: 10;
+}
+
+#squiggly2{
+    position: absolute;
+    top: 4rem;
+    left: -1rem;
+    z-index: 0;
+    color: rgb(134, 173, 255);
 }
