@@ -21,28 +21,28 @@ var projects = {
     title: 'Chamomile',
     type: 'THING?????',
     date: 'Work in Progress',
-    descrip: 'React/Firebase web app made to help you get more sleep... I\'ve promised myself I\'ll finish this by the end of Spring Break, but we\'ll see about that.'
+    descrip: 'React/Firebase web app made to help you get more sleep... Coming soon? Or not... '
   },
   veracity: {
     name: 'veracity',
     title: 'Veracity',
     type: 'React Web App',
     date: 'November 2020',
-    descrip: 'Implements the ReactJS framework and Charity Navigator API to provide users with information on the most transparent and financially accountable charities. May be dead due to API subscription expiration. Click '
+    descrip: 'Implements the ReactJS framework and Charity Navigator API to simplify the process of finding the right charity. May be dead due to API key expiration. Click '
   },
   snowball: {
     name: 'snowball',
     title: 'Snowball',
     type: 'Mobile Android App',
     date: 'October 2020',
-    descrip: 'Takes advantage of corporate matching programs to maximize the impact of individual donations. Developed with a partner using Android Studio (Java & XML). Won Best Overall Hack @ the Creativa 2020 Hackathon.'
+    descrip: 'Aims to connect working professionals and potential donors to take advantage of corporate matching programs and maximize the impact of individual donations.'
   },
   weather: {
     name: 'weather',
     title: 'Weather',
     type: 'Website',
     date: 'August 2020',
-    descrip: 'Uses a weather API to display forecast data from user\'s current location if allowed. Can also get data and location from manually entered coordinates.'
+    descrip: 'Uses a weather API to display forecast data from the user\'s current location and/or get data and location from manually entered coordinates.'
   },
   two: {
     name: 'two',
@@ -56,7 +56,7 @@ var projects = {
     title: 'Tetris',
     type: 'Website/Game',
     date: 'June 2020',
-    descrip: 'Customized version of Tetris developed from scratch using HTML/CSS, JavaScript, & jQuery. Incorporates many different creative modes including multiple themes and difficulty levels.'
+    descrip: 'Customized version of Tetris developed to include different creative modes such as multiple color-changing themes and speed/difficulty levels.'
   }
 };
 var projectArr = [projects.sleep, projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris];
