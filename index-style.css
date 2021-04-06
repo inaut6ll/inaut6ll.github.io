@@ -3,6 +3,7 @@
 :root {
     --main: rgb(134, 173, 255);
     --width: 43vw;
+    --minwidth: 550px;
     overflow-x: hidden;
 }
 
@@ -415,6 +416,8 @@ div{
 .image{
     width: var(--width);
     height: calc(var(--width) * 2 / 3);
+    min-width: var(--minwidth);
+    min-height: calc(var(--minwidth) * 2 / 3);
     box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.719);
     border-radius: 5px;
     transition: 1s ease;
@@ -423,6 +426,15 @@ div{
     margin-bottom: 5rem;
     z-index: 0;
     flex: none;
+}
+
+@media (max-width: 1280px) {
+    .image-over2{
+        top: calc(var(--minwidth) * 2 / -3) !important;
+    }
+    .white-hover{
+        top: calc(var(--minwidth) * 4 / -3) !important;
+    }
 }
 
 .image-over{
