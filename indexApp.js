@@ -97,11 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.pageYOffset < scrollB + scrollM * projectNames.length - 100) {
             document.querySelector('#footer-title').style.top = '220px'
             document.querySelector('#footer-title').style.opacity = '0%'
-        } else {
-            document.querySelector('#footer-title').style.top = '0px'
-            document.querySelector('#footer-title').style.opacity = '100%'
-        }
-        if (window.pageYOffset < scrollB + scrollM * projectNames.length) {
             let links = document.getElementsByClassName('contact-bottom');
             for (let i = 0; i < links.length; i++) {
                 links[i].style.opacity = '0%';
@@ -109,6 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             document.querySelector('#bottom-text').style.opacity = '0%'
         } else {
+            document.querySelector('#footer-title').style.top = '0px'
+            document.querySelector('#footer-title').style.opacity = '100%'
             let links = document.getElementsByClassName('contact-bottom');
             for (let i = 0; i < links.length; i++) {
                 links[i].style.opacity = '100%';

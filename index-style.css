@@ -673,6 +673,11 @@ div{
     cursor: pointer;
 }
 
+#footer-container{
+    position: relative;
+    top: 0;
+}
+
 #footer{
     padding: 3rem 15rem 8rem 15rem;
 }
