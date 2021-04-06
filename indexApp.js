@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.onscroll = function() {
         //project nav bar
         if (window.pageYOffset < 350 || window.pageYOffset > 700 + scrollM * (projectNames.length - 1)) {
-            //document.querySelector('#menu-bottom').style.left = '-20%' 
-            document.querySelector('#menu-bottom').style.opacity = '0%' 
+            //document.querySelector('#menu-side').style.left = '-20%' 
+            document.querySelector('#menu-side').style.opacity = '0%' 
         } else {
-            //document.querySelector('#menu-bottom').style.left = '2%'
-            document.querySelector('#menu-bottom').style.opacity = '100%'  
+            //document.querySelector('#menu-side').style.left = '2%'
+            document.querySelector('#menu-side').style.opacity = '100%'  
         }
         //project title
         if (window.pageYOffset < 200) {

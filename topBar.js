@@ -18,11 +18,55 @@ var TopBar = function (_React$Component) {
     }
 
     _createClass(TopBar, [{
-        key: 'render',
+        key: "render",
         value: function render() {
-            return React.createElement('div', null);
+            return React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "div",
+                    { "class": "section top-bar", id: "top" },
+                    React.createElement(
+                        "div",
+                        { "class": "name" },
+                        React.createElement(
+                            "a",
+                            { id: "name", target: "_blank", href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO" },
+                            "LILIAN ZHAO"
+                        ),
+                        React.createElement("canvas", { "class": "canvas", width: "70", height: "60" })
+                    ),
+                    React.createElement(
+                        "div",
+                        { id: "menu" },
+                        React.createElement(
+                            "a",
+                            { href: "#projects" },
+                            "Projects"
+                        ),
+                        React.createElement(
+                            "a",
+                            { "class": "faded", href: "https://lilianzlettuce.github.io/about" },
+                            "About"
+                        ),
+                        React.createElement(
+                            "a",
+                            { "class": "faded", href: "LilianZhaoResumeJan2021.pdf", target: "_blank" },
+                            "Resume"
+                        ),
+                        React.createElement(
+                            "a",
+                            { "class": "faded", href: "#", id: "contact-btn" },
+                            "Contact"
+                        )
+                    )
+                )
+            );
         }
     }]);
 
     return TopBar;
 }(React.Component);
+
+var domContainer = document.querySelector('#top-bar-container');
+ReactDOM.render(React.createElement(TopBar, null), domContainer);

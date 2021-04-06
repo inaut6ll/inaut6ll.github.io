@@ -91,9 +91,9 @@ class Project extends React.Component {
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 
-const domContainer = document.querySelector('#projects');
-ReactDOM.render(<Project/>, domContainer);
+const domContainer = document.querySelector('#projects')
+ReactDOM.render(<Project/>, domContainer)

@@ -14,20 +14,9 @@
         <link rel="stylesheet" href="top-bar.css">
     </head>
     <body>
-      <div class="section top-bar" id="top">
-        <div class="name">
-          <a id="name" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">LILIAN ZHAO</a>
-          <canvas class="canvas" width="70" height="60"></canvas>
-        </div>
-        <div id="menu">
-          <a href="#projects">Projects</a>
-          <a class="faded" href="https://lilianzlettuce.github.io/about">About</a>
-          <a class="faded" href="LilianZhaoResumeJan2021.pdf" target="_blank">Resume</a>
-          <a class="faded" href="#" id="contact-btn">Contact</a>
-        </div>
-      </div>
+      <div id="top-bar-container"></div>
 
-      <div id="menu-bottom">
+      <div id="menu-side">
         <a id="sleep-link" class="faded p-link">Chamomile</a>
         <a id="veracity-link" class="faded p-lin">Veracity</a>
         <a id="snowball-link" class="faded p-lin">Snowball</a>
@@ -65,13 +54,17 @@
           <a class="contact-bottom" target="_blank" href="mailto:milanzq309@gmail.com">—Email</a> 
           <a class="contact-bottom" target="_blank" href="https://github.com/lilianzlettuce">—Github</a> 
           <a class="contact-bottom" target="_blank" href="https://www.linkedin.com/in/lilian-zhao/">—LinkedIn</a>
-          <p id="bottom-text">Made with the blood of a thousand salmon | 2021</p>
+          <p id="bottom-text">Made with the blood of a thousand snails | 2021</p>
 
           <div id="up-arrow">
             <a href="#top" class="fas fa-chevron-up icon" style="font-size: 3rem;"></a>
           </div>
         </div>
       </div>
+
+      <svg id="squiggly" width="50vw" height="100">
+        <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
+      </svg>
 
       <!--zdog-->
       <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
@@ -84,7 +77,8 @@
       <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
-      <!-- Load our React component. -->
+      <!-- Load React components -->
       <script src="project.js"></script>
+      <script src="topBar.js"></script>
     </body>
 </html>
