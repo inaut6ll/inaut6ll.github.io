@@ -689,9 +689,10 @@ div{
 
 .contact-bottom{
     font-size: 2rem;
-    margin: 0 3rem 0 0;
+    margin: 0 1.5rem 0 0;
     transition: 2s ease;
     position: relative;
+    cursor: pointer;
 }
 
 #bottom-text{
@@ -703,11 +704,11 @@ div{
 
 #svg-container{
     position: absolute;
-    top: 193em;
-    left: 40vw;
+    top: 195em;
+    left: 38vw;
     transform: scale(1.2);
 }
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     #svg-container{
         top: 185em;
     }
@@ -718,7 +719,6 @@ div{
     z-index: 10;
     stroke-dasharray: 2735;
     stroke-dashoffset: 8205;
-    animation: dash 24s linear .5s infinite forwards;
 }
 #squiggly2{
     position: absolute;
@@ -727,21 +727,37 @@ div{
     z-index: 0;
     stroke-dasharray: 2735;
     stroke-dashoffset: 8205;
-    animation: dash 24s linear 8s infinite forwards;
 }
 @keyframes dash {
-    33% {
+    25% {
+        stroke-dashoffset: 5470;
+        opacity: 100%;
+    }
+    50% {
         stroke-dashoffset: 5470;
     }
-    66% {
-        stroke-dashoffset: 5470;
-    }
-    99% {
+    74% {
         stroke-dashoffset: 2736;
         opacity: 100%;
     }
-    100%{
+    75%{
         stroke-dashoffset: 2736;
         opacity: 0%;
+    }
+    76%{
+        stroke-dashoffset: 0;
+        opacity: 0%;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        opacity: 0%;
+    }
+}
+@keyframes appear {
+    0%{
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
     }
 }
