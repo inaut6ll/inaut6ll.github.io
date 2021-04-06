@@ -114,8 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 links[i].style.left = '0px';
             }
             document.querySelector('#bottom-text').style.opacity = '100%'
-            document.querySelector('#squiggly').style.animation = 'dash 24s linear 0s 1 forwards, appear 2s linear 24s 1 forwards'
-            document.querySelector('#squiggly2').style.animation = 'dash 24s linear 6s 1 forwards, appear 2s linear 24s 1 forwards'
+            document.querySelector('#squiggly').style.animation = 'dash 24s linear 2s 1 forwards, appear 2s linear 26s 1 forwards'
+            document.querySelector('#squiggly2').style.animation = 'dash 24s linear 8s 1 forwards, appear 2s linear 26s 1 forwards'
         }
     }
     
