@@ -753,11 +753,25 @@ div{
         opacity: 0%;
     }
 }
+.appear{
+    animation: appear 1s ease 0s 1 forwards;
+}
 @keyframes appear {
     0%{
         opacity: 0%;
     }
     100% {
         opacity: 100%;
+    }
+}
+.disappear{
+    animation: disappear 1s ease 0s 1 forwards;
+}
+@keyframes disappear {
+    0%{
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
     }
 }

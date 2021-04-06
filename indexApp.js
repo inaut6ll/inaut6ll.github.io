@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 links[i].style.left = '300px';
             }
             document.querySelector('#bottom-text').style.opacity = '0%'
-            document.querySelector('#squiggly').style.animation = ''
-            document.querySelector('#squiggly2').style.animation = ''
+            document.querySelector('#svg-container').classList.add('disappear')
+            document.querySelector('#svg-container').classList.remove('appear')
         } else {
             document.querySelector('#footer-title').style.top = '0px'
             document.querySelector('#footer-title').style.opacity = '100%'
@@ -114,8 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 links[i].style.left = '0px';
             }
             document.querySelector('#bottom-text').style.opacity = '100%'
-            document.querySelector('#squiggly').style.animation = 'dash 24s linear 2s 1 forwards, appear 2s linear 26s 1 forwards'
-            document.querySelector('#squiggly2').style.animation = 'dash 24s linear 8s 1 forwards, appear 2s linear 26s 1 forwards'
+            document.querySelector('#squiggly').style.animation = 'dash 24s linear 2s 1 forwards'
+            document.querySelector('#squiggly2').style.animation = 'dash 24s linear 8s 1 forwards'
+            document.querySelector('#svg-container').classList.remove('disappear')
+            document.querySelector('#svg-container').classList.add('appear')
         }
     }
     
@@ -329,5 +331,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         eval("projects." + p + `.currentDotNum = ${changeTo} `) 
     })) 
+
+    //click on bottom lettuce
+    document.querySelector('#lettuce-bottom').addEventListener('click', () => {
+    })
 
 }) 
