@@ -8,16 +8,16 @@ class TopBar extends React.Component {
     render() {
         return (
             <div>
-                <div class="section top-bar" id="top">
-                    <div class="name">
+                <div className="section top-bar" id="top">
+                    <div className="name">
                         <a id="name" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">LILIAN ZHAO</a>
-                        <canvas class="canvas" width="70" height="60"></canvas>
+                        <canvas className="canvas" width="70" height="60"></canvas>
                     </div>
                     <div id="menu">
                         <a href="#projects">Projects</a>
-                        <a class="faded" href="https://lilianzlettuce.github.io/about">About</a>
-                        <a class="faded" href="LilianZhaoResumeJan2021.pdf" target="_blank">Resume</a>
-                        <a class="faded" href="#" id="contact-btn">Contact</a>
+                        <a className="faded" href="#" id="contact-btn">Contact</a>
+                        <a className="faded" href="https://lilianzlettuce.github.io/about">About</a>
+                        <a className="faded" href="LilianZhaoResumeJan2021.pdf" target="_blank">Resume</a>
                     </div>
                 </div>
             </div>

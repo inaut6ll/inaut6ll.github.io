@@ -700,3 +700,14 @@ div{
     color: rgb(78, 78, 78);
     transition: 3s ease;
 }
+
+#squiggly{
+    position: absolute;
+    top: 330em;
+    left: 40vw;
+}
+@media (max-width: 1280px) {
+    #squiggly{
+        top: 315em;
+    }
+}
