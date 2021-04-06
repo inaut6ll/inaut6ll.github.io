@@ -716,12 +716,32 @@ div{
 #squiggly{
     position: absolute;
     z-index: 10;
+    stroke-dasharray: 2735;
+    stroke-dashoffset: 8205;
+    animation: dash 24s linear .5s infinite forwards;
 }
-
 #squiggly2{
     position: absolute;
     top: 4rem;
     left: -1rem;
     z-index: 0;
-    color: rgb(134, 173, 255);
+    stroke-dasharray: 2735;
+    stroke-dashoffset: 8205;
+    animation: dash 24s linear 8s infinite forwards;
+}
+@keyframes dash {
+    33% {
+        stroke-dashoffset: 5470;
+    }
+    66% {
+        stroke-dashoffset: 5470;
+    }
+    99% {
+        stroke-dashoffset: 2736;
+        opacity: 100%;
+    }
+    100%{
+        stroke-dashoffset: 2736;
+        opacity: 0%;
+    }
 }
