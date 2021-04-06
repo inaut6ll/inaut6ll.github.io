@@ -84,6 +84,38 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(`#${projectNames[i]}-link`).style.fontWeight = '600'
             }
         }
+
+        //last project
+        if (window.pageYOffset > scrollB + scrollM * projectNames.length - 100) {
+            document.querySelector(`#${projectNames[projectNames.length - 1]}PC`).style.top = '-200px'
+                document.querySelector(`#${projectNames[projectNames.length - 1]}PC`).style.opacity = '0%'
+                document.querySelector(`#${projectNames[projectNames.length - 1]}-link`).classList.add('faded')
+                document.querySelector(`#${projectNames[projectNames.length - 1]}-link`).style.fontWeight = '400'
+        }
+
+        //contact
+        if (window.pageYOffset < scrollB + scrollM * projectNames.length - 100) {
+            document.querySelector('#footer-title').style.top = '220px'
+            document.querySelector('#footer-title').style.opacity = '0%'
+        } else {
+            document.querySelector('#footer-title').style.top = '0px'
+            document.querySelector('#footer-title').style.opacity = '100%'
+        }
+        if (window.pageYOffset < scrollB + scrollM * projectNames.length) {
+            let links = document.getElementsByClassName('contact-bottom');
+            for (let i = 0; i < links.length; i++) {
+                links[i].style.opacity = '0%';
+                links[i].style.left = '300px';
+            }
+            document.querySelector('#bottom-text').style.opacity = '0%'
+        } else {
+            let links = document.getElementsByClassName('contact-bottom');
+            for (let i = 0; i < links.length; i++) {
+                links[i].style.opacity = '100%';
+                links[i].style.left = '0px';
+            }
+            document.querySelector('#bottom-text').style.opacity = '100%'
+        }
     }
     
     //contact
