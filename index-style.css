@@ -714,43 +714,32 @@ div{
     }
 }
 
-#squiggly{
+#leaf{
     position: absolute;
     z-index: 10;
     stroke-dasharray: 2735;
     stroke-dashoffset: 8205;
 }
-#squiggly2{
+#leaf2{
     position: absolute;
-    top: 4rem;
-    left: -1rem;
+    top: 3rem;
+    left: 0rem;
     z-index: 0;
     stroke-dasharray: 2735;
     stroke-dashoffset: 8205;
+    display: none;
 }
 @keyframes dash {
-    25% {
-        stroke-dashoffset: 5470;
+    0%{
+        stroke-dashoffset: 8205;
+        opacity: 0%;
+    }
+    1%{
         opacity: 100%;
     }
-    50% {
+    100% {
         stroke-dashoffset: 5470;
-    }
-    74% {
-        stroke-dashoffset: 2736;
         opacity: 100%;
-    }
-    75%{
-        stroke-dashoffset: 2736;
-        opacity: 0%;
-    }
-    76%{
-        stroke-dashoffset: 0;
-        opacity: 0%;
-    }
-    100%{
-        stroke-dashoffset: 0;
-        opacity: 0%;
     }
 }
 .appear{
@@ -774,4 +763,10 @@ div{
     100% {
         opacity: 0%;
     }
+}
+
+#svg-container2{
+    position: absolute;
+    top: 198em;
+    left: 0svw;
 }
