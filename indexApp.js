@@ -6,15 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 4100) 
 
     let projectNames = ['sleep', 'veracity', 'snowball', 'weather', 'two', 'tetris']
-    let scrollB = 400 //offset where first project appears
-    let scrollM = 450 //how much offset is added each time
-    let offsets = [scrollB + 200]
-
-    //fill offsets array
-    for (let i = 1; i < projectNames.length; i++) {
-        offsets.push(scrollB + 200 + scrollM * i)
-    }
-
     //add functionality to project anchors (normal linking doesn't work correctly)
     for (let i = 0; i < projectNames.length; i++) {
         document.querySelector(`#${projectNames[i]}-link`).addEventListener('click', () => {
@@ -24,6 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //scroll animations
     window.onscroll = function() {
+        let scrollB = 400 //offset where first project appears
+        let scrollM
+        if (window.innerWidth > 900) {
+            scrollM = 450 //how much offset is added each time
+        } else {
+            scrollM = 750
+        }
+        let offsets = [scrollB + 200]
+    
+        //fill offsets array
+        for (let i = 1; i < projectNames.length; i++) {
+            offsets.push(scrollB + 200 + scrollM * i)
+        }
+
         //project nav bar
         if (window.pageYOffset < 350 || window.pageYOffset > 700 + scrollM * (projectNames.length - 1)) {
             //document.querySelector('#menu-side').style.left = '-20%' 
@@ -42,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         //first project
-        if (window.pageYOffset < scrollM) {
+        if (window.pageYOffset < scrollB) {
             //scroll pov above
             document.querySelector(`#${projectNames[0]}PC`).style.top = '400px'
             document.querySelector(`#${projectNames[0]}PC`).style.opacity = '0%'
@@ -349,20 +354,34 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         document.querySelector(id).setAttribute('d', d)
     }
-    createSquiggly('#squiggly-path', 0, 100, 160, 90, 10, true)
+    createSquiggly('#squiggly-path', 0, 100, 130, 90, 4, true)
 
     //scribble
-    function createScribble(id, startX, startY, height, width, number) {
-        let d = `M ${startX} ${startY} `
-        if (up) {
-            d += `Q ${startX + width / 2} ${startY - height}, ${startX + width} ${startY} `
-        } else {
-            d += `Q ${startX + width / 2} ${startY + height}, ${startX + width} ${startY} `
-        }
-        for (let i = 2; i <= number; i++) {
-            d += `T ${startX + width * i} ${startY} `
+    function createScribble(id, startX, startY, density, size) {
+        let d = `M ${startX} ${startY} Q ${startX + density * 5} ${startY + density * 5}, ${startX - density * 5} ${startY} `
+        for (let i = 0; i <= size; i++) {
+            let r = Math.floor(Math.random() * 2)
+            let r2 = Math.floor(Math.random() * 2)
+            let range = (i * density)
+            let randomX = startX + Math.random() * density * size - density * size / 2
+            let randomY = startY + Math.random() * density * size - density * size / 2
+
+            if (r % 2 === 0) {
+                randomX = startX + range
+            } else {
+                randomX = startX - range
+            }
+            if (r2 % 2 === 0) {
+                randomY = startY + range
+            } else {
+                randomY = startY - range
+            }
+
+            d += `T ${randomX} ${randomY} `
+            console.log('x: ' + randomX)
+            console.log('y: ' + randomY)
         }
         document.querySelector(id).setAttribute('d', d)
     }
-    createScribble('#scribble-path')
+    createScribble('#scribble-path', 250, 250, 1, 40)
 }) 
