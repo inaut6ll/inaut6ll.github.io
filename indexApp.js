@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //svg 
         document.querySelector('#svg-container').style.top = `${scrollB + projectNames.length * scrollM + 100}px`
-        if (window.pageYOffset < scrollB + scrollM * projectNames.length - 100) {
+        if (window.pageYOffset < scrollB + scrollM * (projectNames.length) - 80) {
             document.querySelector('#svg-container').style.opacity = '0%'
         } else{
             document.querySelector('#svg-container').style.opacity = '100%'
