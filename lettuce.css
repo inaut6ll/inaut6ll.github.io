@@ -1,0 +1,89 @@
+:root{
+    --darkergreen: rgb(5, 85, 5);
+    --green: rgb(0, 153, 0);
+    --lightgreen: rgb(109, 207, 109);
+    --mintgreen: rgb(167, 238, 167);
+}
+
+html{
+    font-size: 62.7%;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3{
+    font-size: 2.3rem;
+    color: var(--darkergreen);
+    font-weight: 500;
+}
+
+input{
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-bottom: 1px solid var(--lightgreen);
+    padding: .7rem .2rem;
+    margin-right: 1.5rem;
+    color: var(--green);
+}
+
+#login-page{
+    display: flex;
+}
+
+#login-container{
+    width: 500px;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 55vh;
+    left: 8vw;
+}
+
+#svg-container{
+    position: absolute;
+    left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    transform: scale(1.2);
+    margin: 0;
+}
+
+.leaves{
+    position: absolute;
+    stroke-dasharray: 2735;
+    stroke-dashoffset: 8205;
+    animation: dash 14s linear 0s 1 forwards;
+}
+@keyframes dash {
+    0%{
+        stroke-dashoffset: 8205;
+        opacity: 0%;
+    }
+    1%{
+        opacity: 100%;
+    }
+    100% {
+        stroke-dashoffset: 5470;
+        opacity: 100%;
+    }
+}
+
+#leaf {
+    top: 27%; 
+    left: 10%;
+    transform: scale(1.2) rotate(10deg);
+    animation: dash 1s linear 0s 1 forwards;
+}
+#leaf2 {
+    top: 0%; 
+    left: 33%;
+    transform: scale(1) rotate(25deg);
+    animation: dash 1s linear 0s 1 forwards;
+}
