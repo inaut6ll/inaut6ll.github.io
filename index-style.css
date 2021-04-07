@@ -694,6 +694,7 @@ div{
 
 #footer-container{
     position: relative;
+    z-index: 10;
 }
 
 #footer{
@@ -741,11 +742,45 @@ div{
     position: absolute;
     top: 3200px;
     left: 0vw;
+    z-index: 0;
 }
 
-#scribble{
+#squiggly{
+    display: none;
+}
+
+.scribbles{
     position: absolute; 
-    top: 30px;
-    left: 50vw;
-    border: 1px solid black;
+    top: -15px;
+    left: 33vw;
+    stroke-dasharray: 2735;
+    min-width: 500px;
+    animation: dash 60s linear 0s infinite alternate;
+}
+@keyframes dash {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 50470;
+    }
+}
+@media (max-width: 1300px) {
+    .scribbles{
+        top: -50px;
+        left: 35vw;
+        min-width: 850px;
+    }
+}
+@media (max-width: 1100px) {
+    .scribbles{
+        top: -200px;
+        left: 35vw;
+    }
+}
+@media (max-width: 900px) {
+    .scribbles{
+        top: -50px;
+        left: 20vw;
+    }
 }
