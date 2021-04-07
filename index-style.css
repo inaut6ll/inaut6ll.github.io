@@ -746,10 +746,6 @@ div{
     transition: 1s ease;
 }
 
-#squiggly{
-    display: none;
-}
-
 .scribbles{
     position: absolute; 
     top: -15px;
