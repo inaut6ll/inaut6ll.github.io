@@ -11,7 +11,7 @@ class Lettuce extends React.Component {
                 <div id="login-container">
                     <h3>Lettuce</h3>
                     <input type="text" id="" name="" placeholder="Username" />
-                    <input type="text" id="" name="" placeholder="Password" />
+                    <input type="password" id="" name="" placeholder="Password" />
                 </div>
                 <div id="svg-container">
                     <Leaf strokeWidth="1" color="rgb(5, 85, 5)" id="leaf" />

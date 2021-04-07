@@ -32,7 +32,7 @@ var Lettuce = function (_React$Component) {
                         "Lettuce"
                     ),
                     React.createElement("input", { type: "text", id: "", name: "", placeholder: "Username" }),
-                    React.createElement("input", { type: "text", id: "", name: "", placeholder: "Password" })
+                    React.createElement("input", { type: "password", id: "", name: "", placeholder: "Password" })
                 ),
                 React.createElement(
                     "div",
