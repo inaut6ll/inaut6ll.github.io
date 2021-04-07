@@ -2,7 +2,7 @@
 
 :root {
     --main: rgb(134, 173, 255);
-    --width: 43vw;
+    --width: 600px;
     --minwidth: 550px;
     overflow-x: hidden;
 }
@@ -367,7 +367,7 @@ div{
     justify-content: center;
     flex-direction: row-reverse;
     margin-left: 20%;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
     position: relative;
     top: 100px;
     opacity: 0%;
@@ -418,8 +418,6 @@ div{
 .image{
     width: var(--width);
     height: calc(var(--width) * 2 / 3);
-    min-width: var(--minwidth);
-    min-height: calc(var(--minwidth) * 2 / 3);
     box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.719);
     border-radius: 5px;
     transition: 1s ease;
@@ -430,7 +428,11 @@ div{
     flex: none;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1100px) {
+    .image{
+        width: var(--minwidth);
+        height: calc(var(--minwidth) * 2 / 3);
+    }
     .image-over2{
         top: calc(var(--minwidth) * 2 / -3) !important;
     }
@@ -684,7 +686,7 @@ div{
 }
 
 #footer{
-    padding: 3rem 15rem 8rem 15rem;
+    padding: 3rem 15rem 5rem 15rem;
 }
 
 .contact-bottom{
@@ -700,47 +702,6 @@ div{
     font-size: 1.4rem;
     color: rgb(78, 78, 78);
     transition: 3s ease;
-}
-
-#svg-container{
-    position: absolute;
-    top: 195em;
-    left: 38vw;
-    transform: scale(1.2);
-}
-@media (max-width: 1290px) {
-    #svg-container{
-        top: 185em;
-    }
-}
-
-#leaf{
-    position: absolute;
-    z-index: 10;
-    stroke-dasharray: 2735;
-    stroke-dashoffset: 8205;
-}
-#leaf2{
-    position: absolute;
-    top: 3rem;
-    left: 0rem;
-    z-index: 0;
-    stroke-dasharray: 2735;
-    stroke-dashoffset: 8205;
-    display: none;
-}
-@keyframes dash {
-    0%{
-        stroke-dashoffset: 8205;
-        opacity: 0%;
-    }
-    1%{
-        opacity: 100%;
-    }
-    100% {
-        stroke-dashoffset: 5470;
-        opacity: 100%;
-    }
 }
 .appear{
     animation: appear 1s ease 0s 1 forwards;
@@ -765,8 +726,15 @@ div{
     }
 }
 
-#svg-container2{
+#svg-container{
     position: absolute;
-    top: 198em;
-    left: 0svw;
+    top: 3200px;
+    left: 0vw;
+}
+
+#scribble{
+    position: absolute; 
+    top: 30px;
+    left: 600px;
+    background-color: ivory;
 }

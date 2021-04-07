@@ -79,11 +79,11 @@ input{
     top: 27%; 
     left: 10%;
     transform: scale(1.2) rotate(10deg);
-    animation: dash 9s linear 9s 1 forwards;
+    animation: dash 9s linear 0s 1 forwards;
 }
 #leaf2 {
     top: 0%; 
     left: 33%;
     transform: scale(1) rotate(25deg);
-    animation: dash 9s linear 0s 1 forwards;
+    animation: dash 9s linear 9s 1 forwards;
 }

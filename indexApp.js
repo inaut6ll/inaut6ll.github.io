@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(`#${projectNames[projectNames.length - 1]}-link`).style.fontWeight = '400'
         }
 
-        //contact
+        //contact bottom
         if (window.pageYOffset < scrollB + scrollM * projectNames.length - 100) {
             document.querySelector('#footer-title').style.top = '220px'
             document.querySelector('#footer-title').style.opacity = '0%'
@@ -114,11 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 links[i].style.left = '0px';
             }
             document.querySelector('#bottom-text').style.opacity = '100%'
-            document.querySelector('#leaf').style.animation = 'dash 14s linear 1s 1 forwards'
-            document.querySelector('#leaf2').style.animation = 'dash 14s linear 15s 1 forwards'
             document.querySelector('#svg-container').classList.remove('disappear')
             document.querySelector('#svg-container').classList.add('appear')
         }
+        document.querySelector('#svg-container').style.top = `${scrollB + projectNames.length * scrollM + 100}px`
+
     }
     
     //contact
@@ -336,9 +336,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#lettuce-bottom').addEventListener('click', () => {
     })
 
-    //squiggly 
-    let a = 'M 0 100 Q 100 200, 200 100 T 400 100'
-    function createSquiggly(id, startX, startY, height, width, number, up) {
+    //squiggly creator
+    function createSquiggly(id, startX, startY, width, height, number, up) {
         let d = `M ${startX} ${startY} `
         if (up) {
             d += `Q ${startX + width / 2} ${startY - height}, ${startX + width} ${startY} `
@@ -350,5 +349,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         document.querySelector(id).setAttribute('d', d)
     }
-    createSquiggly('#squiggly-path', 0, 100, 100, 90, 10, true)
+    createSquiggly('#squiggly-path', 0, 100, 160, 90, 10, true)
+
+    //scribble
+    function createScribble(id, startX, startY, height, width, number) {
+        let d = `M ${startX} ${startY} `
+        if (up) {
+            d += `Q ${startX + width / 2} ${startY - height}, ${startX + width} ${startY} `
+        } else {
+            d += `Q ${startX + width / 2} ${startY + height}, ${startX + width} ${startY} `
+        }
+        for (let i = 2; i <= number; i++) {
+            d += `T ${startX + width * i} ${startY} `
+        }
+        document.querySelector(id).setAttribute('d', d)
+    }
+    createScribble('#scribble-path')
 }) 
