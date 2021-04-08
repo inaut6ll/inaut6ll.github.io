@@ -219,15 +219,6 @@ div{
     line-height: 4rem;
 }
 
-#up-arrow{
-    position: relative;
-    left: 95%;
-    display: block;
-    margin: 0;
-    padding: 0;
-    display: none;
-}
-
 #menu-side{
     position: fixed;
     top: 30%;
