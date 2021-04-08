@@ -6,16 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let c3 = document.querySelector("#c3");
     let c4 = document.querySelector("#c4");
     let cArray = [c1, c2, c3, c4]
-    document.querySelector("#c1").addEventListener("click", () => {
-        c1.style.transform = "translateY(-100px)";
-        setTimeout(() => {c1.style.transform = "translateY(0px)";}, 600);
-        setTimeout(() => {c2.style.transform = "translateY(-100px)";}, 200);
-        setTimeout(() => {c2.style.transform = "translateY(0px)";}, 800);
-        setTimeout(() => {c3.style.transform = "translateY(-100px)";}, 400);
-        setTimeout(() => {c3.style.transform = "translateY(0px)";}, 1000);
-        setTimeout(() => {c4.style.transform = "translateY(-100px)";}, 600);
-        setTimeout(() => {c4.style.transform = "translateY(0px)";}, 1200);
-    });
+    cArray.forEach(element => {
+        element.addEventListener("click", () => {
+            c1.style.transform = "translateY(-100px)";
+            setTimeout(() => {c1.style.transform = "translateY(0px)";}, 600);
+            setTimeout(() => {c2.style.transform = "translateY(-100px)";}, 200);
+            setTimeout(() => {c2.style.transform = "translateY(0px)";}, 800);
+            setTimeout(() => {c3.style.transform = "translateY(-100px)";}, 400);
+            setTimeout(() => {c3.style.transform = "translateY(0px)";}, 1000);
+            setTimeout(() => {c4.style.transform = "translateY(-100px)";}, 600);
+            setTimeout(() => {c4.style.transform = "translateY(0px)";}, 1200);
+        })
+    })
 
     //animate mouse parallax
     const mouseParallax = (element, xDistance, yDistance, speed) => {
@@ -79,19 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
             scribbles.forEach(item => {
                 item.style.top = '100px'
                 item.style.left = '35vw'
-                console.log('600')
             })
         } else if (window.innerWidth > 600) {
             scribbles.forEach(item => {
                 item.style.top = '300px'
                 item.style.left = '35vw'
-                console.log('test')
             })
         } else {
             scribbles.forEach(item => {
                 item.style.top = '500px'
                 item.style.left = '35vw'
-                console.log('test')
             })
         }
     }
