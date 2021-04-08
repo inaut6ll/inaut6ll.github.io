@@ -91,6 +91,7 @@ div{
 .about{
     display: flex;
     justify-content: center;
+    padding: 0% 6%;
 }
 
 .about-container-1{
@@ -114,15 +115,15 @@ div{
 
 .about-container-2{
     width: 40%;
-    display: flex;
+
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
 }
 
 #list-container{
-    margin: 10%;
-    width: 50%;
+    margin: 0 10%;
+    width: 70%;
     align-self: center;
     animation: fadeIn ease 3s;
 }
@@ -133,17 +134,17 @@ div{
     justify-content: space-between;
 }
 
-#f1{
+#alien{
     position: relative;
-    top: 6rem;
-    left: 16rem;
-    animation: frag1 ease 3s 1.5s 1 normal forwards;
+    top: 6.4rem;
+    left: 15rem;
+    animation: frag1 ease 3s 2s 1 normal forwards;
 }
 
 #cat{
     position: relative;
-    top: 10rem;
-    left: 10rem;
+    top: 5.2rem;
+    left: 8.4rem;
     animation: frag1 ease 3s 1.5s 1 normal forwards;
 }
 
@@ -151,4 +152,45 @@ div{
     100%{
         opacity: 100%;
     }
+}
+
+#email{
+    animation: icon ease 2.5s 0s 1;
+    transition: .5s ease;
+}
+@keyframes icon{
+    0%{
+        transform: translateY(0px);
+    }
+    55%{
+        transform: translateY(-100px);
+    }
+    65%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-40px);
+    }
+    90%{
+        transform: translateY(-40px);
+    }
+    95%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+#linkedin{
+    animation: icon ease 2.5s .2s 1;
+    transition: .5s ease;
+}
+#github{
+    animation: icon ease 2.5s .4s 1;
+    transition: .5s ease;
+}
+#question{
+    animation: icon ease 2.5s .6s 1;
+    transition: .5s ease;
 }
