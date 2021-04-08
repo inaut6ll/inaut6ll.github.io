@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#svg-container').style.opacity = '100%'
         }
 
-        //svg 
+        //svg placement
         document.querySelector('#svg-container').style.top = `${scrollB + projectNames.length * scrollM + 100}px`
     }
     

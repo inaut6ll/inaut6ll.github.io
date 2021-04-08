@@ -92,11 +92,13 @@ div{
     display: flex;
     justify-content: center;
     padding: 0% 6%;
+    margin-bottom: 240px;
 }
 
 .about-container-1{
     color: black;
     width: 60%;
+    max-width: 680px;
     padding: 10px 40px;
     animation: fadeIn ease 3s;
 }
@@ -115,7 +117,7 @@ div{
 
 .about-container-2{
     width: 40%;
-
+    max-width: 600px;
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
@@ -124,6 +126,7 @@ div{
 #list-container{
     margin: 0 10%;
     width: 70%;
+    max-width: 350px;
     align-self: center;
     animation: fadeIn ease 3s;
 }
