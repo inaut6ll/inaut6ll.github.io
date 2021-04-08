@@ -1,23 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     //animate icons
-    let c1 = document.querySelector("#c1");
-    let c2 = document.querySelector("#c2");
-    let c3 = document.querySelector("#c3");
-    let c4 = document.querySelector("#c4");
-    let cArray = [c1, c2, c3, c4]
-    cArray.forEach(element => {
-        element.addEventListener("click", () => {
-            c1.style.transform = "translateY(-100px)";
-            setTimeout(() => {c1.style.transform = "translateY(0px)";}, 600);
-            setTimeout(() => {c2.style.transform = "translateY(-100px)";}, 200);
-            setTimeout(() => {c2.style.transform = "translateY(0px)";}, 800);
-            setTimeout(() => {c3.style.transform = "translateY(-100px)";}, 400);
-            setTimeout(() => {c3.style.transform = "translateY(0px)";}, 1000);
-            setTimeout(() => {c4.style.transform = "translateY(-100px)";}, 600);
-            setTimeout(() => {c4.style.transform = "translateY(0px)";}, 1200);
+    let color = 'black'
+    for (let i = 1; i < 5; i++) {
+        document.querySelector(`#c${i}`).addEventListener("click", () => {
+            if (color === 'black') {
+                color = 'rgb(134, 173, 255)'
+            } else if (color === 'rgb(134, 173, 255)') {
+                color = 'tomato'
+            } else {
+                color = 'black'
+            }
+            for (let j = i; j < 5; j++) {
+                setTimeout(() => {
+                    eval("c" + j + ".style.transform = \"translateY(-100px)\";")
+                    eval("con" + j + ".style.color = \"" + color + "\";")
+                }, (j - 1) * 200);
+                setTimeout(() => {
+                    eval("c" + j + ".style.transform = \"translateY(0px)\";")
+                }, 600 + (j - 1) * 200);
+            }
         })
-    })
+    }
 
     //animate mouse parallax
     const mouseParallax = (element, xDistance, yDistance, speed) => {
@@ -43,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.onscroll = function() {
 
         //contact bottom
-        if (window.pageYOffset < scrollB + scrollM - 100) {
+        if (window.pageYOffset < scrollB + scrollM - 90) {
             document.querySelector('#footer-title').style.top = '220px'
             document.querySelector('#footer-title').style.opacity = '0%'
             let links = document.getElementsByClassName('contact-bottom');
@@ -62,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 links[i].style.left = '0px';
             }
             document.querySelector('#bottom-text').style.opacity = '100%'
+            document.querySelector('#svg-container').style.opacity = '100%'
+        }
+
+        if (window.pageYOffset < scrollB + scrollM - 200) {
+            document.querySelector('#svg-container').style.opacity = '0%'
+        } else {
             document.querySelector('#svg-container').style.opacity = '100%'
         }
 
