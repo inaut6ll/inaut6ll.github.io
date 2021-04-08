@@ -7,6 +7,7 @@
 html{
     font-size: 62.7%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -61,22 +62,6 @@ div{
     font-size: 1.6rem;
 }
 
-.icon{
-    color: black;
-    font-size: 3.6rem;
-    margin-left: 1rem;
-}
-
-#icon-box{
-    position: fixed;
-    top: 90vh;
-    left: calc(100vw - 22rem);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: 1.5s ease;
-}
-
 .frag-container{
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +102,7 @@ div{
 
 .about-container-2{
     width: 40%;
+    height: calc(600px / 1vw);
     max-width: 600px;
     flex-direction: column;
     align-content: center;
@@ -137,9 +123,30 @@ div{
     justify-content: space-between;
 }
 
+.icon{
+    color: black;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#icon-box{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 30%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transition: 1.5s ease;
+    z-index: 100;
+    border-bottom: 1px solid black;
+}
+
 #alien{
     position: relative;
-    top: 6.4rem;
+    top: 6.2rem;
     left: 15rem;
     animation: frag1 ease 3s 2s 1 normal forwards;
 }
@@ -157,7 +164,7 @@ div{
     }
 }
 
-#email{
+#c1{
     animation: icon ease 2.5s 0s 1;
     transition: .5s ease;
 }
@@ -185,15 +192,15 @@ div{
     }
 }
 
-#linkedin{
+#c2{
     animation: icon ease 2.5s .2s 1;
     transition: .5s ease;
 }
-#github{
+#c3{
     animation: icon ease 2.5s .4s 1;
     transition: .5s ease;
 }
-#question{
+#c4{
     animation: icon ease 2.5s .6s 1;
     transition: .5s ease;
 }

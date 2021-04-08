@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    //add function to contact button -- the icon buttons animated
-    document.querySelector("#contact-btn").addEventListener("click", () => {
-        let email = document.querySelector("#email");
-        let linkedin = document.querySelector("#linkedin");
-        let github = document.querySelector("#github");
-        let question = document.querySelector("#question");
-        email.style.transform = "translateY(-100px)";
-        setTimeout(() => {email.style.transform = "translateY(0px)";}, 600);
-        setTimeout(() => {linkedin.style.transform = "translateY(-100px)";}, 200);
-        setTimeout(() => {linkedin.style.transform = "translateY(0px)";}, 800);
-        setTimeout(() => {github.style.transform = "translateY(-100px)";}, 400);
-        setTimeout(() => {github.style.transform = "translateY(0px)";}, 1000);
-        setTimeout(() => {question.style.transform = "translateY(-100px)";}, 600);
-        setTimeout(() => {question.style.transform = "translateY(0px)";}, 1200);
+    //animate icons
+    let c1 = document.querySelector("#c1");
+    let c2 = document.querySelector("#c2");
+    let c3 = document.querySelector("#c3");
+    let c4 = document.querySelector("#c4");
+    let cArray = [c1, c2, c3, c4]
+    document.querySelector("#c1").addEventListener("click", () => {
+        c1.style.transform = "translateY(-100px)";
+        setTimeout(() => {c1.style.transform = "translateY(0px)";}, 600);
+        setTimeout(() => {c2.style.transform = "translateY(-100px)";}, 200);
+        setTimeout(() => {c2.style.transform = "translateY(0px)";}, 800);
+        setTimeout(() => {c3.style.transform = "translateY(-100px)";}, 400);
+        setTimeout(() => {c3.style.transform = "translateY(0px)";}, 1000);
+        setTimeout(() => {c4.style.transform = "translateY(-100px)";}, 600);
+        setTimeout(() => {c4.style.transform = "translateY(0px)";}, 1200);
     });
 
     //animate mouse parallax
@@ -33,9 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
+    let scrollB = 300
+    let scrollM = 200
+    //svg placement
+    document.querySelector('#svg-container').style.top = `${scrollB + scrollM + 100}px`
     window.onscroll = function() {
-        scrollB = 300
-        scrollM = 200
 
         //contact bottom
         if (window.pageYOffset < scrollB + scrollM - 100) {
@@ -60,31 +63,37 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#svg-container').style.opacity = '100%'
         }
 
-        //svg placement
-        document.querySelector('#svg-container').style.top = `${scrollB + scrollM + 100}px`
-        let scribbles = Array.prototype.slice.call(document.querySelectorAll('.scribbles'))
+        //scribble placement
+        let scribbles = [...document.querySelectorAll('.scribbles')]
         if (window.innerWidth > 1300) {
             scribbles.forEach(item => {
                 item.style.top = '-50px'
                 item.style.left = '35vw'
-                console.log('test')
             })
         } else if (window.innerWidth > 1100) {
             scribbles.forEach(item => {
                 item.style.top = '0px'
                 item.style.left = '35vw'
-                console.log('test2')
             })
-        } else if (window.innerWidth > 600) {
+        } else if (window.innerWidth > 800) {
             scribbles.forEach(item => {
                 item.style.top = '100px'
                 item.style.left = '35vw'
-                console.log('test2')
+                console.log('600')
+            })
+        } else if (window.innerWidth > 600) {
+            scribbles.forEach(item => {
+                item.style.top = '300px'
+                item.style.left = '35vw'
+                console.log('test')
+            })
+        } else {
+            scribbles.forEach(item => {
+                item.style.top = '500px'
+                item.style.left = '35vw'
+                console.log('test')
             })
         }
-
-
-        console.log(window.innerWidth)
     }
 
 

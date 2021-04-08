@@ -139,8 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }) 
 
     //onclick functions for circles
-    let elements = [...document.querySelectorAll(".circle")] 
-    elements.forEach(element => {
+    let circles = [...document.querySelectorAll(".circle")] 
+    circles.forEach(element => {
         element.addEventListener("click", (e) => {
             let a = e.target 
             let contact1 = document.querySelector('#contact1')
