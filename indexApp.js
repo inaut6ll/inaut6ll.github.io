@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(`#${projectNames[projectNames.length - 1]}-link`).style.fontWeight = '400'
         }
 
+        let scribbles = [...document.querySelectorAll('.scribbles')]
         //contact bottom
         if (window.pageYOffset < scrollB + scrollM * projectNames.length - 100) {
             document.querySelector('#footer-title').style.top = '220px'
@@ -110,6 +111,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             document.querySelector('#bottom-text').style.opacity = '0%'
             document.querySelector('#svg-container').style.opacity = '0%'
+            scribbles.forEach(scribble => {
+                scribble.style.transform = 'translateY(100px)'
+            })
         } else {
             document.querySelector('#footer-title').style.top = '0px'
             document.querySelector('#footer-title').style.opacity = '100%'
@@ -120,6 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             document.querySelector('#bottom-text').style.opacity = '100%'
             document.querySelector('#svg-container').style.opacity = '100%'
+            scribbles.forEach(scribble => {
+                scribble.style.transform = 'translateY(-100px)'
+                setTimeout(() => {
+                    scribble.style.transform = 'translateY(0px)'
+                }, 2000);
+            })
         }
 
         //svg placement

@@ -22,7 +22,7 @@
 }
 
 #footer{
-    padding: 3rem 0rem;
+    padding: 5rem 0rem 3rem 0;
     padding-left: 10%;
 }
 
@@ -68,7 +68,7 @@
     top: 3200px;
     left: 0vw;
     z-index: 0;
-    transition: 1s ease;
+    transition: opacity 1s, top 2s;
 }
 
 .scribbles{
@@ -78,6 +78,7 @@
     stroke-dasharray: 2735;
     min-width: 850px;
     min-height: 450px;
+    transition: opacity 1s, transform 4s;
     animation: dash 60s linear 0s infinite alternate;
 }
 @keyframes dash {
