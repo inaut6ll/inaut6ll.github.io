@@ -1,2 +1,2 @@
 # lilianzlettuce.github.io
-Wow it's my wEbSiTe
+My personal website, built with html/css & javascript (and some react)
