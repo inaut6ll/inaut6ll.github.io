@@ -110,9 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 links[i].style.left = '300px';
             }
             document.querySelector('#bottom-text').style.opacity = '0%'
-            document.querySelector('#svg-container').style.opacity = '0%'
             scribbles.forEach(scribble => {
-                scribble.style.transform = 'translateY(100px)'
+                scribble.style.top = '200px'
             })
         } else {
             document.querySelector('#footer-title').style.top = '0px'
@@ -123,12 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 links[i].style.left = '0px';
             }
             document.querySelector('#bottom-text').style.opacity = '100%'
-            document.querySelector('#svg-container').style.opacity = '100%'
             scribbles.forEach(scribble => {
-                scribble.style.transform = 'translateY(-100px)'
-                setTimeout(() => {
-                    scribble.style.transform = 'translateY(0px)'
-                }, 2000);
+                scribble.style.top = '-20px'
             })
         }
 
