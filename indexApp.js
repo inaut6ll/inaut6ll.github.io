@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.open("https://devpost.com/software/dodoplier", "_blank") 
             return 
         } else if (ID == "weather-hover"){
-            p = "weather" 
+            p = "weatherApp" 
         } else if (ID == "two-hover"){
             p = "2048" 
         } else {
