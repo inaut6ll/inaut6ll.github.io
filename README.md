@@ -1,2 +1,2 @@
 # lilianzlettuce.github.io
-My personal website, built with html/css & javascript (and some react)
+My personal website, built from scratch with html/css & javascript (and some react)
