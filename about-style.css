@@ -96,7 +96,7 @@ div{
     }
 }
 
-.faded{
+.faded, #projects-link {
     color: rgb(148, 148, 148);
 }
 

@@ -63,7 +63,7 @@ div{
     font-size: 1.6rem;
 }
 
-.faded{
+.faded, #about-link{
     color: rgb(148, 148, 148);
     cursor: pointer;
 }
