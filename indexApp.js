@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#cover").style.display = "none" 
     }, 4100) 
 
-    let projectNames = ['sleep', 'veracity', 'snowball', 'weather', 'two', 'tetris']
+    let projectNames = ['bloog', 'linescape', 'veracity', 'snowball', 'two', 'tetris']
 
     //scroll animations
     window.onscroll = function() {
@@ -181,9 +181,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //data for each project container
     let projects = {
-        sleep: {
-            color: "orange",
+        bloog: {
+            color: "rgb(103, 219, 151)",
             currentDotNum: 1,
+        },
+        linescape: {
+            color: "rgb(103, 126, 255)",
+            currentDotNum: 1
         },
         veracity: {
             color: "rgb(106, 208, 255)",
@@ -191,10 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         snowball: {
             color: "rgb(86, 40, 255)",
-            currentDotNum: 1
-        },
-        weather: {
-            color: "black",
             currentDotNum: 1
         },
         two: {
@@ -207,27 +207,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //add functionality to all images (snowball is exception)
+    //add functionality to all images
     let allImages = document.querySelectorAll(".white-hover") 
     let imageArr = [...allImages] 
     imageArr.forEach(element => element.addEventListener("click", (e) => {
         const ID = e.target.id 
         let p 
-        if (ID == 'sleep-hover') {
-            p = 'chamomile'
+        if (ID == 'bloog-hover') {
+            window.open("https://bloog-ef82f.web.app/", "_blank") 
+            return 
+        } else if (ID == "linescape-hover"){
+            p = "linescape-vh" 
         } else if (ID == "veracity-hover"){
             p = "veracity" 
         } else if (ID == "snowball-hover"){
             window.open("https://devpost.com/software/dodoplier", "_blank") 
             return 
-        } else if (ID == "weather-hover"){
-            p = "weatherApp" 
         } else if (ID == "two-hover"){
             p = "2048" 
         } else {
             p = "tetris" 
         }
         window.open(`https://lilianzlettuce.github.io/${p}`, "_blank") 
+    })) 
+
+    //add functionality to award links
+    let allAwards = document.querySelectorAll(".award") 
+    let awardArr = [...allAwards] 
+    awardArr.forEach(element => element.addEventListener("click", (e) => {
+        const ID = e.target.id.substring(6)
+        if (ID == 'snowball') {
+            window.open("https://devpost.com/software/dodoplier", "_blank") 
+            return 
+        } else {
+            window.open(`https://devpost.com/software/${ID}`, "_blank") 
+        } 
     })) 
 
 
@@ -245,14 +259,14 @@ document.addEventListener("DOMContentLoaded", () => {
     arrowArr.forEach(element => element.addEventListener("click", (e) => {
         let id = e.target.id 
         let p 
-        if (id == 'sleep-icon') {
-            p = 'sleep'
+        if (id == 'bloog-icon') {
+            p = 'bloog'
+        } else if (id == "linescape-icon"){
+            p = "linescape" 
         } else if (id == "veracity-icon"){
             p = "veracity" 
         } else if (id == "snowball-icon"){
             p = "snowball" 
-        } else if (id == "weather-icon"){
-            p = "weather" 
         } else if (id == "two-icon"){
             p = "two" 
         } else {
@@ -295,14 +309,14 @@ document.addEventListener("DOMContentLoaded", () => {
     dotsArr.forEach(element => element.addEventListener("click", (e) => {
         let id = e.target.id 
         let p 
-        if (id.includes("sleep")){
-            p = "sleep" 
+        if (id.includes("bloog")){
+            p = "bloog" 
+        } else if (id.includes("linescape")){
+            p = "linescape" 
         } else if (id.includes("veracity")){
             p = "veracity" 
         } else if (id.includes("snowball")){
             p = "snowball" 
-        } else if (id.includes("weather")){
-            p = "weather" 
         } else if (id.includes("two")){
             p = "two" 
         } else {

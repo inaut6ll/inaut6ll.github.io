@@ -248,8 +248,8 @@ div{
 }
 
 .icon{
-    font-size: 3.6rem; 
-    transition: color 350ms ease;
+    font-size: 3rem; 
+    transition: color 500ms ease;
 }
 
 .icon:hover{
@@ -408,8 +408,20 @@ div{
 
 .date{
     color:rgb(55, 118, 255);
+    color: black;
     font-weight: 300;
     margin: 1rem 0rem;
+}
+
+.award{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0rem;
+    cursor: pointer;
+    transform: 1s ease;
+    color: rgb(255, 120, 96);
+}
+.award:hover {
 }
 
 .descrip{
@@ -547,26 +559,53 @@ div{
     line-height: 2.7rem;
 }
 
-#sleep{
-    background-image: url(img/sleeppic1.png);
+/* bloog */
+
+#bloog{
+    background-image: url(img/bloogpic1.png);
 }
 
-#sleep2{
-    background-image: url(img/sleeppic2.png);
+#bloog2{
+    background-image: url(img/bloogpic2.png);
 }
 
-#sleep3{
-    background-image: url(img/sleeppic3.png);
+#bloog3{
+    background-image: url(img/bloogpic3.png);
 }
 
-#sleep-dot1{
+#bloog-dot1{
     border: none;
-    background-color: orange;
+    background-color: rgb(103, 219, 151);
 }
 
-#sleep-hex{
+#bloog-hex{
     transform: rotate(100deg);
 }
+
+/* linescape */
+
+#linescape{
+    background-image: url(img/linescapepic1.png);
+}
+
+#linescape2{
+    background-image: url(img/linescapepic2.png);
+}
+
+#linescape3{
+    background-image: url(img/linescapepic3.png);
+}
+
+#linescape-dot1{
+    border: none;
+    background-color: rgb(103, 126, 255);
+}
+
+#linescape-hex{
+    transform: rotate(50deg);
+}
+
+/* veracity */
 
 #veracity{
     background-image: url(img/veracitypic1.png);
@@ -589,6 +628,8 @@ div{
     transform: rotate(10deg);
 }
 
+/* snowball */
+
 #snowball{
     background-image: url(img/snowballpic1.png);
 }
@@ -610,26 +651,7 @@ div{
     transform: rotate(30deg);
 }
 
-#weather{
-    background-image: url(img/weatherpic1.png);
-}
-
-#weather2{
-    background-image: url(img/weatherpic2.png);
-}
-
-#weather3{
-    background-image: url(img/weatherpic3.png);
-}
-
-#weather-dot1{
-    border: none;
-    background-color: rgb(0, 0, 0);
-}
-
-#weather-hex{
-    transform: rotate(50deg);
-}
+/* 2048 */
 
 #two{
     background-image: url(img/2048pic1.png);
@@ -651,6 +673,8 @@ div{
 #two-hex{
     transform: rotate(70deg);
 }
+
+/* tetris */
 
 #tetris{
     background-image: url(img/tetrispic1.png);

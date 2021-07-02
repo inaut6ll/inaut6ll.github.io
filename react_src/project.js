@@ -8,33 +8,33 @@ let projects = {
     date: '',
     descrip: '',
   },
-  sleep: {
-    name: 'sleep',
-    title: 'Chamomile',
-    type: 'THING?????',
-    date: 'Work in Progress',
-    descrip: 'React/Firebase web app made to help you get more sleep... Coming soon? Or not... ',
+  bloog: {
+    name: 'bloog',
+    title: 'BLOOG',
+    type: 'React/Firebase Web App',
+    date: 'April - June 2021',
+    descrip: 'Knockoff quizlet. (Lets users create, study, and browse sets of flashcards) Uses firebase for authentication and data storage.',
+  },
+  linescape: {
+    name: 'linescape',
+    title: 'LineScape',
+    date: 'April 2021',
+    award: 'Best Design @ Superposition V',
+    descrip: 'SVG drawing tool designed to simplify the process of creating line animations for websites.',
   },
   veracity: {
       name: 'veracity',
       title: 'Veracity',
       type: 'React Web App',
       date: 'November 2020',
-      descrip: 'Implements the ReactJS framework and Charity Navigator API to simplify the process of finding the right charity. May be dead due to API key expiration. Click ',
+      descrip: 'Charity-searching web app that helps users determine the reliability of relevant organizations. May be dead due to API key expiration. Click ',
   },
   snowball: {
       name: 'snowball',
       title: 'Snowball',
-      type: 'Mobile Android App',
       date: 'October 2020',
-      descrip: 'Aims to connect working professionals and potential donors to take advantage of corporate matching programs and maximize the impact of individual donations.',
-  },
-  weather: {
-      name: 'weather',
-      title: 'Weather',
-      type: 'Website',
-      date: 'August 2020',
-      descrip: 'Uses a weather API to display forecast data from the user\'s current location and/or get data and location from manually entered coordinates.',
+      award: 'Best Overall Hack @ Creatica 2020',
+      descrip: 'Networking app that connects users with working professionals to maximize the impact of individual donations using corporate matching programs',
   },
   two: {
       name: 'two',
@@ -51,7 +51,7 @@ let projects = {
       descrip: 'Customized version of Tetris developed to include different creative modes such as multiple color-changing themes and speed/difficulty levels.',
   }
 }
-let projectArr = [projects.sleep, projects.veracity, projects.snowball, projects.weather, projects.two, projects.tetris]
+let projectArr = [projects.bloog, projects.linescape, projects.veracity, projects.snowball, projects.two, projects.tetris]
 
 class Project extends React.Component {
   constructor(props) {
@@ -75,8 +75,8 @@ class Project extends React.Component {
               </div>
               <div className="descrip-text">
                   <h4 className="title">{project.title}</h4>
-                  <h5 className="type">{project.type}</h5>
                   <h6 className="date">{project.date}</h6>
+                  {project.award && <div className="award" id={"award-" + project.name}>{project.award}</div>}
                   <p className="descrip">
                     {project.descrip}
                     {project.name == 'veracity' && <span><a style={{fontSize: 1.6 + 'rem', color: 'rgb(255, 136, 115)'}} href="https://youtu.be/gMbwmaDJzTM" target="_blank">here</a> to see a demo video.</span>}
