@@ -38,12 +38,29 @@ input{
 }
 
 #login-container{
-    width: 500px;
+    width: 45vw;
+    max-width: 470px;
     height: auto;
     margin: 0;
     position: absolute;
     top: 55vh;
     left: 8vw;
+    font-size: 1.6rem;
+}
+
+.link-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leaf-link {
+    color: rgb(109, 207, 109);
+    text-decoration: none;
+    cursor: pointer;
+    max-width: 200px;
+}
+.leaf-link:hover, .leaf-link:active, .leaf-link:focus {
+    text-decoration: none;
 }
 
 #svg-container{

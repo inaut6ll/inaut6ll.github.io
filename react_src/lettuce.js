@@ -3,15 +3,47 @@
 class Lettuce extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            text: 'Just a neat leaf animation I made. Isn\'t it cool?',
+            initialLinks: true,
+            choseNo: false,
+            choseYes: false,
+            meh: false,
+        }
+    }
+
+    changeText = (text, old, choice) => {
+        this.setState({ 
+            text,
+            [old]: false, 
+            [choice]: true,
+        })
     }
 
     render() {
         return (
             <div id="login-page">
                 <div id="login-container">
-                    <h3>Lettuce</h3>
-                    <input type="text" id="" name="" placeholder="Username" />
-                    <input type="password" id="" name="" placeholder="Password" />
+                    <h3>{this.state.text}</h3>
+                    <br/>
+                    {this.state.initialLinks &&
+                        <div className="link-box">
+                            <a onClick={() => this.changeText('Thanks, I\'m flattered.', 'initialLinks', 'choseYes')} className="leaf-link">Yes, super cool</a> 
+                            <a onClick={() => this.changeText('Wow, rude.', 'initialLinks','choseNo')} className="leaf-link">No, I'm leaving</a>
+                        </div>
+                    }
+                    {this.state.choseNo &&
+                        <div className="link-box">
+                            <a onClick={() => this.changeText('Too late, you have already hurt my feelings. There is no turning back.', 'choseNo', 'meh')} className="leaf-link">Just kidding</a> 
+                            <a onClick={() => this.changeText(`...go away >:(`, 'choseNo', 'meh')} className="leaf-link">What? I've seen much cooler things</a>
+                        </div>
+                    }
+                    {this.state.choseYes &&
+                        <div className="link-box">
+                            <a onClick={() => this.changeText('... that\'s honestly kind of concerning. Maybe you should go outside or something.', 'choseYes', 'meh')} className="leaf-link">This is the most amazing thing I've ever seen</a> 
+                            <a onClick={() => this.changeText('No. You must stay here forever.', 'choseYes', 'meh')} className="leaf-link">Ok can I leave now</a>
+                        </div>
+                    }
                 </div>
                 <div id="svg-container">
                     <Leaf strokeWidth="1" color="rgb(5, 85, 5)" id="leaf" />
