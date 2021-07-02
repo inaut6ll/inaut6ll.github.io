@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#cover").style.display = "none" 
     }, 4100) 
 
-    let projectNames = ['bloog', 'linescape', 'veracity', 'snowball', 'two', 'tetris']
+    let projectNames = ['cero', 'bloog', 'linescape', 'veracity', 'snowball', 'two']
 
     //scroll animations
     window.onscroll = function() {
@@ -181,6 +181,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //data for each project container
     let projects = {
+        cero: {
+            color: "rgb(103, 219, 151)",
+            currentDotNum: 1
+        },
         bloog: {
             color: "rgb(103, 219, 151)",
             currentDotNum: 1,
@@ -201,10 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
             color: "orange",
             currentDotNum: 1
         },
-        tetris: {
-            color: "rgb(103, 219, 151)",
-            currentDotNum: 1
-        }
     }
 
     //add functionality to all images
@@ -213,20 +213,20 @@ document.addEventListener("DOMContentLoaded", () => {
     imageArr.forEach(element => element.addEventListener("click", (e) => {
         const ID = e.target.id 
         let p 
-        if (ID == 'bloog-hover') {
+        if (ID === 'cero-hover') {
+            p = "cero" 
+        } else if (ID === 'bloog-hover') {
             window.open("https://bloog-ef82f.web.app/", "_blank") 
             return 
-        } else if (ID == "linescape-hover"){
+        } else if (ID === "linescape-hover"){
             p = "linescape-vh" 
-        } else if (ID == "veracity-hover"){
+        } else if (ID === "veracity-hover"){
             p = "veracity" 
-        } else if (ID == "snowball-hover"){
+        } else if (ID === "snowball-hover"){
             window.open("https://devpost.com/software/dodoplier", "_blank") 
             return 
-        } else if (ID == "two-hover"){
-            p = "2048" 
         } else {
-            p = "tetris" 
+            p = "2048" 
         }
         window.open(`https://lilianzlettuce.github.io/${p}`, "_blank") 
     })) 
@@ -235,13 +235,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let allAwards = document.querySelectorAll(".award") 
     let awardArr = [...allAwards] 
     awardArr.forEach(element => element.addEventListener("click", (e) => {
-        const ID = e.target.id.substring(6)
-        if (ID == 'snowball') {
-            window.open("https://devpost.com/software/dodoplier", "_blank") 
-            return 
+        const ID = e.target.id
+        let p
+        if (ID.includes('snowball')) {
+            p = 'dodoplier'
+        } else if (ID.includes('cero')) {
+            p = 'cero-096uig'
         } else {
-            window.open(`https://devpost.com/software/${ID}`, "_blank") 
+            p = ID.substring(6)
         } 
+        window.open(`https://devpost.com/software/${p}`, "_blank") 
     })) 
 
 
@@ -259,19 +262,19 @@ document.addEventListener("DOMContentLoaded", () => {
     arrowArr.forEach(element => element.addEventListener("click", (e) => {
         let id = e.target.id 
         let p 
-        if (id == 'bloog-icon') {
+        if (id === 'cero-icon') {
+            p = "cero" 
+        } else if (id === 'bloog-icon') {
             p = 'bloog'
-        } else if (id == "linescape-icon"){
+        } else if (id === "linescape-icon"){
             p = "linescape" 
-        } else if (id == "veracity-icon"){
+        } else if (id === "veracity-icon"){
             p = "veracity" 
-        } else if (id == "snowball-icon"){
+        } else if (id === "snowball-icon"){
             p = "snowball" 
-        } else if (id == "two-icon"){
-            p = "two" 
         } else {
-            p = "tetris" 
-        }
+            p = "two" 
+        } 
         let color 
         let currentDotNum 
         eval("color = projects." + p + ".color ") 
@@ -309,7 +312,9 @@ document.addEventListener("DOMContentLoaded", () => {
     dotsArr.forEach(element => element.addEventListener("click", (e) => {
         let id = e.target.id 
         let p 
-        if (id.includes("bloog")){
+        if (id.includes('cero')) {
+            p = "cero" 
+        } else if (id.includes("bloog")){
             p = "bloog" 
         } else if (id.includes("linescape")){
             p = "linescape" 
@@ -317,11 +322,9 @@ document.addEventListener("DOMContentLoaded", () => {
             p = "veracity" 
         } else if (id.includes("snowball")){
             p = "snowball" 
-        } else if (id.includes("two")){
-            p = "two" 
         } else {
-            p = "tetris" 
-        }
+            p = "two" 
+        } 
         let color 
         let currentDotNum 
         eval("color = projects." + p + ".color ") 

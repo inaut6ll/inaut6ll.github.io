@@ -16,10 +16,16 @@ var projects = {
     date: '',
     descrip: ''
   },
+  cero: {
+    name: 'cero',
+    title: 'Cero',
+    date: 'June 2020',
+    award: '1st Place @ Hydrangea Hack',
+    descrip: 'Customized version of cero developed to include different creative modes such as multiple color-changing themes and speed/difficulty levels.'
+  },
   bloog: {
     name: 'bloog',
     title: 'BLOOG',
-    type: 'React/Firebase Web App',
     date: 'April - June 2021',
     descrip: 'Knockoff quizlet. (Lets users create, study, and browse sets of flashcards) Uses firebase for authentication and data storage.'
   },
@@ -33,14 +39,12 @@ var projects = {
   veracity: {
     name: 'veracity',
     title: 'Veracity',
-    type: 'React Web App',
     date: 'November 2020',
     descrip: 'Charity-searching web app that helps users determine the reliability of relevant organizations. May be dead due to API key expiration. Click '
   },
   snowball: {
     name: 'snowball',
     title: 'Snowball',
-    date: 'October 2020',
     award: 'Best Overall Hack @ Creatica 2020',
     descrip: 'Networking app that connects users with working professionals to maximize the impact of individual donations using corporate matching programs'
   },
@@ -48,18 +52,10 @@ var projects = {
     name: 'two',
     title: '2048',
     type: 'Website/Game',
-    date: 'July 2020',
     descrip: 'My version of the classic 2048 game built with Javascript (using a lot of array methods)— complete with original styling and themes.'
-  },
-  tetris: {
-    name: 'tetris',
-    title: 'Tetris',
-    type: 'Website/Game',
-    date: 'June 2020',
-    descrip: 'Customized version of Tetris developed to include different creative modes such as multiple color-changing themes and speed/difficulty levels.'
   }
 };
-var projectArr = [projects.bloog, projects.linescape, projects.veracity, projects.snowball, projects.two, projects.tetris];
+var projectArr = [projects.cero, projects.bloog, projects.linescape, projects.veracity, projects.snowball, projects.two];
 
 var Project = function (_React$Component) {
   _inherits(Project, _React$Component);

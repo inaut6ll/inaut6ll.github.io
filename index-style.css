@@ -408,7 +408,6 @@ div{
 
 .date{
     color:rgb(55, 118, 255);
-    color: black;
     font-weight: 300;
     margin: 1rem 0rem;
 }
@@ -416,16 +415,18 @@ div{
 .award{
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 1rem 0rem;
+    margin: 10px 0 5px 0;
     cursor: pointer;
-    transform: 1s ease;
+    transition: 1s ease;
     color: rgb(255, 120, 96);
 }
 .award:hover {
+    color: rgb(255, 120, 96);
 }
 
 .descrip{
     font-weight: 300;
+    margin: 0;
 }
 
 .image{
@@ -559,6 +560,29 @@ div{
     line-height: 2.7rem;
 }
 
+/* cero */
+
+#cero{
+    background-image: url(img/ceropic1.png);
+}
+
+#cero2{
+    background-image: url(img/ceropic2.png);
+}
+
+#cero3{
+    background-image: url(img/ceropic3.png);
+}
+
+#cero-dot1{
+    border: none;
+    background-color: rgb(103, 219, 151);
+}
+
+#cero-hex{
+    transform: rotate(100deg);
+}
+
 /* bloog */
 
 #bloog{
@@ -672,27 +696,4 @@ div{
 
 #two-hex{
     transform: rotate(70deg);
-}
-
-/* tetris */
-
-#tetris{
-    background-image: url(img/tetrispic1.png);
-}
-
-#tetris2{
-    background-image: url(img/tetrispic2.png);
-}
-
-#tetris3{
-    background-image: url(img/tetrispic3.png);
-}
-
-#tetris-dot1{
-    border: none;
-    background-color: rgb(103, 219, 151);
-}
-
-#tetris-hex{
-    transform: rotate(100deg);
 }
