@@ -219,13 +219,14 @@ div{
     line-height: 4rem;
     font-weight: 100;
     font-size: 2.3rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Barlow';
 }
 
 #greeting {
     color: rgb(82, 151, 255); 
-    font-size: 2.3rem;
-    font-weight: 100;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 #menu-side{
