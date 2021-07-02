@@ -11,7 +11,7 @@ let projects = {
   cero: {
     name: 'cero',
     title: 'Cero',
-    date: 'June 2020',
+    date: 'June 2021',
     award: '1st Place @ Hydrangea Hacks',
     descrip: 'Adventure/platformer game developed with Javascript using the melonJS game engine—complete with original sprites, tilesets, and maps.',
   },

@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //data for each project container
     let projects = {
         cero: {
-            color: "rgb(103, 219, 151)",
+            color: "black",
             currentDotNum: 1
         },
         bloog: {
